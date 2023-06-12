@@ -10,7 +10,7 @@ export default function Home() {
         className="border-b container mx-auto border-zinc-900 flex flex-col gap-10 items-center justify-center py-36"
       >
         <h1 className="text-6xl font-bold text-zinc-100">
-          Learn TailwindCSS
+          Learn Tailwind
           <span className="text-berryBlue"> by playing</span>
         </h1>
         <p className="text-2xl text-zinc-400">

@@ -27,6 +27,7 @@ export default function RootLayout({
             className="transition-all active:translate-y-1 flex gap-4 items-center"
           >
             <Image src="/logo.png" alt="logo" width={26} height={26} />
+            <h1 className="font-bold text-2xl">css2wind</h1>
           </Link>
           <ul className="flex items-center justify-between gap-10">
             <li>
