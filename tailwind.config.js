@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         berryBlue: "#79CBE3",
         purplePlus: "#C679E3",
+        greenGo: "#4FBF85",
       },
     },
   },

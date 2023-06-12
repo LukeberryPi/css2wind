@@ -19,14 +19,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html className="scroll-smooth" lang="en">
       <body className={`bg-zinc-950 text-zinc-100 ${dmSans.className}`}>
         <nav className="text-white items-center justify-between flex fixed top-0 text-lg bg-zinc-950 w-full px-8 py-5 border-b border-zinc-900">
           <Link
             href="/"
             className="transition-all active:translate-y-1 flex gap-4 items-center"
           >
-            <h1 className="text-2xl font-bold">css2wind </h1>
+            <Image src="/logo.png" alt="logo" width={26} height={26} />
           </Link>
           <ul className="flex items-center justify-between gap-10">
             <li>
@@ -62,7 +62,7 @@ export default function RootLayout({
               <Link
                 href="https://github.com/LukeberryPi/css2wind"
                 target="_blank"
-                className="underline underline-offset-2"
+                className="underline decoration-berryBlue underline-offset-4"
               >
                 GitHub
               </Link>
@@ -72,7 +72,7 @@ export default function RootLayout({
               <Link
                 href="https://github.com/LukeberryPi/css2wind"
                 target="_blank"
-                className="underline underline-offset-2"
+                className="underline decoration-berryBlue underline-offset-4"
               >
                 Twitter
               </Link>
@@ -82,13 +82,21 @@ export default function RootLayout({
               <Link
                 href="https://github.com/LukeberryPi/css2wind"
                 target="_blank"
-                className="underline underline-offset-2"
+                className="underline decoration-berryBlue underline-offset-4"
               >
                 Instagram
               </Link>
             </li>
           </ul>
-          <p>© 2023 LukeberryPi</p>
+          <p>
+            © 2023{" "}
+            <a
+              className="underline underline-offset-4 decoration-berryBlue"
+              href="https://twitter.com/LukeberryPi"
+            >
+              LukeberryPi
+            </a>
+          </p>
         </footer>
       </body>
     </html>
