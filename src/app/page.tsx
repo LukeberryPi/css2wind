@@ -48,23 +48,27 @@ export default function Home() {
       </section>
       <section
         id="benefits"
-        className="border-b max-w-5xl mx-auto border-zinc-900 flex flex-col gap-36 items-center justify-center py-32"
+        className="border-b max-w-5xl mx-auto border-zinc-900 flex flex-col gap-32 items-center justify-center py-32"
       >
         <div className="flex items-center gap-32 w-full">
-          <div className="flex text-left flex-col gap-6 w-1/2">
-            <h3 className="text-5xl text-zinc-200">Immediate Feedback</h3>
+          <div className="flex text-left flex-col gap-6">
+            <h3 className="text-5xl text-zinc-200 font-medium">
+              Immediate Feedback
+            </h3>
             <p className="text-xl text-zinc-400">
               Gamified learning offers instant feedback on performance, allowing
               learners to understand their strengths and areas for improvement,
               enabling them to adjust their strategies accordingly.
             </p>
           </div>
-          <Image src="/home.png" alt="White square" width={450} height={225} />
+          <Image src="/home.png" alt="White square" width={400} height={225} />
         </div>
         <div className="flex items-center gap-32 w-full">
-          <Image src="/home.png" alt="White square" width={450} height={225} />
-          <div className="flex text-left flex-col gap-6 w-1/2">
-            <h3 className="text-5xl text-zinc-200">Active Learning</h3>
+          <Image src="/home.png" alt="White square" width={400} height={225} />
+          <div className="flex text-left flex-col gap-6">
+            <h3 className="text-5xl text-zinc-200 font-medium">
+              Active Learning
+            </h3>
             <p className="text-xl text-zinc-400">
               Games encourage active participation, requiring players to make
               decisions, solve problems, and apply knowledge in real-time,
