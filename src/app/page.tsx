@@ -1,6 +1,6 @@
+import { PlayIcon } from "@/icons/PlayIcon";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 export default function Home() {
   return (
@@ -16,34 +16,25 @@ export default function Home() {
         <p className="text-2xl text-zinc-400">
           Dive into the most ergonomic styling framework and{" "}
           <strong className="text-zinc-200">boost your development </strong>
-          speed through gamified learning.
+          speed through{" "}
+          <strong className="text-zinc-200">gamified learning</strong>.
         </p>
         <div className="flex gap-16 items-center">
           <Link
             href="/play"
             className="flex border active:translate-y-1 group items-center gap-2 transition-all hover:bg-berryBlue border-berryBlue py-4 pr-8 pl-5"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                className="group-hover:fill-black fill-berryBlue"
-                d="M10 8.64L15.27 12L10 15.36V8.64M8 5v14l11-7L8 5z"
-              />
-            </svg>
+            <PlayIcon />
             <p className="text-xl group-hover:text-black text-berryBlue">
               Play Now
             </p>
           </Link>
-          <Link
+          <a
             className="hover:border-zinc-200 border border-zinc-900 py-4 px-8 text-xl"
-            href="#benefits"
+            href="#faq"
           >
             Learn More
-          </Link>
+          </a>
         </div>
       </section>
       <section
@@ -51,7 +42,7 @@ export default function Home() {
         className="border-b max-w-5xl mx-auto border-zinc-900 flex flex-col gap-32 items-center justify-center py-32"
       >
         <div className="flex items-center gap-32 w-full">
-          <div className="flex text-left flex-col gap-6">
+          <div className="flex text-left flex-col">
             <h3 className="text-5xl text-zinc-200 font-medium">
               Immediate Feedback
             </h3>
@@ -61,11 +52,11 @@ export default function Home() {
               enabling them to adjust their strategies accordingly.
             </p>
           </div>
-          <Image src="/home.png" alt="White square" width={400} height={225} />
+          <Image src="/home.png" alt="White square" width={450} height={250} />
         </div>
         <div className="flex items-center gap-32 w-full">
           <Image src="/home.png" alt="White square" width={400} height={225} />
-          <div className="flex text-left flex-col gap-6">
+          <div className="flex text-left flex-col">
             <h3 className="text-5xl text-zinc-200 font-medium">
               Active Learning
             </h3>
@@ -106,7 +97,7 @@ export default function Home() {
           <summary className="w-full">
             What content can I put in the details-tag?
           </summary>
-          <p className="mt text-zinc-400-4">
+          <p className="pt-4 text-zinc-400">
             You can put any content you want inside of the details-tag, though
             the summary-tag should be the first child.
           </p>
@@ -115,7 +106,7 @@ export default function Home() {
           <summary className="w-full">
             Can I have a details-tag open by default?
           </summary>
-          <p className="mt text-zinc-400-4">
+          <p className="pt-4 text-zinc-400">
             Yes you can, simply add the open attribute to the details-tag
           </p>
         </details>

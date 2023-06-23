@@ -1,17 +1,11 @@
-import Image from "next/image";
 import "./globals.css";
-import { DM_Sans } from "next/font/google";
 import Link from "next/link";
+import { dmSans } from "./fonts";
 
 export const metadata = {
-  title: "css2wind",
+  title: "Home → css2wind",
   description: "Learn tailwind in a relaxed way!",
 };
-
-export const dmSans = DM_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
 
 export default function RootLayout({
   children,
@@ -26,7 +20,6 @@ export default function RootLayout({
             href="/"
             className="transition-all active:translate-y-1 flex gap-4 items-center"
           >
-            <Image src="/logo.png" alt="logo" width={26} height={26} />
             <h1 className="font-bold text-2xl">css2wind</h1>
           </Link>
           <ul className="flex items-center justify-between gap-10">
@@ -71,7 +64,7 @@ export default function RootLayout({
             ▪
             <li>
               <Link
-                href="https://github.com/LukeberryPi/css2wind"
+                href="https://twitter.com/css2wind"
                 target="_blank"
                 className="underline decoration-berryBlue underline-offset-4"
               >
