@@ -24,7 +24,7 @@ export default function Home() {
             href="/play"
             className="flex border active:translate-y-1 group items-center gap-2 transition-all hover:bg-berryBlue border-berryBlue py-4 pr-8 pl-5"
           >
-            <PlayIcon />
+            <PlayIcon className="fill-berryBlue group-hover:fill-black" />
             <p className="text-xl group-hover:text-black text-berryBlue">
               Play Now
             </p>
@@ -39,10 +39,10 @@ export default function Home() {
       </section>
       <section
         id="benefits"
-        className="border-b max-w-5xl mx-auto border-zinc-900 flex flex-col gap-32 items-center justify-center py-32"
+        className="border-b max-w-6xl mx-auto border-zinc-900 flex flex-col gap-32 items-center justify-center py-32"
       >
-        <div className="flex items-center gap-32 w-full">
-          <div className="flex text-left flex-col">
+        <div className="flex items-center gap-16 w-full">
+          <div className="flex text-left flex-col gap-8">
             <h3 className="text-5xl text-zinc-200 font-medium">
               Immediate Feedback
             </h3>
@@ -54,9 +54,9 @@ export default function Home() {
           </div>
           <Image src="/home.png" alt="White square" width={450} height={250} />
         </div>
-        <div className="flex items-center gap-32 w-full">
-          <Image src="/home.png" alt="White square" width={400} height={225} />
-          <div className="flex text-left flex-col">
+        <div className="flex items-center gap-16 w-full">
+          <Image src="/home.png" alt="White square" width={450} height={250} />
+          <div className="flex text-left flex-col gap-8">
             <h3 className="text-5xl text-zinc-200 font-medium">
               Active Learning
             </h3>
