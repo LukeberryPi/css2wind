@@ -1,5 +1,33 @@
 import { ArrowRight, Check, CircleCheck, Close } from "@/icons";
 
+const ok = {
+  "align-items": {
+    equivalentTailwindKey: "items",
+    match: [
+      {
+        css: "center",
+        tailwind: "center",
+      },
+      {
+        css: "baseline",
+        tailwind: "baseline",
+      },
+      {
+        css: "stretch",
+        tailwind: "stretch",
+      },
+      {
+        css: "flex-start",
+        tailwind: "start",
+      },
+      {
+        css: "flex-end",
+        tailwind: "end",
+      },
+    ],
+  },
+};
+
 export default function Play() {
   return (
     <main className="flex-col pt-20 flex h-full w-full text-center justify-center">
