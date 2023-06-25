@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        alertRed: "#E35454",
         berryBlue: "#79CBE3",
         purplePlus: "#C679E3",
         greenGo: "#4FBF85",

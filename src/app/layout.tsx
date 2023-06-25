@@ -21,12 +21,12 @@ export default function RootLayout({
   return (
     <html className="scroll-smooth" lang="en">
       <body className={`bg-zinc-950 text-zinc-100 ${pixelBerry.className}`}>
-        <nav className="text-white items-center justify-between flex fixed top-0 text-lg bg-zinc-950 w-full px-8 py-5 border-b border-zinc-900">
+        <nav className="text-zinc-50 items-center justify-between flex fixed top-0 text-lg bg-zinc-950 w-full px-8 py-5 border-b border-zinc-800">
           <Link
             href="/"
             className="transition-transform active:scale-95 flex gap-4 items-center"
           >
-            <Image alt="heart" src="/catavento.png" height={50} width={50} />
+            <Image alt="heart" src="/wind-vane.png" height={50} width={50} />
             <h1 className={`${pixelBerry.className} font-bold text-2xl`}>
               css2wind
             </h1>
@@ -34,7 +34,7 @@ export default function RootLayout({
           <ul className="flex items-center justify-between gap-10">
             <li>
               <Link
-                className="hover:border-zinc-200 border border-zinc-900 transition-all py-2 px-5"
+                className="hover:border-zinc-200 border border-zinc-700 transition-all py-3 px-6"
                 href="#"
               >
                 Home
@@ -42,7 +42,7 @@ export default function RootLayout({
             </li>
             <li>
               <Link
-                className="hover:border-zinc-200 border border-zinc-900 transition-all py-2 px-5"
+                className="hover:border-zinc-200 border border-zinc-700 transition-all py-3 px-6"
                 href="#"
               >
                 About
@@ -50,7 +50,7 @@ export default function RootLayout({
             </li>
             <li className="transition-all active:translate-y-1">
               <Link
-                className="border hover:bg-berryBlue border-berryBlue hover:text-black text-berryBlue py-2 px-4"
+                className="border hover:bg-berryBlue border-berryBlue hover:text-black text-berryBlue py-3 px-6"
                 href="#"
               >
                 Sign Up
@@ -59,13 +59,13 @@ export default function RootLayout({
           </ul>
         </nav>
         {children}
-        <footer className="border-t text-lg border-zinc-900 flex items-center bg-zinc-950 w-full bottom-0 py-5 px-8 justify-between">
+        <footer className="border-t text-lg border-zinc-700 flex items-center bg-zinc-950 w-full bottom-0 py-5 px-8 justify-between">
           <ul className="flex items-center gap-8">
             <li>
               <Link
                 href="https://github.com/LukeberryPi/css2wind"
                 target="_blank"
-                className="underline decoration-berryBlue underline-offset-4"
+                className="underline decoration-berryBlue hover:text-zinc-300 decoration transition-all hover:decoration-2 underline-offset-4"
               >
                 GitHub
               </Link>
@@ -75,7 +75,7 @@ export default function RootLayout({
               <Link
                 href="https://twitter.com/css2wind"
                 target="_blank"
-                className="underline decoration-berryBlue underline-offset-4"
+                className="underline decoration-berryBlue hover:text-zinc-300 decoration transition-all hover:decoration-2 underline-offset-4"
               >
                 Twitter
               </Link>
@@ -85,7 +85,7 @@ export default function RootLayout({
               <Link
                 href="https://github.com/LukeberryPi/css2wind"
                 target="_blank"
-                className="underline decoration-berryBlue underline-offset-4"
+                className="underline decoration-berryBlue hover:text-zinc-300 decoration transition-all hover:decoration-2 underline-offset-4"
               >
                 Instagram
               </Link>
@@ -94,7 +94,7 @@ export default function RootLayout({
           <p>
             © 2023{" "}
             <a
-              className="underline underline-offset-4 decoration-berryBlue"
+              className="underline underline-offset-4 hover:text-zinc-300 decoration transition-all hover:decoration-2 decoration-berryBlue"
               href="https://twitter.com/LukeberryPi"
             >
               LukeberryPi

@@ -22,9 +22,9 @@ export default function Home() {
         <div className="flex gap-16 items-center">
           <Link
             href="/play"
-            className="flex border active:translate-y-1 group items-center gap-2 transition-all hover:bg-berryBlue border-berryBlue py-4 pr-8 pl-5"
+            className="flex border active:translate-y-1 group items-center gap-2 transition-all hover:bg-berryBlue border-berryBlue py-4 px-8"
           >
-            <Play className="fill-berryBlue group-hover:fill-black" />
+            {/* <Play className="fill-berryBlue group-hover:fill-black" /> */}
             <p className="text-xl group-hover:text-black text-berryBlue">
               Play Now
             </p>
