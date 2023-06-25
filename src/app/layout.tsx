@@ -31,21 +31,6 @@ export default function RootLayout({
               css2wind
             </h1>
           </Link>
-          {/* <div className="flex items-center">
-            {Array(5)
-              .fill(1)
-              .map((_, i) => {
-                return (
-                  <Image
-                    key={i}
-                    alt="heart"
-                    src="/heart.png"
-                    height={50}
-                    width={50}
-                  />
-                );
-              })}
-          </div> */}
           <ul className="flex items-center justify-between gap-10">
             <li>
               <Link

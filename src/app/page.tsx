@@ -1,4 +1,4 @@
-import { PlayIcon } from "@/icons/PlayIcon";
+import { Play } from "@/icons/Play";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,7 +24,7 @@ export default function Home() {
             href="/play"
             className="flex border active:translate-y-1 group items-center gap-2 transition-all hover:bg-berryBlue border-berryBlue py-4 pr-8 pl-5"
           >
-            <PlayIcon className="fill-berryBlue group-hover:fill-black" />
+            <Play className="fill-berryBlue group-hover:fill-black" />
             <p className="text-xl group-hover:text-black text-berryBlue">
               Play Now
             </p>
