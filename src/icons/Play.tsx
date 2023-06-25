@@ -1,11 +1,11 @@
 import { IconProps } from "./IconProps.types";
 
-export function Play({ className }: IconProps) {
+export function Play({ className, size = 32 }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
+      width={size}
+      height={size}
       viewBox="0 0 24 24"
       className={className}
     >

@@ -31,10 +31,10 @@ export default function RootLayout({
             href="/"
             className="transition-transform active:scale-95 flex gap-4 items-center"
           >
-            <Image alt="heart" src="/wind-vane.png" height={32} width={32} />
+            <Image alt="heart" src="/wind-vane.png" height={40} width={40} />
             <h1 className={` font-bold text-2xl`}>css2wind</h1>
           </Link>
-          <ul className="flex items-center justify-between gap-10">
+          <ul className="flex items-center gap-10">
             <li>
               <Link
                 className="hover:border-zinc-200 border border-zinc-700 transition-all py-3 px-6"

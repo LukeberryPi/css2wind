@@ -1,32 +1,4 @@
-import { ArrowRight, Check, CircleCheck, Close } from "@/icons";
-
-const ok = {
-  "align-items": {
-    equivalentTailwindKey: "items",
-    match: [
-      {
-        css: "center",
-        tailwind: "center",
-      },
-      {
-        css: "baseline",
-        tailwind: "baseline",
-      },
-      {
-        css: "stretch",
-        tailwind: "stretch",
-      },
-      {
-        css: "flex-start",
-        tailwind: "start",
-      },
-      {
-        css: "flex-end",
-        tailwind: "end",
-      },
-    ],
-  },
-};
+import { ArrowRight, Check, Zap, Close } from "@/icons";
 
 export default function Play() {
   return (
@@ -36,7 +8,7 @@ export default function Play() {
         className="border-b container mx-auto gap-12 border-zinc-900 flex-col flex items-center justify-center py-36"
       >
         <div className="flex items-center gap-2">
-          <CircleCheck className="fill-berryBlue" />
+          <Zap className="fill-yellowYes" />
           <h2>While users are typing the translation</h2>
         </div>
         <div className="flex items-center">
@@ -49,7 +21,7 @@ export default function Play() {
           </div>
           <ArrowRight className="fill-zinc-50 mx-8" />
           <div className="text-zinc-600 cursor-default items-start flex-col flex gap-2">
-            className = &#34;
+            className=&#34;
             <input
               className={`text-zinc-50 border border-zinc-50 focus:outline-none bg-transparent p-5`}
             ></input>
@@ -62,7 +34,7 @@ export default function Play() {
         className="border-b container mx-auto gap-12 border-zinc-900 flex-col flex items-center justify-center py-36"
       >
         <div className="flex items-center gap-2">
-          <CircleCheck className="fill-berryBlue" />
+          <Zap className="fill-yellowYes" />
           <h2>When users gets the translation right</h2>
         </div>
         <div className="flex items-center">
@@ -75,7 +47,7 @@ export default function Play() {
           </div>
           <Check className="fill-greenGo mx-8" />
           <div className="text-zinc-600 cursor-default items-start flex-col flex gap-2">
-            className = &#34;
+            className=&#34;
             <input
               className={`text-greenGo border border-greenGo focus:outline-none bg-transparent p-5`}
             ></input>
@@ -88,7 +60,7 @@ export default function Play() {
         className="border-b container mx-auto gap-12 border-zinc-900 flex-col flex items-center justify-center py-36"
       >
         <div className="flex items-center gap-2">
-          <CircleCheck className="fill-berryBlue" />
+          <Zap className="fill-yellowYes" />
           <h2>When users gets the translation wrong</h2>
         </div>
         <div className="flex items-center">
@@ -101,7 +73,7 @@ export default function Play() {
           </div>
           <Close className="fill-alertRed mx-8" />
           <div className="text-zinc-600 cursor-default items-start flex-col flex gap-2">
-            className = &#34;
+            className=&#34;
             <input
               className={`text-alertRed border border-alertRed focus:outline-none bg-transparent p-5`}
             ></input>
