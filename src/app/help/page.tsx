@@ -5,7 +5,7 @@ export default function Help() {
     <main className="flex-col text-md pt-20 flex text-center justify-center">
       <section
         id="translate-ongoing"
-        className="border-b container mx-auto gap-10 border-zinc-900 flex-col flex items-center justify-center py-36"
+        className="border-b container mx-auto gap-10 border-zinc-700 flex-col flex items-center justify-center py-36"
       >
         <div className="flex items-center gap-4">
           <Zap className="fill-yellowYes" size={24} />
@@ -34,7 +34,7 @@ export default function Help() {
       </section>
       <section
         id="translate-correct"
-        className="border-b container mx-auto gap-10 border-zinc-900 flex-col flex items-center justify-center py-36"
+        className="border-b container mx-auto gap-10 border-zinc-700 flex-col flex items-center justify-center py-36"
       >
         <div className="flex items-center gap-4">
           <Zap className="fill-yellowYes" size={24} />
@@ -63,7 +63,7 @@ export default function Help() {
       </section>
       <section
         id="translate-incorrect"
-        className="border-b container mx-auto gap-10 border-zinc-900 flex-col flex items-center justify-center py-36"
+        className="border-b container mx-auto gap-10 border-zinc-700 flex-col flex items-center justify-center py-36"
       >
         <div className="flex items-center gap-4">
           <Zap className="fill-yellowYes" size={24} />

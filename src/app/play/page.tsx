@@ -6,7 +6,7 @@ export default function Play() {
       {/* TODO: Remove hardcoded value for py */}
       <section
         id="translate-ongoing"
-        className="border-b container mx-auto gap-12 border-zinc-900 items-center flex"
+        className="border-b container mx-auto gap-12 border-zinc-700 items-center flex"
       >
         <div className="flex items-center gap-4">
           <Zap className="fill-yellowYes" size={24} />

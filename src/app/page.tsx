@@ -1,3 +1,4 @@
+import { Open } from "@/icons";
 import { Play } from "@/icons/Play";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,7 +8,7 @@ export default function Home() {
     <main className="flex-col flex h-full w-full text-center justify-center">
       <section
         id="hero-banner"
-        className="border-b container mx-auto border-zinc-900 flex flex-col gap-10 items-center justify-center py-36"
+        className="border-b max-w-7xl cursor-pointer mx-auto border-zinc-700 flex flex-col gap-10 items-center justify-center py-36"
       >
         <h1 className="text-6xl font-bold text-zinc-100">
           Learn Tailwind
@@ -21,22 +22,23 @@ export default function Home() {
         </p>
         <div className="flex gap-16 items-center">
           <Link
-            className="hover:bg-berryBlue font-medium hover:text-zinc-950 border border-berryBlue text-berryBlue py-4 px-8 text-xl"
+            className=" font-medium border border-berryBlue text-berryBlue py-4 px-8 text-xl"
             href="/play"
           >
             Play Now
           </Link>
           <Link
-            className="hover:border-zinc-200 border border-zinc-900 py-4 px-8 text-xl"
+            className="hover:border-zinc-200 border flex items-center gap-4 border-zinc-700 py-4 px-8 text-xl"
             href="/help"
           >
             Learn More
+            <Open size={24} className="fill-zinc-50" />
           </Link>
         </div>
       </section>
       <section
         id="benefits"
-        className="border-b max-w-6xl mx-auto border-zinc-900 flex flex-col gap-32 items-center justify-center py-32"
+        className="border-b max-w-7xl mx-auto border-zinc-700 flex flex-col gap-32 items-center justify-center py-32"
       >
         <div className="flex items-center gap-16 w-full">
           <div className="flex text-left flex-col gap-8">
@@ -72,17 +74,14 @@ export default function Home() {
         <h2 className="text-5xl font-medium self-center text-zinc-100">
           Frequently Asked Questions
         </h2>
-        <details
-          open
-          className="max-w-5xl flex text-left border hover:border-zinc-100 transition-all border-zinc-800 w-full py-4 px-6 cursor-pointer"
-        >
+        <details className="max-w-7xl cursor-pointer flex text-left border hover:border-zinc-100 transition-all border-zinc-700 w-full py-4 px-6">
           <summary className="w-full">How does the details-tag work?</summary>
           <p className="pt-4 text-zinc-400">
             The details tag works as an interactive widget that hides / shows
             content.
           </p>
         </details>
-        <details className="cursor-pointer max-w-5xl flex text-left border hover:border-zinc-100 transition-all border-zinc-800 w-full py-4 px-6">
+        <details className="max-w-7xl cursor-pointer flex text-left border hover:border-zinc-100 transition-all border-zinc-700 w-full py-4 px-6">
           <summary className="w-full">How does the summary-tag work?</summary>
           <p className="pt-4 text-zinc-400">
             The summary tag works as the heading of the details tag. The summary
@@ -90,7 +89,7 @@ export default function Home() {
             content of the details-tag
           </p>
         </details>
-        <details className="cursor-pointer max-w-5xl flex text-left border hover:border-zinc-100 transition-all border-zinc-800 w-full py-4 px-6">
+        <details className="max-w-7xl cursor-pointer flex text-left border hover:border-zinc-100 transition-all border-zinc-700 w-full py-4 px-6">
           <summary className="w-full">
             What content can I put in the details-tag?
           </summary>
@@ -99,7 +98,7 @@ export default function Home() {
             the summary-tag should be the first child.
           </p>
         </details>
-        <details className="cursor-pointer max-w-5xl flex text-left border hover:border-zinc-100 transition-all border-zinc-800 w-full py-4 px-6">
+        <details className="max-w-7xl cursor-pointer flex text-left border hover:border-zinc-100 transition-all border-zinc-700 w-full py-4 px-6">
           <summary className="w-full">
             Can I have a details-tag open by default?
           </summary>
