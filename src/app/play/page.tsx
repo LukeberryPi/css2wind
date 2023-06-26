@@ -10,7 +10,7 @@ export default function Play() {
         <div className="flex items-center gap-4">
           <Zap className="fill-yellowYes" size={24} />
           <h2>
-            <span className="font-bold">Tip: </span>While the user is
+            <span className="font-medium">Tip: </span>While the user is
             translating
           </h2>
         </div>

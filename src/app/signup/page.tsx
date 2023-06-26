@@ -5,13 +5,13 @@ export default function SignUp() {
         id="translate-ongoing"
         className="mx-auto flex w-full max-w-7xl flex-col items-center gap-10 py-[268px]"
       >
-        <p className="text-6xl">SignUp</p>
+        <p className="text-6xl">Sign Up</p>
       </section>
       <section
         id="translate-ongoing"
         className="mx-auto flex w-full max-w-7xl flex-col items-center gap-10 py-[268px]"
       >
-        <p className="text-6xl">SignUp</p>
+        <p className="text-6xl">Sign Up</p>
       </section>
     </main>
   );

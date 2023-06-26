@@ -46,7 +46,7 @@ export default function Help() {
         <div className="flex items-center">
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
             .class &#123;
-            <div className="border-2 border-greenGo bg-greenGo p-5 text-xl text-black">
+            <div className="border-2 border-greenGo bg-inherit p-5 text-xl font-medium text-greenGo">
               flex-direction: column;
             </div>
             &#125;
@@ -75,7 +75,7 @@ export default function Help() {
         <div className="flex items-center">
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
             .class &#123;
-            <div className="border-2 border-alertRed bg-alertRed p-5 text-xl text-zinc-950">
+            <div className="border-2 border-alertRed bg-inherit p-5 text-xl font-medium text-alertRed">
               flex-direction: column;
             </div>
             &#125;

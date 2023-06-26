@@ -1,5 +1,4 @@
 import { Open } from "@/icons";
-import { Play } from "@/icons/Play";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,7 +9,7 @@ export default function Home() {
         id="hero-banner"
         className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-10 border-zinc-700 py-36"
       >
-        <h1 className="text-6xl font-bold text-zinc-100">
+        <h1 className="text-6xl font-medium text-zinc-100">
           Learn Tailwind
           <span className="text-berryBlue"> by playing</span>
         </h1>
