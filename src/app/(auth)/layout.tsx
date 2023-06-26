@@ -1,4 +1,3 @@
-import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
 import { Fira_Code } from "next/font/google";
