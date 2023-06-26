@@ -5,10 +5,10 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex-col flex h-full w-full text-center justify-center">
+    <main className="flex h-full w-full flex-col justify-center divide-y-2 divide-zinc-800 text-center">
       <section
         id="hero-banner"
-        className="border-b max-w-7xl cursor-pointer mx-auto border-zinc-700 flex flex-col gap-10 items-center justify-center py-36"
+        className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-10 border-zinc-700 py-36"
       >
         <h1 className="text-6xl font-bold text-zinc-100">
           Learn Tailwind
@@ -20,15 +20,15 @@ export default function Home() {
           speed through{" "}
           <strong className="text-zinc-200">gamified learning</strong>.
         </p>
-        <div className="flex gap-16 items-center">
+        <div className="flex items-center gap-16">
           <Link
-            className=" font-medium border border-berryBlue text-berryBlue py-4 px-8 text-xl"
+            className="border border-berryBlue px-8 py-4 text-xl text-berryBlue"
             href="/play"
           >
             Play Now
           </Link>
           <Link
-            className="hover:border-zinc-200 border flex items-center gap-4 border-zinc-700 py-4 px-8 text-xl"
+            className="flex items-center gap-4 border border-zinc-700 px-8 py-4 text-xl hover:border-zinc-200"
             href="/help"
           >
             Learn More
@@ -38,11 +38,11 @@ export default function Home() {
       </section>
       <section
         id="benefits"
-        className="border-b max-w-7xl mx-auto border-zinc-700 flex flex-col gap-32 items-center justify-center py-32"
+        className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-32 border-zinc-700 py-32"
       >
-        <div className="flex items-center gap-16 w-full">
-          <div className="flex text-left flex-col gap-8">
-            <h3 className="text-5xl text-zinc-200 font-medium">
+        <div className="flex w-full items-center gap-16">
+          <div className="flex flex-col gap-8 text-left">
+            <h3 className="text-5xl font-medium text-zinc-200">
               Immediate Feedback
             </h3>
             <p className="text-xl text-zinc-400">
@@ -53,10 +53,10 @@ export default function Home() {
           </div>
           <Image src="/home.png" alt="White square" width={450} height={250} />
         </div>
-        <div className="flex items-center gap-16 w-full">
+        <div className="flex w-full items-center gap-16">
           <Image src="/home.png" alt="White square" width={450} height={250} />
-          <div className="flex text-left flex-col gap-8">
-            <h3 className="text-5xl text-zinc-200 font-medium">
+          <div className="flex flex-col gap-8 text-left">
+            <h3 className="text-5xl font-medium text-zinc-200">
               Active Learning
             </h3>
             <p className="text-xl text-zinc-400">
@@ -69,19 +69,19 @@ export default function Home() {
       </section>
       <section
         id="faq"
-        className="flex flex-col gap-8 py-32 mx-auto min-w-[1024px]"
+        className="mx-auto flex w-full max-w-7xl flex-col gap-8 py-32"
       >
-        <h2 className="text-5xl font-medium self-center text-zinc-100">
+        <h2 className="self-center text-5xl text-zinc-100">
           Frequently Asked Questions
         </h2>
-        <details className="max-w-7xl cursor-pointer flex text-left border hover:border-zinc-100 transition-all border-zinc-700 w-full py-4 px-6">
+        <details className="flex w-full max-w-7xl cursor-pointer border border-zinc-700 px-6 py-4 text-left transition-all hover:border-zinc-100">
           <summary className="w-full">How does the details-tag work?</summary>
           <p className="pt-4 text-zinc-400">
             The details tag works as an interactive widget that hides / shows
             content.
           </p>
         </details>
-        <details className="max-w-7xl cursor-pointer flex text-left border hover:border-zinc-100 transition-all border-zinc-700 w-full py-4 px-6">
+        <details className="flex w-full max-w-7xl cursor-pointer border border-zinc-700 px-6 py-4 text-left transition-all hover:border-zinc-100">
           <summary className="w-full">How does the summary-tag work?</summary>
           <p className="pt-4 text-zinc-400">
             The summary tag works as the heading of the details tag. The summary
@@ -89,7 +89,7 @@ export default function Home() {
             content of the details-tag
           </p>
         </details>
-        <details className="max-w-7xl cursor-pointer flex text-left border hover:border-zinc-100 transition-all border-zinc-700 w-full py-4 px-6">
+        <details className="flex w-full max-w-7xl cursor-pointer border border-zinc-700 px-6 py-4 text-left transition-all hover:border-zinc-100">
           <summary className="w-full">
             What content can I put in the details-tag?
           </summary>
@@ -98,7 +98,7 @@ export default function Home() {
             the summary-tag should be the first child.
           </p>
         </details>
-        <details className="max-w-7xl cursor-pointer flex text-left border hover:border-zinc-100 transition-all border-zinc-700 w-full py-4 px-6">
+        <details className="flex w-full max-w-7xl cursor-pointer border border-zinc-700 px-6 py-4 text-left transition-all hover:border-zinc-100">
           <summary className="w-full">
             Can I have a details-tag open by default?
           </summary>

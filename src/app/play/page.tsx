@@ -2,11 +2,10 @@ import { Arrow, Zap } from "@/icons";
 
 export default function Play() {
   return (
-    <main className="flex-col text-md flex text-center justify-center">
-      {/* TODO: Remove hardcoded value for py */}
+    <main className="flex flex-col justify-center divide-y-2 divide-zinc-800 text-center">
       <section
         id="translate-ongoing"
-        className="border-b container mx-auto gap-12 border-zinc-700 items-center flex"
+        className="mx-auto flex max-w-7xl flex-col items-center gap-10 py-[268px]"
       >
         <div className="flex items-center gap-4">
           <Zap className="fill-yellowYes" size={24} />
@@ -16,18 +15,18 @@ export default function Play() {
           </h2>
         </div>
         <div className="flex items-center">
-          <div className="text-zinc-500 cursor-default items-start flex-col flex gap-2">
+          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
             .class &#123;
-            <span className="text-xl text-berryBlue border border-berryBlue bg-transparent p-5">
+            <span className="border border-berryBlue bg-transparent p-5 text-xl text-berryBlue">
               flex-direction: column;
             </span>
             &#125;
           </div>
-          <Arrow className="fill-zinc-50 mx-8" />
-          <div className="text-zinc-500 cursor-default items-start flex-col flex gap-2">
+          <Arrow className="mx-8 fill-zinc-50" />
+          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
             className=&#34;
             <input
-              className={`text-xl text-zinc-50 border border-zinc-50 focus:outline-none bg-transparent p-5`}
+              className={`border border-zinc-50 bg-transparent p-5 text-xl text-zinc-50 focus:outline-none`}
             ></input>
             &#34;
           </div>
