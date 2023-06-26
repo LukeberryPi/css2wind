@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex-col pt-20 flex h-full w-full text-center justify-center">
+    <main className="flex-col flex h-full w-full text-center justify-center">
       <section
         id="hero-banner"
         className="border-b container mx-auto border-zinc-900 flex flex-col gap-10 items-center justify-center py-36"
@@ -21,20 +21,17 @@ export default function Home() {
         </p>
         <div className="flex gap-16 items-center">
           <Link
+            className="hover:bg-berryBlue font-medium hover:text-zinc-950 border border-berryBlue text-berryBlue py-4 px-8 text-xl"
             href="/play"
-            className="flex border active:translate-y-1 group items-center gap-2 transition-all hover:bg-berryBlue border-berryBlue py-4 px-8"
           >
-            {/* <Play className="fill-berryBlue group-hover:fill-black" /> */}
-            <p className="text-xl group-hover:text-black text-berryBlue">
-              Play Now
-            </p>
+            Play Now
           </Link>
-          <a
+          <Link
             className="hover:border-zinc-200 border border-zinc-900 py-4 px-8 text-xl"
-            href="#faq"
+            href="/help"
           >
             Learn More
-          </a>
+          </Link>
         </div>
       </section>
       <section

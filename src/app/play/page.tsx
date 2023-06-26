@@ -1,81 +1,33 @@
-import { ArrowRight, Check, Zap, Close } from "@/icons";
+import { Arrow, Zap } from "@/icons";
 
 export default function Play() {
   return (
-    <main className="flex-col pt-20 flex h-full w-full text-center justify-center">
+    <main className="flex-col text-md flex text-center justify-center">
+      {/* TODO: Remove hardcoded value for py */}
       <section
-        id="translate-correct"
-        className="border-b container mx-auto gap-12 border-zinc-900 flex-col flex items-center justify-center py-36"
+        id="translate-ongoing"
+        className="border-b container mx-auto gap-12 border-zinc-900 items-center flex"
       >
-        <div className="flex items-center gap-2">
-          <Zap className="fill-yellowYes" />
-          <h2>While users are typing the translation</h2>
+        <div className="flex items-center gap-4">
+          <Zap className="fill-yellowYes" size={24} />
+          <h2>
+            <span className="font-bold">Tip: </span>While the user is
+            translating
+          </h2>
         </div>
         <div className="flex items-center">
-          <div className="text-zinc-600 cursor-default items-start flex-col flex gap-2">
+          <div className="text-zinc-500 cursor-default items-start flex-col flex gap-2">
             .class &#123;
-            <span className="text-berryBlue border border-berryBlue bg-transparent p-5">
+            <span className="text-xl text-berryBlue border border-berryBlue bg-transparent p-5">
               flex-direction: column;
             </span>
             &#125;
           </div>
-          <ArrowRight className="fill-zinc-50 mx-8" />
-          <div className="text-zinc-600 cursor-default items-start flex-col flex gap-2">
+          <Arrow className="fill-zinc-50 mx-8" />
+          <div className="text-zinc-500 cursor-default items-start flex-col flex gap-2">
             className=&#34;
             <input
-              className={`text-zinc-50 border border-zinc-50 focus:outline-none bg-transparent p-5`}
-            ></input>
-            &#34;
-          </div>
-        </div>
-      </section>
-      <section
-        id="translate-correct"
-        className="border-b container mx-auto gap-12 border-zinc-900 flex-col flex items-center justify-center py-36"
-      >
-        <div className="flex items-center gap-2">
-          <Zap className="fill-yellowYes" />
-          <h2>When users gets the translation right</h2>
-        </div>
-        <div className="flex items-center">
-          <div className="text-zinc-600 cursor-default items-start flex-col flex gap-2">
-            .class &#123;
-            <span className="text-black border bg-berryBlue border-berryBlue p-5">
-              flex-direction: column;
-            </span>
-            &#125;
-          </div>
-          <Check className="fill-greenGo mx-8" />
-          <div className="text-zinc-600 cursor-default items-start flex-col flex gap-2">
-            className=&#34;
-            <input
-              className={`text-greenGo border border-greenGo focus:outline-none bg-transparent p-5`}
-            ></input>
-            &#34;
-          </div>
-        </div>
-      </section>
-      <section
-        id="translate-correct"
-        className="border-b container mx-auto gap-12 border-zinc-900 flex-col flex items-center justify-center py-36"
-      >
-        <div className="flex items-center gap-2">
-          <Zap className="fill-yellowYes" />
-          <h2>When users gets the translation wrong</h2>
-        </div>
-        <div className="flex items-center">
-          <div className="text-zinc-600 cursor-default items-start flex-col flex gap-2">
-            .class &#123;
-            <span className="text-berryBlue border border-berryBlue bg-transparent p-5">
-              flex-direction: column;
-            </span>
-            &#125;
-          </div>
-          <Close className="fill-alertRed mx-8" />
-          <div className="text-zinc-600 cursor-default items-start flex-col flex gap-2">
-            className=&#34;
-            <input
-              className={`text-alertRed border border-alertRed focus:outline-none bg-transparent p-5`}
+              className={`text-xl text-zinc-50 border border-zinc-50 focus:outline-none bg-transparent p-5`}
             ></input>
             &#34;
           </div>

@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className="scroll-smooth" lang="en">
+    <html className="h-full w-full scroll-smooth" lang="en">
       <body className={`bg-zinc-950 text-zinc-100 ${firaCode.className}`}>
         <nav className="text-zinc-50 items-center justify-between flex fixed top-0 text-lg bg-zinc-950 w-full px-8 py-5 border-b border-zinc-800">
           <Link

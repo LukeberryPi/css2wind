@@ -1,6 +1,6 @@
 import { IconProps } from "./IconProps.types";
 
-export function ArrowRight({ className, size = 32 }: IconProps) {
+export function Arrow({ className, size = 32 }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
