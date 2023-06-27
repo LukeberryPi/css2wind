@@ -2,7 +2,7 @@ import { Open } from "@/icons";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main className="flex h-full w-full flex-col justify-center divide-y-2 divide-zinc-800 text-center">
       <section

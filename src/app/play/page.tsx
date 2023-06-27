@@ -1,6 +1,6 @@
 import { Arrow, Zap } from "@/icons";
 
-export default function Play() {
+export default function PlayPage() {
   return (
     <main className="flex flex-col justify-center divide-y-2 divide-zinc-800 text-center">
       <section

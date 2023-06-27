@@ -1,6 +1,6 @@
 import { Arrow, Check, Zap, Close } from "@/icons";
 
-export default function Help() {
+export default function HelpPage() {
   return (
     <main className="flex flex-col justify-center divide-y-2 divide-zinc-800 text-center">
       <section
