@@ -34,14 +34,14 @@ export default function RootLayout({
           colorPrimary: "#79CBE3",
           colorBackground: "#09090b",
           colorTextSecondary: "#a1a1aa",
-          colorAlphaShade: "#fafafa",
+          colorAlphaShade: "#79CBE3",
           colorText: "#fafafa",
           colorTextOnPrimaryBackground: "#09090b",
           colorSuccess: "#4FBF85",
           colorDanger: "#E35454",
           colorWarning: "#F9F871",
-          colorInputText: "#09090b",
-          colorInputBackground: "#18181b",
+          colorInputText: "#fafafa",
+          colorInputBackground: "#09090b",
         },
       }}
     >
