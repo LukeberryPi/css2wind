@@ -15,9 +15,9 @@ export default function Home() {
         </h1>
         <p className="text-2xl text-zinc-400">
           Dive into the most ergonomic styling framework and{" "}
-          <strong className="text-zinc-200">boost your development </strong>
+          <strong className="text-zinc-50">boost your development </strong>
           speed through{" "}
-          <strong className="text-zinc-200">gamified learning</strong>.
+          <strong className="text-zinc-50">gamified learning</strong>.
         </p>
         <div className="flex items-center gap-16">
           <Link
@@ -41,7 +41,7 @@ export default function Home() {
       >
         <div className="flex w-full items-center gap-16">
           <div className="flex flex-col gap-8 text-left">
-            <h3 className="text-5xl font-medium text-zinc-200">
+            <h3 className="text-4xl font-medium text-zinc-50">
               Immediate Feedback
             </h3>
             <p className="text-xl text-zinc-400">
@@ -55,7 +55,7 @@ export default function Home() {
         <div className="flex w-full items-center gap-16">
           <Image src="/home.png" alt="White square" width={450} height={250} />
           <div className="flex flex-col gap-8 text-left">
-            <h3 className="text-5xl font-medium text-zinc-200">
+            <h3 className="text-4xl font-medium text-zinc-50">
               Active Learning
             </h3>
             <p className="text-xl text-zinc-400">
@@ -70,7 +70,7 @@ export default function Home() {
         id="faq"
         className="mx-auto flex w-full max-w-7xl flex-col gap-8 py-32"
       >
-        <h2 className="self-center text-5xl text-zinc-100">
+        <h2 className="self-center text-4xl text-zinc-100">
           Frequently Asked Questions
         </h2>
         <details className="flex w-full max-w-7xl cursor-pointer border border-zinc-700 px-6 py-4 text-left transition-all hover:border-zinc-100">

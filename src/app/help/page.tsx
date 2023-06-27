@@ -75,16 +75,16 @@ export default function Help() {
         <div className="flex items-center">
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
             .class &#123;
-            <div className="border-2 border-alertRed bg-inherit p-5 text-xl font-medium text-alertRed">
+            <div className="border-alertyellow text-alertyellow border-2 bg-inherit p-5 text-xl font-medium">
               flex-direction: column;
             </div>
             &#125;
           </div>
-          <Close className="mx-8 fill-alertRed" />
+          <Close className="fill-alertyellow mx-8" />
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
             className=&#34;
             <input
-              className={`border-2 border-alertRed bg-transparent p-5 text-xl text-alertRed focus:outline-none`}
+              className={`border-alertyellow text-alertyellow border-2 bg-transparent p-5 text-xl focus:outline-none`}
             ></input>
             &#34;
           </div>
