@@ -6,6 +6,7 @@ import { Login } from "@/icons";
 import { House } from "@/icons/House";
 import { Info } from "@/icons/Info";
 import { ClerkProvider, UserButton } from "@clerk/nextjs";
+import type { AppProps } from "next/app";
 
 export const firaCode = Fira_Code({
   subsets: ["latin"],
@@ -27,7 +28,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        variables: {
+          colorPrimary: "#79CBE3",
+          colorBackground: "#09090b",
+          colorTextSecondary: "#a1a1aa",
+          colorAlphaShade: "#fafafa",
+          colorText: "#fafafa",
+          colorTextOnPrimaryBackground: "#09090b",
+          colorSuccess: "#4FBF85",
+          colorDanger: "#E35454",
+          colorWarning: "#F9F871",
+          colorInputText: "#09090b",
+          colorInputBackground: "#18181b",
+        },
+      }}
+    >
       <html
         className="h-full w-full scroll-smooth pt-20 subpixel-antialiased"
         lang="en"
