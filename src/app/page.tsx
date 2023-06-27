@@ -9,7 +9,7 @@ export default function Home() {
         id="hero-banner"
         className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-10 border-zinc-700 py-36"
       >
-        <h1 className="text-6xl font-medium text-zinc-100">
+        <h1 className="text-6xl font-bold text-zinc-100">
           Learn Tailwind
           <span className="text-berryBlue"> by playing</span>
         </h1>
@@ -19,15 +19,15 @@ export default function Home() {
           speed through{" "}
           <strong className="text-zinc-50">gamified learning</strong>.
         </p>
-        <div className="flex items-center gap-16">
+        <div className="flex items-center gap-12">
           <Link
-            className="border border-berryBlue px-8 py-4 text-xl text-berryBlue"
+            className="border border-berryBlue px-6 py-4 text-xl text-berryBlue decoration-berryBlue decoration-1 underline-offset-4 transition-all hover:underline active:scale-95"
             href="/play"
           >
             Play Now
           </Link>
           <Link
-            className="flex items-center gap-4 border border-zinc-700 px-8 py-4 text-xl hover:border-zinc-200"
+            className="flex items-center gap-4 border border-zinc-700 px-6 py-4 text-xl transition-all hover:border-zinc-50 active:scale-95"
             href="/help"
           >
             Learn More
@@ -37,31 +37,46 @@ export default function Home() {
       </section>
       <section
         id="benefits"
-        className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-32 border-zinc-700 py-32"
+        className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-24 border-zinc-700 py-32"
       >
-        <div className="flex w-full items-center gap-16">
-          <div className="flex flex-col gap-8 text-left">
-            <h3 className="text-4xl font-medium text-zinc-50">
+        <h2 className="text-6xl font-bold text-zinc-100">
+          <span className="text-berryBlue">Playfully</span> master Tailwind!
+        </h2>
+        <div className="flex items-center gap-16">
+          <div className="flex flex-col gap-6 text-left">
+            <h3 className="max-w-1/2 text-5xl font-medium text-zinc-50">
               Immediate Feedback
             </h3>
             <p className="text-xl text-zinc-400">
-              Gamified learning offers instant feedback on performance, allowing
-              learners to understand their strengths and areas for improvement,
-              enabling them to adjust their strategies accordingly.
+              Active games foster decision-making, problem-solving, real-time
+              knowledge application, and deeper understanding with concept
+              retention.
             </p>
           </div>
-          <Image src="/home.png" alt="White square" width={450} height={250} />
+          <Image
+            className="h-auto w-auto"
+            src="/immediate-feedback.png"
+            alt="White square"
+            width={400}
+            height={225}
+          />
         </div>
         <div className="flex w-full items-center gap-16">
-          <Image src="/home.png" alt="White square" width={450} height={250} />
-          <div className="flex flex-col gap-8 text-left">
-            <h3 className="text-4xl font-medium text-zinc-50">
+          <Image
+            className="h-auto w-auto"
+            src="/immediate-feedback.png"
+            alt="White square"
+            width={400}
+            height={225}
+          />
+          <div className="flex flex-col gap-6 text-left">
+            <h3 className="max-w-1/2 text-5xl font-medium text-zinc-50">
               Active Learning
             </h3>
             <p className="text-xl text-zinc-400">
-              Games encourage active participation, requiring players to make
-              decisions, solve problems, and apply knowledge in real-time,
-              leading to deeper understanding and retention of concepts.
+              Games empower players with active decision-making,
+              problem-solving, and real-time knowledge application, fostering
+              deep understanding and concept retention.
             </p>
           </div>
         </div>
