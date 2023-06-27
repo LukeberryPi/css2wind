@@ -26,7 +26,7 @@ export default function RootLayout({
       lang="en"
     >
       <body
-        className={`bg-zinc-950 text-zinc-100 selection:bg-slate-50 selection:text-zinc-950 ${firaCode.className}`}
+        className={`bg-zinc-950 text-zinc-100 selection:bg-zinc-200 selection:text-zinc-800 ${firaCode.className}`}
       >
         <nav className="fixed top-0 flex w-full select-none items-center justify-between border-b border-zinc-700 bg-inherit px-8 py-5 text-lg text-zinc-50">
           <Link
@@ -109,14 +109,16 @@ export default function RootLayout({
                 Twitter
               </a>
             </li>
-            <li className="bg-gradient-to-r from-instagramPink via-instagramOrange to-instagramPurple active:scale-95">
-              <a
-                href="https://github.com/LukeberryPi/css2wind"
-                className="flex items-center bg-inherit px-4 py-2 transition-all"
-                target="_blank"
-              >
-                Instagram
-              </a>
+            <li className="relative bg-gradient-to-r from-instagramPink via-instagramOrange to-instagramPurple p-px active:scale-95">
+              <div className="h-full w-full bg-zinc-950">
+                <a
+                  href="https://github.com/LukeberryPi/css2wind"
+                  className="flex items-center bg-inherit bg-gradient-to-r from-instagramPink via-instagramOrange to-instagramPurple bg-clip-text px-4 py-2 text-transparent transition-all"
+                  target="_blank"
+                >
+                  Instagram
+                </a>
+              </div>
             </li>
           </ul>
           <a
