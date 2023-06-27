@@ -37,7 +37,7 @@ export default function Home() {
       </section>
       <section
         id="benefits"
-        className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-24 border-zinc-700 py-32"
+        className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-10 border-zinc-700 py-32"
       >
         <h2 className="text-6xl font-bold text-zinc-100">
           <span className="text-berryBlue">Playfully</span> master Tailwind!
@@ -83,43 +83,41 @@ export default function Home() {
       </section>
       <section
         id="faq"
-        className="mx-auto flex w-full max-w-7xl flex-col gap-8 py-32"
+        className="mx-auto flex w-full max-w-7xl flex-col gap-16 py-32"
       >
-        <h2 className="self-center text-4xl text-zinc-100">
+        <h2 className="text-6xl font-bold text-zinc-100">
           Frequently Asked Questions
         </h2>
-        <details className="flex w-full max-w-7xl cursor-pointer border border-zinc-700 px-6 py-4 text-left transition-all hover:border-zinc-100">
-          <summary className="w-full">How does the details-tag work?</summary>
-          <p className="pt-4 text-zinc-400">
-            The details tag works as an interactive widget that hides / shows
-            content.
-          </p>
-        </details>
-        <details className="flex w-full max-w-7xl cursor-pointer border border-zinc-700 px-6 py-4 text-left transition-all hover:border-zinc-100">
-          <summary className="w-full">How does the summary-tag work?</summary>
-          <p className="pt-4 text-zinc-400">
-            The summary tag works as the heading of the details tag. The summary
-            will always be shown and can be clicked to show or hide the other
-            content of the details-tag
-          </p>
-        </details>
-        <details className="flex w-full max-w-7xl cursor-pointer border border-zinc-700 px-6 py-4 text-left transition-all hover:border-zinc-100">
-          <summary className="w-full">
-            What content can I put in the details-tag?
-          </summary>
-          <p className="pt-4 text-zinc-400">
-            You can put any content you want inside of the details-tag, though
-            the summary-tag should be the first child.
-          </p>
-        </details>
-        <details className="flex w-full max-w-7xl cursor-pointer border border-zinc-700 px-6 py-4 text-left transition-all hover:border-zinc-100">
-          <summary className="w-full">
-            Can I have a details-tag open by default?
-          </summary>
-          <p className="pt-4 text-zinc-400">
-            Yes you can, simply add the open attribute to the details-tag
-          </p>
-        </details>
+        <ul className="flex flex-col gap-6">
+          <li className="flex flex-col gap-3">
+            <p className="text-xl text-berryBlue">What is TailwindCSS?</p>
+            <p className="text-zinc-400">
+              The div tag works as an interactive widget that hides / shows
+              content.
+            </p>
+          </li>
+          <li className="flex flex-col gap-3">
+            <p className="text-xl text-berryBlue">What is TailwindCSS?</p>
+            <p className="text-zinc-400">
+              The div tag works as an interactive widget that hides / shows
+              content.
+            </p>
+          </li>
+          <li className="flex flex-col gap-3">
+            <p className="text-xl text-berryBlue">What is TailwindCSS?</p>
+            <p className="text-zinc-400">
+              The div tag works as an interactive widget that hides / shows
+              content.
+            </p>
+          </li>
+          <li className="flex flex-col gap-3">
+            <p className="text-xl text-berryBlue">What is TailwindCSS?</p>
+            <p className="text-zinc-400">
+              The div tag works as an interactive widget that hides / shows
+              content.
+            </p>
+          </li>
+        </ul>
       </section>
     </main>
   );
