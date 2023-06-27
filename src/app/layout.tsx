@@ -1,20 +1,14 @@
 import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
-import { Fira_Code, Fira_Sans } from "next/font/google";
+import { Fira_Code } from "next/font/google";
 import { Login } from "@/icons";
 import { House } from "@/icons/House";
 import { Info } from "@/icons/Info";
 import { ClerkProvider, UserButton } from "@clerk/nextjs";
-import type { AppProps } from "next/app";
 
 export const firaCode = Fira_Code({
   subsets: ["latin"],
-});
-
-export const firaSans = Fira_Sans({
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "500", "600", "700"],
 });
 
 export const metadata = {

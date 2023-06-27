@@ -43,7 +43,7 @@ export default function HomePage() {
           Explore. <span className="text-berryBlue">Practice. </span>Master.
         </h2>
         <div className="flex items-center gap-16">
-          <div className="flex flex-col gap-6 text-left">
+          <div className="flex shrink flex-col gap-6 text-left">
             <h3 className="text-4xl font-bold text-zinc-50">
               Immediate Feedback
             </h3>
@@ -53,22 +53,26 @@ export default function HomePage() {
               retention.
             </p>
           </div>
-          <Image
-            className="h-auto w-auto"
-            src="/immediate-feedback.png"
-            alt="White square"
-            width={400}
-            height={225}
-          />
+          <div className="flex shrink flex-col gap-6 text-left">
+            <h3 className="text-4xl font-bold text-zinc-50">
+              Immediate Feedback
+            </h3>
+            <p className="text-lg text-zinc-400">
+              Active games foster decision-making, problem-solving, real-time
+              knowledge application, and deeper understanding with concept
+              retention.
+            </p>
+          </div>
         </div>
         <div className="flex w-full items-center gap-16">
-          <Image
-            className="h-auto w-auto"
-            src="/immediate-feedback.png"
-            alt="White square"
-            width={400}
-            height={225}
-          />
+          <div className="flex flex-col gap-6 text-left">
+            <h3 className="text-4xl font-bold text-zinc-50">Active Learning</h3>
+            <p className="text-lg text-zinc-400">
+              Games empower players with active decision-making,
+              problem-solving, and real-time knowledge application, fostering
+              deep understanding and concept retention.
+            </p>
+          </div>
           <div className="flex flex-col gap-6 text-left">
             <h3 className="text-4xl font-bold text-zinc-50">Active Learning</h3>
             <p className="text-lg text-zinc-400">
