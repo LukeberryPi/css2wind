@@ -88,33 +88,37 @@ export default function Home() {
         <h2 className="text-6xl font-bold text-zinc-100">
           Frequently Asked Questions
         </h2>
-        <ul className="flex flex-col gap-6">
+        <ul className="flex max-w-5xl flex-col gap-6 self-center">
           <li className="flex flex-col gap-3">
             <p className="text-xl text-berryBlue">What is TailwindCSS?</p>
             <p className="text-zinc-400">
-              The div tag works as an interactive widget that hides / shows
-              content.
+              A utility-first CSS framework packed with classes like flex, pt-4,
+              text-center and rotate-90 that can be composed to build any
+              design, directly in your markup.
             </p>
           </li>
           <li className="flex flex-col gap-3">
             <p className="text-xl text-berryBlue">What is TailwindCSS?</p>
             <p className="text-zinc-400">
-              The div tag works as an interactive widget that hides / shows
-              content.
+              A utility-first CSS framework packed with classes like flex, pt-4,
+              text-center and rotate-90 that can be composed to build any
+              design, directly in your markup.
             </p>
           </li>
           <li className="flex flex-col gap-3">
             <p className="text-xl text-berryBlue">What is TailwindCSS?</p>
             <p className="text-zinc-400">
-              The div tag works as an interactive widget that hides / shows
-              content.
+              A utility-first CSS framework packed with classes like flex, pt-4,
+              text-center and rotate-90 that can be composed to build any
+              design, directly in your markup.
             </p>
           </li>
           <li className="flex flex-col gap-3">
             <p className="text-xl text-berryBlue">What is TailwindCSS?</p>
             <p className="text-zinc-400">
-              The div tag works as an interactive widget that hides / shows
-              content.
+              A utility-first CSS framework packed with classes like flex, pt-4,
+              text-center and rotate-90 that can be composed to build any
+              design, directly in your markup.
             </p>
           </li>
         </ul>
