@@ -37,7 +37,7 @@ export default function HomePage() {
       </section>
       <section
         id="benefits"
-        className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-10 border-zinc-700 py-32"
+        className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-16 border-zinc-700 py-32"
       >
         <h2 className="text-6xl font-bold text-zinc-100">
           Explore. <span className="text-berryBlue">Practice. </span>Master.

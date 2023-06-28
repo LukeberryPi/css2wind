@@ -5,3 +5,5 @@ export { Copy } from "./Copy";
 export { Arrow } from "./Arrow";
 export { Login } from "./Login";
 export { Open } from "./Open";
+export { House } from "./House";
+export { Info } from "./Info";

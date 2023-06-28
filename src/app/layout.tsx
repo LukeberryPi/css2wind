@@ -2,10 +2,8 @@ import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
 import { Fira_Code } from "next/font/google";
-import { Login } from "@/icons";
-import { House } from "@/icons/House";
-import { Info } from "@/icons/Info";
-import { ClerkProvider, UserButton } from "@clerk/nextjs";
+import { Login, House, Info } from "@/icons";
+import { ClerkProvider, UserButton, currentUser } from "@clerk/nextjs";
 
 export const firaCode = Fira_Code({
   subsets: ["latin"],
@@ -16,11 +14,14 @@ export const metadata = {
   description: "Learn tailwind by playing!",
 };
 
-export default function RootLayout({
+// TODO: feels bad to make this async, is it the best way?
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const user = await currentUser();
+
   return (
     <ClerkProvider
       appearance={{
@@ -88,26 +89,32 @@ export default function RootLayout({
               </li>
             </ul>
             <ul className="flex items-center gap-10 underline-offset-4 group-hover:underline">
-              <li className="border border-zinc-700 transition-all hover:border-zinc-50 active:scale-95">
-                <Link
-                  className="flex items-center gap-4 py-2 pl-4 pr-3 underline-offset-4 transition-all group-hover:underline"
-                  href="/login"
-                >
-                  Login
-                  <Login size={24} className="fill-zinc-50" />
-                </Link>
-              </li>
-              <li className="group border border-berryBlue transition-all active:scale-95">
-                <Link
-                  className="relative flex origin-center px-4 py-2 text-berryBlue underline-offset-4 transition-all group-hover:underline"
-                  href="/signup"
-                >
-                  Sign Up
-                </Link>
-              </li>
-              <li>
-                <UserButton afterSignOutUrl="/" />
-              </li>
+              {!user && (
+                <>
+                  <li className="border border-zinc-700 transition-all hover:border-zinc-50 active:scale-95">
+                    <Link
+                      className="flex items-center gap-4 py-2 pl-4 pr-3 underline-offset-4 transition-all group-hover:underline"
+                      href="/login"
+                    >
+                      Login
+                      <Login size={24} className="fill-zinc-50" />
+                    </Link>
+                  </li>
+                  <li className="group border border-berryBlue transition-all active:scale-95">
+                    <Link
+                      className="relative flex origin-center px-4 py-2 text-berryBlue underline-offset-4 transition-all group-hover:underline"
+                      href="/signup"
+                    >
+                      Sign Up
+                    </Link>
+                  </li>
+                </>
+              )}
+              {user && (
+                <li>
+                  <UserButton afterSignOutUrl="/" />
+                </li>
+              )}
             </ul>
           </nav>
           {children}
