@@ -38,6 +38,10 @@ export default async function RootLayout({
           colorInputText: "#fafafa",
           colorInputBackground: "#09090b",
         },
+        elements: {
+          // trying to remove box shadow from clerk components
+          rootBox: "bg-inherit",
+        },
       }}
     >
       <html

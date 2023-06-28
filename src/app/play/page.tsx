@@ -1,6 +1,40 @@
+"use client";
 import { Arrow, Zap } from "@/icons";
+import { useState } from "react";
 
 export default function PlayPage() {
+  const [currentTranslation, setCurrentTranslation] = useState<string>("");
+  const [correct, setCorrect] = useState<boolean | null>(null);
+
+  const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
+    const currentTranslation = event.currentTarget.value;
+    setCurrentTranslation(currentTranslation);
+  };
+
+  function evaluateTranslation(translation: string) {
+    if (!translation) {
+      return;
+    }
+
+    if (translation === "flex-col") {
+      setCorrect(true);
+      return;
+    }
+
+    setCorrect(false);
+    return;
+  }
+
+  const handleKeyDown = (
+    event: React.KeyboardEvent<HTMLInputElement>,
+    translation: string
+  ) => {
+    if (event.key == " " || event.code == "Space") {
+      event.preventDefault();
+      evaluateTranslation(translation);
+    }
+  };
+
   return (
     <main className="flex flex-col justify-center divide-y-2 divide-zinc-800 text-center">
       <section
@@ -17,7 +51,13 @@ export default function PlayPage() {
         <div className="flex items-center">
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
             .class &#123;
-            <span className="border border-berryBlue bg-transparent p-5 text-xl text-berryBlue">
+            <span
+              className={`${
+                correct
+                  ? "border-2 border-greenGo text-greenGo"
+                  : "border border-berryBlue text-berryBlue"
+              } bg-transparent p-5 text-xl`}
+            >
               flex-direction: column;
             </span>
             &#125;
@@ -26,11 +66,19 @@ export default function PlayPage() {
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
             className=&#34;
             <input
-              className={`border border-zinc-50 bg-transparent p-5 text-xl text-zinc-50 focus:outline-none`}
-            ></input>
+              value={currentTranslation}
+              onChange={(event) => handleChange(event)}
+              onKeyDown={(event) => handleKeyDown(event, currentTranslation)}
+              className={`${
+                correct
+                  ? "border-2 border-greenGo text-greenGo"
+                  : "border border-zinc-50 text-zinc-50"
+              } bg-transparent p-5 text-xl focus:outline-none`}
+            />
             &#34;
           </div>
         </div>
+        <p>{currentTranslation}</p>
       </section>
     </main>
   );
