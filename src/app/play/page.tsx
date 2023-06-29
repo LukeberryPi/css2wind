@@ -5,6 +5,9 @@ import { useState } from "react";
 export default function PlayPage() {
   const [currentTranslation, setCurrentTranslation] = useState<string>("");
   const [correct, setCorrect] = useState<boolean | null>(null);
+  const [incorrect, setIncorrect] = useState<boolean | null>(null);
+
+  const notSubmitted = correct === null && incorrect === null;
 
   const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
     const currentTranslation = event.currentTarget.value;
@@ -18,10 +21,12 @@ export default function PlayPage() {
 
     if (translation === "flex-col") {
       setCorrect(true);
+      setIncorrect(false);
       return;
     }
 
     setCorrect(false);
+    setIncorrect(true);
     return;
   }
 
@@ -53,9 +58,10 @@ export default function PlayPage() {
             .class &#123;
             <span
               className={`${
-                correct
-                  ? "border-2 border-greenGo text-greenGo"
-                  : "border border-berryBlue text-berryBlue"
+                notSubmitted && "border border-berryBlue text-berryBlue"
+              } ${correct && "border border-greenGo text-greenGo"}
+              ${
+                incorrect && "border border-alertRed text-alertRed"
               } bg-transparent p-5 text-xl`}
             >
               flex-direction: column;
@@ -70,15 +76,19 @@ export default function PlayPage() {
               onChange={(event) => handleChange(event)}
               onKeyDown={(event) => handleKeyDown(event, currentTranslation)}
               className={`${
-                correct
-                  ? "border-2 border-greenGo text-greenGo"
-                  : "border border-zinc-50 text-zinc-50"
+                notSubmitted && "border border-zinc-50 text-zinc-50"
+              } ${correct && "border border-greenGo text-greenGo"}
+              ${
+                incorrect && "border border-alertRed text-alertRed"
               } bg-transparent p-5 text-xl focus:outline-none`}
             />
             &#34;
           </div>
         </div>
         <p>{currentTranslation}</p>
+        <p>{`correct: ${correct?.toString()}`}</p>
+        <p>{`incorrect: ${incorrect?.toString()}`}</p>
+        <p>{`notSubmitted: ${notSubmitted?.toString()}`}</p>
       </section>
     </main>
   );

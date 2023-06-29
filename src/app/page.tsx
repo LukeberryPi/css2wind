@@ -90,8 +90,8 @@ export default function HomePage() {
         <h2 className="text-6xl font-bold text-zinc-100">
           Frequently Asked Questions
         </h2>
-        <ul className="flex max-w-5xl flex-col gap-6 self-center">
-          <li className="flex flex-col gap-3">
+        <ul className="flex max-w-prose flex-col gap-6 self-center">
+          <li className="flex flex-col gap-3 text-left">
             <p className="text-xl text-berryBlue">What is TailwindCSS?</p>
             <p className="text-zinc-400">
               A utility-first CSS framework packed with classes like flex, pt-4,
@@ -99,24 +99,30 @@ export default function HomePage() {
               design, directly in your markup.
             </p>
           </li>
-          <li className="flex flex-col gap-3">
-            <p className="text-xl text-berryBlue">What is TailwindCSS?</p>
+          <li className="flex flex-col gap-3 text-left">
+            <p className="text-xl text-berryBlue">
+              Isn&apos;t that just inline styles?
+            </p>
             <p className="text-zinc-400">
               A utility-first CSS framework packed with classes like flex, pt-4,
               text-center and rotate-90 that can be composed to build any
               design, directly in your markup.
             </p>
           </li>
-          <li className="flex flex-col gap-3">
-            <p className="text-xl text-berryBlue">What is TailwindCSS?</p>
+          <li className="flex flex-col gap-3 text-left">
+            <p className="text-xl text-berryBlue">
+              Why not use Bootstrap then?
+            </p>
             <p className="text-zinc-400">
               A utility-first CSS framework packed with classes like flex, pt-4,
               text-center and rotate-90 that can be composed to build any
               design, directly in your markup.
             </p>
           </li>
-          <li className="flex flex-col gap-3">
-            <p className="text-xl text-berryBlue">What is TailwindCSS?</p>
+          <li className="flex flex-col gap-3 text-left">
+            <p className="text-xl text-berryBlue">
+              Doesn&apos;t the HTML get ugly?
+            </p>
             <p className="text-zinc-400">
               A utility-first CSS framework packed with classes like flex, pt-4,
               text-center and rotate-90 that can be composed to build any
