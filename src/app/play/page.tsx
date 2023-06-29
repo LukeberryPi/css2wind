@@ -1,25 +1,45 @@
 "use client";
 import { Arrow, Zap } from "@/icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+export const cssProperties = {
+  "display: flex": "flex",
+  "flex-direction: column": "flex-col",
+  "padding: 16px": "p-4",
+  "padding-inline: 16px": "px-4",
+  "margin: 16px": "m-4",
+  "margin-inline: 16px": "mx-4",
+};
+
+function getRandomKey(obj: any) {
+  let keys = Object.keys(obj);
+  let randomIndex = Math.floor(Math.random() * keys.length);
+  return keys[randomIndex];
+}
 
 export default function PlayPage() {
-  const [currentTranslation, setCurrentTranslation] = useState<string>("");
+  const [attempt, setAttempt] = useState<string>("");
+  const [cssProperty, setCssProperty] = useState<string>();
   const [correct, setCorrect] = useState<boolean | null>(null);
   const [incorrect, setIncorrect] = useState<boolean | null>(null);
 
   const notSubmitted = correct === null && incorrect === null;
 
+  useEffect(() => {
+    setCssProperty(getRandomKey(cssProperties));
+  }, []);
+
   const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
-    const currentTranslation = event.currentTarget.value;
-    setCurrentTranslation(currentTranslation);
+    const attempt = event.currentTarget.value;
+    setAttempt(attempt);
   };
 
-  function evaluateTranslation(translation: string) {
-    if (!translation) {
+  const evaluateTranslation = (attempt: string) => {
+    if (!attempt) {
       return;
     }
 
-    if (translation === "flex-col") {
+    if (attempt === cssProperties[cssProperty]) {
       setCorrect(true);
       setIncorrect(false);
       return;
@@ -28,7 +48,7 @@ export default function PlayPage() {
     setCorrect(false);
     setIncorrect(true);
     return;
-  }
+  };
 
   const handleKeyDown = (
     event: React.KeyboardEvent<HTMLInputElement>,
@@ -64,7 +84,7 @@ export default function PlayPage() {
                 incorrect && "border border-alertRed text-alertRed"
               } bg-transparent p-5 text-xl`}
             >
-              flex-direction: column;
+              {cssProperty}
             </span>
             &#125;
           </div>
@@ -72,9 +92,9 @@ export default function PlayPage() {
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
             className=&#34;
             <input
-              value={currentTranslation}
+              value={attempt}
               onChange={(event) => handleChange(event)}
-              onKeyDown={(event) => handleKeyDown(event, currentTranslation)}
+              onKeyDown={(event) => handleKeyDown(event, attempt)}
               className={`${
                 notSubmitted && "border border-zinc-50 text-zinc-50"
               } ${correct && "border border-greenGo text-greenGo"}
@@ -85,10 +105,11 @@ export default function PlayPage() {
             &#34;
           </div>
         </div>
-        <p>{currentTranslation}</p>
-        <p>{`correct: ${correct?.toString()}`}</p>
-        <p>{`incorrect: ${incorrect?.toString()}`}</p>
-        <p>{`notSubmitted: ${notSubmitted?.toString()}`}</p>
+        <p>{attempt}</p>
+        <p>{`correct: ${correct}`}</p>
+        <p>{`incorrect: ${incorrect}`}</p>
+        <p>{`notSubmitted: ${notSubmitted}`}</p>
+        <p>{`cssProperty: ${cssProperty}`}</p>
       </section>
     </main>
   );
