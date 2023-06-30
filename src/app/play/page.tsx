@@ -46,7 +46,12 @@ export default function PlayPage() {
       setCorrect(true);
       setIncorrect(false);
       setCssProperty(getRandomKey(cssProperties));
-      setAttempt("");
+
+      setTimeout(() => {
+        setCorrect(null);
+        setIncorrect(null);
+        setAttempt("");
+      }, 800);
       return;
     }
 
@@ -55,10 +60,10 @@ export default function PlayPage() {
     setCssProperty(getRandomKey(cssProperties));
 
     setTimeout(() => {
-      setNotSubmitted(true);
+      setCorrect(null);
+      setIncorrect(null);
       setAttempt("");
-    }, 1000);
-
+    }, 800);
     return;
   };
 
