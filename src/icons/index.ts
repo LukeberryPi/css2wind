@@ -7,3 +7,4 @@ export { Login } from "./Login";
 export { Open } from "./Open";
 export { House } from "./House";
 export { Info } from "./Info";
+export { Restart } from "./Restart";

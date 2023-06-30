@@ -1,5 +1,5 @@
 "use client";
-import { Arrow, Check, Close, Zap } from "@/icons";
+import { Arrow, Check, Close, Restart, Zap } from "@/icons";
 import { useEffect, useState } from "react";
 
 export const cssProperties = {
@@ -19,7 +19,7 @@ function getRandomKey(obj: any) {
 
 export default function PlayPage() {
   const [attempt, setAttempt] = useState<string>("");
-  const [cssProperty, setCssProperty] = useState<string>();
+  const [cssProperty, setCssProperty] = useState<string>("");
   const [correct, setCorrect] = useState<boolean | null>(null);
   const [incorrect, setIncorrect] = useState<boolean | null>(null);
   const [notSubmitted, setNotSubmitted] = useState<boolean>(false);
@@ -65,9 +65,7 @@ export default function PlayPage() {
       setAttempt("");
     }, 800);
 
-    document.querySelector("input")?.focus;
-    console.log(document.querySelector("input")?.focus);
-    return;
+    return document.querySelector("input")?.focus();
   };
 
   const handleKeyDown = (
@@ -99,18 +97,18 @@ export default function PlayPage() {
             <span
               className={`${
                 notSubmitted && "border border-berryBlue text-berryBlue"
-              } ${correct && "border-2 border-greenGo text-greenGo"}
+              } ${correct && "border border-greenGo text-greenGo"}
               ${
                 incorrect &&
-                "animate-shake border-2 border-alertRed text-alertRed"
+                "animate-shake border border-alertRed text-alertRed"
               } w-96 origin-center bg-transparent p-5 text-xl transition-all`}
             >
               {cssProperty}
             </span>
             &#125;
           </div>
-          {notSubmitted && <Arrow className="fill-zinc-50 transition-all" />}
-          {correct && <Check className="fill-greenGo transition-all" />}
+          {notSubmitted && <Arrow className="fill-zinc-50" />}
+          {correct && <Check className="fill-greenGo" />}
           {incorrect && (
             <Close className="animate-shake fill-alertRed transition-all" />
           )}
@@ -120,18 +118,21 @@ export default function PlayPage() {
               value={attempt}
               onChange={(event) => handleChange(event)}
               onKeyDown={(event) => handleKeyDown(event, attempt)}
-              disabled={!notSubmitted}
               className={`${
                 notSubmitted && "border border-zinc-50 text-zinc-50"
-              } ${correct && "border-2 border-greenGo text-greenGo"}
+              } ${correct && "border border-greenGo text-greenGo"}
               ${
                 incorrect &&
-                "animate-shake border-2 border-alertRed text-alertRed"
-              } w-96 origin-center bg-transparent p-5 text-xl transition-all focus:outline-none`}
+                "animate-shake border border-alertRed text-alertRed"
+              } transition-al w-96 origin-center bg-transparent p-5 text-xl focus:outline-none`}
             />
             &#34;
           </div>
         </div>
+        <button className="flex items-center gap-4 border border-berryBlue p-4">
+          <Restart size={24} className="fill-berryBlue" />
+          <p className="text-berryBlue">Restart</p>
+        </button>
       </section>
     </main>
   );
