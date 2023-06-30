@@ -1,5 +1,5 @@
 "use client";
-import { Arrow, Zap } from "@/icons";
+import { Arrow, Check, Close, Zap } from "@/icons";
 import { useEffect, useState } from "react";
 
 export const cssProperties = {
@@ -64,6 +64,9 @@ export default function PlayPage() {
       setCssProperty(getRandomKey(cssProperties));
       setAttempt("");
     }, 800);
+
+    document.querySelector("input")?.focus;
+    console.log(document.querySelector("input")?.focus);
     return;
   };
 
@@ -90,7 +93,7 @@ export default function PlayPage() {
             translating
           </h2>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center gap-8">
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
             .class &#123;
             <span
@@ -98,14 +101,19 @@ export default function PlayPage() {
                 notSubmitted && "border border-berryBlue text-berryBlue"
               } ${correct && "border-2 border-greenGo text-greenGo"}
               ${
-                incorrect && "border-2 border-alertRed text-alertRed"
+                incorrect &&
+                "animate-shake border-2 border-alertRed text-alertRed"
               } w-96 origin-center bg-transparent p-5 text-xl transition-all`}
             >
               {cssProperty}
             </span>
             &#125;
           </div>
-          <Arrow className="mx-8 fill-zinc-50" />
+          {notSubmitted && <Arrow className="fill-zinc-50 transition-all" />}
+          {correct && <Check className="fill-greenGo transition-all" />}
+          {incorrect && (
+            <Close className="animate-shake fill-alertRed transition-all" />
+          )}
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
             className=&#34;
             <input
@@ -117,7 +125,8 @@ export default function PlayPage() {
                 notSubmitted && "border border-zinc-50 text-zinc-50"
               } ${correct && "border-2 border-greenGo text-greenGo"}
               ${
-                incorrect && "border-2 border-alertRed text-alertRed"
+                incorrect &&
+                "animate-shake border-2 border-alertRed text-alertRed"
               } w-96 origin-center bg-transparent p-5 text-xl transition-all focus:outline-none`}
             />
             &#34;
