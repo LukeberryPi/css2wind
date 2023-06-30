@@ -112,6 +112,7 @@ export default function PlayPage() {
               value={attempt}
               onChange={(event) => handleChange(event)}
               onKeyDown={(event) => handleKeyDown(event, attempt)}
+              disabled={!notSubmitted}
               className={`${
                 notSubmitted && "border border-zinc-50 text-zinc-50"
               } ${correct && "border-2 border-greenGo text-greenGo"}
