@@ -22,8 +22,11 @@ export default function PlayPage() {
   const [cssProperty, setCssProperty] = useState<string>();
   const [correct, setCorrect] = useState<boolean | null>(null);
   const [incorrect, setIncorrect] = useState<boolean | null>(null);
+  const [notSubmitted, setNotSubmitted] = useState<boolean>(false);
 
-  const notSubmitted = correct === null && incorrect === null;
+  useEffect(() => {
+    setNotSubmitted(correct === null && incorrect === null);
+  }, [setNotSubmitted, correct, incorrect]);
 
   useEffect(() => {
     setCssProperty(getRandomKey(cssProperties));
@@ -42,11 +45,20 @@ export default function PlayPage() {
     if (attempt === cssProperties[cssProperty]) {
       setCorrect(true);
       setIncorrect(false);
+      setCssProperty(getRandomKey(cssProperties));
+      setAttempt("");
       return;
     }
 
     setCorrect(false);
     setIncorrect(true);
+    setCssProperty(getRandomKey(cssProperties));
+
+    setTimeout(() => {
+      setNotSubmitted(true);
+      setAttempt("");
+    }, 1000);
+
     return;
   };
 
@@ -82,7 +94,7 @@ export default function PlayPage() {
               } ${correct && "border border-greenGo text-greenGo"}
               ${
                 incorrect && "border border-alertRed text-alertRed"
-              } bg-transparent p-5 text-xl`}
+              } w-96 bg-transparent p-5 text-xl`}
             >
               {cssProperty}
             </span>
@@ -100,7 +112,7 @@ export default function PlayPage() {
               } ${correct && "border border-greenGo text-greenGo"}
               ${
                 incorrect && "border border-alertRed text-alertRed"
-              } bg-transparent p-5 text-xl focus:outline-none`}
+              } w-96 bg-transparent p-5 text-xl focus:outline-none`}
             />
             &#34;
           </div>
