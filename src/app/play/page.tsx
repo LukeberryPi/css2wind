@@ -45,11 +45,11 @@ export default function PlayPage() {
     if (attempt === cssProperties[cssProperty]) {
       setCorrect(true);
       setIncorrect(false);
-      setCssProperty(getRandomKey(cssProperties));
 
       setTimeout(() => {
         setCorrect(null);
         setIncorrect(null);
+        setCssProperty(getRandomKey(cssProperties));
         setAttempt("");
       }, 800);
       return;
@@ -57,11 +57,11 @@ export default function PlayPage() {
 
     setCorrect(false);
     setIncorrect(true);
-    setCssProperty(getRandomKey(cssProperties));
 
     setTimeout(() => {
       setCorrect(null);
       setIncorrect(null);
+      setCssProperty(getRandomKey(cssProperties));
       setAttempt("");
     }, 800);
     return;
@@ -96,10 +96,10 @@ export default function PlayPage() {
             <span
               className={`${
                 notSubmitted && "border border-berryBlue text-berryBlue"
-              } ${correct && "border border-greenGo text-greenGo"}
+              } ${correct && "border-2 border-greenGo text-greenGo"}
               ${
-                incorrect && "border border-alertRed text-alertRed"
-              } w-96 bg-transparent p-5 text-xl`}
+                incorrect && "border-2 border-alertRed text-alertRed"
+              } w-96 origin-center bg-transparent p-5 text-xl transition-all`}
             >
               {cssProperty}
             </span>
@@ -114,19 +114,14 @@ export default function PlayPage() {
               onKeyDown={(event) => handleKeyDown(event, attempt)}
               className={`${
                 notSubmitted && "border border-zinc-50 text-zinc-50"
-              } ${correct && "border border-greenGo text-greenGo"}
+              } ${correct && "border-2 border-greenGo text-greenGo"}
               ${
-                incorrect && "border border-alertRed text-alertRed"
-              } w-96 bg-transparent p-5 text-xl focus:outline-none`}
+                incorrect && "border-2 border-alertRed text-alertRed"
+              } w-96 origin-center bg-transparent p-5 text-xl transition-all focus:outline-none`}
             />
             &#34;
           </div>
         </div>
-        <p>{attempt}</p>
-        <p>{`correct: ${correct}`}</p>
-        <p>{`incorrect: ${incorrect}`}</p>
-        <p>{`notSubmitted: ${notSubmitted}`}</p>
-        <p>{`cssProperty: ${cssProperty}`}</p>
       </section>
     </main>
   );
