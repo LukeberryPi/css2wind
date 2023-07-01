@@ -1,30 +1,7 @@
 "use client";
 import { Arrow, Check, Close, Restart, Zap } from "@/icons";
 import { useEffect, useState } from "react";
-
-export const cssProperties = {
-  "display: flex": "flex",
-  "flex-direction: column": "flex-col",
-  "margin-inline: 16px": "mx-4",
-  "margin: 16px": "m-4",
-  "padding-inline: 16px": "px-4",
-  "padding: 0px": "p-0",
-  "padding: 1px": "p-px",
-  "padding: 2px": "p-0.5",
-  "padding: 4px": "p-1",
-  "padding: 8px": "p-4",
-  "padding: 16px": "p-4",
-  "padding: 32px": "p-4",
-  "padding: 36px": "p-4",
-  "padding: 40px": "p-4",
-  "padding: 48px": "p-4",
-  "padding: 52px": "p-4",
-  "padding: 56px": "p-4",
-  "padding: 60px": "p-4",
-  "padding: 64px": "p-4",
-  "padding: 68px": "p-4",
-  "padding: 72px": "p-4",
-};
+import { cssProperties } from "../../../leozada";
 
 function getRandomKey(obj: any) {
   let keys = Object.keys(obj);
@@ -118,7 +95,7 @@ export default function PlayPage() {
                 "animate-shake border border-alertRed text-alertRed"
               } w-96 origin-center bg-transparent p-5 text-xl transition-all`}
             >
-              {cssProperty}
+              {cssProperty};
             </span>
             &#125;
           </div>
