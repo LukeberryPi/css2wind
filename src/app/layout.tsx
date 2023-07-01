@@ -75,10 +75,10 @@ export default async function RootLayout({
                   Home
                 </Link>
               </li>
-              <li className="group border border-berryBlue transition-all active:scale-95">
+              <li className="group transition-all active:scale-95">
                 <Link
                   href="/play"
-                  className="relative flex origin-center items-center gap-4 px-4 py-2 text-berryBlue underline-offset-4 transition-all group-hover:underline"
+                  className="relative flex origin-center items-center gap-4 border bg-berryBlue px-4 py-2 font-bold text-zinc-950 underline-offset-4 transition-all hover:border-zinc-50 group-hover:underline"
                 >
                   Play Now
                 </Link>
@@ -105,9 +105,9 @@ export default async function RootLayout({
                       <Login size={24} className="fill-zinc-50" />
                     </Link>
                   </li>
-                  <li className="group border border-berryBlue transition-all active:scale-95">
+                  <li className="group transition-all active:scale-95">
                     <Link
-                      className="relative flex origin-center px-4 py-2 text-berryBlue underline-offset-4 transition-all group-hover:underline"
+                      className="relative flex origin-center border bg-berryBlue px-4 py-2 font-bold text-zinc-950 underline-offset-4 transition-all hover:border-zinc-50 group-hover:underline"
                       href="/signup"
                     >
                       Sign Up

@@ -20,7 +20,7 @@ export default function HomePage() {
         </p>
         <div className="flex items-center gap-12">
           <Link
-            className="border border-berryBlue px-6 py-4 text-xl text-berryBlue decoration-berryBlue decoration-1 underline-offset-4 transition-all hover:underline active:scale-95"
+            className="border border-berryBlue bg-berryBlue px-6 py-4 text-xl font-bold text-zinc-950 underline-offset-4 transition-all hover:underline active:scale-95"
             href="/play"
           >
             Play Now

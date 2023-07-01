@@ -121,9 +121,9 @@ export default function PlayPage() {
             &#34;
           </div>
         </div>
-        <button className="flex items-center gap-4 border border-berryBlue p-4">
-          <Restart size={24} className="fill-berryBlue" />
-          <p className="text-berryBlue">Restart</p>
+        <button className="flex items-center gap-4 border border-zinc-700 p-4 transition-all hover:border-zinc-50">
+          <Restart size={24} className="fill-zinc-50" />
+          <p className="text-zinc-50">Restart</p>
         </button>
       </section>
     </main>
