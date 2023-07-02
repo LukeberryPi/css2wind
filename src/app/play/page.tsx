@@ -34,7 +34,7 @@ export default function PlayPage() {
       return;
     }
 
-    if (attempt === cssProperties[cssProperty]) {
+    if (cssProperties[cssProperty].includes(attempt)) {
       setCorrect(true);
       setIncorrect(false);
 
