@@ -12,12 +12,12 @@ function getRandomKey(obj: any) {
 export default function PlayPage() {
   const [attempt, setAttempt] = useState<string>("");
   const [cssProperty, setCssProperty] = useState<string>("");
-  const [correct, setCorrect] = useState<boolean | null>(null);
-  const [incorrect, setIncorrect] = useState<boolean | null>(null);
-  const [notSubmitted, setNotSubmitted] = useState<boolean>(false);
+  const [correct, setCorrect] = useState<boolean>(false);
+  const [incorrect, setIncorrect] = useState<boolean>(false);
+  const [notSubmitted, setNotSubmitted] = useState<boolean>(true);
 
   useEffect(() => {
-    setNotSubmitted(correct === null && incorrect === null);
+    setNotSubmitted(!correct && !incorrect);
   }, [setNotSubmitted, correct, incorrect]);
 
   useEffect(() => {
@@ -39,8 +39,8 @@ export default function PlayPage() {
       setIncorrect(false);
 
       setTimeout(() => {
-        setCorrect(null);
-        setIncorrect(null);
+        setCorrect(false);
+        setIncorrect(false);
         setCssProperty(getRandomKey(cssProperties));
         setAttempt("");
       }, 800);
@@ -51,8 +51,8 @@ export default function PlayPage() {
     setIncorrect(true);
 
     setTimeout(() => {
-      setCorrect(null);
-      setIncorrect(null);
+      setCorrect(false);
+      setIncorrect(false);
       setCssProperty(getRandomKey(cssProperties));
       setAttempt("");
     }, 800);
