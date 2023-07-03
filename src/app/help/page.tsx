@@ -12,17 +12,17 @@ export default function HelpPage() {
           </h2>
         </div>
         <div className="flex items-center">
-          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
+          <div className="text-white0 flex cursor-default flex-col items-start gap-2">
             .class &#123;
             <div className="border border-berryBlue bg-transparent p-5 text-xl text-berryBlue">
               flex-direction: column;
             </div>
             &#125;
           </div>
-          <Arrow className="mx-8 fill-zinc-50" />
-          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
+          <Arrow className="mx-8 fill-white" />
+          <div className="text-white0 flex cursor-default flex-col items-start gap-2">
             className=&#34;
-            <input className="border border-zinc-50 bg-transparent p-5 text-xl text-zinc-50 focus:outline-none" />
+            <input className="border border-white bg-transparent p-5 text-xl text-white focus:outline-none" />
             &#34;
           </div>
         </div>
@@ -36,7 +36,7 @@ export default function HelpPage() {
           </h2>
         </div>
         <div className="flex items-center">
-          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
+          <div className="text-white0 flex cursor-default flex-col items-start gap-2">
             .class &#123;
             <div className="border-2 border-greenGo bg-inherit p-5 text-xl font-medium text-greenGo">
               flex-direction: column;
@@ -44,7 +44,7 @@ export default function HelpPage() {
             &#125;
           </div>
           <Check className="mx-8 fill-greenGo" />
-          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
+          <div className="text-white0 flex cursor-default flex-col items-start gap-2">
             className=&#34;
             <input className="border-2 border-greenGo bg-transparent p-5 text-xl text-greenGo focus:outline-none" />
             &#34;
@@ -60,7 +60,7 @@ export default function HelpPage() {
           </h2>
         </div>
         <div className="flex items-center">
-          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
+          <div className="text-white0 flex cursor-default flex-col items-start gap-2">
             .class &#123;
             <div className="border-2 border-alertRed bg-inherit p-5 text-xl font-medium text-alertRed">
               flex-direction: column;
@@ -68,7 +68,7 @@ export default function HelpPage() {
             &#125;
           </div>
           <Close className="mx-8 fill-alertRed" />
-          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
+          <div className="text-white0 flex cursor-default flex-col items-start gap-2">
             className=&#34;
             <input className="border-2 border-alertRed bg-transparent p-5 text-xl text-alertRed focus:outline-none" />
             &#34;

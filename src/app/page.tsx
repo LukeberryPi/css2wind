@@ -14,23 +14,23 @@ export default function HomePage() {
         </h1>
         <p className="text-xl text-zinc-400">
           Dive into the most ergonomic styling framework and{" "}
-          <strong className="text-zinc-50">boost your development </strong>
+          <strong className="text-white">boost your development </strong>
           speed through{" "}
-          <strong className="text-zinc-50">gamified learning</strong>.
+          <strong className="text-white">gamified learning</strong>.
         </p>
         <div className="flex items-center gap-12">
           <Link
-            className="border border-berryBlue bg-berryBlue px-6 py-4 text-xl font-bold text-zinc-950 underline-offset-4 transition-all hover:underline active:scale-95"
+            className="border border-berryBlue bg-berryBlue px-6 py-4 text-xl font-bold text-black underline-offset-4 transition-all hover:underline active:scale-95"
             href="/play"
           >
             Play Now
           </Link>
           <Link
-            className="flex items-center gap-4 border border-zinc-700 px-6 py-4 text-xl transition-all hover:border-zinc-50 active:scale-95"
+            className="flex items-center gap-4 border border-zinc-700 px-6 py-4 text-xl transition-all hover:border-white active:scale-95"
             href="/help"
           >
             Learn More
-            <Open size={24} className="fill-zinc-50" />
+            <Open size={24} className="fill-white" />
           </Link>
         </div>
       </section>
@@ -43,7 +43,7 @@ export default function HomePage() {
         </h2>
         <div className="flex items-center gap-16">
           <div className="flex shrink flex-col gap-6 text-left">
-            <h3 className="text-4xl font-bold text-zinc-50">
+            <h3 className="text-4xl font-bold text-white">
               Immediate Feedback
             </h3>
             <p className="text-lg text-zinc-400">
@@ -53,7 +53,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="flex shrink flex-col gap-6 text-left">
-            <h3 className="text-4xl font-bold text-zinc-50">
+            <h3 className="text-4xl font-bold text-white">
               Immediate Feedback
             </h3>
             <p className="text-lg text-zinc-400">
@@ -65,7 +65,7 @@ export default function HomePage() {
         </div>
         <div className="flex w-full items-center gap-16">
           <div className="flex flex-col gap-6 text-left">
-            <h3 className="text-4xl font-bold text-zinc-50">Active Learning</h3>
+            <h3 className="text-4xl font-bold text-white">Active Learning</h3>
             <p className="text-lg text-zinc-400">
               Games empower players with active decision-making,
               problem-solving, and real-time knowledge application, fostering
@@ -73,7 +73,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="flex flex-col gap-6 text-left">
-            <h3 className="text-4xl font-bold text-zinc-50">Active Learning</h3>
+            <h3 className="text-4xl font-bold text-white">Active Learning</h3>
             <p className="text-lg text-zinc-400">
               Games empower players with active decision-making,
               problem-solving, and real-time knowledge application, fostering

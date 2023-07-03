@@ -74,7 +74,7 @@ export default function PlayPage() {
           </h2>
         </div>
         <div className="flex items-center gap-8">
-          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
+          <div className="text-white0 flex cursor-default flex-col items-start gap-2">
             .class &#123;
             <span
               className={`${
@@ -89,21 +89,21 @@ export default function PlayPage() {
             </span>
             &#125;
           </div>
-          {notSubmitted && <Arrow className="fill-zinc-50" />}
+          {notSubmitted && <Arrow className="fill-white" />}
           {correct && <Check className="fill-greenGo" />}
           {incorrect && (
             <Close className="animate-shake fill-alertRed transition-all" />
           )}
-          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
+          <div className="text-white0 flex cursor-default flex-col items-start gap-2">
             className=&#34;
             <input
               value={attempt}
               onChange={(event) => handleChange(event)}
               onKeyDown={(event) => handleKeyDown(event, attempt)}
               autoFocus
-              className={`${
-                notSubmitted && "border border-zinc-50 text-zinc-50"
-              } ${correct && "border border-greenGo text-greenGo"}
+              className={`${notSubmitted && "border border-white text-white"} ${
+                correct && "border border-greenGo text-greenGo"
+              }
               ${
                 incorrect &&
                 "animate-shake border border-alertRed text-alertRed"
@@ -112,9 +112,9 @@ export default function PlayPage() {
             &#34;
           </div>
         </div>
-        <button className="flex items-center gap-4 border border-zinc-700 p-4 transition-all hover:border-zinc-50">
-          <Restart size={24} className="fill-zinc-50" />
-          <p className="text-zinc-50">Restart</p>
+        <button className="flex items-center gap-4 border border-zinc-700 p-4 transition-all hover:border-white">
+          <Restart size={24} className="fill-white" />
+          <p className="text-white">Restart</p>
         </button>
       </section>
     </main>
