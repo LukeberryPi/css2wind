@@ -14,12 +14,12 @@ export const metadata = {
   description: "Learn tailwind by playing!",
 };
 
-// TODO: feels bad to make this async, is it the best way?
 export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  // TODO: feels wrong to do at RootLayout and turn it async, is it the best way?
   const user = await currentUser();
 
   return (
@@ -50,20 +50,15 @@ export default async function RootLayout({
         lang="en"
       >
         <body
-          className={`bg-zinc-950 text-zinc-100 selection:bg-zinc-100 selection:text-zinc-900 ${firaCode.className}`}
+          className={`${firaCode.className} bg-zinc-950 text-zinc-100 selection:bg-zinc-100 selection:text-zinc-900`}
         >
           <nav className="fixed top-0 flex w-full items-center justify-between border-b border-zinc-700 bg-inherit px-8 py-4 text-lg text-zinc-50">
             <Link
               href="/"
               className="flex items-center gap-4 underline-offset-4 transition-transform active:scale-95 group-hover:underline"
             >
-              <Image
-                alt="A wind vane"
-                src="/wind-vane.png"
-                height={40}
-                width={40}
-              />
-              <span className={`text-2xl font-medium`}>css2wind</span>
+              <Image alt="A wind vane" src="/logo.png" height={40} width={40} />
+              <span className="text-2xl font-medium">css2wind</span>
             </Link>
             <ul className="flex items-center gap-10 underline-offset-4 group-hover:underline">
               <li className="border border-zinc-700 transition-all hover:border-zinc-50 active:scale-95">

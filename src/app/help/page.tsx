@@ -26,7 +26,7 @@ export default function HelpPage() {
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
             className=&#34;
             <input
-              className={`border border-zinc-50 bg-transparent p-5 text-xl text-zinc-50 focus:outline-none`}
+              className="border border-zinc-50 bg-transparent p-5 text-xl text-zinc-50 focus:outline-none"
             ></input>
             &#34;
           </div>
@@ -55,7 +55,7 @@ export default function HelpPage() {
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
             className=&#34;
             <input
-              className={`border-2 border-greenGo bg-transparent p-5 text-xl text-greenGo focus:outline-none`}
+              className="border-2 border-greenGo bg-transparent p-5 text-xl text-greenGo focus:outline-none"
             ></input>
             &#34;
           </div>
@@ -84,7 +84,7 @@ export default function HelpPage() {
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
             className=&#34;
             <input
-              className={`border-2 border-alertRed bg-transparent p-5 text-xl text-alertRed focus:outline-none`}
+              className="border-2 border-alertRed bg-transparent p-5 text-xl text-alertRed focus:outline-none"
             ></input>
             &#34;
           </div>
