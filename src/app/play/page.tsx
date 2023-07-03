@@ -11,9 +11,7 @@ function getRandomKey(obj: any) {
 
 export default function PlayPage() {
   const [attempt, setAttempt] = useState<string>("");
-  const [cssProperty, setCssProperty] = useState<string>(
-    getRandomKey(cssProperties)
-  );
+  const [cssProperty, setCssProperty] = useState<string>("");
   const [correct, setCorrect] = useState<boolean | null>(null);
   const [incorrect, setIncorrect] = useState<boolean | null>(null);
   const [notSubmitted, setNotSubmitted] = useState<boolean>(false);
