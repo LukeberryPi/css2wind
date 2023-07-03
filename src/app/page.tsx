@@ -8,7 +8,7 @@ export default function HomePage() {
         id="hero-banner"
         className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-10 border-zinc-700 py-32"
       >
-        <h1 className="text-6xl font-bold text-zinc-100">
+        <h1 className="break-words text-3xl font-bold text-zinc-100 md:text-6xl">
           Learn Tailwind
           <span className="text-berryBlue"> by playing</span>
         </h1>
@@ -36,9 +36,9 @@ export default function HomePage() {
       </section>
       <section
         id="benefits"
-        className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-16 border-zinc-700 py-32"
+        className="mx-auto hidden max-w-7xl flex-col items-center justify-center gap-16 border-zinc-700 py-32 md:flex"
       >
-        <h2 className="text-6xl font-bold text-zinc-100">
+        <h2 className="break-words text-3xl font-bold text-zinc-100 md:text-6xl">
           Explore. <span className="text-berryBlue">Practice. </span>Master.
         </h2>
         <div className="flex items-center gap-16">
@@ -86,7 +86,7 @@ export default function HomePage() {
         id="faq"
         className="mx-auto flex w-full max-w-7xl flex-col gap-16 py-32"
       >
-        <h2 className="text-6xl font-bold text-zinc-100">
+        <h2 className="break-words text-3xl font-bold text-zinc-100 md:text-6xl">
           Frequently Asked Questions
         </h2>
         <ul className="flex max-w-prose flex-col gap-6 self-center">

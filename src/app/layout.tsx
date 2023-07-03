@@ -45,12 +45,9 @@ export default async function RootLayout({
         },
       }}
     >
-      <html
-        className="h-full w-full scroll-smooth pt-20 subpixel-antialiased"
-        lang="en"
-      >
+      <html className="scroll-smooth pt-20 subpixel-antialiased" lang="en">
         <body
-          className={`${firaCode.className} bg-zinc-950 text-zinc-100 selection:bg-zinc-100 selection:text-zinc-900`}
+          className={`${firaCode.className} min-h-screen bg-zinc-950 text-zinc-100 selection:bg-zinc-100 selection:text-zinc-900`}
         >
           <nav className="fixed top-0 flex w-full items-center justify-between border-b border-zinc-700 bg-inherit px-8 py-4 text-lg text-zinc-50">
             <Link
@@ -60,7 +57,7 @@ export default async function RootLayout({
               <Image alt="A wind vane" src="/logo.png" height={40} width={40} />
               <span className="text-2xl font-medium">css2wind</span>
             </Link>
-            <ul className="flex items-center gap-10 underline-offset-4 group-hover:underline">
+            <ul className="hidden items-center gap-10 underline-offset-4 group-hover:underline md:flex">
               <li className="border border-zinc-700 transition-all hover:border-zinc-50 active:scale-95">
                 <Link
                   className="flex items-center gap-4 px-4 py-2 underline-offset-4 transition-all group-hover:underline"
@@ -88,7 +85,7 @@ export default async function RootLayout({
                 </Link>
               </li>
             </ul>
-            <ul className="flex items-center gap-10 underline-offset-4 group-hover:underline">
+            <ul className="hidden items-center gap-10 underline-offset-4 group-hover:underline md:flex">
               {!user && (
                 <>
                   <li className="border border-zinc-700 transition-all hover:border-zinc-50 active:scale-95">
@@ -119,7 +116,7 @@ export default async function RootLayout({
           </nav>
           {children}
           <footer className="bottom-0 flex w-full items-center justify-between border-t border-zinc-700 bg-inherit px-8 py-5 text-lg">
-            <ul className="flex items-center gap-10 underline-offset-4 group-hover:underline">
+            <ul className="hidden items-center gap-10 underline-offset-4 group-hover:underline md:flex">
               <li className="group border border-zinc-50 transition-all active:scale-95">
                 <a
                   href="https://github.com/LukeberryPi/css2wind"
