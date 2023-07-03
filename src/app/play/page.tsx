@@ -56,8 +56,6 @@ export default function PlayPage() {
       setCssProperty(getRandomKey(cssProperties));
       setAttempt("");
     }, 800);
-
-    return document.querySelector("input")?.focus();
   };
 
   const handleKeyDown = (
@@ -110,6 +108,7 @@ export default function PlayPage() {
               value={attempt}
               onChange={(event) => handleChange(event)}
               onKeyDown={(event) => handleKeyDown(event, attempt)}
+              autoFocus
               className={`${
                 notSubmitted && "border border-zinc-50 text-zinc-50"
               } ${correct && "border border-greenGo text-greenGo"}
