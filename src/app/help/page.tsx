@@ -3,10 +3,7 @@ import { Arrow, Check, Zap, Close } from "@/icons";
 export default function HelpPage() {
   return (
     <main className="flex flex-col justify-center divide-y-2 divide-zinc-800 text-center">
-      <section
-        id="translate-ongoing"
-        className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-10 border-zinc-700 py-24"
-      >
+      <section className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-10 border-zinc-700 py-24">
         <div className="flex items-center gap-3">
           <Zap className="fill-yellowYes" size={24} />
           <h2>
@@ -30,10 +27,7 @@ export default function HelpPage() {
           </div>
         </div>
       </section>
-      <section
-        id="translate-correct"
-        className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-10 border-zinc-700 py-24"
-      >
+      <section className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-10 border-zinc-700 py-24">
         <div className="flex items-center gap-3">
           <Zap className="fill-yellowYes" size={24} />
           <h2>
@@ -57,10 +51,7 @@ export default function HelpPage() {
           </div>
         </div>
       </section>
-      <section
-        id="translate-incorrect"
-        className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-10 border-zinc-700 py-24"
-      >
+      <section className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-10 border-zinc-700 py-24">
         <div className="flex items-center gap-3">
           <Zap className="fill-yellowYes" size={24} />
           <h2>

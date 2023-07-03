@@ -2,12 +2,7 @@
 import { Arrow, Check, Close, Restart, Zap } from "@/icons";
 import { useEffect, useState } from "react";
 import { cssProperties } from "../../leozada";
-
-function getRandomKey(obj: any) {
-  let keys = Object.keys(obj);
-  let randomIndex = Math.floor(Math.random() * keys.length);
-  return keys[randomIndex];
-}
+import { getRandomKey } from "@/utils";
 
 export default function PlayPage() {
   const [attempt, setAttempt] = useState<string>("");
@@ -70,10 +65,7 @@ export default function PlayPage() {
 
   return (
     <main className="flex flex-col justify-center divide-y-2 divide-zinc-800 text-center">
-      <section
-        id="translate-ongoing"
-        className="mx-auto flex max-w-7xl flex-col items-center gap-10 py-[268px]"
-      >
+      <section className="mx-auto flex max-w-7xl flex-col items-center gap-10 py-[268px]">
         <div className="flex items-center gap-4">
           <Zap className="fill-yellowYes" size={24} />
           <h2>
