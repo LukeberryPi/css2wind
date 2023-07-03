@@ -1,7 +1,7 @@
 "use client";
 import { Arrow, Check, Close, Restart, Zap } from "@/icons";
 import { useEffect, useState } from "react";
-import { cssProperties } from "../../../leozada";
+import { cssProperties } from "../../leozada";
 
 function getRandomKey(obj: any) {
   let keys = Object.keys(obj);
