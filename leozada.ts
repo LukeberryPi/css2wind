@@ -1,4 +1,8 @@
-export const cssProperties = {
+interface CssProperties {
+  [key: string]: string[];
+}
+
+export const cssProperties: CssProperties = {
   "align-items: baseline": ["items-baseline"],
   "align-items: center": ["items-center"],
   "align-items: flex-end": ["items-end"],
