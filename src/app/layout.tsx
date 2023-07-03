@@ -102,7 +102,7 @@ export default async function RootLayout({
                   </li>
                   <li className="group transition-all active:scale-95">
                     <Link
-                      className="relative flex origin-center border bg-berryBlue px-4 py-2 font-bold text-zinc-950 underline-offset-4 transition-all hover:border-zinc-50 group-hover:underline"
+                      className="relative flex origin-center bg-berryBlue px-4 py-2 font-bold text-zinc-950 underline-offset-4 transition-all hover:border-zinc-50 group-hover:underline"
                       href="/signup"
                     >
                       Sign Up
