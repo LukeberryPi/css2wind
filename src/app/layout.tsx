@@ -14,13 +14,13 @@ export const metadata = {
   description: "Learn tailwind by playing!",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   // TODO: feels wrong to do at RootLayout and turn it async, is it the best way?
-  // const user = await currentUser();
+  const user = await currentUser();
 
   return (
     <ClerkProvider
@@ -41,7 +41,7 @@ export default function RootLayout({
         elements: {
           // trying to remove box shadow from clerk components
           rootBox: "bg-inherit",
-          providerIcon__github: "bg-white rounded-full",
+          providerIcon__github: "bg-zinc-50 rounded-full",
         },
       }}
     >
@@ -50,9 +50,9 @@ export default function RootLayout({
         lang="en"
       >
         <body
-          className={`${firaCode.className} bg-black text-zinc-100 selection:bg-zinc-100 selection:text-black`}
+          className={`${firaCode.className} bg-zinc-950 text-zinc-100 selection:bg-zinc-100 selection:text-zinc-900`}
         >
-          <nav className="fixed top-0 flex w-full items-center justify-between border-b border-zinc-700 bg-inherit px-8 py-4 text-lg text-white">
+          <nav className="fixed top-0 flex w-full items-center justify-between border-b border-zinc-700 bg-inherit px-8 py-4 text-lg text-zinc-50">
             <Link
               href="/"
               className="flex items-center gap-4 underline-offset-4 transition-transform active:scale-95 group-hover:underline"
@@ -61,69 +61,69 @@ export default function RootLayout({
               <span className="text-2xl font-medium">css2wind</span>
             </Link>
             <ul className="flex items-center gap-10 underline-offset-4 group-hover:underline">
-              <li className="border border-zinc-700 transition-all hover:border-white active:scale-95">
+              <li className="border border-zinc-700 transition-all hover:border-zinc-50 active:scale-95">
                 <Link
                   className="flex items-center gap-4 px-4 py-2 underline-offset-4 transition-all group-hover:underline"
                   href="/"
                 >
-                  <House size={24} className="fill-white" />
+                  <House size={24} className="fill-zinc-50" />
                   Home
                 </Link>
               </li>
               <li className="group transition-all active:scale-95">
                 <Link
                   href="/play"
-                  className="relative flex origin-center items-center gap-4 bg-berryBlue px-4 py-2 font-bold text-black underline-offset-4 transition-all group-hover:underline"
+                  className="relative flex origin-center items-center gap-4 bg-berryBlue px-4 py-2 font-bold text-zinc-950 underline-offset-4 transition-all group-hover:underline"
                 >
                   Play Now
                 </Link>
               </li>
-              <li className="border border-zinc-700 transition-all hover:border-white active:scale-95">
+              <li className="border border-zinc-700 transition-all hover:border-zinc-50 active:scale-95">
                 <Link
                   className="flex items-center gap-4 px-4 py-2 underline-offset-4 transition-all group-hover:underline"
                   href="/help"
                 >
-                  <Info size={24} className="fill-white" />
+                  <Info size={24} className="fill-zinc-50" />
                   Help
                 </Link>
               </li>
             </ul>
             <ul className="flex items-center gap-10 underline-offset-4 group-hover:underline">
-              {/* {!user && ( */}
-              <>
-                <li className="border border-zinc-700 transition-all hover:border-white active:scale-95">
-                  <Link
-                    className="flex items-center gap-4 py-2 pl-4 pr-3 underline-offset-4 transition-all group-hover:underline"
-                    href="/login"
-                  >
-                    Login
-                    <Login size={24} className="fill-white" />
-                  </Link>
+              {!user && (
+                <>
+                  <li className="border border-zinc-700 transition-all hover:border-zinc-50 active:scale-95">
+                    <Link
+                      className="flex items-center gap-4 py-2 pl-4 pr-3 underline-offset-4 transition-all group-hover:underline"
+                      href="/login"
+                    >
+                      Login
+                      <Login size={24} className="fill-zinc-50" />
+                    </Link>
+                  </li>
+                  <li className="group transition-all active:scale-95">
+                    <Link
+                      className="relative flex origin-center bg-berryBlue px-4 py-2 font-bold text-zinc-950 underline-offset-4 transition-all hover:border-zinc-50 group-hover:underline"
+                      href="/signup"
+                    >
+                      Sign Up
+                    </Link>
+                  </li>
+                </>
+              )}
+              {user && (
+                <li>
+                  <UserButton afterSignOutUrl="/" />
                 </li>
-                <li className="group transition-all active:scale-95">
-                  <Link
-                    className="relative flex origin-center bg-berryBlue px-4 py-2 font-bold text-black underline-offset-4 transition-all hover:border-white group-hover:underline"
-                    href="/signup"
-                  >
-                    Sign Up
-                  </Link>
-                </li>
-              </>
-              {/* )}
-              {user && ( */}
-              <li>
-                <UserButton afterSignOutUrl="/" />
-              </li>
-              {/* )} */}
+              )}
             </ul>
           </nav>
           {children}
           <footer className="bottom-0 flex w-full items-center justify-between border-t border-zinc-700 bg-inherit px-8 py-5 text-lg">
             <ul className="flex items-center gap-10 underline-offset-4 group-hover:underline">
-              <li className="group border border-white transition-all active:scale-95">
+              <li className="group border border-zinc-50 transition-all active:scale-95">
                 <a
                   href="https://github.com/LukeberryPi/css2wind"
-                  className="flex items-center px-4 py-2 decoration-white underline-offset-4 transition-all group-hover:underline"
+                  className="flex items-center px-4 py-2 decoration-zinc-50 underline-offset-4 transition-all group-hover:underline"
                   target="_blank"
                 >
                   GitHub
@@ -139,7 +139,7 @@ export default function RootLayout({
                 </a>
               </li>
               <li className="group bg-gradient-to-r from-instagramPink via-instagramOrange to-instagramPurple p-px active:scale-95">
-                <div className="h-full w-full bg-black">
+                <div className="h-full w-full bg-zinc-950">
                   <a
                     href="https://github.com/LukeberryPi/css2wind"
                     className="flex items-center bg-inherit bg-gradient-to-r from-instagramPink via-instagramOrange to-instagramPurple bg-clip-text px-4 py-2 text-transparent decoration-instagramPink underline-offset-4 transition-all group-hover:underline"
@@ -151,7 +151,7 @@ export default function RootLayout({
               </li>
             </ul>
             <a
-              className="border border-zinc-700 px-4 py-2 text-white transition-all hover:border-white active:scale-95"
+              className="border border-zinc-700 px-4 py-2 text-zinc-50 transition-all hover:border-zinc-50 active:scale-95"
               target="_blank"
               href="https://twitter.com/LukeberryPi"
             >
