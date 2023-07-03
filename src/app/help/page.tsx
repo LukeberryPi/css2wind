@@ -25,9 +25,7 @@ export default function HelpPage() {
           <Arrow className="mx-8 fill-zinc-50" />
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
             className=&#34;
-            <input
-              className="border border-zinc-50 bg-transparent p-5 text-xl text-zinc-50 focus:outline-none"
-            ></input>
+            <input className="border border-zinc-50 bg-transparent p-5 text-xl text-zinc-50 focus:outline-none" />
             &#34;
           </div>
         </div>
@@ -54,9 +52,7 @@ export default function HelpPage() {
           <Check className="mx-8 fill-greenGo" />
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
             className=&#34;
-            <input
-              className="border-2 border-greenGo bg-transparent p-5 text-xl text-greenGo focus:outline-none"
-            ></input>
+            <input className="border-2 border-greenGo bg-transparent p-5 text-xl text-greenGo focus:outline-none" />
             &#34;
           </div>
         </div>
@@ -83,9 +79,7 @@ export default function HelpPage() {
           <Close className="mx-8 fill-alertRed" />
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
             className=&#34;
-            <input
-              className="border-2 border-alertRed bg-transparent p-5 text-xl text-alertRed focus:outline-none"
-            ></input>
+            <input className="border-2 border-alertRed bg-transparent p-5 text-xl text-alertRed focus:outline-none" />
             &#34;
           </div>
         </div>
