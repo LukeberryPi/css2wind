@@ -1,6 +1,6 @@
 import { IconProps } from "./IconProps.types";
 
-export function Arrow({ className, size = 24 }: IconProps) {
+export function MultipleNotes({ className, size = 24 }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +9,7 @@ export function Arrow({ className, size = 24 }: IconProps) {
       viewBox="0 0 24 24"
       className={className}
     >
-      <path d="M4 11v2h12v2h2v-2h2v-2h-2V9h-2v2H4zm10-4h2v2h-2V7zm0 0h-2V5h2v2zm0 10h2v-2h-2v2zm0 0h-2v2h2v-2z" />
+      <path d="M7 0h16v20H5V0h2zm14 18V2H7v16h14zM9 4h10v2H9V4zm10 4H9v2h10V8zM9 12h7v2H9v-2zm10 10H3V4H1v20h18v-2z" />
     </svg>
   );
 }

@@ -3,6 +3,7 @@ import { Arrow, Check, Close, Copy, Restart, Swap, Zap } from "@/icons";
 import { useEffect, useState } from "react";
 import { cssProperties } from "../../leozada";
 import { getRandomKey } from "@/utils";
+import { MultipleNotes } from "@/icons/MultipleNotes";
 
 export default function PlayPage() {
   const [attempt, setAttempt] = useState<string>("");
@@ -67,7 +68,7 @@ export default function PlayPage() {
     <main className="flex flex-col justify-center divide-y-2 divide-zinc-700 text-center">
       <section className="mx-auto flex max-w-7xl flex-col items-center gap-10 py-[268px]">
         <div className="flex items-center gap-4">
-          <Zap className="fill-yellowYes" size={24} />
+          <Zap className="fill-yellowYes" />
           <h2>
             <span className="font-medium">Tip: </span>While the user is
             translating
@@ -86,7 +87,7 @@ export default function PlayPage() {
                 "animate-shake border border-alertRed font-medium text-alertRed"
               } w-96 origin-center select-all bg-transparent p-5 text-xl transition-all selection:bg-berryBlue selection:text-black`}
             >
-              {cssProperty};
+              {cssProperty}
             </span>
             &#125;
           </div>
@@ -115,15 +116,16 @@ export default function PlayPage() {
         </div>
         <div className="flex items-center gap-6">
           <button className="flex items-center gap-4 border border-berryBlue p-4 text-berryBlue underline-offset-4 transition-all hover:underline">
-            <Copy size={24} className="fill-berryBlue" />
-            <p>Copy</p>
+            <Copy className="fill-berryBlue" />
           </button>
           <button className="flex items-center gap-4 border border-purplePlus p-4 text-purplePlus underline-offset-4 transition-all hover:underline">
-            <Swap size={24} className="fill-purplePlus" />
-            <p>Swap</p>
+            <Swap className="fill-purplePlus" />
+          </button>
+          <button className="flex items-center gap-4 border border-purplePlus p-4 text-purplePlus underline-offset-4 transition-all hover:underline">
+            <MultipleNotes className="fill-purplePlus" />
           </button>
           <button className="flex items-center gap-4 border border-white p-4 text-white underline-offset-4 hover:underline">
-            <Restart size={24} className="fill-white" />
+            <Restart className="fill-white" />
             <p>Restart</p>
           </button>
         </div>

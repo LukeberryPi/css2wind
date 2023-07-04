@@ -5,7 +5,7 @@ export default function HelpPage() {
     <main className="flex flex-col justify-center divide-y-2 divide-zinc-700 text-center">
       <section className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-10 border-zinc-700 py-24">
         <div className="flex items-center gap-3">
-          <Zap className="fill-yellowYes" size={24} />
+          <Zap className="fill-yellowYes" />
           <h2>
             <span className="font-bold">Tip: </span>While the user is
             translating
@@ -29,7 +29,7 @@ export default function HelpPage() {
       </section>
       <section className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-10 border-zinc-700 py-24">
         <div className="flex items-center gap-3">
-          <Zap className="fill-yellowYes" size={24} />
+          <Zap className="fill-yellowYes" />
           <h2>
             <span className="font-bold">Tip: </span>When users gets the
             translation right
@@ -53,7 +53,7 @@ export default function HelpPage() {
       </section>
       <section className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-10 border-zinc-700 py-24">
         <div className="flex items-center gap-3">
-          <Zap className="fill-yellowYes" size={24} />
+          <Zap className="fill-yellowYes" />
           <h2>
             <span className="font-bold">Tip: </span>When users gets the
             translation wrong

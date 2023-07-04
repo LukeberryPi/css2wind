@@ -31,7 +31,7 @@ export default function HomePage() {
             href="/help"
           >
             Learn More
-            <Open size={24} className="fill-white" />
+            <Open className="fill-white" />
           </Link>
         </div>
       </section>
@@ -39,7 +39,7 @@ export default function HomePage() {
         id="benefits"
         className="mx-auto flex max-w-full flex-col items-center justify-center gap-16 border-zinc-700 px-2 py-16 sm:max-w-7xl md:py-32"
       >
-        <p className="-m-10 text-lg uppercase italic tracking-wider">
+        <p className="-m-11 text-lg italic tracking-wider">
           <span className="text-white">Noob?</span>{" "}
           <span className="text-berryBlue">User?</span>{" "}
           <span className="text-purplePlus">Adept?</span>
@@ -75,7 +75,7 @@ export default function HomePage() {
         id="faq"
         className="mx-auto flex w-full max-w-full flex-col gap-16 px-2 py-16 sm:max-w-7xl md:py-32"
       >
-        <p className="-m-10 text-lg uppercase italic tracking-wider">
+        <p className="-m-11 text-lg italic tracking-wider">
           Have doubts?
           <span className="text-berryBlue"> Good!</span>
         </p>

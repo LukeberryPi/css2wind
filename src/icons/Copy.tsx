@@ -1,6 +1,6 @@
 import { IconProps } from "./IconProps.types";
 
-export function Copy({ className, size = 32 }: IconProps) {
+export function Copy({ className, size = 24 }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -1,6 +1,6 @@
 import { IconProps } from "./IconProps.types";
 
-export function Zap({ className, size = 32 }: IconProps) {
+export function Zap({ className, size = 24 }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -11,3 +11,4 @@ export { Info } from "./Info";
 export { Restart } from "./Restart";
 export { Alert } from "./Alert";
 export { Swap } from "./Swap";
+export { Trend } from "./Trend";

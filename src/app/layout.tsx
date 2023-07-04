@@ -2,7 +2,7 @@ import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
 import { Fira_Code } from "next/font/google";
-import { Login, House, Info } from "@/icons";
+import { Login, House, Info, Trend } from "@/icons";
 import { ClerkProvider, UserButton, currentUser } from "@clerk/nextjs";
 
 export const firaCode = Fira_Code({
@@ -63,7 +63,7 @@ export default async function RootLayout({
                   className="flex items-center gap-4 px-4 py-2 underline-offset-4 transition-all group-hover:underline"
                   href="/"
                 >
-                  <House size={24} className="fill-zinc-50" />
+                  <House className="fill-zinc-50" />
                   Home
                 </Link>
               </li>
@@ -80,7 +80,7 @@ export default async function RootLayout({
                   className="flex items-center gap-4 px-4 py-2 underline-offset-4 transition-all group-hover:underline"
                   href="/help"
                 >
-                  <Info size={24} className="fill-zinc-50" />
+                  <Info className="fill-zinc-50" />
                   Help
                 </Link>
               </li>
@@ -94,7 +94,7 @@ export default async function RootLayout({
                       href="/login"
                     >
                       Login
-                      <Login size={24} className="fill-zinc-50" />
+                      <Login className="fill-zinc-50" />
                     </Link>
                   </li>
                   <li className="group transition-all active:scale-95 ">
@@ -111,10 +111,11 @@ export default async function RootLayout({
                 <>
                   <li className="active:scale-95">
                     <Link
-                      className="border border-purplePlus bg-inherit px-4 py-2 font-medium text-purplePlus underline-offset-4 hover:underline"
+                      className="flex items-center gap-4 border border-purplePlus bg-inherit px-4 py-2 font-medium text-purplePlus underline-offset-4 hover:underline"
                       href="/storm"
                     >
                       Step Up
+                      <Trend className="fill-purplePlus" />
                     </Link>
                   </li>
                   <li className="active:scale-95">
