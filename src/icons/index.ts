@@ -10,3 +10,4 @@ export { House } from "./House";
 export { Info } from "./Info";
 export { Restart } from "./Restart";
 export { Alert } from "./Alert";
+export { Swap } from "./Swap";

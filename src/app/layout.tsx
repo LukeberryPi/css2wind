@@ -19,7 +19,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // TODO: feels wrong to do at RootLayout and turn it async, is it the best way?
+  // TODO: feels wrong to do this at RootLayout and turn it async, is it the best way?
   const user = await currentUser();
 
   return (
@@ -47,18 +47,18 @@ export default async function RootLayout({
     >
       <html className="scroll-smooth pt-20 subpixel-antialiased" lang="en">
         <body
-          className={`${firaCode.className} min-h-screen bg-zinc-950 text-zinc-100 selection:bg-zinc-100 selection:text-zinc-900`}
+          className={`${firaCode.className} min-h-screen bg-zinc-950 text-white selection:bg-purplePlus selection:text-black`}
         >
           <nav className="fixed top-0 flex w-full items-center justify-between border-b border-zinc-700 bg-inherit px-8 py-4 text-lg text-zinc-50">
             <Link
               href="/"
-              className="flex items-center gap-4 underline-offset-4 transition-transform active:scale-95 group-hover:underline"
+              className="flex items-center gap-4 underline-offset-4 transition-transform active:scale-95  group-hover:underline"
             >
-              <Image alt="A wind vane" src="/logo.png" height={40} width={40} />
+              <Image alt="A wind vane" src="/Logo.svg" height={40} width={40} />
               <span className="text-2xl font-medium">css2wind</span>
             </Link>
             <ul className="hidden items-center gap-10 underline-offset-4 group-hover:underline md:flex">
-              <li className="border border-zinc-700 transition-all hover:border-zinc-50 active:scale-95">
+              <li className="border border-zinc-700 transition-all hover:border-zinc-50 active:scale-95 ">
                 <Link
                   className="flex items-center gap-4 px-4 py-2 underline-offset-4 transition-all group-hover:underline"
                   href="/"
@@ -67,15 +67,15 @@ export default async function RootLayout({
                   Home
                 </Link>
               </li>
-              <li className="group transition-all active:scale-95">
+              <li className="group transition-all active:scale-95 ">
                 <Link
+                  className="flex items-center gap-4 border border-berryBlue bg-inherit px-4 py-2 font-medium text-berryBlue underline-offset-4 transition-all group-hover:underline"
                   href="/play"
-                  className="relative flex origin-center items-center gap-4 bg-berryBlue px-4 py-2 font-bold text-zinc-950 underline-offset-4 transition-all group-hover:underline"
                 >
                   Play Now
                 </Link>
               </li>
-              <li className="border border-zinc-700 transition-all hover:border-zinc-50 active:scale-95">
+              <li className="border border-zinc-700 transition-all hover:border-zinc-50 active:scale-95 ">
                 <Link
                   className="flex items-center gap-4 px-4 py-2 underline-offset-4 transition-all group-hover:underline"
                   href="/help"
@@ -88,7 +88,7 @@ export default async function RootLayout({
             <ul className="hidden items-center gap-10 underline-offset-4 group-hover:underline md:flex">
               {!user && (
                 <>
-                  <li className="border border-zinc-700 transition-all hover:border-zinc-50 active:scale-95">
+                  <li className="border border-zinc-700 transition-all hover:border-zinc-50 active:scale-95 ">
                     <Link
                       className="flex items-center gap-4 py-2 pl-4 pr-3 underline-offset-4 transition-all group-hover:underline"
                       href="/login"
@@ -97,9 +97,9 @@ export default async function RootLayout({
                       <Login size={24} className="fill-zinc-50" />
                     </Link>
                   </li>
-                  <li className="group transition-all active:scale-95">
+                  <li className="group transition-all active:scale-95 ">
                     <Link
-                      className="relative flex origin-center bg-berryBlue px-4 py-2 font-bold text-zinc-950 underline-offset-4 transition-all hover:border-zinc-50 group-hover:underline"
+                      className="flex border border-berryBlue bg-inherit px-4 py-2 font-medium text-berryBlue underline-offset-4 transition-all group-hover:underline"
                       href="/signup"
                     >
                       Sign Up
@@ -108,16 +108,26 @@ export default async function RootLayout({
                 </>
               )}
               {user && (
-                <li>
-                  <UserButton afterSignOutUrl="/" />
-                </li>
+                <>
+                  <li className="active:scale-95">
+                    <Link
+                      className="border border-purplePlus bg-inherit px-4 py-2 font-medium text-purplePlus underline-offset-4 hover:underline"
+                      href="/storm"
+                    >
+                      Step Up
+                    </Link>
+                  </li>
+                  <li className="active:scale-95">
+                    <UserButton afterSignOutUrl="/" />
+                  </li>
+                </>
               )}
             </ul>
           </nav>
           {children}
           <footer className="bottom-0 flex w-full items-center justify-between border-t border-zinc-700 bg-inherit px-8 py-5 text-lg">
             <ul className="hidden items-center gap-10 underline-offset-4 group-hover:underline md:flex">
-              <li className="group border border-zinc-50 transition-all active:scale-95">
+              <li className="group border border-zinc-50 transition-all active:scale-95 ">
                 <a
                   href="https://github.com/LukeberryPi/css2wind"
                   className="flex items-center px-4 py-2 decoration-zinc-50 underline-offset-4 transition-all group-hover:underline"
@@ -126,7 +136,7 @@ export default async function RootLayout({
                   GitHub
                 </a>
               </li>
-              <li className="group border border-twitterBlue text-twitterBlue transition-all active:scale-95">
+              <li className="group border border-twitterBlue text-twitterBlue transition-all active:scale-95 ">
                 <a
                   href="https://twitter.com/css2wind"
                   className="flex items-center px-4 py-2 decoration-twitterBlue underline-offset-4 transition-all group-hover:underline"
@@ -135,7 +145,7 @@ export default async function RootLayout({
                   Twitter
                 </a>
               </li>
-              <li className="group bg-gradient-to-r from-instagramPink via-instagramOrange to-instagramPurple p-px active:scale-95">
+              <li className="group bg-gradient-to-r from-instagramPink via-instagramOrange to-instagramPurple p-px active:scale-95 ">
                 <div className="h-full w-full bg-zinc-950">
                   <a
                     href="https://github.com/LukeberryPi/css2wind"
@@ -148,7 +158,7 @@ export default async function RootLayout({
               </li>
             </ul>
             <a
-              className="border border-zinc-700 px-4 py-2 text-zinc-50 transition-all hover:border-zinc-50 active:scale-95"
+              className="border border-zinc-700 px-4 py-2 text-zinc-50 transition-all hover:border-zinc-50 "
               target="_blank"
               href="https://twitter.com/LukeberryPi"
             >

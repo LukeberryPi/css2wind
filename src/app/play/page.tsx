@@ -1,5 +1,5 @@
 "use client";
-import { Arrow, Check, Close, Restart, Zap } from "@/icons";
+import { Arrow, Check, Close, Copy, Restart, Swap, Zap } from "@/icons";
 import { useEffect, useState } from "react";
 import { cssProperties } from "../../leozada";
 import { getRandomKey } from "@/utils";
@@ -64,7 +64,7 @@ export default function PlayPage() {
   };
 
   return (
-    <main className="flex flex-col justify-center divide-y-2 divide-zinc-800 text-center">
+    <main className="flex flex-col justify-center divide-y-2 divide-zinc-700 text-center">
       <section className="mx-auto flex max-w-7xl flex-col items-center gap-10 py-[268px]">
         <div className="flex items-center gap-4">
           <Zap className="fill-yellowYes" size={24} />
@@ -74,16 +74,17 @@ export default function PlayPage() {
           </h2>
         </div>
         <div className="flex items-center gap-8">
-          <div className="text-white0 flex cursor-default flex-col items-start gap-2">
+          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
             .class &#123;
             <span
               className={`${
-                notSubmitted && "border border-berryBlue text-berryBlue"
-              } ${correct && "border border-greenGo text-greenGo"}
+                notSubmitted &&
+                "border border-berryBlue font-medium text-berryBlue"
+              } ${correct && "border border-greenGo font-medium text-greenGo"}
               ${
                 incorrect &&
-                "animate-shake border border-alertRed text-alertRed"
-              } w-96 origin-center bg-transparent p-5 text-xl transition-all`}
+                "animate-shake border border-alertRed font-medium text-alertRed"
+              } w-96 origin-center select-all bg-transparent p-5 text-xl transition-all selection:bg-berryBlue selection:text-black`}
             >
               {cssProperty};
             </span>
@@ -94,28 +95,38 @@ export default function PlayPage() {
           {incorrect && (
             <Close className="animate-shake fill-alertRed transition-all" />
           )}
-          <div className="text-white0 flex cursor-default flex-col items-start gap-2">
+          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
             className=&#34;
             <input
               value={attempt}
               onChange={(event) => handleChange(event)}
               onKeyDown={(event) => handleKeyDown(event, attempt)}
               autoFocus
-              className={`${notSubmitted && "border border-white text-white"} ${
-                correct && "border border-greenGo text-greenGo"
-              }
+              className={`${
+                notSubmitted && "border border-white font-medium text-white"
+              } ${correct && "border border-greenGo font-medium text-greenGo"}
               ${
                 incorrect &&
-                "animate-shake border border-alertRed text-alertRed"
+                "animate-shake border border-alertRed font-medium text-alertRed"
               } transition-al w-96 origin-center bg-transparent p-5 text-xl focus:outline-none`}
             />
             &#34;
           </div>
         </div>
-        <button className="flex items-center gap-4 border border-zinc-700 p-4 transition-all hover:border-white">
-          <Restart size={24} className="fill-white" />
-          <p className="text-white">Restart</p>
-        </button>
+        <div className="flex items-center gap-6">
+          <button className="flex items-center gap-4 border border-berryBlue p-4 text-berryBlue underline-offset-4 transition-all hover:underline">
+            <Copy size={24} className="fill-berryBlue" />
+            <p>Copy</p>
+          </button>
+          <button className="flex items-center gap-4 border border-purplePlus p-4 text-purplePlus underline-offset-4 transition-all hover:underline">
+            <Swap size={24} className="fill-purplePlus" />
+            <p>Swap</p>
+          </button>
+          <button className="flex items-center gap-4 border border-white p-4 text-white underline-offset-4 hover:underline">
+            <Restart size={24} className="fill-white" />
+            <p>Restart</p>
+          </button>
+        </div>
       </section>
     </main>
   );
