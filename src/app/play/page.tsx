@@ -91,10 +91,13 @@ export default function PlayPage() {
             </span>
             &#125;
           </div>
-          {notSubmitted && <Arrow className="fill-white" />}
-          {correct && <Check className="fill-greenGo" />}
+          {notSubmitted && <Arrow size={32} className="fill-white" />}
+          {correct && <Check size={32} className="fill-greenGo" />}
           {incorrect && (
-            <Close className="animate-shake fill-alertRed transition-all" />
+            <Close
+              size={32}
+              className="animate-shake fill-alertRed transition-all"
+            />
           )}
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
             className=&#34;
