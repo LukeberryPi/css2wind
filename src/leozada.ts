@@ -254,6 +254,8 @@ export const cssProperties: CssProperties = {
   "max-width: 65ch": ["max-w-prose", "max-w-[65ch]"],
   "max-width: 672px": ["max-w-2xl", "max-w-[672px]"],
   "max-width: 768px": ["max-w-3xl", "max-w-screen-md", "max-w-[768px]"],
+  "font-style: italic": ["italic"],
+  "font-style: normal": ["not-italic"],
   "max-width: fit-content": ["max-w-fit"],
   "max-width: max-content": ["max-w-max"],
   "max-width: min-content": ["max-w-min"],

@@ -1,5 +1,5 @@
 "use client";
-import { Arrow, Check, Close, Copy, Restart, Swap, Zap } from "@/icons";
+import { Alert, Arrow, Check, Close, Copy, Restart, Swap, Zap } from "@/icons";
 import { useEffect, useState } from "react";
 import { cssProperties } from "../../leozada";
 import { getRandomKey } from "@/utils";
@@ -10,11 +10,12 @@ export default function PlayPage() {
   const [cssProperty, setCssProperty] = useState<string>("");
   const [correct, setCorrect] = useState<boolean>(false);
   const [incorrect, setIncorrect] = useState<boolean>(false);
+  const [partial, setPartial] = useState<boolean>(false);
   const [notSubmitted, setNotSubmitted] = useState<boolean>(true);
 
   useEffect(() => {
-    setNotSubmitted(!correct && !incorrect);
-  }, [setNotSubmitted, correct, incorrect]);
+    setNotSubmitted(!correct && !incorrect && !partial);
+  }, [setNotSubmitted, correct, incorrect, partial]);
 
   useEffect(() => {
     setCssProperty(getRandomKey(cssProperties));
@@ -25,40 +26,51 @@ export default function PlayPage() {
     setAttempt(attempt);
   };
 
+  const resetInput = (afterMilisseconds = 800) => {
+    setTimeout(() => {
+      setCorrect(false);
+      setIncorrect(false);
+      setPartial(false);
+      setCssProperty(getRandomKey(cssProperties));
+      setAttempt("");
+    }, afterMilisseconds);
+  };
+
   const evaluateTranslation = (attempt: string) => {
     if (!attempt) {
+      return;
+    }
+
+    if (cssProperties[cssProperty].includes(attempt) && attempt.includes("[")) {
+      setCorrect(false);
+      setIncorrect(false);
+      setPartial(true);
+      resetInput();
       return;
     }
 
     if (cssProperties[cssProperty].includes(attempt)) {
       setCorrect(true);
       setIncorrect(false);
-
-      setTimeout(() => {
-        setCorrect(false);
-        setIncorrect(false);
-        setCssProperty(getRandomKey(cssProperties));
-        setAttempt("");
-      }, 800);
+      setPartial(false);
+      resetInput();
       return;
     }
 
-    setCorrect(false);
-    setIncorrect(true);
-
-    setTimeout(() => {
+    if (!cssProperties[cssProperty].includes(attempt)) {
       setCorrect(false);
-      setIncorrect(false);
-      setCssProperty(getRandomKey(cssProperties));
-      setAttempt("");
-    }, 800);
+      setIncorrect(true);
+      setPartial(false);
+      resetInput();
+      return;
+    }
   };
 
   const handleKeyDown = (
     event: React.KeyboardEvent<HTMLInputElement>,
     translation: string
   ) => {
-    if (event.key == " " || event.code == "Space") {
+    if (event.key == "Enter" || event.code == "Enter") {
       event.preventDefault();
       evaluateTranslation(translation);
     }
@@ -78,14 +90,21 @@ export default function PlayPage() {
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
             .class &#123;
             <span
-              className={`${
-                notSubmitted &&
-                "border border-berryBlue font-medium text-berryBlue"
-              } ${correct && "border border-greenGo font-medium text-greenGo"}
-              ${
-                incorrect &&
-                "animate-shake border border-alertRed font-medium text-alertRed"
-              } w-96 origin-center select-all bg-transparent p-5 text-xl transition-all selection:bg-berryBlue selection:text-black`}
+              className={`
+                ${
+                  notSubmitted &&
+                  "border border-berryBlue font-medium text-berryBlue"
+                } 
+                ${correct && "border border-greenGo font-medium text-greenGo"}
+                ${
+                  partial &&
+                  "border border-yellowYes font-medium text-yellowYes"
+                }
+                ${
+                  incorrect &&
+                  "animate-shake border border-alertRed font-medium text-alertRed"
+                }
+                w-96 origin-center select-all bg-transparent p-5 text-xl transition-all selection:bg-berryBlue selection:text-black`}
             >
               {cssProperty}
             </span>
@@ -93,6 +112,7 @@ export default function PlayPage() {
           </div>
           {notSubmitted && <Arrow size={32} className="fill-white" />}
           {correct && <Check size={32} className="fill-greenGo" />}
+          {partial && <Alert size={32} className="fill-yellowYes" />}
           {incorrect && (
             <Close
               size={32}
@@ -109,6 +129,7 @@ export default function PlayPage() {
               className={`${
                 notSubmitted && "border border-white font-medium text-white"
               } ${correct && "border border-greenGo font-medium text-greenGo"}
+              ${partial && "border border-yellowYes font-medium text-yellowYes"}
               ${
                 incorrect &&
                 "animate-shake border border-alertRed font-medium text-alertRed"
