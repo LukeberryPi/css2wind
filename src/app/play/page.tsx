@@ -1,9 +1,18 @@
 "use client";
-import { Alert, Arrow, Check, Close, Copy, Restart, Swap, Zap } from "@/icons";
+import {
+  Alert,
+  Arrow,
+  Check,
+  Close,
+  Copy,
+  MultipleNotes,
+  Restart,
+  Swap,
+  Zap,
+} from "@/icons";
 import { useEffect, useState } from "react";
 import { cssProperties } from "../../leozada";
 import { getRandomKey } from "@/utils";
-import { MultipleNotes } from "@/icons/MultipleNotes";
 
 export default function PlayPage() {
   const [attempt, setAttempt] = useState<string>("");

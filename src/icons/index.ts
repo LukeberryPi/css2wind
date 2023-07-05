@@ -13,3 +13,4 @@ export { Alert } from "./Alert";
 export { Swap } from "./Swap";
 export { Trend } from "./Trend";
 export { Menu } from "./Menu";
+export { MultipleNotes } from "./MultipleNotes";
