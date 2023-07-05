@@ -10,21 +10,74 @@ import {
   Swap,
   Zap,
 } from "@/icons";
-import { useEffect, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 import { cssProperties } from "../../leozada";
 import { getRandomKey } from "@/utils";
+
+type EvaluateAction = {
+  type: "correct" | "incorrect" | "partial" | "not_submitted";
+};
+
+const initialState = {
+  correct: false,
+  incorrect: false,
+  partial: false,
+  notSubmitted: true,
+};
+
+type initialStateType = {
+  correct: boolean;
+  incorrect: boolean;
+  partial: boolean;
+  notSubmitted: boolean;
+};
+
+function evaluationReducer(state: initialStateType, action: EvaluateAction) {
+  switch (action.type) {
+    case "correct": {
+      return {
+        ...state,
+        correct: true,
+        incorrect: false,
+        partial: false,
+        notSubmitted: false,
+      };
+    }
+    case "incorrect": {
+      return {
+        ...state,
+        correct: false,
+        incorrect: true,
+        partial: false,
+        notSubmitted: false,
+      };
+    }
+    case "partial": {
+      return {
+        ...state,
+        correct: false,
+        incorrect: false,
+        partial: true,
+        notSubmitted: false,
+      };
+    }
+    case "not_submitted": {
+      return {
+        ...state,
+        correct: false,
+        incorrect: false,
+        partial: false,
+        notSubmitted: true,
+      };
+    }
+  }
+}
 
 export default function PlayPage() {
   const [attempt, setAttempt] = useState<string>("");
   const [cssProperty, setCssProperty] = useState<string>("");
-  const [correct, setCorrect] = useState<boolean>(false);
-  const [incorrect, setIncorrect] = useState<boolean>(false);
-  const [partial, setPartial] = useState<boolean>(false);
-  const [notSubmitted, setNotSubmitted] = useState<boolean>(true);
-
-  useEffect(() => {
-    setNotSubmitted(!correct && !incorrect && !partial);
-  }, [setNotSubmitted, correct, incorrect, partial]);
+  const [state, dispatch] = useReducer(evaluationReducer, initialState);
+  const { correct, incorrect, partial, notSubmitted } = state;
 
   useEffect(() => {
     setCssProperty(getRandomKey(cssProperties));
@@ -37,11 +90,9 @@ export default function PlayPage() {
 
   const resetInput = (afterMilisseconds = 800) => {
     setTimeout(() => {
-      setCorrect(false);
-      setIncorrect(false);
-      setPartial(false);
       setCssProperty(getRandomKey(cssProperties));
       setAttempt("");
+      dispatch({ type: "not_submitted" });
     }, afterMilisseconds);
   };
 
@@ -51,25 +102,19 @@ export default function PlayPage() {
     }
 
     if (cssProperties[cssProperty].includes(attempt) && attempt.includes("[")) {
-      setCorrect(false);
-      setIncorrect(false);
-      setPartial(true);
+      dispatch({ type: "partial" });
       resetInput();
       return;
     }
 
     if (cssProperties[cssProperty].includes(attempt)) {
-      setCorrect(true);
-      setIncorrect(false);
-      setPartial(false);
+      dispatch({ type: "correct" });
       resetInput();
       return;
     }
 
     if (!cssProperties[cssProperty].includes(attempt)) {
-      setCorrect(false);
-      setIncorrect(true);
-      setPartial(false);
+      dispatch({ type: "incorrect" });
       resetInput();
       return;
     }
@@ -135,14 +180,14 @@ export default function PlayPage() {
               onChange={(event) => handleChange(event)}
               onKeyDown={(event) => handleKeyDown(event, attempt)}
               autoFocus
-              className={`${
-                notSubmitted && "border border-white font-medium text-white"
-              } ${correct && "border border-greenGo font-medium text-greenGo"}
+              className={`transition-al w-96 origin-center bg-transparent p-5 text-xl focus:outline-none
+              ${notSubmitted && "border border-white font-medium text-white"}
+              ${correct && "border border-greenGo font-medium text-greenGo"}
               ${partial && "border border-yellowYes font-medium text-yellowYes"}
               ${
                 incorrect &&
                 "animate-shake border border-alertRed font-medium text-alertRed"
-              } transition-al w-96 origin-center bg-transparent p-5 text-xl focus:outline-none`}
+              }`}
             />
             &#34;
           </div>
@@ -162,6 +207,10 @@ export default function PlayPage() {
             <p>Restart</p>
           </button>
         </div>
+        <p>correct: {correct.toString()}</p>
+        <p>incorrect: {incorrect.toString()}</p>
+        <p>partial: {partial.toString()}</p>
+        <p>notSubmitted: {notSubmitted.toString()}</p>
       </section>
     </main>
   );
