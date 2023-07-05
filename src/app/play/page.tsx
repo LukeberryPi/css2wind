@@ -70,7 +70,7 @@ export default function PlayPage() {
     event: React.KeyboardEvent<HTMLInputElement>,
     translation: string
   ) => {
-    if (event.key == "Enter" || event.code == "Enter") {
+    if (event.key == " " || event.code == "Space") {
       event.preventDefault();
       evaluateTranslation(translation);
     }
