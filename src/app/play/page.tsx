@@ -10,13 +10,10 @@ import {
   Swap,
   Zap,
 } from "@/icons";
-import { useEffect, useReducer, useState } from "react";
+import { useState } from "react";
 import { cssProperties } from "../../leozada";
 import { getRandomKey } from "@/utils";
-
-type EvaluateAction = {
-  type: "correct" | "incorrect" | "partial" | "not_submitted";
-};
+import { useEvaluation } from "@/hooks/useEvaluation";
 
 const initialState = {
   correct: false,
@@ -25,63 +22,17 @@ const initialState = {
   notSubmitted: true,
 };
 
-type initialStateType = {
-  correct: boolean;
-  incorrect: boolean;
-  partial: boolean;
-  notSubmitted: boolean;
-};
-
-function evaluationReducer(state: initialStateType, action: EvaluateAction) {
-  switch (action.type) {
-    case "correct": {
-      return {
-        ...state,
-        correct: true,
-        incorrect: false,
-        partial: false,
-        notSubmitted: false,
-      };
-    }
-    case "incorrect": {
-      return {
-        ...state,
-        correct: false,
-        incorrect: true,
-        partial: false,
-        notSubmitted: false,
-      };
-    }
-    case "partial": {
-      return {
-        ...state,
-        correct: false,
-        incorrect: false,
-        partial: true,
-        notSubmitted: false,
-      };
-    }
-    case "not_submitted": {
-      return {
-        ...state,
-        correct: false,
-        incorrect: false,
-        partial: false,
-        notSubmitted: true,
-      };
-    }
-  }
-}
-
 export default function PlayPage() {
   const [attempt, setAttempt] = useState<string>("");
-  const [cssProperty, setCssProperty] = useState<string>("");
-  const [state, dispatch] = useReducer(evaluationReducer, initialState);
+  const [cssProperty, setCssProperty] = useState<string>(
+    getRandomKey(cssProperties)
+  );
+  const {
+    state,
+    evaluateTranslation,
+    mutate: mutateTranslationStatus,
+  } = useEvaluation(initialState);
   const { correct, incorrect, partial, notSubmitted } = state;
-
-  useEffect(() => {
-    setCssProperty(getRandomKey(cssProperties));
-  }, []);
 
   const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
     const attempt = event.currentTarget.value;
@@ -92,32 +43,8 @@ export default function PlayPage() {
     setTimeout(() => {
       setCssProperty(getRandomKey(cssProperties));
       setAttempt("");
-      dispatch({ type: "not_submitted" });
+      mutateTranslationStatus({ type: "not_submitted" });
     }, afterMilisseconds);
-  };
-
-  const evaluateTranslation = (attempt: string) => {
-    if (!attempt) {
-      return;
-    }
-
-    if (cssProperties[cssProperty].includes(attempt) && attempt.includes("[")) {
-      dispatch({ type: "partial" });
-      resetInput();
-      return;
-    }
-
-    if (cssProperties[cssProperty].includes(attempt)) {
-      dispatch({ type: "correct" });
-      resetInput();
-      return;
-    }
-
-    if (!cssProperties[cssProperty].includes(attempt)) {
-      dispatch({ type: "incorrect" });
-      resetInput();
-      return;
-    }
   };
 
   const handleKeyDown = (
@@ -126,7 +53,10 @@ export default function PlayPage() {
   ) => {
     if (event.key == " " || event.code == "Space") {
       event.preventDefault();
-      evaluateTranslation(translation);
+      const evaluation = evaluateTranslation(translation, cssProperty);
+
+      if (!evaluation) return;
+      resetInput();
     }
   };
 
