@@ -118,7 +118,7 @@
 //   "list-style-image": ["none", "url('image.png')"],
 //   "list-style-position": ["outside", "inside"],
 //   "list-style-type": ["disc", "circle", "square", "decimal", "lower-roman"],
-//   margin: ["0", "10px", "20px"],
+//   ["0", "10px", "20px"],
 //   "margin-bottom": ["0", "10px", "20px"],
 //   "margin-left": ["0", "10px", "20px"],
 //   "margin-right": ["0", "10px", "20px"],
@@ -201,4 +201,145 @@
 //     ],
 //   },
 // };
+//
 
+export const api = {
+  flexboxAndGrid: [
+    {
+      key: "align-items",
+      isNumeric: false,
+      isHard: false,
+      match: [
+        {
+          css: "center",
+          tailwind: {
+            correct: ["items-center"],
+          },
+        },
+        {
+          css: "start",
+          tailwind: {
+            correct: ["items-start"],
+          },
+        },
+        {
+          css: "end",
+          tailwind: {
+            correct: ["items-end"],
+          },
+        },
+        {
+          css: "baseline",
+          tailwind: {
+            correct: ["items-baseline"],
+          },
+        },
+        {
+          css: "stretch",
+          tailwind: {
+            correct: ["items-stretch"],
+          },
+        },
+      ],
+    },
+    {
+      key: "justify-content",
+      isNumeric: false,
+      isHard: false,
+      match: [
+        {
+          css: "center",
+          tailwind: {
+            correct: ["justify-center"],
+          },
+        },
+        {
+          css: "start",
+          tailwind: {
+            correct: ["justify-start"],
+          },
+        },
+        {
+          css: "end",
+          tailwind: {
+            correct: ["justify-end"],
+          },
+        },
+        {
+          css: "between",
+          tailwind: {
+            correct: ["justify-between"],
+          },
+        },
+        {
+          css: "stretch",
+          tailwind: {
+            correct: ["justify-stretch"],
+          },
+        },
+        {
+          css: "around",
+          tailwind: {
+            correct: ["justify-around"],
+          },
+        },
+        {
+          css: "evenly",
+          tailwind: {
+            correct: ["justify-evenly"],
+          },
+        },
+        {
+          css: "normal",
+          tailwind: {
+            correct: ["justify-normal"],
+          },
+        },
+      ],
+    },
+  ],
+  spacing: [
+    {
+      key: "margin",
+      isNumeric: true,
+      isHard: false,
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["m-0"],
+            partial: ["m-[0px]"],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["m-1"],
+            partial: ["m-[4px]"],
+          },
+        },
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["m-0"],
+            partial: ["m-[0px]"],
+          },
+        },
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["m-0"],
+            partial: ["m-[0px]"],
+          },
+        },
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["m-0"],
+            partial: ["m-[0px]"],
+          },
+        },
+      ],
+    },
+  ],
+};
