@@ -54,7 +54,7 @@ export default async function RootLayout({
               href="/"
               className="flex items-center gap-4 underline-offset-4 transition-transform active:scale-95  group-hover:underline"
             >
-              <Image alt="A wind vane" src="/Logo.svg" height={40} width={40} />
+              <Image alt="A wind vane" src="/logo.svg" height={32} width={32} />
               <span className="text-2xl font-medium">css2wind</span>
             </Link>
             <ul className="hidden items-center gap-10 underline-offset-4 group-hover:underline md:flex">
