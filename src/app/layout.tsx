@@ -47,7 +47,7 @@ export default async function RootLayout({
     >
       <html className="scroll-smooth pt-20 subpixel-antialiased" lang="en">
         <body
-          className={`${firaCode.className} min-h-screen bg-zinc-950 text-white selection:bg-purplePlus selection:text-black`}
+          className={`${firaCode.className} min-h-screen bg-black text-white selection:bg-purplePlus selection:text-black`}
         >
           <nav className="fixed top-0 flex w-full items-center justify-between border-b border-zinc-700 bg-inherit px-8 py-4 text-lg text-zinc-50">
             <Link
@@ -147,7 +147,7 @@ export default async function RootLayout({
                 </a>
               </li>
               <li className="group bg-gradient-to-r from-instagramPink via-instagramOrange to-instagramPurple p-px active:scale-95 ">
-                <div className="h-full w-full bg-zinc-950">
+                <div className="h-full w-full bg-black">
                   <a
                     href="https://github.com/LukeberryPi/css2wind"
                     className="flex items-center bg-inherit bg-gradient-to-r from-instagramPink via-instagramOrange to-instagramPurple bg-clip-text px-4 py-2 text-transparent decoration-instagramPink underline-offset-4 transition-all group-hover:underline"
