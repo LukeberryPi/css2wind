@@ -8,7 +8,7 @@ export default function HomePage() {
         id="hero-banner"
         className="mx-auto flex max-w-full flex-col items-center justify-center gap-10 px-2 py-16 sm:max-w-7xl md:py-32"
       >
-        <h1 className="break-words text-5xl font-bold text-white md:text-6xl">
+        <h1 className="break-words text-5xl font-bold text-white md:text-7xl">
           Learn
           <span className="text-berryBlue"> Tailwind </span>
           by playing

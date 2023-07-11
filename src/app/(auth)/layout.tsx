@@ -3,5 +3,11 @@ export default function AuthLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <main>{children}</main>;
+  return (
+    <html className="scroll-smooth subpixel-antialiased" lang="en">
+      <body className="min-h-screen bg-black text-white selection:bg-berryBlue selection:text-black">
+        <main>{children}</main>
+      </body>
+    </html>
+  );
 }
