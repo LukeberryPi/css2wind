@@ -27,7 +27,7 @@ export default function HomePage() {
             Play Now
           </Link>
           <Link
-            className="text-md flex w-52 items-center justify-center gap-4 border border-zinc-700 py-2 transition-all hover:border-white  md:w-auto md:px-6 md:py-4 md:text-xl"
+            className="text-md flex w-52 items-center justify-center gap-4 border border-zinc-700 py-2 transition-all hover:border-white md:w-auto md:px-6 md:py-4 md:text-xl"
             href="/help"
           >
             Learn More
