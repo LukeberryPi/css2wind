@@ -6,7 +6,7 @@ export default function HomePage() {
     <main className="flex h-full w-full flex-col justify-center divide-y-2 divide-zinc-700 text-center">
       <section
         id="hero-banner"
-        className="mx-auto flex max-w-full flex-col items-center justify-center gap-10 px-2 py-24 sm:max-w-7xl md:py-32"
+        className="mx-auto flex max-w-full flex-col items-center justify-center gap-10 px-2 py-20 sm:max-w-7xl md:py-32"
       >
         <h1 className="break-words text-5xl font-bold text-white md:text-7xl">
           Learn
@@ -37,7 +37,7 @@ export default function HomePage() {
       </section>
       <section
         id="benefits"
-        className="mx-auto flex max-w-full flex-col items-center justify-center gap-16 border-zinc-700 px-2 py-24 sm:max-w-7xl md:py-32"
+        className="mx-auto flex max-w-full flex-col items-center justify-center gap-16 border-zinc-700 px-2 py-20 sm:max-w-7xl md:py-32"
       >
         <div className="flex flex-col items-center gap-6">
           <span className="text-lg italic tracking-wider">
@@ -75,7 +75,7 @@ export default function HomePage() {
       </section>
       <section
         id="faq"
-        className="mx-auto flex w-full max-w-full flex-col gap-16 px-2 py-24 sm:max-w-7xl md:py-32"
+        className="mx-auto flex w-full max-w-full flex-col gap-16 px-2 py-20 sm:max-w-7xl md:py-32"
       >
         <div className="flex flex-col items-center gap-6">
           <p className="text-lg italic tracking-wider">
