@@ -6,7 +6,7 @@ export default function HomePage() {
     <main className="flex h-full w-full flex-col justify-center divide-y-2 divide-zinc-700 text-center">
       <section
         id="hero-banner"
-        className="mx-auto flex max-w-full flex-col items-center justify-center gap-10 px-2 py-16 sm:max-w-7xl md:py-32"
+        className="mx-auto flex max-w-full flex-col items-center justify-center gap-10 px-2 py-24 sm:max-w-7xl md:py-32"
       >
         <h1 className="break-words text-5xl font-bold text-white md:text-7xl">
           Learn
@@ -37,17 +37,19 @@ export default function HomePage() {
       </section>
       <section
         id="benefits"
-        className="mx-auto flex max-w-full flex-col items-center justify-center gap-16 border-zinc-700 px-2 py-16 sm:max-w-7xl md:py-32"
+        className="mx-auto flex max-w-full flex-col items-center justify-center gap-16 border-zinc-700 px-2 py-24 sm:max-w-7xl md:py-32"
       >
-        <p className="-m-11 text-lg italic tracking-wider">
-          <span className="text-white">Noob?</span>{" "}
-          <span className="text-berryBlue">User?</span>{" "}
-          <span className="text-purplePlus">Adept?</span>
-        </p>
-        <h2 className="break-words text-5xl font-bold text-white md:text-6xl">
-          Explore. <span className="text-berryBlue">Practice. </span>
-          <span className="text-purplePlus">Master. </span>
-        </h2>
+        <div className="flex flex-col items-center gap-6">
+          <span className="text-lg italic tracking-wider">
+            <span className="text-white">Noob?</span>{" "}
+            <span className="text-berryBlue">User?</span>{" "}
+            <span className="text-purplePlus">Adept?</span>
+          </span>
+          <h2 className="break-words text-5xl font-bold text-white md:text-6xl">
+            Explore. <span className="text-berryBlue">Practice. </span>
+            <span className="text-purplePlus">Master. </span>
+          </h2>
+        </div>
         <div className="flex w-full flex-col items-center gap-16 md:flex-row">
           <div className="flex flex-col gap-6 text-center md:text-left">
             <h3 className="text-2xl font-medium text-white md:text-4xl">
@@ -73,24 +75,27 @@ export default function HomePage() {
       </section>
       <section
         id="faq"
-        className="mx-auto flex w-full max-w-full flex-col gap-16 px-2 py-16 sm:max-w-7xl md:py-32"
+        className="mx-auto flex w-full max-w-full flex-col gap-16 px-2 py-24 sm:max-w-7xl md:py-32"
       >
-        <p className="-m-11 text-lg italic tracking-wider">
-          Have doubts?
-          <span className="text-berryBlue"> Good!</span>
-        </p>
-        <h2 className="break-words text-5xl font-bold text-white md:text-6xl">
-          Frequently Asked <span className="text-berryBlue">Questions</span>
-        </h2>
+        <div className="flex flex-col items-center gap-6">
+          <p className="text-lg italic tracking-wider">
+            Have doubts?
+            <span className="text-berryBlue"> Good!</span>
+          </p>
+          <h2 className="break-words text-5xl font-bold text-white md:text-6xl">
+            Frequently Asked <span className="text-berryBlue">Questions</span>
+          </h2>
+        </div>
         <ul className="flex max-w-3xl flex-col gap-6 self-center">
           <li className="flex flex-col gap-3 px-2 text-center md:px-0 md:text-left">
             <p className="text-lg font-medium md:text-2xl">
-              What even is <span className="text-berryBlue">Tailwind?</span>
+              What is <span className="text-berryBlue">Tailwind?</span>
             </p>
             <p className="text-sm text-zinc-400 md:text-lg">
-              A utility-first CSS framework packed with classes like flex, pt-4,
-              text-center and rotate-90 that can be composed to build any
-              design, directly in your markup.
+              Tailwind CSS is a utility-first framework with pre-built CSS
+              classes for responsive, customizable UIs. It promotes a functional
+              styling approach, offering flexibility through direct class
+              manipulation for efficient design control.
             </p>
           </li>
           <li className="flex flex-col gap-3 px-2 text-center md:px-0 md:text-left">
@@ -99,9 +104,12 @@ export default function HomePage() {
               <span className="text-berryBlue"> inline styles?</span>
             </p>
             <p className="text-sm text-zinc-400 md:text-lg">
-              A utility-first CSS framework packed with classes like flex, pt-4,
-              text-center and rotate-90 that can be composed to build any
-              design, directly in your markup.
+              TailwindCSS goes beyond inline styles by providing a predefined
+              design system, allowing for consistent UIs with constraints. It
+              offers responsive utilities for building fully responsive
+              interfaces, unlike inline styles. Tailwind&apos;s state variants
+              enable styling hover, focus, and other states not possible with
+              inline styles.
             </p>
           </li>
           <li className="flex flex-col gap-3 px-2 text-center md:px-0 md:text-left">
@@ -110,20 +118,24 @@ export default function HomePage() {
               then?
             </p>
             <p className="text-sm text-zinc-400 md:text-lg">
-              A utility-first CSS framework packed with classes like flex, pt-4,
-              text-center and rotate-90 that can be composed to build any
-              design, directly in your markup.
+              Tailwind CSS uses utility classes directly in HTML for styling
+              components, providing flexibility and customization without
+              overriding styles or writing custom CSS. It diverges from
+              Bootstrap&apos;s pre-defined components, embracing a utility-first
+              approach for efficient styling.
             </p>
           </li>
           <li className="flex flex-col gap-3 px-2 text-center md:px-0 md:text-left">
             <p className="text-lg font-medium md:text-2xl">
-              Doesn&apos;t the{" "}
+              Doesn&apos;t the
               <span className="text-berryBlue"> HTML get ugly?</span>
             </p>
             <p className="text-sm text-zinc-400 md:text-lg">
-              A utility-first CSS framework packed with classes like flex, pt-4,
-              text-center and rotate-90 that can be composed to build any
-              design, directly in your markup.
+              Tailwind CSS&apos;s utility classes may increase HTML verbosity,
+              but the benefits of scalability, maintainability, rapid
+              development, and flexibility outweigh concerns about
+              &quot;ugliness.&quot; It offers a functional approach to styling
+              and reduces the need for custom CSS.
             </p>
           </li>
         </ul>
