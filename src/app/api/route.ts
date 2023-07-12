@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { cssProperties } from "../../leozada";
+import { propertyDictionary } from "../../leozada";
 
 export async function GET() {
-  return NextResponse.json({ cssProperties });
+  return NextResponse.json({ propertyDictionary });
 }

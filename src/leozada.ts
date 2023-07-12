@@ -1,8 +1,8 @@
-interface CssProperties {
+interface PropertyDictionary {
   [key: string]: string[];
 }
 
-export const cssProperties: CssProperties = {
+export const propertyDictionary: PropertyDictionary = {
   "align-items: baseline": ["items-baseline"],
   "align-items: center": ["items-center"],
   "align-items: flex-end": ["items-end"],
