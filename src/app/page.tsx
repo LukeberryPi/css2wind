@@ -92,7 +92,7 @@ export default function HomePage() {
               What is <span className="text-berryBlue">Tailwind?</span>
             </p>
             <p className="text-sm text-zinc-400 md:text-lg">
-              Tailwind CSS is a utility-first framework with pre-built CSS
+              TailwindCSS is a utility-first framework with pre-built CSS
               classes for responsive, customizable UIs. It promotes a functional
               styling approach, offering flexibility through direct class
               manipulation for efficient design control.
@@ -118,7 +118,7 @@ export default function HomePage() {
               then?
             </p>
             <p className="text-sm text-zinc-400 md:text-lg">
-              Tailwind CSS uses utility classes directly in HTML for styling
+              TailwindCSS uses utility classes directly in HTML for styling
               components, providing flexibility and customization without
               overriding styles or writing custom CSS. It diverges from
               Bootstrap&apos;s pre-defined components, embracing a utility-first
@@ -131,7 +131,7 @@ export default function HomePage() {
               <span className="text-berryBlue"> HTML get ugly?</span>
             </p>
             <p className="text-sm text-zinc-400 md:text-lg">
-              Tailwind CSS&apos;s utility classes may increase HTML verbosity,
+              TailwindCSS&apos;s utility classes may increase HTML verbosity,
               but the benefits of scalability, maintainability, rapid
               development, and flexibility outweigh concerns about
               &quot;ugliness.&quot; It offers a functional approach to styling
