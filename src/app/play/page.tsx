@@ -11,7 +11,7 @@ import {
   Zap,
 } from "@/icons";
 import { useEffect, useReducer, useState } from "react";
-import { cssProperties } from "../../leozada";
+import { propertyDictionary } from "../../leozada";
 import { getRandomKey } from "@/utils";
 
 type EvaluateAction = {
@@ -80,7 +80,7 @@ export default function PlayPage() {
   const { correct, incorrect, partial, notSubmitted } = state;
 
   useEffect(() => {
-    setCssProperty(getRandomKey(cssProperties));
+    setCssProperty(getRandomKey(propertyDictionary));
   }, []);
 
   const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
@@ -90,7 +90,7 @@ export default function PlayPage() {
 
   const resetInput = (afterMilisseconds = 800) => {
     setTimeout(() => {
-      setCssProperty(getRandomKey(cssProperties));
+      setCssProperty(getRandomKey(propertyDictionary));
       setAttempt("");
       dispatch({ type: "not_submitted" });
     }, afterMilisseconds);
@@ -101,19 +101,22 @@ export default function PlayPage() {
       return;
     }
 
-    if (cssProperties[cssProperty].includes(attempt) && attempt.includes("[")) {
+    if (
+      propertyDictionary[cssProperty].includes(attempt) &&
+      attempt.includes("[")
+    ) {
       dispatch({ type: "partial" });
       resetInput();
       return;
     }
 
-    if (cssProperties[cssProperty].includes(attempt)) {
+    if (propertyDictionary[cssProperty].includes(attempt)) {
       dispatch({ type: "correct" });
       resetInput();
       return;
     }
 
-    if (!cssProperties[cssProperty].includes(attempt)) {
+    if (!propertyDictionary[cssProperty].includes(attempt)) {
       dispatch({ type: "incorrect" });
       resetInput();
       return;
