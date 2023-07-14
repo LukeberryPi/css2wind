@@ -11,7 +11,7 @@ import {
   Zap,
 } from "@/icons";
 import { useEffect, useState } from "react";
-import { propertyDictionary } from "../../leozada";
+import { propertyDictionary } from "@/leozada";
 import { getRandomKey } from "@/utils";
 import { useEvaluation } from "@/hooks";
 
