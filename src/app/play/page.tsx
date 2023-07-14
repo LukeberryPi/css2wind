@@ -10,13 +10,10 @@ import {
   Swap,
   Zap,
 } from "@/icons";
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useState } from "react";
 import { propertyDictionary } from "../../leozada";
 import { getRandomKey } from "@/utils";
-
-type EvaluateAction = {
-  type: "correct" | "incorrect" | "partial" | "not_submitted";
-};
+import { useEvaluation } from "@/hooks";
 
 const initialState = {
   correct: false,
@@ -25,58 +22,14 @@ const initialState = {
   notSubmitted: true,
 };
 
-type initialStateType = {
-  correct: boolean;
-  incorrect: boolean;
-  partial: boolean;
-  notSubmitted: boolean;
-};
-
-function evaluationReducer(state: initialStateType, action: EvaluateAction) {
-  switch (action.type) {
-    case "correct": {
-      return {
-        ...state,
-        correct: true,
-        incorrect: false,
-        partial: false,
-        notSubmitted: false,
-      };
-    }
-    case "incorrect": {
-      return {
-        ...state,
-        correct: false,
-        incorrect: true,
-        partial: false,
-        notSubmitted: false,
-      };
-    }
-    case "partial": {
-      return {
-        ...state,
-        correct: false,
-        incorrect: false,
-        partial: true,
-        notSubmitted: false,
-      };
-    }
-    case "not_submitted": {
-      return {
-        ...state,
-        correct: false,
-        incorrect: false,
-        partial: false,
-        notSubmitted: true,
-      };
-    }
-  }
-}
-
 export default function PlayPage() {
   const [attempt, setAttempt] = useState<string>("");
   const [cssProperty, setCssProperty] = useState<string>("");
-  const [state, dispatch] = useReducer(evaluationReducer, initialState);
+  const {
+    state,
+    evaluateTranslation,
+    mutate: mutateTranslationStatus,
+  } = useEvaluation(initialState);
   const { correct, incorrect, partial, notSubmitted } = state;
 
   useEffect(() => {
@@ -92,35 +45,8 @@ export default function PlayPage() {
     setTimeout(() => {
       setCssProperty(getRandomKey(propertyDictionary));
       setAttempt("");
-      dispatch({ type: "not_submitted" });
+      mutateTranslationStatus({ type: "not_submitted" });
     }, afterMilisseconds);
-  };
-
-  const evaluateTranslation = (attempt: string) => {
-    if (!attempt) {
-      return;
-    }
-
-    if (
-      propertyDictionary[cssProperty].includes(attempt) &&
-      attempt.includes("[")
-    ) {
-      dispatch({ type: "partial" });
-      resetInput();
-      return;
-    }
-
-    if (propertyDictionary[cssProperty].includes(attempt)) {
-      dispatch({ type: "correct" });
-      resetInput();
-      return;
-    }
-
-    if (!propertyDictionary[cssProperty].includes(attempt)) {
-      dispatch({ type: "incorrect" });
-      resetInput();
-      return;
-    }
   };
 
   const handleKeyDown = (
@@ -129,19 +55,33 @@ export default function PlayPage() {
   ) => {
     if (event.key == " " || event.code == "Space") {
       event.preventDefault();
-      evaluateTranslation(translation);
+      const evaluation = evaluateTranslation(translation, cssProperty);
+
+      if (!evaluation) return;
+      resetInput();
     }
   };
 
   return (
     <main className="flex flex-col justify-center divide-y-2 divide-zinc-700 text-center">
       <section className="mx-auto flex max-w-7xl flex-col items-center gap-10 py-[268px]">
-        <div className="flex items-center gap-4">
-          <Zap className="fill-yellowYes" />
-          <h2>
-            <span className="font-medium">Tip: </span>While the user is
-            translating
-          </h2>
+        <div className="flex items-center justify-center gap-6">
+          <button className="flex items-center justify-center gap-4 border border-berryBlue p-4 text-berryBlue underline-offset-4 transition-all hover:underline">
+            <Copy className="fill-berryBlue" />
+            Copy CSS
+          </button>
+          <button className="flex items-center justify-center gap-4 border border-purplePlus p-4 text-purplePlus underline-offset-4 transition-all hover:underline">
+            <Swap className="fill-purplePlus" />
+            Swap translation
+          </button>
+          <button className="flex items-center justify-center gap-4 border border-purplePlus p-4 text-purplePlus underline-offset-4 transition-all hover:underline">
+            <MultipleNotes className="fill-purplePlus" />
+            Open documentation
+          </button>
+          <button className="flex items-center justify-center gap-4 border border-white p-4 text-white underline-offset-4 hover:underline">
+            <Restart className="fill-white" />
+            Restart game
+          </button>
         </div>
         <div className="flex items-center gap-8">
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
@@ -195,25 +135,13 @@ export default function PlayPage() {
             &#34;
           </div>
         </div>
-        <div className="flex items-center gap-6">
-          <button className="flex items-center gap-4 border border-berryBlue p-4 text-berryBlue underline-offset-4 transition-all hover:underline">
-            <Copy className="fill-berryBlue" />
-          </button>
-          <button className="flex items-center gap-4 border border-purplePlus p-4 text-purplePlus underline-offset-4 transition-all hover:underline">
-            <Swap className="fill-purplePlus" />
-          </button>
-          <button className="flex items-center gap-4 border border-purplePlus p-4 text-purplePlus underline-offset-4 transition-all hover:underline">
-            <MultipleNotes className="fill-purplePlus" />
-          </button>
-          <button className="flex items-center gap-4 border border-white p-4 text-white underline-offset-4 hover:underline">
-            <Restart className="fill-white" />
-            <p>Restart</p>
-          </button>
+        <div className="flex items-center gap-4">
+          <Zap className="fill-yellowYes" />
+          <h2>
+            <span className="font-bold">Tip: </span>While the user is
+            translating
+          </h2>
         </div>
-        <p>correct: {correct.toString()}</p>
-        <p>incorrect: {incorrect.toString()}</p>
-        <p>partial: {partial.toString()}</p>
-        <p>notSubmitted: {notSubmitted.toString()}</p>
       </section>
     </main>
   );
