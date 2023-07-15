@@ -96,28 +96,24 @@ export const api = {
           css: "column-reverse",
           tailwind: {
             correct: ["flex-col-reverse"],
-            partial: [],
           },
         },
         {
           css: "column",
           tailwind: {
             correct: ["flex-col"],
-            partial: [],
           },
         },
         {
           css: "row-reverse",
           tailwind: {
             correct: ["flex-row-reverse"],
-            partial: [],
           },
         },
         {
           css: "row",
           tailwind: {
             correct: ["flex-row"],
-            partial: [],
           },
         },
       ],
@@ -129,21 +125,18 @@ export const api = {
           css: "wrap",
           tailwind: {
             correct: ["flex-wrap"],
-            partial: [],
           },
         },
         {
           css: "wrap-reverse",
           tailwind: {
             correct: ["flex-wrap-reverse"],
-            partial: [],
           },
         },
         {
           css: "nowrap",
           tailwind: {
             correct: ["flex-nowrap"],
-            partial: [],
           },
         },
       ],
@@ -155,28 +148,24 @@ export const api = {
           css: "0 1 auto",
           tailwind: {
             correct: ["flex-initial"],
-            partial: [],
           },
         },
         {
           css: "1 1 0%",
           tailwind: {
             correct: ["flex-1"],
-            partial: [],
           },
         },
         {
           css: "1 1 auto",
           tailwind: {
             correct: ["flex-auto"],
-            partial: [],
           },
         },
         {
           css: "none",
           tailwind: {
             correct: ["flex-none"],
-            partial: [],
           },
         },
       ],
@@ -188,105 +177,90 @@ export const api = {
           css: "1",
           tailwind: {
             correct: ["order-1"],
-            partial: [],
           },
         },
         {
           css: "2",
           tailwind: {
             correct: ["order-2"],
-            partial: [],
           },
         },
         {
           css: "3",
           tailwind: {
             correct: ["order-3"],
-            partial: [],
           },
         },
         {
           css: "4",
           tailwind: {
             correct: ["order-4"],
-            partial: [],
           },
         },
         {
           css: "5",
           tailwind: {
             correct: ["order-5"],
-            partial: [],
           },
         },
         {
           css: "6",
           tailwind: {
             correct: ["order-6"],
-            partial: [],
           },
         },
         {
           css: "7",
           tailwind: {
             correct: ["order-7"],
-            partial: [],
           },
         },
         {
           css: "8",
           tailwind: {
             correct: ["order-8"],
-            partial: [],
           },
         },
         {
           css: "9",
           tailwind: {
             correct: ["order-9"],
-            partial: [],
           },
         },
         {
           css: "10",
           tailwind: {
             correct: ["order-10"],
-            partial: [],
           },
         },
         {
           css: "11",
           tailwind: {
             correct: ["order-11"],
-            partial: [],
           },
         },
         {
           css: "12",
           tailwind: {
             correct: ["order-12"],
-            partial: [],
           },
         },
         {
           css: "-9999",
           tailwind: {
             correct: ["order-first"],
-            partial: [],
           },
         },
         {
           css: "9999",
           tailwind: {
             correct: ["order-last"],
-            partial: [],
           },
         },
         {
           css: "0",
           tailwind: {
             correct: ["order-none"],
-            partial: [],
           },
         },
       ],
@@ -298,14 +272,12 @@ export const api = {
           css: "1",
           tailwind: {
             correct: ["grow"],
-            partial: [],
           },
         },
         {
           css: "0",
           tailwind: {
             correct: ["grow-0"],
-            partial: [],
           },
         },
       ],
@@ -317,14 +289,12 @@ export const api = {
           css: "1",
           tailwind: {
             correct: ["shrink"],
-            partial: [],
           },
         },
         {
           css: "0",
           tailwind: {
             correct: ["shrink-0"],
-            partial: [],
           },
         },
       ],
@@ -792,28 +762,24 @@ export const api = {
           css: "start",
           tailwind: {
             correct: ["justify-items-start"],
-            partial: [],
           },
         },
         {
           css: "end",
           tailwind: {
             correct: ["justify-items-end"],
-            partial: [],
           },
         },
         {
           css: "center",
           tailwind: {
             correct: ["justify-items-center"],
-            partial: [],
           },
         },
         {
           css: "stretch",
           tailwind: {
             correct: ["justify-items-stretch"],
-            partial: [],
           },
         },
       ],
@@ -825,35 +791,30 @@ export const api = {
           css: "auto",
           tailwind: {
             correct: ["justify-self-auto"],
-            partial: [],
           },
         },
         {
           css: "center",
           tailwind: {
             correct: ["justify-self-center"],
-            partial: [],
           },
         },
         {
           css: "end",
           tailwind: {
             correct: ["justify-self-end"],
-            partial: [],
           },
         },
         {
           css: "start",
           tailwind: {
             correct: ["justify-self-start"],
-            partial: [],
           },
         },
         {
           css: "stretch",
           tailwind: {
             correct: ["justify-self-stretch"],
-            partial: [],
           },
         },
       ],
@@ -865,63 +826,54 @@ export const api = {
           css: "normal",
           tailwind: {
             correct: ["content-normal"],
-            partial: [],
           },
         },
         {
           css: "center",
           tailwind: {
             correct: ["content-center"],
-            partial: [],
           },
         },
         {
           css: "flex-start",
           tailwind: {
             correct: ["content-start"],
-            partial: [],
           },
         },
         {
           css: "flex-end",
           tailwind: {
             correct: ["content-end"],
-            partial: [],
           },
         },
         {
           css: "space-between",
           tailwind: {
             correct: ["content-between"],
-            partial: [],
           },
         },
         {
           css: "space-around",
           tailwind: {
             correct: ["content-around"],
-            partial: [],
           },
         },
         {
           css: "space-evenly",
           tailwind: {
             correct: ["content-evenly"],
-            partial: [],
           },
         },
         {
           css: "baseline",
           tailwind: {
             correct: ["content-baseline"],
-            partial: [],
           },
         },
         {
           css: "stretch",
           tailwind: {
             correct: ["content-stretch"],
-            partial: [],
           },
         },
       ],
@@ -933,42 +885,36 @@ export const api = {
           css: "auto",
           tailwind: {
             correct: ["self-auto"],
-            partial: [],
           },
         },
         {
           css: "flex-start",
           tailwind: {
             correct: ["self-start"],
-            partial: [],
           },
         },
         {
           css: "flex-end",
           tailwind: {
             correct: ["self-end"],
-            partial: [],
           },
         },
         {
           css: "center",
           tailwind: {
             correct: ["self-center"],
-            partial: [],
           },
         },
         {
           css: "stretch",
           tailwind: {
             correct: ["self-stretch"],
-            partial: [],
           },
         },
         {
           css: "baseline",
           tailwind: {
             correct: ["self-baseline"],
-            partial: [],
           },
         },
       ],
@@ -980,56 +926,48 @@ export const api = {
           css: "center",
           tailwind: {
             correct: ["place-content-center"],
-            partial: [],
           },
         },
         {
           css: "start",
           tailwind: {
             correct: ["place-content-start"],
-            partial: [],
           },
         },
         {
           css: "end",
           tailwind: {
             correct: ["place-content-end"],
-            partial: [],
           },
         },
         {
           css: "space-between",
           tailwind: {
             correct: ["place-content-between"],
-            partial: [],
           },
         },
         {
           css: "space-around",
           tailwind: {
             correct: ["place-content-around"],
-            partial: [],
           },
         },
         {
           css: "space-evenly",
           tailwind: {
             correct: ["place-content-evenly"],
-            partial: [],
           },
         },
         {
           css: "baseline",
           tailwind: {
             correct: ["place-content-baseline"],
-            partial: [],
           },
         },
         {
           css: "stretch",
           tailwind: {
             correct: ["place-content-stretch"],
-            partial: [],
           },
         },
       ],
@@ -1041,35 +979,30 @@ export const api = {
           css: "start",
           tailwind: {
             correct: ["place-items-start"],
-            partial: [],
           },
         },
         {
           css: "end",
           tailwind: {
             correct: ["place-items-end"],
-            partial: [],
           },
         },
         {
           css: "center",
           tailwind: {
             correct: ["place-items-center"],
-            partial: [],
           },
         },
         {
           css: "baseline",
           tailwind: {
             correct: ["place-items-baseline"],
-            partial: [],
           },
         },
         {
           css: "stretch",
           tailwind: {
             correct: ["place-items-stretch"],
-            partial: [],
           },
         },
       ],
@@ -1081,35 +1014,30 @@ export const api = {
           css: "auto",
           tailwind: {
             correct: ["place-self-auto"],
-            partial: [],
           },
         },
         {
           css: "start",
           tailwind: {
             correct: ["place-self-start"],
-            partial: [],
           },
         },
         {
           css: "end",
           tailwind: {
             correct: ["place-self-end"],
-            partial: [],
           },
         },
         {
           css: "center",
           tailwind: {
             correct: ["place-self-center"],
-            partial: [],
           },
         },
         {
           css: "stretch",
           tailwind: {
             correct: ["place-self-stretch"],
-            partial: [],
           },
         },
       ],
@@ -3779,14 +3707,12 @@ export const api = {
           css: "italic",
           tailwind: {
             correct: ["italic"],
-            partial: [],
           },
         },
         {
           css: "normal",
           tailwind: {
             correct: ["not-italic"],
-            partial: [],
           },
         },
       ],
@@ -3798,63 +3724,54 @@ export const api = {
           css: "100",
           tailwind: {
             correct: ["font-thin"],
-            partial: [],
           },
         },
         {
           css: "200",
           tailwind: {
             correct: ["font-extralight"],
-            partial: [],
           },
         },
         {
           css: "300",
           tailwind: {
             correct: ["font-light"],
-            partial: [],
           },
         },
         {
           css: "400",
           tailwind: {
             correct: ["font-normal"],
-            partial: [],
           },
         },
         {
           css: "500",
           tailwind: {
             correct: ["font-medium"],
-            partial: [],
           },
         },
         {
           css: "600",
           tailwind: {
             correct: ["font-semibold"],
-            partial: [],
           },
         },
         {
           css: "700",
           tailwind: {
             correct: ["font-bold"],
-            partial: [],
           },
         },
         {
           css: "800",
           tailwind: {
             correct: ["font-extrabold"],
-            partial: [],
           },
         },
         {
           css: "900",
           tailwind: {
             correct: ["font-black"],
-            partial: [],
           },
         },
       ],
@@ -3866,63 +3783,54 @@ export const api = {
           css: "normal",
           tailwind: {
             correct: ["normal-nums"],
-            partial: [],
           },
         },
         {
           css: "ordinal",
           tailwind: {
             correct: ["ordinal"],
-            partial: [],
           },
         },
         {
           css: "slashed-zero",
           tailwind: {
             correct: ["slashed-zero"],
-            partial: [],
           },
         },
         {
           css: "lining-nums",
           tailwind: {
             correct: ["lining-nums"],
-            partial: [],
           },
         },
         {
           css: "oldstyle-nums",
           tailwind: {
             correct: ["oldstyle-nums"],
-            partial: [],
           },
         },
         {
           css: "proportional-nums",
           tailwind: {
             correct: ["proportional-nums"],
-            partial: [],
           },
         },
         {
           css: "tabular-nums",
           tailwind: {
             correct: ["tabular-nums"],
-            partial: [],
           },
         },
         {
           css: "diagonal-fractions",
           tailwind: {
             correct: ["diagonal-fractions"],
-            partial: [],
           },
         },
         {
           css: "stacked-fractions",
           tailwind: {
             correct: ["stacked-fractions"],
-            partial: [],
           },
         },
       ],
@@ -3934,42 +3842,36 @@ export const api = {
           css: "-0.05em",
           tailwind: {
             correct: ["tracking-tighter"],
-            partial: [],
           },
         },
         {
           css: "-0.025em",
           tailwind: {
             correct: ["tracking-tight"],
-            partial: [],
           },
         },
         {
           css: "0em",
           tailwind: {
             correct: ["tracking-normal"],
-            partial: [],
           },
         },
         {
           css: "0.025em",
           tailwind: {
             correct: ["tracking-wide"],
-            partial: [],
           },
         },
         {
           css: "0.05em",
           tailwind: {
             correct: ["tracking-wider"],
-            partial: [],
           },
         },
         {
           css: "0.1em",
           tailwind: {
             correct: ["tracking-widest"],
-            partial: [],
           },
         },
       ],
@@ -4037,42 +3939,36 @@ export const api = {
           css: "1",
           tailwind: {
             correct: ["leading-none"],
-            partial: [],
           },
         },
         {
           css: "1.25",
           tailwind: {
             correct: ["leading-snug"],
-            partial: [],
           },
         },
         {
           css: "1.375",
           tailwind: {
             correct: ["leading-snug"],
-            partial: [],
           },
         },
         {
           css: "1.5",
           tailwind: {
             correct: ["leading-normal"],
-            partial: [],
           },
         },
         {
           css: "1.625",
           tailwind: {
             correct: ["leading-relaxed"],
-            partial: [],
           },
         },
         {
           css: "2",
           tailwind: {
             correct: ["leading-loose"],
-            partial: [],
           },
         },
       ],
@@ -4084,21 +3980,18 @@ export const api = {
           css: "none",
           tailwind: {
             correct: ["list-none"],
-            partial: [],
           },
         },
         {
           css: "disc",
           tailwind: {
             correct: ["list-disc"],
-            partial: [],
           },
         },
         {
           css: "decimal",
           tailwind: {
             correct: ["list-decimal"],
-            partial: [],
           },
         },
       ],
@@ -4110,14 +4003,12 @@ export const api = {
           css: "inside",
           tailwind: {
             correct: ["list-inside"],
-            partial: [],
           },
         },
         {
           css: "outside",
           tailwind: {
             correct: ["list-outside"],
-            partial: [],
           },
         },
       ],
@@ -4129,42 +4020,36 @@ export const api = {
           css: "left",
           tailwind: {
             correct: ["text-left"],
-            partial: [],
           },
         },
         {
           css: "center",
           tailwind: {
             correct: ["text-center"],
-            partial: [],
           },
         },
         {
           css: "right",
           tailwind: {
             correct: ["text-right"],
-            partial: [],
           },
         },
         {
           css: "justify",
           tailwind: {
             correct: ["text-justify"],
-            partial: [],
           },
         },
         {
           css: "start",
           tailwind: {
             correct: ["text-start"],
-            partial: [],
           },
         },
         {
           css: "end",
           tailwind: {
             correct: ["text-end"],
-            partial: [],
           },
         },
       ],
@@ -4176,28 +4061,24 @@ export const api = {
           css: "underline",
           tailwind: {
             correct: ["underline"],
-            partial: [],
           },
         },
         {
           css: "overline",
           tailwind: {
             correct: ["overline"],
-            partial: [],
           },
         },
         {
           css: "line-through",
           tailwind: {
             correct: ["line-through"],
-            partial: [],
           },
         },
         {
           css: "none",
           tailwind: {
             correct: ["no-underline"],
-            partial: [],
           },
         },
       ],
@@ -4209,35 +4090,30 @@ export const api = {
           css: "solid",
           tailwind: {
             correct: ["decoration-solid"],
-            partial: [],
           },
         },
         {
           css: "double",
           tailwind: {
             correct: ["decoration-double"],
-            partial: [],
           },
         },
         {
           css: "dotted",
           tailwind: {
             correct: ["decoration-dotted"],
-            partial: [],
           },
         },
         {
           css: "dashed",
           tailwind: {
             correct: ["decoration-dashed"],
-            partial: [],
           },
         },
         {
           css: "wavy",
           tailwind: {
             correct: ["decoration-wavy"],
-            partial: [],
           },
         },
       ],
@@ -4249,49 +4125,42 @@ export const api = {
           css: "auto",
           tailwind: {
             correct: ["decoration-auto"],
-            partial: [],
           },
         },
         {
           css: "from-font",
           tailwind: {
             correct: ["decoration-from-font"],
-            partial: [],
           },
         },
         {
           css: "0px",
           tailwind: {
             correct: ["decoration-0"],
-            partial: [],
           },
         },
         {
           css: "1px",
           tailwind: {
             correct: ["decoration-1"],
-            partial: [],
           },
         },
         {
           css: "2px",
           tailwind: {
             correct: ["decoration-2"],
-            partial: [],
           },
         },
         {
           css: "4px",
           tailwind: {
             correct: ["decoration-4"],
-            partial: [],
           },
         },
         {
           css: "8px",
           tailwind: {
             correct: ["decoration-8"],
-            partial: [],
           },
         },
       ],
@@ -4303,42 +4172,36 @@ export const api = {
           css: "auto",
           tailwind: {
             correct: ["underline-offset-auto"],
-            partial: [],
           },
         },
         {
           css: "0px",
           tailwind: {
             correct: ["underline-offset-0"],
-            partial: [],
           },
         },
         {
           css: "1px",
           tailwind: {
             correct: ["underline-offset-1"],
-            partial: [],
           },
         },
         {
           css: "2px",
           tailwind: {
             correct: ["underline-offset-2"],
-            partial: [],
           },
         },
         {
           css: "4px",
           tailwind: {
             correct: ["underline-offset-4"],
-            partial: [],
           },
         },
         {
           css: "8px",
           tailwind: {
             correct: ["underline-offset-8"],
-            partial: [],
           },
         },
       ],
@@ -4350,28 +4213,24 @@ export const api = {
           css: "uppercase",
           tailwind: {
             correct: ["uppercase"],
-            partial: [],
           },
         },
         {
           css: "lowercase",
           tailwind: {
             correct: ["lowercase"],
-            partial: [],
           },
         },
         {
           css: "capitalize",
           tailwind: {
             correct: ["capitalize"],
-            partial: [],
           },
         },
         {
           css: "none",
           tailwind: {
             correct: ["normal-case"],
-            partial: [],
           },
         },
       ],
@@ -4383,154 +4242,132 @@ export const api = {
           css: "0px",
           tailwind: {
             correct: ["indent-0"],
-            partial: [],
           },
         },
         {
           css: "1px",
           tailwind: {
             correct: ["indent-px"],
-            partial: [],
           },
         },
         {
           css: "2px",
           tailwind: {
             correct: ["indent-0.5"],
-            partial: [],
           },
         },
         {
           css: "4px",
           tailwind: {
             correct: ["indent-1"],
-            partial: [],
           },
         },
         {
           css: "6px",
           tailwind: {
             correct: ["indent-1.5"],
-            partial: [],
           },
         },
         {
           css: "8px",
           tailwind: {
             correct: ["indent-2"],
-            partial: [],
           },
         },
         {
           css: "10px",
           tailwind: {
             correct: ["indent-2.5"],
-            partial: [],
           },
         },
         {
           css: "12px",
           tailwind: {
             correct: ["indent-3"],
-            partial: [],
           },
         },
         {
           css: "14px",
           tailwind: {
             correct: ["indent-3.5"],
-            partial: [],
           },
         },
         {
           css: "16px",
           tailwind: {
             correct: ["indent-4"],
-            partial: [],
           },
         },
         {
           css: "20px",
           tailwind: {
             correct: ["indent-5"],
-            partial: [],
           },
         },
         {
           css: "24px",
           tailwind: {
             correct: ["indent-6"],
-            partial: [],
           },
         },
         {
           css: "28px",
           tailwind: {
             correct: ["indent-7"],
-            partial: [],
           },
         },
         {
           css: "32px",
           tailwind: {
             correct: ["indent-8"],
-            partial: [],
           },
         },
         {
           css: "36px",
           tailwind: {
             correct: ["indent-9"],
-            partial: [],
           },
         },
         {
           css: "40px",
           tailwind: {
             correct: ["indent-10"],
-            partial: [],
           },
         },
         {
           css: "44px",
           tailwind: {
             correct: ["indent-11"],
-            partial: [],
           },
         },
         {
           css: "48px",
           tailwind: {
             correct: ["indent-12"],
-            partial: [],
           },
         },
         {
           css: "56px",
           tailwind: {
             correct: ["indent-14"],
-            partial: [],
           },
         },
         {
           css: "64px",
           tailwind: {
             correct: ["indent-16"],
-            partial: [],
           },
         },
         {
           css: "80px",
           tailwind: {
             correct: ["indent-20"],
-            partial: [],
           },
         },
         {
           css: "96px",
           tailwind: {
             correct: ["indent-24"],
-            partial: [],
           },
         },
       ],
@@ -4542,42 +4379,36 @@ export const api = {
           css: "normal",
           tailwind: {
             correct: ["whitespace-normal"],
-            partial: [],
           },
         },
         {
           css: "nowrap",
           tailwind: {
             correct: ["whitespace-nowrap"],
-            partial: [],
           },
         },
         {
           css: "pre",
           tailwind: {
             correct: ["whitespace-pre"],
-            partial: [],
           },
         },
         {
           css: "pre-line",
           tailwind: {
             correct: ["whitespace-pre-line"],
-            partial: [],
           },
         },
         {
           css: "pre-wrap",
           tailwind: {
             correct: ["whitespace-pre-wrap"],
-            partial: [],
           },
         },
         {
           css: "break-spaces",
           tailwind: {
             correct: ["whitespace-break-spaces"],
-            partial: [],
           },
         },
       ],
@@ -4589,6 +4420,394 @@ export const api = {
   tables: [],
   transitionsAndAnimation: [],
   transforms: [],
-  interactivity: [],
-  svg: [],
+  interactivity: [
+    {
+      key: "cursor",
+      match: [
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["cursor-auto"],
+          },
+        },
+        {
+          css: "default",
+          tailwind: {
+            correct: ["cursor-default"],
+          },
+        },
+        {
+          css: "pointer",
+          tailwind: {
+            correct: ["cursor-pointer"],
+          },
+        },
+        {
+          css: "wait",
+          tailwind: {
+            correct: ["cursor-wait"],
+          },
+        },
+        {
+          css: "text",
+          tailwind: {
+            correct: ["cursor-text"],
+          },
+        },
+        {
+          css: "move",
+          tailwind: {
+            correct: ["cursor-move"],
+          },
+        },
+        {
+          css: "help",
+          tailwind: {
+            correct: ["cursor-help"],
+          },
+        },
+        {
+          css: "not-allowed",
+          tailwind: {
+            correct: ["cursor-not-allowed"],
+          },
+        },
+        {
+          css: "none",
+          tailwind: {
+            correct: ["cursor-none"],
+          },
+        },
+        {
+          css: "context-menu",
+          tailwind: {
+            correct: ["cursor-context-menu"],
+          },
+        },
+        {
+          css: "progress",
+          tailwind: {
+            correct: ["cursor-progress"],
+          },
+        },
+        {
+          css: "cell",
+          tailwind: {
+            correct: ["cursor-cell"],
+          },
+        },
+        {
+          css: "crosshair",
+          tailwind: {
+            correct: ["cursor-crosshair"],
+          },
+        },
+        {
+          css: "vertical-text",
+          tailwind: {
+            correct: ["cursor-vertical-text"],
+          },
+        },
+        {
+          css: "alias",
+          tailwind: {
+            correct: ["cursor-alias"],
+          },
+        },
+        {
+          css: "copy",
+          tailwind: {
+            correct: ["cursor-copy"],
+          },
+        },
+        {
+          css: "no-drop",
+          tailwind: {
+            correct: ["cursor-no-drop"],
+          },
+        },
+        {
+          css: "grab",
+          tailwind: {
+            correct: ["cursor-grab"],
+          },
+        },
+        {
+          css: "grabbing",
+          tailwind: {
+            correct: ["cursor-grabbing"],
+          },
+        },
+        {
+          css: "all-scroll",
+          tailwind: {
+            correct: ["cursor-all-scroll"],
+          },
+        },
+        {
+          css: "col-resize",
+          tailwind: {
+            correct: ["cursor-col-resize"],
+          },
+        },
+        {
+          css: "row-resize",
+          tailwind: {
+            correct: ["cursor-row-resize"],
+          },
+        },
+        {
+          css: "n-resize",
+          tailwind: {
+            correct: ["cursor-n-resize"],
+          },
+        },
+        {
+          css: "e-resize",
+          tailwind: {
+            correct: ["cursor-e-resize"],
+          },
+        },
+        {
+          css: "s-resize",
+          tailwind: {
+            correct: ["cursor-s-resize"],
+          },
+        },
+        {
+          css: "w-resize",
+          tailwind: {
+            correct: ["cursor-w-resize"],
+          },
+        },
+        {
+          css: "ne-resize",
+          tailwind: {
+            correct: ["cursor-ne-resize"],
+          },
+        },
+        {
+          css: "nw-resize",
+          tailwind: {
+            correct: ["cursor-nw-resize"],
+          },
+        },
+        {
+          css: "se-resize",
+          tailwind: {
+            correct: ["cursor-se-resize"],
+          },
+        },
+        {
+          css: "sw-resize",
+          tailwind: {
+            correct: ["cursor-sw-resize"],
+          },
+        },
+        {
+          css: "ew-resize",
+          tailwind: {
+            correct: ["cursor-ew-resize"],
+          },
+        },
+        {
+          css: "ns-resize",
+          tailwind: {
+            correct: ["cursor-ns-resize"],
+          },
+        },
+        {
+          css: "nesw-resize",
+          tailwind: {
+            correct: ["cursor-nesw-resize"],
+          },
+        },
+        {
+          css: "nwse-resize",
+          tailwind: {
+            correct: ["cursor-nwse-resize"],
+          },
+        },
+        {
+          css: "zoom-in",
+          tailwind: {
+            correct: ["cursor-zoom-in"],
+          },
+        },
+        {
+          css: "zoom-out",
+          tailwind: {
+            correct: ["cursor-zoom-out"],
+          },
+        },
+      ],
+    },
+    {
+      key: "pointer-events",
+      match: [
+        {
+          css: "none",
+          tailwind: {
+            correct: ["pointer-events-none"],
+          },
+        },
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["pointer-events-auto"],
+          },
+        },
+      ],
+    },
+    {
+      key: "resize",
+      match: [
+        {
+          css: "none",
+          tailwind: {
+            correct: ["resize-none"],
+          },
+        },
+        {
+          css: "vertical",
+          tailwind: {
+            correct: ["resize-y"],
+          },
+        },
+        {
+          css: "horizontal",
+          tailwind: {
+            correct: ["resize-x"],
+          },
+        },
+        {
+          css: "both",
+          tailwind: {
+            correct: ["resize"],
+          },
+        },
+      ],
+    },
+    {
+      key: "scroll-behavior",
+      match: [
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["scroll-auto"],
+          },
+        },
+        {
+          css: "smooth",
+          tailwind: {
+            correct: ["scroll-smooth"],
+          },
+        },
+      ],
+    },
+    {
+      key: "scroll-snap-align",
+      match: [
+        {
+          css: "start",
+          tailwind: {
+            correct: ["snap-start"],
+          },
+        },
+        {
+          css: "end",
+          tailwind: {
+            correct: ["snap-end"],
+          },
+        },
+        {
+          css: "center",
+          tailwind: {
+            correct: ["snap-center"],
+          },
+        },
+        {
+          css: "none",
+          tailwind: {
+            correct: ["snap-align-none"],
+          },
+        },
+      ],
+    },
+    {
+      key: "scroll-snap-stop",
+      match: [
+        {
+          css: "normal",
+          tailwind: {
+            correct: ["snap-normal"],
+          },
+        },
+        {
+          css: "always",
+          tailwind: {
+            correct: ["snap-always"],
+          },
+        },
+      ],
+    },
+    {
+      key: "user-select",
+      match: [
+        {
+          css: "none",
+          tailwind: {
+            correct: ["select-none"],
+          },
+        },
+        {
+          css: "text",
+          tailwind: {
+            correct: ["select-text"],
+          },
+        },
+        {
+          css: "all",
+          tailwind: {
+            correct: ["select-all"],
+          },
+        },
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["select-auto"],
+          },
+        },
+      ],
+    },
+    {
+      key: "will-change",
+      match: [
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["will-change-auto"],
+          },
+        },
+        {
+          css: "scroll-position",
+          tailwind: {
+            correct: ["will-change-scroll"],
+          },
+        },
+        {
+          css: "contents",
+          tailwind: {
+            correct: ["will-change-contents"],
+          },
+        },
+        {
+          css: "transform",
+          tailwind: {
+            correct: ["will-change-transform"],
+          },
+        },
+      ],
+    },
+  ],
 };
