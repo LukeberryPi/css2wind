@@ -2018,14 +2018,12 @@ export const api = {
           css: "100%",
           tailwind: {
             correct: ["h-full"],
-            partial: [],
           },
         },
         {
           css: "100vh",
           tailwind: {
             correct: ["h-screen"],
-            partial: [],
           },
         },
         {
@@ -2165,28 +2163,24 @@ export const api = {
           css: "auto",
           tailwind: {
             correct: ["h-auto"],
-            partial: [],
           },
         },
         {
           css: "fit-content",
           tailwind: {
             correct: ["h-fit"],
-            partial: [],
           },
         },
         {
           css: "max-content",
           tailwind: {
             correct: ["h-max"],
-            partial: [],
           },
         },
         {
           css: "min-content",
           tailwind: {
             correct: ["h-min"],
-            partial: [],
           },
         },
       ],
@@ -2205,35 +2199,30 @@ export const api = {
           css: "100%",
           tailwind: {
             correct: ["min-h-full"],
-            partial: [],
           },
         },
         {
           css: "100vh",
           tailwind: {
             correct: ["min-h-screen"],
-            partial: [],
           },
         },
         {
           css: "fit-content",
           tailwind: {
             correct: ["min-h-fit"],
-            partial: [],
           },
         },
         {
           css: "max-content",
           tailwind: {
             correct: ["min-h-max"],
-            partial: [],
           },
         },
         {
           css: "min-content",
           tailwind: {
             correct: ["min-h-min"],
-            partial: [],
           },
         },
       ],
@@ -2252,14 +2241,12 @@ export const api = {
           css: "100%",
           tailwind: {
             correct: ["max-h-full"],
-            partial: [],
           },
         },
         {
           css: "100vh",
           tailwind: {
             correct: ["max-h-screen"],
-            partial: [],
           },
         },
         {
@@ -2399,28 +2386,24 @@ export const api = {
           css: "fit-content",
           tailwind: {
             correct: ["max-h-fit"],
-            partial: [],
           },
         },
         {
           css: "max-content",
           tailwind: {
             correct: ["max-h-max"],
-            partial: [],
           },
         },
         {
           css: "min-content",
           tailwind: {
             correct: ["max-h-min"],
-            partial: [],
           },
         },
         {
           css: "none",
           tailwind: {
             correct: ["max-h-none"],
-            partial: [],
           },
         },
       ],
@@ -2439,14 +2422,12 @@ export const api = {
           css: "100%",
           tailwind: {
             correct: ["w-full"],
-            partial: [],
           },
         },
         {
           css: "100vw",
           tailwind: {
             correct: ["w-screen"],
-            partial: [],
           },
         },
         {
@@ -2586,28 +2567,24 @@ export const api = {
           css: "auto",
           tailwind: {
             correct: ["w-auto"],
-            partial: [],
           },
         },
         {
           css: "fit-content",
           tailwind: {
             correct: ["w-fit"],
-            partial: [],
           },
         },
         {
           css: "max-content",
           tailwind: {
             correct: ["w-max"],
-            partial: [],
           },
         },
         {
           css: "min-content",
           tailwind: {
             correct: ["w-min"],
-            partial: [],
           },
         },
       ],
@@ -2626,21 +2603,18 @@ export const api = {
           css: "100%",
           tailwind: {
             correct: ["min-w-full"],
-            partial: [],
           },
         },
         {
           css: "max-content",
           tailwind: {
             correct: ["min-w-max"],
-            partial: [],
           },
         },
         {
           css: "min-content",
           tailwind: {
             correct: ["min-w-min"],
-            partial: [],
           },
         },
       ],
@@ -2659,7 +2633,6 @@ export const api = {
           css: "100%",
           tailwind: {
             correct: ["max-w-full"],
-            partial: [],
           },
         },
         {
@@ -2750,28 +2723,24 @@ export const api = {
           css: "fit-content",
           tailwind: {
             correct: ["max-w-fit"],
-            partial: [],
           },
         },
         {
           css: "max-content",
           tailwind: {
             correct: ["max-w-max"],
-            partial: [],
           },
         },
         {
           css: "min-content",
           tailwind: {
             correct: ["max-w-min"],
-            partial: [],
           },
         },
         {
           css: "none",
           tailwind: {
             correct: ["max-w-none"],
-            partial: [],
           },
         },
       ],
