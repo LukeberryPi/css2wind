@@ -89,6 +89,1031 @@ export const api = {
         },
       ],
     },
+    {
+      key: "flex-direction",
+      match: [
+        {
+          css: "column-reverse",
+          tailwind: {
+            correct: ["flex-col-reverse"],
+            partial: [],
+          },
+        },
+        {
+          css: "column",
+          tailwind: {
+            correct: ["flex-col"],
+            partial: [],
+          },
+        },
+        {
+          css: "row-reverse",
+          tailwind: {
+            correct: ["flex-row-reverse"],
+            partial: [],
+          },
+        },
+        {
+          css: "row",
+          tailwind: {
+            correct: ["flex-row"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "flex-wrap",
+      match: [
+        {
+          css: "wrap",
+          tailwind: {
+            correct: ["flex-wrap"],
+            partial: [],
+          },
+        },
+        {
+          css: "wrap-reverse",
+          tailwind: {
+            correct: ["flex-wrap-reverse"],
+            partial: [],
+          },
+        },
+        {
+          css: "nowrap",
+          tailwind: {
+            correct: ["flex-nowrap"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "flex",
+      match: [
+        {
+          css: "0 1 auto",
+          tailwind: {
+            correct: ["flex-initial"],
+            partial: [],
+          },
+        },
+        {
+          css: "1 1 0%",
+          tailwind: {
+            correct: ["flex-1"],
+            partial: [],
+          },
+        },
+        {
+          css: "1 1 auto",
+          tailwind: {
+            correct: ["flex-auto"],
+            partial: [],
+          },
+        },
+        {
+          css: "none",
+          tailwind: {
+            correct: ["flex-none"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "order",
+      match: [
+        {
+          css: "1",
+          tailwind: {
+            correct: ["order-1"],
+            partial: [],
+          },
+        },
+        {
+          css: "2",
+          tailwind: {
+            correct: ["order-2"],
+            partial: [],
+          },
+        },
+        {
+          css: "3",
+          tailwind: {
+            correct: ["order-3"],
+            partial: [],
+          },
+        },
+        {
+          css: "4",
+          tailwind: {
+            correct: ["order-4"],
+            partial: [],
+          },
+        },
+        {
+          css: "5",
+          tailwind: {
+            correct: ["order-5"],
+            partial: [],
+          },
+        },
+        {
+          css: "6",
+          tailwind: {
+            correct: ["order-6"],
+            partial: [],
+          },
+        },
+        {
+          css: "7",
+          tailwind: {
+            correct: ["order-7"],
+            partial: [],
+          },
+        },
+        {
+          css: "8",
+          tailwind: {
+            correct: ["order-8"],
+            partial: [],
+          },
+        },
+        {
+          css: "9",
+          tailwind: {
+            correct: ["order-9"],
+            partial: [],
+          },
+        },
+        {
+          css: "10",
+          tailwind: {
+            correct: ["order-10"],
+            partial: [],
+          },
+        },
+        {
+          css: "11",
+          tailwind: {
+            correct: ["order-11"],
+            partial: [],
+          },
+        },
+        {
+          css: "12",
+          tailwind: {
+            correct: ["order-12"],
+            partial: [],
+          },
+        },
+        {
+          css: "-9999",
+          tailwind: {
+            correct: ["order-first"],
+            partial: [],
+          },
+        },
+        {
+          css: "9999",
+          tailwind: {
+            correct: ["order-last"],
+            partial: [],
+          },
+        },
+        {
+          css: "0",
+          tailwind: {
+            correct: ["order-none"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "flex-grow",
+      match: [
+        {
+          css: "1",
+          tailwind: {
+            correct: ["grow"],
+            partial: [],
+          },
+        },
+        {
+          css: "0",
+          tailwind: {
+            correct: ["grow-0"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "flex-shrink",
+      match: [
+        {
+          css: "1",
+          tailwind: {
+            correct: ["shrink"],
+            partial: [],
+          },
+        },
+        {
+          css: "0",
+          tailwind: {
+            correct: ["shrink-0"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "gap",
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["gap-0"],
+            partial: ["gap-[0px]"],
+          },
+        },
+        {
+          css: "1px",
+          tailwind: {
+            correct: ["gap-px"],
+            partial: ["gap-[1px]"],
+          },
+        },
+        {
+          css: "2px",
+          tailwind: {
+            correct: ["gap-0.5"],
+            partial: ["gap-[2px]", "gap-0,5"],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["gap-1"],
+            partial: ["gap-[4px]"],
+          },
+        },
+        {
+          css: "6px",
+          tailwind: {
+            correct: ["gap-1.5"],
+            partial: ["gap-[6px]", "gap-1,5"],
+          },
+        },
+        {
+          css: "8px",
+          tailwind: {
+            correct: ["gap-2"],
+            partial: ["gap-[8px]"],
+          },
+        },
+        {
+          css: "10px",
+          tailwind: {
+            correct: ["gap-2.5"],
+            partial: ["gap-[10px]", "gap-2,5"],
+          },
+        },
+        {
+          css: "12px",
+          tailwind: {
+            correct: ["gap-3"],
+            partial: ["gap-[12px]"],
+          },
+        },
+        {
+          css: "14px",
+          tailwind: {
+            correct: ["gap-3.5"],
+            partial: ["gap-[14px]", "gap-3,5"],
+          },
+        },
+        {
+          css: "16px",
+          tailwind: {
+            correct: ["gap-4"],
+            partial: ["gap-[16px]"],
+          },
+        },
+        {
+          css: "20px",
+          tailwind: {
+            correct: ["gap-5"],
+            partial: ["gap-[20px]"],
+          },
+        },
+        {
+          css: "24px",
+          tailwind: {
+            correct: ["gap-6"],
+            partial: ["gap-[24px]"],
+          },
+        },
+        {
+          css: "28px",
+          tailwind: {
+            correct: ["gap-7"],
+            partial: ["gap-[28px]"],
+          },
+        },
+        {
+          css: "32px",
+          tailwind: {
+            correct: ["gap-8"],
+            partial: ["gap-[32px]"],
+          },
+        },
+        {
+          css: "36px",
+          tailwind: {
+            correct: ["gap-9"],
+            partial: ["gap-[36px]"],
+          },
+        },
+        {
+          css: "40px",
+          tailwind: {
+            correct: ["gap-10"],
+            partial: ["gap-[40px]"],
+          },
+        },
+        {
+          css: "48px",
+          tailwind: {
+            correct: ["gap-12"],
+            partial: ["gap-[48px]"],
+          },
+        },
+        {
+          css: "80px",
+          tailwind: {
+            correct: ["gap-20"],
+            partial: ["gap-[80px]"],
+          },
+        },
+        {
+          css: "160px",
+          tailwind: {
+            correct: ["gap-40"],
+            partial: ["gap-[160px]"],
+          },
+        },
+        {
+          css: "240px",
+          tailwind: {
+            correct: ["gap-60"],
+            partial: ["gap-[240px]"],
+          },
+        },
+        {
+          css: "320px",
+          tailwind: {
+            correct: ["gap-80"],
+            partial: ["gap-[320px]"],
+          },
+        },
+      ],
+    },
+    {
+      key: "row-gap",
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["gap-y-0"],
+            partial: ["gap-y-[0px]"],
+          },
+        },
+        {
+          css: "1px",
+          tailwind: {
+            correct: ["gap-y-px"],
+            partial: ["gap-y-[1px]"],
+          },
+        },
+        {
+          css: "2px",
+          tailwind: {
+            correct: ["gap-y-0.5"],
+            partial: ["gap-y-[2px]", "gap-y-0,5"],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["gap-y-1"],
+            partial: ["gap-y-[4px]"],
+          },
+        },
+        {
+          css: "6px",
+          tailwind: {
+            correct: ["gap-y-1.5"],
+            partial: ["gap-y-[6px]", "gap-y-1,5"],
+          },
+        },
+        {
+          css: "8px",
+          tailwind: {
+            correct: ["gap-y-2"],
+            partial: ["gap-y-[8px]"],
+          },
+        },
+        {
+          css: "10px",
+          tailwind: {
+            correct: ["gap-y-2.5"],
+            partial: ["gap-y-[10px]", "gap-y-2,5"],
+          },
+        },
+        {
+          css: "12px",
+          tailwind: {
+            correct: ["gap-y-3"],
+            partial: ["gap-y-[12px]"],
+          },
+        },
+        {
+          css: "14px",
+          tailwind: {
+            correct: ["gap-y-3.5"],
+            partial: ["gap-y-[14px]", "gap-y-3,5"],
+          },
+        },
+        {
+          css: "16px",
+          tailwind: {
+            correct: ["gap-y-4"],
+            partial: ["gap-y-[16px]"],
+          },
+        },
+        {
+          css: "20px",
+          tailwind: {
+            correct: ["gap-y-5"],
+            partial: ["gap-y-[20px]"],
+          },
+        },
+        {
+          css: "24px",
+          tailwind: {
+            correct: ["gap-y-6"],
+            partial: ["gap-y-[24px]"],
+          },
+        },
+        {
+          css: "28px",
+          tailwind: {
+            correct: ["gap-y-7"],
+            partial: ["gap-y-[28px]"],
+          },
+        },
+        {
+          css: "32px",
+          tailwind: {
+            correct: ["gap-y-8"],
+            partial: ["gap-y-[32px]"],
+          },
+        },
+        {
+          css: "36px",
+          tailwind: {
+            correct: ["gap-y-9"],
+            partial: ["gap-y-[36px]"],
+          },
+        },
+        {
+          css: "40px",
+          tailwind: {
+            correct: ["gap-y-10"],
+            partial: ["gap-y-[40px]"],
+          },
+        },
+        {
+          css: "48px",
+          tailwind: {
+            correct: ["gap-y-12"],
+            partial: ["gap-y-[48px]"],
+          },
+        },
+        {
+          css: "80px",
+          tailwind: {
+            correct: ["gap-y-20"],
+            partial: ["gap-y-[80px]"],
+          },
+        },
+        {
+          css: "160px",
+          tailwind: {
+            correct: ["gap-y-40"],
+            partial: ["gap-y-[160px]"],
+          },
+        },
+        {
+          css: "240px",
+          tailwind: {
+            correct: ["gap-y-60"],
+            partial: ["gap-y-[240px]"],
+          },
+        },
+        {
+          css: "320px",
+          tailwind: {
+            correct: ["gap-y-80"],
+            partial: ["gap-y-[320px]"],
+          },
+        },
+      ],
+    },
+    {
+      key: "column-gap",
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["gap-x-0"],
+            partial: ["gap-x-[0px]"],
+          },
+        },
+        {
+          css: "1px",
+          tailwind: {
+            correct: ["gap-x-px"],
+            partial: ["gap-x-[1px]"],
+          },
+        },
+        {
+          css: "2px",
+          tailwind: {
+            correct: ["gap-x-0.5"],
+            partial: ["gap-x-[2px]", "gap-x-0,5"],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["gap-x-1"],
+            partial: ["gap-x-[4px]"],
+          },
+        },
+        {
+          css: "6px",
+          tailwind: {
+            correct: ["gap-x-1.5"],
+            partial: ["gap-x-[6px]", "gap-x-1,5"],
+          },
+        },
+        {
+          css: "8px",
+          tailwind: {
+            correct: ["gap-x-2"],
+            partial: ["gap-x-[8px]"],
+          },
+        },
+        {
+          css: "10px",
+          tailwind: {
+            correct: ["gap-x-2.5"],
+            partial: ["gap-x-[10px]", "gap-x-2,5"],
+          },
+        },
+        {
+          css: "12px",
+          tailwind: {
+            correct: ["gap-x-3"],
+            partial: ["gap-x-[12px]"],
+          },
+        },
+        {
+          css: "14px",
+          tailwind: {
+            correct: ["gap-x-3.5"],
+            partial: ["gap-x-[14px]", "gap-x-3,5"],
+          },
+        },
+        {
+          css: "16px",
+          tailwind: {
+            correct: ["gap-x-4"],
+            partial: ["gap-x-[16px]"],
+          },
+        },
+        {
+          css: "20px",
+          tailwind: {
+            correct: ["gap-x-5"],
+            partial: ["gap-x-[20px]"],
+          },
+        },
+        {
+          css: "24px",
+          tailwind: {
+            correct: ["gap-x-6"],
+            partial: ["gap-x-[24px]"],
+          },
+        },
+        {
+          css: "28px",
+          tailwind: {
+            correct: ["gap-x-7"],
+            partial: ["gap-x-[28px]"],
+          },
+        },
+        {
+          css: "32px",
+          tailwind: {
+            correct: ["gap-x-8"],
+            partial: ["gap-x-[32px]"],
+          },
+        },
+        {
+          css: "36px",
+          tailwind: {
+            correct: ["gap-x-9"],
+            partial: ["gap-x-[36px]"],
+          },
+        },
+        {
+          css: "40px",
+          tailwind: {
+            correct: ["gap-x-10"],
+            partial: ["gap-x-[40px]"],
+          },
+        },
+        {
+          css: "48px",
+          tailwind: {
+            correct: ["gap-x-12"],
+            partial: ["gap-x-[48px]"],
+          },
+        },
+        {
+          css: "80px",
+          tailwind: {
+            correct: ["gap-x-20"],
+            partial: ["gap-x-[80px]"],
+          },
+        },
+        {
+          css: "160px",
+          tailwind: {
+            correct: ["gap-x-40"],
+            partial: ["gap-x-[160px]"],
+          },
+        },
+        {
+          css: "240px",
+          tailwind: {
+            correct: ["gap-x-60"],
+            partial: ["gap-x-[240px]"],
+          },
+        },
+        {
+          css: "320px",
+          tailwind: {
+            correct: ["gap-x-80"],
+            partial: ["gap-x-[320px]"],
+          },
+        },
+      ],
+    },
+    {
+      key: "justify-items",
+      match: [
+        {
+          css: "start",
+          tailwind: {
+            correct: ["justify-items-start"],
+            partial: [],
+          },
+        },
+        {
+          css: "end",
+          tailwind: {
+            correct: ["justify-items-end"],
+            partial: [],
+          },
+        },
+        {
+          css: "center",
+          tailwind: {
+            correct: ["justify-items-center"],
+            partial: [],
+          },
+        },
+        {
+          css: "stretch",
+          tailwind: {
+            correct: ["justify-items-stretch"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "justify-self",
+      match: [
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["justify-self-auto"],
+            partial: [],
+          },
+        },
+        {
+          css: "center",
+          tailwind: {
+            correct: ["justify-self-center"],
+            partial: [],
+          },
+        },
+        {
+          css: "end",
+          tailwind: {
+            correct: ["justify-self-end"],
+            partial: [],
+          },
+        },
+        {
+          css: "start",
+          tailwind: {
+            correct: ["justify-self-start"],
+            partial: [],
+          },
+        },
+        {
+          css: "stretch",
+          tailwind: {
+            correct: ["justify-self-stretch"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "align-content",
+      match: [
+        {
+          css: "normal",
+          tailwind: {
+            correct: ["content-normal"],
+            partial: [],
+          },
+        },
+        {
+          css: "center",
+          tailwind: {
+            correct: ["content-center"],
+            partial: [],
+          },
+        },
+        {
+          css: "flex-start",
+          tailwind: {
+            correct: ["content-start"],
+            partial: [],
+          },
+        },
+        {
+          css: "flex-end",
+          tailwind: {
+            correct: ["content-end"],
+            partial: [],
+          },
+        },
+        {
+          css: "space-between",
+          tailwind: {
+            correct: ["content-between"],
+            partial: [],
+          },
+        },
+        {
+          css: "space-around",
+          tailwind: {
+            correct: ["content-around"],
+            partial: [],
+          },
+        },
+        {
+          css: "space-evenly",
+          tailwind: {
+            correct: ["content-evenly"],
+            partial: [],
+          },
+        },
+        {
+          css: "baseline",
+          tailwind: {
+            correct: ["content-baseline"],
+            partial: [],
+          },
+        },
+        {
+          css: "stretch",
+          tailwind: {
+            correct: ["content-stretch"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "align-self",
+      match: [
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["self-auto"],
+            partial: [],
+          },
+        },
+        {
+          css: "flex-start",
+          tailwind: {
+            correct: ["self-start"],
+            partial: [],
+          },
+        },
+        {
+          css: "flex-end",
+          tailwind: {
+            correct: ["self-end"],
+            partial: [],
+          },
+        },
+        {
+          css: "center",
+          tailwind: {
+            correct: ["self-center"],
+            partial: [],
+          },
+        },
+        {
+          css: "stretch",
+          tailwind: {
+            correct: ["self-stretch"],
+            partial: [],
+          },
+        },
+        {
+          css: "baseline",
+          tailwind: {
+            correct: ["self-baseline"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "place-content",
+      match: [
+        {
+          css: "center",
+          tailwind: {
+            correct: ["place-content-center"],
+            partial: [],
+          },
+        },
+        {
+          css: "start",
+          tailwind: {
+            correct: ["place-content-start"],
+            partial: [],
+          },
+        },
+        {
+          css: "end",
+          tailwind: {
+            correct: ["place-content-end"],
+            partial: [],
+          },
+        },
+        {
+          css: "space-between",
+          tailwind: {
+            correct: ["place-content-between"],
+            partial: [],
+          },
+        },
+        {
+          css: "space-around",
+          tailwind: {
+            correct: ["place-content-around"],
+            partial: [],
+          },
+        },
+        {
+          css: "space-evenly",
+          tailwind: {
+            correct: ["place-content-evenly"],
+            partial: [],
+          },
+        },
+        {
+          css: "baseline",
+          tailwind: {
+            correct: ["place-content-baseline"],
+            partial: [],
+          },
+        },
+        {
+          css: "stretch",
+          tailwind: {
+            correct: ["place-content-stretch"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "place-items",
+      match: [
+        {
+          css: "start",
+          tailwind: {
+            correct: ["place-items-start"],
+            partial: [],
+          },
+        },
+        {
+          css: "end",
+          tailwind: {
+            correct: ["place-items-end"],
+            partial: [],
+          },
+        },
+        {
+          css: "center",
+          tailwind: {
+            correct: ["place-items-center"],
+            partial: [],
+          },
+        },
+        {
+          css: "baseline",
+          tailwind: {
+            correct: ["place-items-baseline"],
+            partial: [],
+          },
+        },
+        {
+          css: "stretch",
+          tailwind: {
+            correct: ["place-items-stretch"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "place-self",
+      match: [
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["place-self-auto"],
+            partial: [],
+          },
+        },
+        {
+          css: "start",
+          tailwind: {
+            correct: ["place-self-start"],
+            partial: [],
+          },
+        },
+        {
+          css: "end",
+          tailwind: {
+            correct: ["place-self-end"],
+            partial: [],
+          },
+        },
+        {
+          css: "center",
+          tailwind: {
+            correct: ["place-self-center"],
+            partial: [],
+          },
+        },
+        {
+          css: "stretch",
+          tailwind: {
+            correct: ["place-self-stretch"],
+            partial: [],
+          },
+        },
+      ],
+    },
   ],
   spacing: [
     {
@@ -2746,7 +3771,818 @@ export const api = {
       ],
     },
   ],
-  typography: [],
+  typography: [
+    {
+      key: "font-style",
+      match: [
+        {
+          css: "italic",
+          tailwind: {
+            correct: ["italic"],
+            partial: [],
+          },
+        },
+        {
+          css: "normal",
+          tailwind: {
+            correct: ["not-italic"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "font-weight",
+      match: [
+        {
+          css: "100",
+          tailwind: {
+            correct: ["font-thin"],
+            partial: [],
+          },
+        },
+        {
+          css: "200",
+          tailwind: {
+            correct: ["font-extralight"],
+            partial: [],
+          },
+        },
+        {
+          css: "300",
+          tailwind: {
+            correct: ["font-light"],
+            partial: [],
+          },
+        },
+        {
+          css: "400",
+          tailwind: {
+            correct: ["font-normal"],
+            partial: [],
+          },
+        },
+        {
+          css: "500",
+          tailwind: {
+            correct: ["font-medium"],
+            partial: [],
+          },
+        },
+        {
+          css: "600",
+          tailwind: {
+            correct: ["font-semibold"],
+            partial: [],
+          },
+        },
+        {
+          css: "700",
+          tailwind: {
+            correct: ["font-bold"],
+            partial: [],
+          },
+        },
+        {
+          css: "800",
+          tailwind: {
+            correct: ["font-extrabold"],
+            partial: [],
+          },
+        },
+        {
+          css: "900",
+          tailwind: {
+            correct: ["font-black"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "font-variant-numeric",
+      match: [
+        {
+          css: "normal",
+          tailwind: {
+            correct: ["normal-nums"],
+            partial: [],
+          },
+        },
+        {
+          css: "ordinal",
+          tailwind: {
+            correct: ["ordinal"],
+            partial: [],
+          },
+        },
+        {
+          css: "slashed-zero",
+          tailwind: {
+            correct: ["slashed-zero"],
+            partial: [],
+          },
+        },
+        {
+          css: "lining-nums",
+          tailwind: {
+            correct: ["lining-nums"],
+            partial: [],
+          },
+        },
+        {
+          css: "oldstyle-nums",
+          tailwind: {
+            correct: ["oldstyle-nums"],
+            partial: [],
+          },
+        },
+        {
+          css: "proportional-nums",
+          tailwind: {
+            correct: ["proportional-nums"],
+            partial: [],
+          },
+        },
+        {
+          css: "tabular-nums",
+          tailwind: {
+            correct: ["tabular-nums"],
+            partial: [],
+          },
+        },
+        {
+          css: "diagonal-fractions",
+          tailwind: {
+            correct: ["diagonal-fractions"],
+            partial: [],
+          },
+        },
+        {
+          css: "stacked-fractions",
+          tailwind: {
+            correct: ["stacked-fractions"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "letter-spacing",
+      match: [
+        {
+          css: "-0.05em",
+          tailwind: {
+            correct: ["tracking-tighter"],
+            partial: [],
+          },
+        },
+        {
+          css: "-0.025em",
+          tailwind: {
+            correct: ["tracking-tight"],
+            partial: [],
+          },
+        },
+        {
+          css: "0em",
+          tailwind: {
+            correct: ["tracking-normal"],
+            partial: [],
+          },
+        },
+        {
+          css: "0.025em",
+          tailwind: {
+            correct: ["tracking-wide"],
+            partial: [],
+          },
+        },
+        {
+          css: "0.05em",
+          tailwind: {
+            correct: ["tracking-wider"],
+            partial: [],
+          },
+        },
+        {
+          css: "0.1em",
+          tailwind: {
+            correct: ["tracking-widest"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "line-height",
+      match: [
+        {
+          css: "12px",
+          tailwind: {
+            correct: ["leading-3"],
+            partial: ["leading-[12px]"],
+          },
+        },
+        {
+          css: "16px",
+          tailwind: {
+            correct: ["leading-4"],
+            partial: ["leading-[16px]"],
+          },
+        },
+        {
+          css: "20px",
+          tailwind: {
+            correct: ["leading-5", "leading-tight"],
+            partial: ["leading-[20px]"],
+          },
+        },
+        {
+          css: "24px",
+          tailwind: {
+            correct: ["leading-6", "leading-normal"],
+            partial: ["leading-[24px]"],
+          },
+        },
+        {
+          css: "28px",
+          tailwind: {
+            correct: ["leading-7"],
+            partial: ["leading-[28px]"],
+          },
+        },
+        {
+          css: "32px",
+          tailwind: {
+            correct: ["leading-8"],
+            partial: ["leading-[32px]"],
+          },
+        },
+        {
+          css: "36px",
+          tailwind: {
+            correct: ["leading-9"],
+            partial: ["leading-[36px]"],
+          },
+        },
+        {
+          css: "40px",
+          tailwind: {
+            correct: ["leading-10"],
+            partial: ["leading-[40px]"],
+          },
+        },
+        {
+          css: "1",
+          tailwind: {
+            correct: ["leading-none"],
+            partial: [],
+          },
+        },
+        {
+          css: "1.25",
+          tailwind: {
+            correct: ["leading-snug"],
+            partial: [],
+          },
+        },
+        {
+          css: "1.375",
+          tailwind: {
+            correct: ["leading-snug"],
+            partial: [],
+          },
+        },
+        {
+          css: "1.5",
+          tailwind: {
+            correct: ["leading-normal"],
+            partial: [],
+          },
+        },
+        {
+          css: "1.625",
+          tailwind: {
+            correct: ["leading-relaxed"],
+            partial: [],
+          },
+        },
+        {
+          css: "2",
+          tailwind: {
+            correct: ["leading-loose"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "list-style-type",
+      match: [
+        {
+          css: "none",
+          tailwind: {
+            correct: ["list-none"],
+            partial: [],
+          },
+        },
+        {
+          css: "disc",
+          tailwind: {
+            correct: ["list-disc"],
+            partial: [],
+          },
+        },
+        {
+          css: "decimal",
+          tailwind: {
+            correct: ["list-decimal"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "list-style-position",
+      match: [
+        {
+          css: "inside",
+          tailwind: {
+            correct: ["list-inside"],
+            partial: [],
+          },
+        },
+        {
+          css: "outside",
+          tailwind: {
+            correct: ["list-outside"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "text-align",
+      match: [
+        {
+          css: "left",
+          tailwind: {
+            correct: ["text-left"],
+            partial: [],
+          },
+        },
+        {
+          css: "center",
+          tailwind: {
+            correct: ["text-center"],
+            partial: [],
+          },
+        },
+        {
+          css: "right",
+          tailwind: {
+            correct: ["text-right"],
+            partial: [],
+          },
+        },
+        {
+          css: "justify",
+          tailwind: {
+            correct: ["text-justify"],
+            partial: [],
+          },
+        },
+        {
+          css: "start",
+          tailwind: {
+            correct: ["text-start"],
+            partial: [],
+          },
+        },
+        {
+          css: "end",
+          tailwind: {
+            correct: ["text-end"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "text-decoration-line",
+      match: [
+        {
+          css: "underline",
+          tailwind: {
+            correct: ["underline"],
+            partial: [],
+          },
+        },
+        {
+          css: "overline",
+          tailwind: {
+            correct: ["overline"],
+            partial: [],
+          },
+        },
+        {
+          css: "line-through",
+          tailwind: {
+            correct: ["line-through"],
+            partial: [],
+          },
+        },
+        {
+          css: "none",
+          tailwind: {
+            correct: ["no-underline"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "text-decoration-style",
+      match: [
+        {
+          css: "solid",
+          tailwind: {
+            correct: ["decoration-solid"],
+            partial: [],
+          },
+        },
+        {
+          css: "double",
+          tailwind: {
+            correct: ["decoration-double"],
+            partial: [],
+          },
+        },
+        {
+          css: "dotted",
+          tailwind: {
+            correct: ["decoration-dotted"],
+            partial: [],
+          },
+        },
+        {
+          css: "dashed",
+          tailwind: {
+            correct: ["decoration-dashed"],
+            partial: [],
+          },
+        },
+        {
+          css: "wavy",
+          tailwind: {
+            correct: ["decoration-wavy"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "text-decoration-thickness",
+      match: [
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["decoration-auto"],
+            partial: [],
+          },
+        },
+        {
+          css: "from-font",
+          tailwind: {
+            correct: ["decoration-from-font"],
+            partial: [],
+          },
+        },
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["decoration-0"],
+            partial: [],
+          },
+        },
+        {
+          css: "1px",
+          tailwind: {
+            correct: ["decoration-1"],
+            partial: [],
+          },
+        },
+        {
+          css: "2px",
+          tailwind: {
+            correct: ["decoration-2"],
+            partial: [],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["decoration-4"],
+            partial: [],
+          },
+        },
+        {
+          css: "8px",
+          tailwind: {
+            correct: ["decoration-8"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "text-underline-offset",
+      match: [
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["underline-offset-auto"],
+            partial: [],
+          },
+        },
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["underline-offset-0"],
+            partial: [],
+          },
+        },
+        {
+          css: "1px",
+          tailwind: {
+            correct: ["underline-offset-1"],
+            partial: [],
+          },
+        },
+        {
+          css: "2px",
+          tailwind: {
+            correct: ["underline-offset-2"],
+            partial: [],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["underline-offset-4"],
+            partial: [],
+          },
+        },
+        {
+          css: "8px",
+          tailwind: {
+            correct: ["underline-offset-8"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "text-transform",
+      match: [
+        {
+          css: "uppercase",
+          tailwind: {
+            correct: ["uppercase"],
+            partial: [],
+          },
+        },
+        {
+          css: "lowercase",
+          tailwind: {
+            correct: ["lowercase"],
+            partial: [],
+          },
+        },
+        {
+          css: "capitalize",
+          tailwind: {
+            correct: ["capitalize"],
+            partial: [],
+          },
+        },
+        {
+          css: "none",
+          tailwind: {
+            correct: ["normal-case"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "text-indent",
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["indent-0"],
+            partial: [],
+          },
+        },
+        {
+          css: "1px",
+          tailwind: {
+            correct: ["indent-px"],
+            partial: [],
+          },
+        },
+        {
+          css: "2px",
+          tailwind: {
+            correct: ["indent-0.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["indent-1"],
+            partial: [],
+          },
+        },
+        {
+          css: "6px",
+          tailwind: {
+            correct: ["indent-1.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "8px",
+          tailwind: {
+            correct: ["indent-2"],
+            partial: [],
+          },
+        },
+        {
+          css: "10px",
+          tailwind: {
+            correct: ["indent-2.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "12px",
+          tailwind: {
+            correct: ["indent-3"],
+            partial: [],
+          },
+        },
+        {
+          css: "14px",
+          tailwind: {
+            correct: ["indent-3.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "16px",
+          tailwind: {
+            correct: ["indent-4"],
+            partial: [],
+          },
+        },
+        {
+          css: "20px",
+          tailwind: {
+            correct: ["indent-5"],
+            partial: [],
+          },
+        },
+        {
+          css: "24px",
+          tailwind: {
+            correct: ["indent-6"],
+            partial: [],
+          },
+        },
+        {
+          css: "28px",
+          tailwind: {
+            correct: ["indent-7"],
+            partial: [],
+          },
+        },
+        {
+          css: "32px",
+          tailwind: {
+            correct: ["indent-8"],
+            partial: [],
+          },
+        },
+        {
+          css: "36px",
+          tailwind: {
+            correct: ["indent-9"],
+            partial: [],
+          },
+        },
+        {
+          css: "40px",
+          tailwind: {
+            correct: ["indent-10"],
+            partial: [],
+          },
+        },
+        {
+          css: "44px",
+          tailwind: {
+            correct: ["indent-11"],
+            partial: [],
+          },
+        },
+        {
+          css: "48px",
+          tailwind: {
+            correct: ["indent-12"],
+            partial: [],
+          },
+        },
+        {
+          css: "56px",
+          tailwind: {
+            correct: ["indent-14"],
+            partial: [],
+          },
+        },
+        {
+          css: "64px",
+          tailwind: {
+            correct: ["indent-16"],
+            partial: [],
+          },
+        },
+        {
+          css: "80px",
+          tailwind: {
+            correct: ["indent-20"],
+            partial: [],
+          },
+        },
+        {
+          css: "96px",
+          tailwind: {
+            correct: ["indent-24"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "white-space",
+      match: [
+        {
+          css: "normal",
+          tailwind: {
+            correct: ["whitespace-normal"],
+            partial: [],
+          },
+        },
+        {
+          css: "nowrap",
+          tailwind: {
+            correct: ["whitespace-nowrap"],
+            partial: [],
+          },
+        },
+        {
+          css: "pre",
+          tailwind: {
+            correct: ["whitespace-pre"],
+            partial: [],
+          },
+        },
+        {
+          css: "pre-line",
+          tailwind: {
+            correct: ["whitespace-pre-line"],
+            partial: [],
+          },
+        },
+        {
+          css: "pre-wrap",
+          tailwind: {
+            correct: ["whitespace-pre-wrap"],
+            partial: [],
+          },
+        },
+        {
+          css: "break-spaces",
+          tailwind: {
+            correct: ["whitespace-break-spaces"],
+            partial: [],
+          },
+        },
+      ],
+    },
+  ],
   backgrounds: [],
   borders: [],
   filters: [],
