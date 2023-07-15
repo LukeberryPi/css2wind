@@ -1,4 +1,5 @@
 export const api = {
+  layout: [],
   flexboxAndGrid: [
     {
       key: "align-items",
@@ -2009,4 +2010,780 @@ export const api = {
       ],
     },
   ],
+  sizing: [
+    {
+      key: "height",
+      match: [
+        {
+          css: "100%",
+          tailwind: {
+            correct: ["h-full"],
+            partial: [],
+          },
+        },
+        {
+          css: "100vh",
+          tailwind: {
+            correct: ["h-screen"],
+            partial: [],
+          },
+        },
+        {
+          css: "10px",
+          tailwind: {
+            correct: ["h-2.5"],
+            partial: ["h-[10px]"],
+          },
+        },
+        {
+          css: "12px",
+          tailwind: {
+            correct: ["h-3"],
+            partial: ["h-[12px]"],
+          },
+        },
+        {
+          css: "14px",
+          tailwind: {
+            correct: ["h-3.5"],
+            partial: ["h-[14px]"],
+          },
+        },
+        {
+          css: "160px",
+          tailwind: {
+            correct: ["h-40"],
+            partial: ["h-[160px]"],
+          },
+        },
+        {
+          css: "16px",
+          tailwind: {
+            correct: ["h-4"],
+            partial: ["h-[16px]"],
+          },
+        },
+        {
+          css: "1px",
+          tailwind: {
+            correct: ["h-px"],
+            partial: ["h-[1px]"],
+          },
+        },
+        {
+          css: "20px",
+          tailwind: {
+            correct: ["h-5"],
+            partial: ["h-[20px]"],
+          },
+        },
+        {
+          css: "24px",
+          tailwind: {
+            correct: ["h-6"],
+            partial: ["h-[24px]"],
+          },
+        },
+        {
+          css: "28px",
+          tailwind: {
+            correct: ["h-7"],
+            partial: ["h-[28px]"],
+          },
+        },
+        {
+          css: "2px",
+          tailwind: {
+            correct: ["h-0.5"],
+            partial: ["h-[2px]"],
+          },
+        },
+        {
+          css: "320px",
+          tailwind: {
+            correct: ["h-80"],
+            partial: ["h-[320px]"],
+          },
+        },
+        {
+          css: "32px",
+          tailwind: {
+            correct: ["h-8"],
+            partial: ["h-[32px]"],
+          },
+        },
+        {
+          css: "36px",
+          tailwind: {
+            correct: ["h-9"],
+            partial: ["h-[36px]"],
+          },
+        },
+        {
+          css: "40px",
+          tailwind: {
+            correct: ["h-10"],
+            partial: ["h-[40px]"],
+          },
+        },
+        {
+          css: "48px",
+          tailwind: {
+            correct: ["h-12"],
+            partial: ["h-[48px]"],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["h-1"],
+            partial: ["h-[4px]"],
+          },
+        },
+        {
+          css: "6px",
+          tailwind: {
+            correct: ["h-1.5"],
+            partial: ["h-[6px]"],
+          },
+        },
+        {
+          css: "80px",
+          tailwind: {
+            correct: ["h-20"],
+            partial: ["h-[80px]"],
+          },
+        },
+        {
+          css: "8px",
+          tailwind: {
+            correct: ["h-2"],
+            partial: ["h-[8px]"],
+          },
+        },
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["h-auto"],
+            partial: [],
+          },
+        },
+        {
+          css: "fit-content",
+          tailwind: {
+            correct: ["h-fit"],
+            partial: [],
+          },
+        },
+        {
+          css: "max-content",
+          tailwind: {
+            correct: ["h-max"],
+            partial: [],
+          },
+        },
+        {
+          css: "min-content",
+          tailwind: {
+            correct: ["h-min"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "min-height",
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["min-h-0"],
+            partial: ["min-h-[0px]"],
+          },
+        },
+        {
+          css: "100%",
+          tailwind: {
+            correct: ["min-h-full"],
+            partial: [],
+          },
+        },
+        {
+          css: "100vh",
+          tailwind: {
+            correct: ["min-h-screen"],
+            partial: [],
+          },
+        },
+        {
+          css: "fit-content",
+          tailwind: {
+            correct: ["min-h-fit"],
+            partial: [],
+          },
+        },
+        {
+          css: "max-content",
+          tailwind: {
+            correct: ["min-h-max"],
+            partial: [],
+          },
+        },
+        {
+          css: "min-content",
+          tailwind: {
+            correct: ["min-h-min"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "max-height",
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["max-h-0"],
+            partial: ["max-h-[0px]"],
+          },
+        },
+        {
+          css: "100%",
+          tailwind: {
+            correct: ["max-h-full"],
+            partial: [],
+          },
+        },
+        {
+          css: "100vh",
+          tailwind: {
+            correct: ["max-h-screen"],
+            partial: [],
+          },
+        },
+        {
+          css: "10px",
+          tailwind: {
+            correct: ["max-h-2.5"],
+            partial: ["max-h-[10px]"],
+          },
+        },
+        {
+          css: "12px",
+          tailwind: {
+            correct: ["max-h-3"],
+            partial: ["max-h-[12px]"],
+          },
+        },
+        {
+          css: "14px",
+          tailwind: {
+            correct: ["max-h-3.5"],
+            partial: ["max-h-[14px]"],
+          },
+        },
+        {
+          css: "160px",
+          tailwind: {
+            correct: ["max-h-40"],
+            partial: ["max-h-[160px]"],
+          },
+        },
+        {
+          css: "16px",
+          tailwind: {
+            correct: ["max-h-4"],
+            partial: ["max-h-[16px]"],
+          },
+        },
+        {
+          css: "1px",
+          tailwind: {
+            correct: ["max-h-px"],
+            partial: ["max-h-[1px]"],
+          },
+        },
+        {
+          css: "20px",
+          tailwind: {
+            correct: ["max-h-5"],
+            partial: ["max-h-[20px]"],
+          },
+        },
+        {
+          css: "24px",
+          tailwind: {
+            correct: ["max-h-6"],
+            partial: ["max-h-[24px]"],
+          },
+        },
+        {
+          css: "28px",
+          tailwind: {
+            correct: ["max-h-7"],
+            partial: ["max-h-[28px]"],
+          },
+        },
+        {
+          css: "2px",
+          tailwind: {
+            correct: ["max-h-0.5"],
+            partial: ["max-h-[2px]"],
+          },
+        },
+        {
+          css: "320px",
+          tailwind: {
+            correct: ["max-h-80"],
+            partial: ["max-h-[320px]"],
+          },
+        },
+        {
+          css: "32px",
+          tailwind: {
+            correct: ["max-h-8"],
+            partial: ["max-h-[32px]"],
+          },
+        },
+        {
+          css: "36px",
+          tailwind: {
+            correct: ["max-h-9"],
+            partial: ["max-h-[36px]"],
+          },
+        },
+        {
+          css: "40px",
+          tailwind: {
+            correct: ["max-h-10"],
+            partial: ["max-h-[40px]"],
+          },
+        },
+        {
+          css: "48px",
+          tailwind: {
+            correct: ["max-h-12"],
+            partial: ["max-h-[48px]"],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["max-h-1"],
+            partial: ["max-h-[4px]"],
+          },
+        },
+        {
+          css: "6px",
+          tailwind: {
+            correct: ["max-h-1.5"],
+            partial: ["max-h-[6px]"],
+          },
+        },
+        {
+          css: "80px",
+          tailwind: {
+            correct: ["max-h-20"],
+            partial: ["max-h-[80px]"],
+          },
+        },
+        {
+          css: "8px",
+          tailwind: {
+            correct: ["max-h-2"],
+            partial: ["max-h-[8px]"],
+          },
+        },
+        {
+          css: "fit-content",
+          tailwind: {
+            correct: ["max-h-fit"],
+            partial: [],
+          },
+        },
+        {
+          css: "max-content",
+          tailwind: {
+            correct: ["max-h-max"],
+            partial: [],
+          },
+        },
+        {
+          css: "min-content",
+          tailwind: {
+            correct: ["max-h-min"],
+            partial: [],
+          },
+        },
+        {
+          css: "none",
+          tailwind: {
+            correct: ["max-h-none"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "width",
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["w-0"],
+            partial: ["w-[0px]"],
+          },
+        },
+        {
+          css: "100%",
+          tailwind: {
+            correct: ["w-full"],
+            partial: [],
+          },
+        },
+        {
+          css: "100vw",
+          tailwind: {
+            correct: ["w-screen"],
+            partial: [],
+          },
+        },
+        {
+          css: "10px",
+          tailwind: {
+            correct: ["w-2.5"],
+            partial: ["w-[10px]"],
+          },
+        },
+        {
+          css: "12px",
+          tailwind: {
+            correct: ["w-3"],
+            partial: ["w-[12px]"],
+          },
+        },
+        {
+          css: "14px",
+          tailwind: {
+            correct: ["w-3.5"],
+            partial: ["w-[14px]"],
+          },
+        },
+        {
+          css: "160px",
+          tailwind: {
+            correct: ["w-40"],
+            partial: ["w-[160px]"],
+          },
+        },
+        {
+          css: "16px",
+          tailwind: {
+            correct: ["w-4"],
+            partial: ["w-[16px]"],
+          },
+        },
+        {
+          css: "1px",
+          tailwind: {
+            correct: ["w-px"],
+            partial: ["w-[1px]"],
+          },
+        },
+        {
+          css: "20px",
+          tailwind: {
+            correct: ["w-5"],
+            partial: ["w-[20px]"],
+          },
+        },
+        {
+          css: "24px",
+          tailwind: {
+            correct: ["w-6"],
+            partial: ["w-[24px]"],
+          },
+        },
+        {
+          css: "28px",
+          tailwind: {
+            correct: ["w-7"],
+            partial: ["w-[28px]"],
+          },
+        },
+        {
+          css: "2px",
+          tailwind: {
+            correct: ["w-0.5"],
+            partial: ["w-[2px]"],
+          },
+        },
+        {
+          css: "320px",
+          tailwind: {
+            correct: ["w-80"],
+            partial: ["w-[320px]"],
+          },
+        },
+        {
+          css: "32px",
+          tailwind: {
+            correct: ["w-8"],
+            partial: ["w-[32px]"],
+          },
+        },
+        {
+          css: "36px",
+          tailwind: {
+            correct: ["w-9"],
+            partial: ["w-[36px]"],
+          },
+        },
+        {
+          css: "40px",
+          tailwind: {
+            correct: ["w-10"],
+            partial: ["w-[40px]"],
+          },
+        },
+        {
+          css: "48px",
+          tailwind: {
+            correct: ["w-12"],
+            partial: ["w-[48px]"],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["w-1"],
+            partial: ["w-[4px]"],
+          },
+        },
+        {
+          css: "6px",
+          tailwind: {
+            correct: ["w-1.5"],
+            partial: ["w-[6px]"],
+          },
+        },
+        {
+          css: "80px",
+          tailwind: {
+            correct: ["w-20"],
+            partial: ["w-[80px]"],
+          },
+        },
+        {
+          css: "8px",
+          tailwind: {
+            correct: ["w-2"],
+            partial: ["w-[8px]"],
+          },
+        },
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["w-auto"],
+            partial: [],
+          },
+        },
+        {
+          css: "fit-content",
+          tailwind: {
+            correct: ["w-fit"],
+            partial: [],
+          },
+        },
+        {
+          css: "max-content",
+          tailwind: {
+            correct: ["w-max"],
+            partial: [],
+          },
+        },
+        {
+          css: "min-content",
+          tailwind: {
+            correct: ["w-min"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "min-width",
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["min-w-0"],
+            partial: ["min-w-[0px]"],
+          },
+        },
+        {
+          css: "100%",
+          tailwind: {
+            correct: ["min-w-full"],
+            partial: [],
+          },
+        },
+        {
+          css: "max-content",
+          tailwind: {
+            correct: ["min-w-max"],
+            partial: [],
+          },
+        },
+        {
+          css: "min-content",
+          tailwind: {
+            correct: ["min-w-min"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "max-width",
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["max-w-0"],
+            partial: ["max-w-[0px]"],
+          },
+        },
+        {
+          css: "100%",
+          tailwind: {
+            correct: ["max-w-full"],
+            partial: [],
+          },
+        },
+        {
+          css: "1024px",
+          tailwind: {
+            correct: ["max-w-5xl", "max-w-screen-lg"],
+            partial: ["max-w-[1024px]"],
+          },
+        },
+        {
+          css: "1152px",
+          tailwind: {
+            correct: ["max-w-6xl"],
+            partial: ["max-w-[1152px]"],
+          },
+        },
+        {
+          css: "1280px",
+          tailwind: {
+            correct: ["max-w-7xl", "max-w-screen-xl"],
+            partial: ["max-w-[1280px]"],
+          },
+        },
+        {
+          css: "1536px",
+          tailwind: {
+            correct: ["max-w-screen-2xl"],
+            partial: ["max-w-[1536px]"],
+          },
+        },
+        {
+          css: "320px",
+          tailwind: {
+            correct: ["max-w-xs"],
+            partial: ["max-w-[320px]"],
+          },
+        },
+        {
+          css: "448px",
+          tailwind: {
+            correct: ["max-w-md"],
+            partial: ["max-w-[448px]"],
+          },
+        },
+        {
+          css: "512px",
+          tailwind: {
+            correct: ["max-w-lg"],
+            partial: ["max-w-[512px]"],
+          },
+        },
+        {
+          css: "576px",
+          tailwind: {
+            correct: ["max-w-xl"],
+            partial: ["max-w-[576px]"],
+          },
+        },
+        {
+          css: "640px",
+          tailwind: {
+            correct: ["max-w-screen-sm"],
+            partial: ["max-w-[640px]"],
+          },
+        },
+        {
+          css: "65ch",
+          tailwind: {
+            correct: ["max-w-prose"],
+            partial: ["max-w-[65ch]"],
+          },
+        },
+        {
+          css: "672px",
+          tailwind: {
+            correct: ["max-w-2xl"],
+            partial: ["max-w-[672px]"],
+          },
+        },
+        {
+          css: "768px",
+          tailwind: {
+            correct: ["max-w-3xl", "max-w-screen-md"],
+            partial: ["max-w-[768px]"],
+          },
+        },
+        {
+          css: "fit-content",
+          tailwind: {
+            correct: ["max-w-fit"],
+            partial: [],
+          },
+        },
+        {
+          css: "max-content",
+          tailwind: {
+            correct: ["max-w-max"],
+            partial: [],
+          },
+        },
+        {
+          css: "min-content",
+          tailwind: {
+            correct: ["max-w-min"],
+            partial: [],
+          },
+        },
+        {
+          css: "none",
+          tailwind: {
+            correct: ["max-w-none"],
+            partial: [],
+          },
+        },
+      ],
+    },
+  ],
+  typography: [],
+  backgrounds: [],
+  borders: [],
+  filters: [],
+  tables: [],
+  transitionsAndAnimation: [],
+  transforms: [],
+  interactivity: [],
+  svg: [],
 };
