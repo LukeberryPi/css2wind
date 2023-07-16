@@ -4474,8 +4474,578 @@ export const api = {
         },
       ],
     },
+    {
+      key: "background-position",
+      match: [
+        {
+          css: "bottom",
+          tailwind: {
+            correct: ["bg-bottom"],
+            partial: [],
+          },
+        },
+        {
+          css: "center",
+          tailwind: {
+            correct: ["bg-center"],
+            partial: [],
+          },
+        },
+        {
+          css: "left",
+          tailwind: {
+            correct: ["bg-left"],
+            partial: [],
+          },
+        },
+        {
+          css: "left bottom",
+          tailwind: {
+            correct: ["bg-left-bottom"],
+            partial: [],
+          },
+        },
+        {
+          css: "left top",
+          tailwind: {
+            correct: ["bg-left-top"],
+            partial: [],
+          },
+        },
+        {
+          css: "right",
+          tailwind: {
+            correct: ["bg-right"],
+            partial: [],
+          },
+        },
+        {
+          css: "right bottom",
+          tailwind: {
+            correct: ["bg-right-bottom"],
+            partial: [],
+          },
+        },
+        {
+          css: "right top",
+          tailwind: {
+            correct: ["bg-right-top"],
+            partial: [],
+          },
+        },
+        {
+          css: "top",
+          tailwind: {
+            correct: ["bg-top"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "background-repeat",
+      match: [
+        {
+          css: "repeat",
+          tailwind: {
+            correct: ["bg-repeat"],
+            partial: [],
+          },
+        },
+        {
+          css: "no-repeat",
+          tailwind: {
+            correct: ["bg-no-repeat"],
+            partial: [],
+          },
+        },
+        {
+          css: "repeat-x",
+          tailwind: {
+            correct: ["bg-repeat-x"],
+            partial: [],
+          },
+        },
+        {
+          css: "repeat-y",
+          tailwind: {
+            correct: ["bg-repeat-y"],
+            partial: [],
+          },
+        },
+        {
+          css: "round",
+          tailwind: {
+            correct: ["bg-repeat-round"],
+            partial: [],
+          },
+        },
+        {
+          css: "space",
+          tailwind: {
+            correct: ["bg-repeat-space"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "background-size",
+      match: [
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["bg-auto"],
+            partial: [],
+          },
+        },
+        {
+          css: "cover",
+          tailwind: {
+            correct: ["bg-cover"],
+            partial: [],
+          },
+        },
+        {
+          css: "contain",
+          tailwind: {
+            correct: ["bg-contain"],
+            partial: [],
+          },
+        },
+      ],
+    },
   ],
-  borders: [],
+  borders: [
+    {
+      key: "border-radius",
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["rounded-none"],
+            partial: [],
+          },
+        },
+        {
+          css: "2px",
+          tailwind: {
+            correct: ["rounded-sm"],
+            partial: ["rounded-[2px]"],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["rounded"],
+            partial: ["rounded-[4px]"],
+          },
+        },
+        {
+          css: "6px",
+          tailwind: {
+            correct: ["rounded-md"],
+            partial: ["rounded-[6px]"],
+          },
+        },
+        {
+          css: "8px",
+          tailwind: {
+            correct: ["rounded-lg"],
+            partial: ["rounded-[8px]"],
+          },
+        },
+        {
+          css: "12px",
+          tailwind: {
+            correct: ["rounded-xl"],
+            partial: ["rounded-[12px]"],
+          },
+        },
+        {
+          css: "16px",
+          tailwind: {
+            correct: ["rounded-2xl"],
+            partial: ["rounded-[16px]"],
+          },
+        },
+        {
+          css: "24px",
+          tailwind: {
+            correct: ["rounded-3xl"],
+            partial: ["rounded-[24px]"],
+          },
+        },
+        {
+          css: "9999px",
+          tailwind: {
+            correct: ["rounded-full"],
+            partial: ["rounded-[9999px]"],
+          },
+        },
+      ],
+    },
+    {
+      key: "border-width",
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["border-0"],
+            partial: [],
+          },
+        },
+        {
+          css: "1px",
+          tailwind: {
+            correct: ["border"],
+            partial: ["border-[1px]"],
+          },
+        },
+        {
+          css: "2px",
+          tailwind: {
+            correct: ["border-2"],
+            partial: ["border-[2px]"],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["border-4"],
+            partial: ["border-[4px]"],
+          },
+        },
+        {
+          css: "8px",
+          tailwind: {
+            correct: ["border-8"],
+            partial: ["border-[8px]"],
+          },
+        },
+      ],
+    },
+    {
+      key: "border-top-width",
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["border-t-0"],
+            partial: [],
+          },
+        },
+        {
+          css: "2px",
+          tailwind: {
+            correct: ["border-t-2"],
+            partial: ["border-t-[2px]"],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["border-t-4"],
+            partial: ["border-t-[4px]"],
+          },
+        },
+        {
+          css: "8px",
+          tailwind: {
+            correct: ["border-t-8"],
+            partial: ["border-t-[8px]"],
+          },
+        },
+        {
+          css: "1px",
+          tailwind: {
+            correct: ["border-t"],
+            partial: ["border-t-[1px]"],
+          },
+        },
+      ],
+    },
+    {
+      key: "border-right-width",
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["border-r-0"],
+            partial: [],
+          },
+        },
+        {
+          css: "2px",
+          tailwind: {
+            correct: ["border-r-2"],
+            partial: ["border-r-[2px]"],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["border-r-4"],
+            partial: ["border-r-[4px]"],
+          },
+        },
+        {
+          css: "8px",
+          tailwind: {
+            correct: ["border-r-8"],
+            partial: ["border-r-[8px]"],
+          },
+        },
+        {
+          css: "1px",
+          tailwind: {
+            correct: ["border-r"],
+            partial: ["border-r-[1px]"],
+          },
+        },
+      ],
+    },
+    {
+      key: "border-bottom-width",
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["border-b-0"],
+            partial: [],
+          },
+        },
+        {
+          css: "2px",
+          tailwind: {
+            correct: ["border-b-2"],
+            partial: ["border-b-[2px]"],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["border-b-4"],
+            partial: ["border-b-[4px]"],
+          },
+        },
+        {
+          css: "8px",
+          tailwind: {
+            correct: ["border-b-8"],
+            partial: ["border-b-[8px]"],
+          },
+        },
+        {
+          css: "1px",
+          tailwind: {
+            correct: ["border-b"],
+            partial: ["border-b-[1px]"],
+          },
+        },
+      ],
+    },
+    {
+      key: "border-left-width",
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["border-l-0"],
+            partial: [],
+          },
+        },
+        {
+          css: "2px",
+          tailwind: {
+            correct: ["border-l-2"],
+            partial: ["border-l-[2px]"],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["border-l-4"],
+            partial: ["border-l-[4px]"],
+          },
+        },
+        {
+          css: "8px",
+          tailwind: {
+            correct: ["border-l-8"],
+            partial: ["border-l-[8px]"],
+          },
+        },
+        {
+          css: "1px",
+          tailwind: {
+            correct: ["border-l"],
+            partial: ["border-l-[1px]"],
+          },
+        },
+      ],
+    },
+    {
+      key: "border-style",
+      match: [
+        {
+          css: "solid",
+          tailwind: {
+            correct: ["border-solid"],
+            partial: [],
+          },
+        },
+        {
+          css: "dashed",
+          tailwind: {
+            correct: ["border-dashed"],
+            partial: [],
+          },
+        },
+        {
+          css: "dotted",
+          tailwind: {
+            correct: ["border-dotted"],
+            partial: [],
+          },
+        },
+        {
+          css: "double",
+          tailwind: {
+            correct: ["border-double"],
+            partial: [],
+          },
+        },
+        {
+          css: "hidden",
+          tailwind: {
+            correct: ["border-hidden"],
+            partial: [],
+          },
+        },
+        {
+          css: "none",
+          tailwind: {
+            correct: ["border-none"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "outline-width",
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["outline-0"],
+            partial: [],
+          },
+        },
+        {
+          css: "1px",
+          tailwind: {
+            correct: ["outline-1"],
+            partial: [],
+          },
+        },
+        {
+          css: "2px",
+          tailwind: {
+            correct: ["outline-2"],
+            partial: [],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["outline-4"],
+            partial: [],
+          },
+        },
+        {
+          css: "8px",
+          tailwind: {
+            correct: ["outline-8"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "outline-style",
+      match: [
+        {
+          css: "solid",
+          tailwind: {
+            correct: ["outline"],
+            partial: [],
+          },
+        },
+        {
+          css: "dashed",
+          tailwind: {
+            correct: ["outline-dashed"],
+            partial: [],
+          },
+        },
+        {
+          css: "dotted",
+          tailwind: {
+            correct: ["outline-dotted"],
+            partial: [],
+          },
+        },
+        {
+          css: "double",
+          tailwind: {
+            correct: ["outline-double"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "outline-offset",
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["outline-offset-0"],
+            partial: [],
+          },
+        },
+        {
+          css: "1px",
+          tailwind: {
+            correct: ["outline-offset-1"],
+            partial: [],
+          },
+        },
+        {
+          css: "2px",
+          tailwind: {
+            correct: ["outline-offset-2"],
+            partial: [],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["outline-offset-4"],
+            partial: [],
+          },
+        },
+        {
+          css: "8px",
+          tailwind: {
+            correct: ["outline-offset-8"],
+            partial: [],
+          },
+        },
+      ],
+    },
+  ],
   filters: [],
   tables: [],
   transitionsAndAnimation: [],
