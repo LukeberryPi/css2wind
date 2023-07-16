@@ -4414,7 +4414,67 @@ export const api = {
       ],
     },
   ],
-  backgrounds: [],
+  backgrounds: [
+    {
+      key: "background-attachment",
+      match: [
+        {
+          css: "fixed",
+          tailwind: {
+            correct: ["bg-fixed"],
+            partial: [],
+          },
+        },
+        {
+          css: "local",
+          tailwind: {
+            correct: ["bg-local"],
+            partial: [],
+          },
+        },
+        {
+          css: "scroll",
+          tailwind: {
+            correct: ["bg-scroll"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "background-clip",
+      match: [
+        {
+          css: "border-box",
+          tailwind: {
+            correct: ["bg-clip-border"],
+            partial: [],
+          },
+        },
+        {
+          css: "padding-box",
+          tailwind: {
+            correct: ["bg-clip-padding"],
+            partial: [],
+          },
+        },
+        {
+          css: "content-box",
+          tailwind: {
+            correct: ["bg-clip-content"],
+            partial: [],
+          },
+        },
+        {
+          css: "text",
+          tailwind: {
+            correct: ["bg-clip-text"],
+            partial: [],
+          },
+        },
+      ],
+    },
+  ],
   borders: [],
   filters: [],
   tables: [],
