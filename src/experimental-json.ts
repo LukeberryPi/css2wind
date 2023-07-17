@@ -1,6 +1,1638 @@
 export const api = {
-  layout: [],
+  layout: [
+    {
+      key: "aspect-ratio",
+      match: [
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["aspect-auto"],
+            partial: [],
+          },
+        },
+        {
+          css: "1 / 1",
+          tailwind: {
+            correct: ["aspect-square"],
+            partial: [],
+          },
+        },
+        {
+          css: "16 / 9",
+          tailwind: {
+            correct: ["aspect-video"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "columns",
+      match: [
+        {
+          css: "1",
+          tailwind: {
+            correct: ["columns-1"],
+            partial: [],
+          },
+        },
+        {
+          css: "2",
+          tailwind: {
+            correct: ["columns-2"],
+            partial: [],
+          },
+        },
+        {
+          css: "3",
+          tailwind: {
+            correct: ["columns-3"],
+            partial: [],
+          },
+        },
+        {
+          css: "4",
+          tailwind: {
+            correct: ["columns-4"],
+            partial: [],
+          },
+        },
+        {
+          css: "5",
+          tailwind: {
+            correct: ["columns-5"],
+            partial: [],
+          },
+        },
+        {
+          css: "6",
+          tailwind: {
+            correct: ["columns-6"],
+            partial: [],
+          },
+        },
+        {
+          css: "7",
+          tailwind: {
+            correct: ["columns-7"],
+            partial: [],
+          },
+        },
+        {
+          css: "8",
+          tailwind: {
+            correct: ["columns-8"],
+            partial: [],
+          },
+        },
+        {
+          css: "9",
+          tailwind: {
+            correct: ["columns-9"],
+            partial: [],
+          },
+        },
+        {
+          css: "10",
+          tailwind: {
+            correct: ["columns-10"],
+            partial: [],
+          },
+        },
+        {
+          css: "11",
+          tailwind: {
+            correct: ["columns-11"],
+            partial: [],
+          },
+        },
+        {
+          css: "12",
+          tailwind: {
+            correct: ["columns-12"],
+            partial: [],
+          },
+        },
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["columns-auto"],
+            partial: [],
+          },
+        },
+        {
+          css: "256px",
+          tailwind: {
+            correct: ["columns-3xs"],
+            partial: ["columns-[256px]"],
+          },
+        },
+        {
+          css: "288px",
+          tailwind: {
+            correct: ["columns-2xs"],
+            partial: ["columns-[288px]"],
+          },
+        },
+        {
+          css: "320px",
+          tailwind: {
+            correct: ["columns-xs"],
+            partial: ["columns-[320px]"],
+          },
+        },
+        {
+          css: "384px",
+          tailwind: {
+            correct: ["columns-sm"],
+            partial: ["columns-[384px]"],
+          },
+        },
+        {
+          css: "448px",
+          tailwind: {
+            correct: ["columns-md"],
+            partial: ["columns-[448px]"],
+          },
+        },
+        {
+          css: "512px",
+          tailwind: {
+            correct: ["columns-lg"],
+            partial: ["columns-[512px]"],
+          },
+        },
+        {
+          css: "576px",
+          tailwind: {
+            correct: ["columns-xl"],
+            partial: ["columns-[576px]"],
+          },
+        },
+        {
+          css: "672px",
+          tailwind: {
+            correct: ["columns-2xl"],
+            partial: ["columns-[672px]"],
+          },
+        },
+        {
+          css: "768px",
+          tailwind: {
+            correct: ["columns-3xl"],
+            partial: ["columns-[768px]"],
+          },
+        },
+        {
+          css: "896px",
+          tailwind: {
+            correct: ["columns-4xl"],
+            partial: ["columns-[896px]"],
+          },
+        },
+        {
+          css: "1024px",
+          tailwind: {
+            correct: ["columns-5xl"],
+            partial: ["columns-[1024px]"],
+          },
+        },
+        {
+          css: "1152px",
+          tailwind: {
+            correct: ["columns-6xl"],
+            partial: ["columns-[1152px]"],
+          },
+        },
+        {
+          css: "1280px",
+          tailwind: {
+            correct: ["columns-7xl"],
+            partial: ["columns-[1280px]"],
+          },
+        },
+      ],
+    },
+    {
+      key: "break-after",
+      match: [
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["break-after-auto"],
+            partial: [],
+          },
+        },
+        {
+          css: "avoid",
+          tailwind: {
+            correct: ["break-after-avoid"],
+            partial: [],
+          },
+        },
+        {
+          css: "all",
+          tailwind: {
+            correct: ["break-after-all"],
+            partial: [],
+          },
+        },
+        {
+          css: "avoid-page",
+          tailwind: {
+            correct: ["break-after-avoid-page"],
+            partial: [],
+          },
+        },
+        {
+          css: "page",
+          tailwind: {
+            correct: ["break-after-page"],
+            partial: [],
+          },
+        },
+        {
+          css: "left",
+          tailwind: {
+            correct: ["break-after-left"],
+            partial: [],
+          },
+        },
+        {
+          css: "right",
+          tailwind: {
+            correct: ["break-after-right"],
+            partial: [],
+          },
+        },
+        {
+          css: "column",
+          tailwind: {
+            correct: ["break-after-column"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "break-inside",
+      match: [
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["break-inside-auto"],
+            partial: [],
+          },
+        },
+        {
+          css: "avoid",
+          tailwind: {
+            correct: ["break-inside-avoid"],
+            partial: [],
+          },
+        },
+        {
+          css: "avoid-page",
+          tailwind: {
+            correct: ["break-inside-avoid-page"],
+            partial: [],
+          },
+        },
+        {
+          css: "avoid-column",
+          tailwind: {
+            correct: ["break-inside-avoid-column"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "box-decoration-break",
+      match: [
+        {
+          css: "clone",
+          tailwind: {
+            correct: ["box-decoration-clone"],
+            partial: [],
+          },
+        },
+        {
+          css: "slice",
+          tailwind: {
+            correct: ["box-decoration-slice"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "box-sizing",
+      match: [
+        {
+          css: "border-box",
+          tailwind: {
+            correct: ["box-border"],
+            partial: [],
+          },
+        },
+        {
+          css: "content-box",
+          tailwind: {
+            correct: ["box-content"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "display",
+      match: [
+        {
+          css: "block",
+          tailwind: {
+            correct: ["block"],
+            partial: [],
+          },
+        },
+        {
+          css: "inline-block",
+          tailwind: {
+            correct: ["inline-block"],
+            partial: [],
+          },
+        },
+        {
+          css: "inline",
+          tailwind: {
+            correct: ["inline"],
+            partial: [],
+          },
+        },
+        {
+          css: "flex",
+          tailwind: {
+            correct: ["flex"],
+            partial: [],
+          },
+        },
+        {
+          css: "inline-flex",
+          tailwind: {
+            correct: ["inline-flex"],
+            partial: [],
+          },
+        },
+        {
+          css: "table",
+          tailwind: {
+            correct: ["table"],
+            partial: [],
+          },
+        },
+        {
+          css: "inline-table",
+          tailwind: {
+            correct: ["inline-table"],
+            partial: [],
+          },
+        },
+        {
+          css: "table-caption",
+          tailwind: {
+            correct: ["table-caption"],
+            partial: [],
+          },
+        },
+        {
+          css: "table-cell",
+          tailwind: {
+            correct: ["table-cell"],
+            partial: [],
+          },
+        },
+        {
+          css: "table-column",
+          tailwind: {
+            correct: ["table-column"],
+            partial: [],
+          },
+        },
+        {
+          css: "table-column-group",
+          tailwind: {
+            correct: ["table-column-group"],
+            partial: [],
+          },
+        },
+        {
+          css: "table-footer-group",
+          tailwind: {
+            correct: ["table-footer-group"],
+            partial: [],
+          },
+        },
+        {
+          css: "table-header-group",
+          tailwind: {
+            correct: ["table-header-group"],
+            partial: [],
+          },
+        },
+        {
+          css: "table-row-group",
+          tailwind: {
+            correct: ["table-row-group"],
+            partial: [],
+          },
+        },
+        {
+          css: "table-row",
+          tailwind: {
+            correct: ["table-row"],
+            partial: [],
+          },
+        },
+        {
+          css: "flow-root",
+          tailwind: {
+            correct: ["flow-root"],
+            partial: [],
+          },
+        },
+        {
+          css: "grid",
+          tailwind: {
+            correct: ["grid"],
+            partial: [],
+          },
+        },
+        {
+          css: "inline-grid",
+          tailwind: {
+            correct: ["inline-grid"],
+            partial: [],
+          },
+        },
+        {
+          css: "contents",
+          tailwind: {
+            correct: ["contents"],
+            partial: [],
+          },
+        },
+        {
+          css: "list-item",
+          tailwind: {
+            correct: ["list-item"],
+            partial: [],
+          },
+        },
+        {
+          css: "none",
+          tailwind: {
+            correct: ["hidden"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "isolation",
+      match: [
+        {
+          css: "isolate",
+          tailwind: {
+            correct: ["isolate"],
+            partial: [],
+          },
+        },
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["isolation-auto"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "object-fit",
+      match: [
+        {
+          css: "contain",
+          tailwind: {
+            correct: ["object-contain"],
+            partial: [],
+          },
+        },
+        {
+          css: "cover",
+          tailwind: {
+            correct: ["object-cover"],
+            partial: [],
+          },
+        },
+        {
+          css: "fill",
+          tailwind: {
+            correct: ["object-fill"],
+            partial: [],
+          },
+        },
+        {
+          css: "none",
+          tailwind: {
+            correct: ["object-none"],
+            partial: [],
+          },
+        },
+        {
+          css: "scale-down",
+          tailwind: {
+            correct: ["object-scale-down"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "object-position",
+      match: [
+        {
+          css: "bottom",
+          tailwind: {
+            correct: ["object-bottom"],
+            partial: [],
+          },
+        },
+        {
+          css: "center",
+          tailwind: {
+            correct: ["object-center"],
+            partial: [],
+          },
+        },
+        {
+          css: "left",
+          tailwind: {
+            correct: ["object-left"],
+            partial: [],
+          },
+        },
+        {
+          css: "left bottom",
+          tailwind: {
+            correct: ["object-left-bottom"],
+            partial: [],
+          },
+        },
+        {
+          css: "left top",
+          tailwind: {
+            correct: ["object-left-top"],
+            partial: [],
+          },
+        },
+        {
+          css: "right",
+          tailwind: {
+            correct: ["object-right"],
+            partial: [],
+          },
+        },
+        {
+          css: "right bottom",
+          tailwind: {
+            correct: ["object-right-bottom"],
+            partial: [],
+          },
+        },
+        {
+          css: "right top",
+          tailwind: {
+            correct: ["object-right-top"],
+            partial: [],
+          },
+        },
+        {
+          css: "top",
+          tailwind: {
+            correct: ["object-top"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "overflow",
+      match: [
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["overflow-auto"],
+            partial: [],
+          },
+        },
+        {
+          css: "hidden",
+          tailwind: {
+            correct: ["overflow-hidden"],
+            partial: [],
+          },
+        },
+        {
+          css: "clip",
+          tailwind: {
+            correct: ["overflow-clip"],
+            partial: [],
+          },
+        },
+        {
+          css: "visible",
+          tailwind: {
+            correct: ["overflow-visible"],
+            partial: [],
+          },
+        },
+        {
+          css: "scroll",
+          tailwind: {
+            correct: ["overflow-scroll"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "overflow-y",
+      match: [
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["overflow-y-auto"],
+            partial: [],
+          },
+        },
+        {
+          css: "hidden",
+          tailwind: {
+            correct: ["overflow-y-hidden"],
+            partial: [],
+          },
+        },
+        {
+          css: "clip",
+          tailwind: {
+            correct: ["overflow-y-clip"],
+            partial: [],
+          },
+        },
+        {
+          css: "visible",
+          tailwind: {
+            correct: ["overflow-y-visible"],
+            partial: [],
+          },
+        },
+        {
+          css: "scroll",
+          tailwind: {
+            correct: ["overflow-y-scroll"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "overflow-x",
+      match: [
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["overflow-x-auto"],
+            partial: [],
+          },
+        },
+        {
+          css: "hidden",
+          tailwind: {
+            correct: ["overflow-x-hidden"],
+            partial: [],
+          },
+        },
+        {
+          css: "clip",
+          tailwind: {
+            correct: ["overflow-x-clip"],
+            partial: [],
+          },
+        },
+        {
+          css: "visible",
+          tailwind: {
+            correct: ["overflow-x-visible"],
+            partial: [],
+          },
+        },
+        {
+          css: "scroll",
+          tailwind: {
+            correct: ["overflow-x-scroll"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "position",
+      match: [
+        {
+          css: "static",
+          tailwind: {
+            correct: ["static"],
+            partial: [],
+          },
+        },
+        {
+          css: "fixed",
+          tailwind: {
+            correct: ["fixed"],
+            partial: [],
+          },
+        },
+        {
+          css: "absolute",
+          tailwind: {
+            correct: ["absolute"],
+            partial: [],
+          },
+        },
+        {
+          css: "relative",
+          tailwind: {
+            correct: ["relative"],
+            partial: [],
+          },
+        },
+        {
+          css: "sticky",
+          tailwind: {
+            correct: ["sticky"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "visibility",
+      match: [
+        {
+          css: "visible",
+          tailwind: {
+            correct: ["visible"],
+            partial: [],
+          },
+        },
+        {
+          css: "hidden",
+          tailwind: {
+            correct: ["invisible"],
+            partial: [],
+          },
+        },
+        {
+          css: "collapse",
+          tailwind: {
+            correct: ["collapse"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "z-index",
+      match: [
+        {
+          css: "0",
+          tailwind: {
+            correct: ["z-0"],
+            partial: [],
+          },
+        },
+        {
+          css: "10",
+          tailwind: {
+            correct: ["z-10"],
+            partial: [],
+          },
+        },
+        {
+          css: "20",
+          tailwind: {
+            correct: ["z-20"],
+            partial: [],
+          },
+        },
+        {
+          css: "30",
+          tailwind: {
+            correct: ["z-30"],
+            partial: [],
+          },
+        },
+        {
+          css: "40",
+          tailwind: {
+            correct: ["z-40"],
+            partial: [],
+          },
+        },
+        {
+          css: "50",
+          tailwind: {
+            correct: ["z-50"],
+            partial: [],
+          },
+        },
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["z-auto"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "top",
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["top-0"],
+            partial: [],
+          },
+        },
+        {
+          css: "1px",
+          tailwind: {
+            correct: ["top-px"],
+            partial: [],
+          },
+        },
+        {
+          css: "2px",
+          tailwind: {
+            correct: ["top-0.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["top-1"],
+            partial: [],
+          },
+        },
+        {
+          css: "6px",
+          tailwind: {
+            correct: ["top-1.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "8px",
+          tailwind: {
+            correct: ["top-2"],
+            partial: [],
+          },
+        },
+        {
+          css: "10px",
+          tailwind: {
+            correct: ["top-2.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "12px",
+          tailwind: {
+            correct: ["top-3"],
+            partial: [],
+          },
+        },
+        {
+          css: "14px",
+          tailwind: {
+            correct: ["top-3.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "16px",
+          tailwind: {
+            correct: ["top-4"],
+            partial: [],
+          },
+        },
+        {
+          css: "20px",
+          tailwind: {
+            correct: ["top-5"],
+            partial: [],
+          },
+        },
+        {
+          css: "24px",
+          tailwind: {
+            correct: ["top-6"],
+            partial: [],
+          },
+        },
+        {
+          css: "28px",
+          tailwind: {
+            correct: ["top-7"],
+            partial: [],
+          },
+        },
+        {
+          css: "32px",
+          tailwind: {
+            correct: ["top-8"],
+            partial: [],
+          },
+        },
+        {
+          css: "36px",
+          tailwind: {
+            correct: ["top-9"],
+            partial: [],
+          },
+        },
+        {
+          css: "40px",
+          tailwind: {
+            correct: ["top-10"],
+            partial: [],
+          },
+        },
+        {
+          css: "48px",
+          tailwind: {
+            correct: ["top-12"],
+            partial: [],
+          },
+        },
+        {
+          css: "80px",
+          tailwind: {
+            correct: ["top-20"],
+            partial: [],
+          },
+        },
+        {
+          css: "160px",
+          tailwind: {
+            correct: ["top-40"],
+            partial: [],
+          },
+        },
+        {
+          css: "240px",
+          tailwind: {
+            correct: ["top-60"],
+            partial: [],
+          },
+        },
+        {
+          css: "320px",
+          tailwind: {
+            correct: ["top-80"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "left",
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["left-0"],
+            partial: [],
+          },
+        },
+        {
+          css: "1px",
+          tailwind: {
+            correct: ["left-px"],
+            partial: [],
+          },
+        },
+        {
+          css: "2px",
+          tailwind: {
+            correct: ["left-0.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["left-1"],
+            partial: [],
+          },
+        },
+        {
+          css: "6px",
+          tailwind: {
+            correct: ["left-1.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "8px",
+          tailwind: {
+            correct: ["left-2"],
+            partial: [],
+          },
+        },
+        {
+          css: "10px",
+          tailwind: {
+            correct: ["left-2.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "12px",
+          tailwind: {
+            correct: ["left-3"],
+            partial: [],
+          },
+        },
+        {
+          css: "14px",
+          tailwind: {
+            correct: ["left-3.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "16px",
+          tailwind: {
+            correct: ["left-4"],
+            partial: [],
+          },
+        },
+        {
+          css: "20px",
+          tailwind: {
+            correct: ["left-5"],
+            partial: [],
+          },
+        },
+        {
+          css: "24px",
+          tailwind: {
+            correct: ["left-6"],
+            partial: [],
+          },
+        },
+        {
+          css: "28px",
+          tailwind: {
+            correct: ["left-7"],
+            partial: [],
+          },
+        },
+        {
+          css: "32px",
+          tailwind: {
+            correct: ["left-8"],
+            partial: [],
+          },
+        },
+        {
+          css: "36px",
+          tailwind: {
+            correct: ["left-9"],
+            partial: [],
+          },
+        },
+        {
+          css: "40px",
+          tailwind: {
+            correct: ["left-10"],
+            partial: [],
+          },
+        },
+        {
+          css: "48px",
+          tailwind: {
+            correct: ["left-12"],
+            partial: [],
+          },
+        },
+        {
+          css: "80px",
+          tailwind: {
+            correct: ["left-20"],
+            partial: [],
+          },
+        },
+        {
+          css: "160px",
+          tailwind: {
+            correct: ["left-40"],
+            partial: [],
+          },
+        },
+        {
+          css: "240px",
+          tailwind: {
+            correct: ["left-60"],
+            partial: [],
+          },
+        },
+        {
+          css: "320px",
+          tailwind: {
+            correct: ["left-80"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "bottom",
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["bottom-0"],
+            partial: [],
+          },
+        },
+        {
+          css: "1px",
+          tailwind: {
+            correct: ["bottom-px"],
+            partial: [],
+          },
+        },
+        {
+          css: "2px",
+          tailwind: {
+            correct: ["bottom-0.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["bottom-1"],
+            partial: [],
+          },
+        },
+        {
+          css: "6px",
+          tailwind: {
+            correct: ["bottom-1.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "8px",
+          tailwind: {
+            correct: ["bottom-2"],
+            partial: [],
+          },
+        },
+        {
+          css: "10px",
+          tailwind: {
+            correct: ["bottom-2.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "12px",
+          tailwind: {
+            correct: ["bottom-3"],
+            partial: [],
+          },
+        },
+        {
+          css: "14px",
+          tailwind: {
+            correct: ["bottom-3.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "16px",
+          tailwind: {
+            correct: ["bottom-4"],
+            partial: [],
+          },
+        },
+        {
+          css: "20px",
+          tailwind: {
+            correct: ["bottom-5"],
+            partial: [],
+          },
+        },
+        {
+          css: "24px",
+          tailwind: {
+            correct: ["bottom-6"],
+            partial: [],
+          },
+        },
+        {
+          css: "28px",
+          tailwind: {
+            correct: ["bottom-7"],
+            partial: [],
+          },
+        },
+        {
+          css: "32px",
+          tailwind: {
+            correct: ["bottom-8"],
+            partial: [],
+          },
+        },
+        {
+          css: "36px",
+          tailwind: {
+            correct: ["bottom-9"],
+            partial: [],
+          },
+        },
+        {
+          css: "40px",
+          tailwind: {
+            correct: ["bottom-10"],
+            partial: [],
+          },
+        },
+        {
+          css: "48px",
+          tailwind: {
+            correct: ["bottom-12"],
+            partial: [],
+          },
+        },
+        {
+          css: "80px",
+          tailwind: {
+            correct: ["bottom-20"],
+            partial: [],
+          },
+        },
+        {
+          css: "160px",
+          tailwind: {
+            correct: ["bottom-40"],
+            partial: [],
+          },
+        },
+        {
+          css: "240px",
+          tailwind: {
+            correct: ["bottom-60"],
+            partial: [],
+          },
+        },
+        {
+          css: "320px",
+          tailwind: {
+            correct: ["bottom-80"],
+            partial: [],
+          },
+        },
+      ],
+    },
+    {
+      key: "right",
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["right-0"],
+            partial: [],
+          },
+        },
+        {
+          css: "1px",
+          tailwind: {
+            correct: ["right-px"],
+            partial: [],
+          },
+        },
+        {
+          css: "2px",
+          tailwind: {
+            correct: ["right-0.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["right-1"],
+            partial: [],
+          },
+        },
+        {
+          css: "6px",
+          tailwind: {
+            correct: ["right-1.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "8px",
+          tailwind: {
+            correct: ["right-2"],
+            partial: [],
+          },
+        },
+        {
+          css: "10px",
+          tailwind: {
+            correct: ["right-2.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "12px",
+          tailwind: {
+            correct: ["right-3"],
+            partial: [],
+          },
+        },
+        {
+          css: "14px",
+          tailwind: {
+            correct: ["right-3.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "16px",
+          tailwind: {
+            correct: ["right-4"],
+            partial: [],
+          },
+        },
+        {
+          css: "20px",
+          tailwind: {
+            correct: ["right-5"],
+            partial: [],
+          },
+        },
+        {
+          css: "24px",
+          tailwind: {
+            correct: ["right-6"],
+            partial: [],
+          },
+        },
+        {
+          css: "28px",
+          tailwind: {
+            correct: ["right-7"],
+            partial: [],
+          },
+        },
+        {
+          css: "32px",
+          tailwind: {
+            correct: ["right-8"],
+            partial: [],
+          },
+        },
+        {
+          css: "36px",
+          tailwind: {
+            correct: ["right-9"],
+            partial: [],
+          },
+        },
+        {
+          css: "40px",
+          tailwind: {
+            correct: ["right-10"],
+            partial: [],
+          },
+        },
+        {
+          css: "48px",
+          tailwind: {
+            correct: ["right-12"],
+            partial: [],
+          },
+        },
+        {
+          css: "80px",
+          tailwind: {
+            correct: ["right-20"],
+            partial: [],
+          },
+        },
+        {
+          css: "160px",
+          tailwind: {
+            correct: ["right-40"],
+            partial: [],
+          },
+        },
+        {
+          css: "240px",
+          tailwind: {
+            correct: ["right-60"],
+            partial: [],
+          },
+        },
+        {
+          css: "320px",
+          tailwind: {
+            correct: ["right-80"],
+            partial: [],
+          },
+        },
+      ],
+    },
+  ],
   flexboxAndGrid: [
+    {
+      key: "flex-basis",
+      match: [
+        {
+          css: "0px",
+          tailwind: {
+            correct: ["basis-0"],
+            partial: [],
+          },
+        },
+        {
+          css: "4px",
+          tailwind: {
+            correct: ["basis-1"],
+            partial: [],
+          },
+        },
+        {
+          css: "8px",
+          tailwind: {
+            correct: ["basis-2"],
+            partial: [],
+          },
+        },
+        {
+          css: "12px",
+          tailwind: {
+            correct: ["basis-3"],
+            partial: [],
+          },
+        },
+        {
+          css: "16px",
+          tailwind: {
+            correct: ["basis-4"],
+            partial: [],
+          },
+        },
+        {
+          css: "20px",
+          tailwind: {
+            correct: ["basis-5"],
+            partial: [],
+          },
+        },
+        {
+          css: "24px",
+          tailwind: {
+            correct: ["basis-6"],
+            partial: [],
+          },
+        },
+        {
+          css: "28px",
+          tailwind: {
+            correct: ["basis-7"],
+            partial: [],
+          },
+        },
+        {
+          css: "32px",
+          tailwind: {
+            correct: ["basis-8"],
+            partial: [],
+          },
+        },
+        {
+          css: "36px",
+          tailwind: {
+            correct: ["basis-9"],
+            partial: [],
+          },
+        },
+        {
+          css: "40px",
+          tailwind: {
+            correct: ["basis-10"],
+            partial: [],
+          },
+        },
+        {
+          css: "48px",
+          tailwind: {
+            correct: ["basis-12"],
+            partial: [],
+          },
+        },
+        {
+          css: "80px",
+          tailwind: {
+            correct: ["basis-20"],
+            partial: [],
+          },
+        },
+        {
+          css: "160px",
+          tailwind: {
+            correct: ["basis-40"],
+            partial: [],
+          },
+        },
+        {
+          css: "240px",
+          tailwind: {
+            correct: ["basis-60"],
+            partial: [],
+          },
+        },
+        {
+          css: "320px",
+          tailwind: {
+            correct: ["basis-80"],
+            partial: [],
+          },
+        },
+        {
+          css: "auto",
+          tailwind: {
+            correct: ["basis-auto"],
+            partial: [],
+          },
+        },
+        {
+          css: "1px",
+          tailwind: {
+            correct: ["basis-px"],
+            partial: [],
+          },
+        },
+        {
+          css: "2px",
+          tailwind: {
+            correct: ["basis-0.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "6px",
+          tailwind: {
+            correct: ["basis-1.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "10px",
+          tailwind: {
+            correct: ["basis-2.5"],
+            partial: [],
+          },
+        },
+        {
+          css: "14px",
+          tailwind: {
+            correct: ["basis-3.5"],
+            partial: [],
+          },
+        },
+      ],
+    },
     {
       key: "align-items",
       match: [
