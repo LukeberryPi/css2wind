@@ -5,7 +5,7 @@ export default function AuthLayout({
 }) {
   return (
     <html className="scroll-smooth subpixel-antialiased" lang="en">
-      <body className="min-h-screen bg-black text-white selection:bg-berryBlue selection:text-black">
+      <body className="min-h-screen bg-black text-white">
         <main>{children}</main>
       </body>
     </html>

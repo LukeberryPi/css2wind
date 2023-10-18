@@ -101,7 +101,7 @@ export default function PlayPage() {
                   incorrect &&
                   "animate-shake border border-alertRed font-medium text-alertRed"
                 }
-                w-96 origin-center select-all bg-transparent p-5 text-xl transition-all selection:bg-berryBlue selection:text-black`}
+                w-96 origin-center select-all bg-transparent p-5 text-xl transition-all`}
             >
               {cssProperty}
             </span>
