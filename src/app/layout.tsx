@@ -10,7 +10,7 @@ export const firaCode = Fira_Code({
 });
 
 export const metadata = {
-  title: "css2wind ̖́-",
+  title: "css2wind",
   description: "Learn tailwind by playing!",
 };
 
@@ -52,12 +52,12 @@ export default async function RootLayout({
           <nav className="fixed top-0 flex w-full items-center justify-between border-b border-zinc-700 bg-inherit px-8 py-4 text-lg text-zinc-50">
             <Link
               href="/"
-              className="flex items-center gap-4 underline-offset-4 transition-transform  group-hover:underline"
+              className="flex flex-1 items-center gap-4 underline-offset-4 transition-transform  group-hover:underline"
             >
               <Image alt="A wind vane" src="/logo.svg" height={32} width={32} />
               <span className="text-2xl font-medium">css2wind</span>
             </Link>
-            <ul className="hidden items-center gap-10 underline-offset-4 group-hover:underline md:flex">
+            <ul className="hidden items-center justify-center flex-1 gap-10 underline-offset-4 group-hover:underline md:flex">
               <li className="border border-zinc-700 transition-all hover:border-zinc-50 ">
                 <Link
                   className="flex items-center gap-4 px-4 py-2 underline-offset-4 transition-all group-hover:underline"
@@ -85,7 +85,7 @@ export default async function RootLayout({
                 </Link>
               </li>
             </ul>
-            <ul className="hidden items-center gap-10 underline-offset-4 group-hover:underline md:flex">
+            <ul className="hidden flex-1 justify-end items-center gap-10 underline-offset-4 group-hover:underline md:flex">
               {!user && (
                 <>
                   <li className="border border-zinc-700 transition-all hover:border-zinc-50 ">
