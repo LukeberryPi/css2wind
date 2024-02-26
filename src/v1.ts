@@ -1,4 +1,4 @@
-export const propertyDictionary = {
+export const propertyDictionary: Record<string, string[]> = {
   "align-items: baseline": ["items-baseline"],
   "align-items: center": ["items-center"],
   "align-items: flex-end": ["items-end"],

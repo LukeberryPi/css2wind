@@ -8,7 +8,6 @@ import { useEvaluation } from "@/hooks";
 const initialState = {
   correct: false,
   incorrect: false,
-  partial: false,
   notSubmitted: true,
 };
 
@@ -20,7 +19,7 @@ export default function Home() {
     evaluateTranslation,
     mutate: mutateTranslationStatus,
   } = useEvaluation(initialState);
-  const { correct, incorrect, partial, notSubmitted } = state;
+  const { correct, incorrect, notSubmitted } = state;
 
   useEffect(() => {
     setCssProperty(getRandomKey(propertyDictionary));
@@ -70,10 +69,6 @@ export default function Home() {
                 } 
                 ${correct && "border border-greenGo font-medium text-greenGo"}
                 ${
-                  partial &&
-                  "border border-yellowYes font-medium text-yellowYes"
-                }
-                ${
                   incorrect &&
                   "animate-shake border border-alertRed font-medium text-alertRed"
                 }
@@ -85,7 +80,6 @@ export default function Home() {
           </div>
           {notSubmitted && <Arrow size={32} className="fill-white" />}
           {correct && <Check size={32} className="fill-greenGo" />}
-          {partial && <Alert size={32} className="fill-yellowYes" />}
           {incorrect && (
             <Close size={32} className="animate-shake fill-alertRed " />
           )}
@@ -99,7 +93,6 @@ export default function Home() {
               className={`w-96 origin-center bg-transparent p-5 text-xl  focus:outline-none
               ${notSubmitted && "border border-white font-medium text-white"}
               ${correct && "border border-greenGo font-medium text-greenGo"}
-              ${partial && "border border-yellowYes font-medium text-yellowYes"}
               ${
                 incorrect &&
                 "animate-shake border border-alertRed font-medium text-alertRed"
@@ -124,10 +117,6 @@ export default function Home() {
                 } 
                 ${correct && "border border-greenGo font-medium text-greenGo"}
                 ${
-                  partial &&
-                  "border border-yellowYes font-medium text-yellowYes"
-                }
-                ${
                   incorrect &&
                   "animate-shake border border-alertRed font-medium text-alertRed"
                 }
@@ -139,7 +128,6 @@ export default function Home() {
           </div>
           {notSubmitted && <Arrow size={32} className="fill-white" />}
           {correct && <Check size={32} className="fill-greenGo" />}
-          {partial && <Alert size={32} className="fill-yellowYes" />}
           {incorrect && (
             <Close size={32} className="animate-shake fill-alertRed " />
           )}
@@ -153,7 +141,6 @@ export default function Home() {
               className={`w-96 origin-center bg-transparent p-5 text-xl  focus:outline-none
               ${notSubmitted && "border border-white font-medium text-white"}
               ${correct && "border border-greenGo font-medium text-greenGo"}
-              ${partial && "border border-yellowYes font-medium text-yellowYes"}
               ${
                 incorrect &&
                 "animate-shake border border-alertRed font-medium text-alertRed"

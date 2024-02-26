@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  a,
+  button {
+    @apply transition-transform active:scale-95;
+  }
+}

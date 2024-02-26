@@ -4,11 +4,10 @@ import { useReducer } from "react";
 type State = {
   correct: boolean;
   incorrect: boolean;
-  partial: boolean;
   notSubmitted: boolean;
 };
 type Action = {
-  type: "correct" | "incorrect" | "partial" | "not_submitted";
+  type: "correct" | "incorrect" | "not_submitted";
 };
 
 const reducer = (state: State, action: Action) => {
@@ -18,7 +17,6 @@ const reducer = (state: State, action: Action) => {
         ...state,
         correct: true,
         incorrect: false,
-        partial: false,
         notSubmitted: false,
       };
     }
@@ -27,16 +25,6 @@ const reducer = (state: State, action: Action) => {
         ...state,
         correct: false,
         incorrect: true,
-        partial: false,
-        notSubmitted: false,
-      };
-    }
-    case "partial": {
-      return {
-        ...state,
-        correct: false,
-        incorrect: false,
-        partial: true,
         notSubmitted: false,
       };
     }
@@ -45,7 +33,6 @@ const reducer = (state: State, action: Action) => {
         ...state,
         correct: false,
         incorrect: false,
-        partial: false,
         notSubmitted: true,
       };
     }
@@ -61,14 +48,6 @@ export const useEvaluation = (initialState: State) => {
   ): Action["type"] | undefined => {
     if (!attempt) {
       return;
-    }
-
-    if (
-      propertyDictionary[cssProperty].includes(attempt) &&
-      attempt.includes("[")
-    ) {
-      dispatch({ type: "partial" });
-      return "partial";
     }
 
     if (propertyDictionary[cssProperty].includes(attempt)) {
