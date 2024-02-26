@@ -100,6 +100,7 @@ export default function Home() {
               onChange={(event) => handleChange(event)}
               onKeyDown={(event) => handleKeyDown(event, attempt)}
               autoFocus
+              autoComplete="off"
               className={`w-96 origin-center bg-transparent p-5 text-xl  focus:outline-none
               ${notSubmitted && "border border-zinc-50 text-zinc-50"}
               ${correct && "border border-greenGo text-greenGo"}
