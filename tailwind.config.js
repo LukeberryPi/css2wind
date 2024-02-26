@@ -14,9 +14,6 @@ module.exports = {
         greenGo: "#4FBF85",
         yellowYes: "#F9F871",
         twitterBlue: "#1da1f2",
-        instagramPink: "#d62976",
-        instagramPurple: "#962fbf",
-        instagramOrange: "#fa7e1e",
       },
       animation: {
         shake: "shake 0.82s cubic-bezier(.36,.07,.19,.97) both",

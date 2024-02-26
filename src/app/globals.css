@@ -5,6 +5,6 @@
 @layer base {
   a,
   button {
-    @apply select-none;
+    @apply transition-transform active:scale-95;
   }
 }

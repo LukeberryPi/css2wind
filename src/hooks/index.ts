@@ -1,2 +1,1 @@
-export { useEvaluation } from "./useEvaluation";
-export { useLocalStorage } from "./useLocalStorage";
+export { default as useEvaluation } from "./useEvaluation";
