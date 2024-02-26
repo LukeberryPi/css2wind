@@ -1,8 +1,4 @@
-interface PropertyDictionary {
-  [key: string]: string[];
-}
-
-export const propertyDictionary: PropertyDictionary = {
+export const propertyDictionary = {
   "align-items: baseline": ["items-baseline"],
   "align-items: center": ["items-center"],
   "align-items: flex-end": ["items-end"],

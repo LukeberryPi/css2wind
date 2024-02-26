@@ -1,4 +1,4 @@
-import { propertyDictionary } from "@/leozada";
+import { propertyDictionary } from "@/v1";
 import { useReducer } from "react";
 
 type State = {
