@@ -6,3 +6,4 @@ export { House } from "./House";
 export { Info } from "./Info";
 export { Alert } from "./Alert";
 export { Menu } from "./Menu";
+export { Minus } from "./Minus";

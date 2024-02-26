@@ -1,5 +1,5 @@
 "use client";
-import { Alert, Arrow, Check, Close } from "@/icons";
+import { Arrow, Check, Close } from "@/icons";
 import { useEffect, useState } from "react";
 import { propertyDictionary } from "../../v1";
 import { getRandomKey } from "@/utils";
@@ -59,12 +59,12 @@ export default function Home() {
         className="mx-auto flex h-screen flex-col items-center justify-center"
       >
         <div className="flex items-center justify-center gap-6">
-          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
+          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
             .class &#123;
             <span
               className={`
                 ${notSubmitted && "border border-berryBlue text-berryBlue"} 
-                ${correct && "border border-greenGo text-greenGo"}
+                ${correct && "animate-lift border border-greenGo text-greenGo"}
                 ${
                   incorrect &&
                   "animate-shake border border-alertRed text-alertRed"
@@ -80,7 +80,7 @@ export default function Home() {
           {incorrect && (
             <Close size={32} className="animate-shake fill-alertRed " />
           )}
-          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
+          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
             className=&#34;
             <input
               value={attempt}
@@ -103,12 +103,12 @@ export default function Home() {
         id="how-to-play"
         className="mx-auto flex h-screen flex-col items-center justify-center"
       >
-        <h3 className="text-4xl text-zinc-950">How to Play</h3>
+        <h3 className="text-4xl text-zinc-100">How to Play</h3>
         <p>
           Type the correct tailwind equivalent to the css property on the left!
         </p>
         <div className="flex items-center justify-center gap-6">
-          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
+          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
             .class &#123;
             <span
               className={`
@@ -129,7 +129,7 @@ export default function Home() {
           {incorrect && (
             <Close size={32} className="animate-shake fill-alertRed " />
           )}
-          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
+          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
             className=&#34;
             <input
               value={attempt}
