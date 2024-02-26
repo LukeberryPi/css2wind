@@ -24,8 +24,10 @@ const initialState = {
 };
 
 export default function Home() {
+  const [properties, setProperties] = useState([]);
+  const [currentProperty, setCurrentProperty] = useState("");
   const [attempt, setAttempt] = useState("");
-  const [cssProperty, setCssProperty] = useState("");
+  
   const {
     state,
     evaluateTranslation,
@@ -34,7 +36,7 @@ export default function Home() {
   const { correct, incorrect, notSubmitted } = state;
 
   useEffect(() => {
-    setCssProperty(getRandomKey(dict));
+    setCurrentProperty(getRandomKey(dict));
   }, []);
 
   const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
@@ -44,7 +46,7 @@ export default function Home() {
 
   const resetInput = (afterMilisseconds = 800) => {
     setTimeout(() => {
-      setCssProperty(getRandomKey(dict));
+      setCurrentProperty(getRandomKey(dict));
       setAttempt("");
       mutateTranslationStatus({ type: "not_submitted" });
     }, afterMilisseconds);
@@ -56,7 +58,7 @@ export default function Home() {
   ) => {
     if (event.code == "Enter") {
       event.preventDefault();
-      const evaluation = evaluateTranslation(translation.trim(), cssProperty);
+      const evaluation = evaluateTranslation(translation.trim(), currentProperty);
 
       if (!evaluation) return;
 
@@ -83,7 +85,7 @@ export default function Home() {
                 }
                 w-96 origin-center select-all bg-transparent p-5 text-xl `}
             >
-              {cssProperty}
+              {currentProperty}
             </span>
             &#125;
           </div>
