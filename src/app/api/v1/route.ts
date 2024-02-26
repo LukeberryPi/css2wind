@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { propertyDictionary } from "../../../../v1";
+import { dict } from "../../../../v1";
 import { getRandomKey } from "@/utils";
 
 // first get request of the day selects 8 keys
@@ -10,8 +10,8 @@ export async function GET() {
   const numberOfProperties = 8;
 
   for (let i = 0; i < numberOfProperties; i++) {
-    const randomProperty = getRandomKey(propertyDictionary);
-    data[randomProperty] = propertyDictionary[randomProperty];
+    const randomProperty = getRandomKey(dict);
+    data[randomProperty] = dict[randomProperty];
   }
 
   return NextResponse.json(data);

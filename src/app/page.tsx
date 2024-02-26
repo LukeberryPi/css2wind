@@ -1,7 +1,7 @@
 "use client";
 import { Arrow, Check, Close, Minus } from "@/icons";
 import { useEffect, useState } from "react";
-import { propertyDictionary } from "../../v1";
+import { dict } from "../../v1";
 import { getRandomKey } from "@/utils";
 import { useEvaluation } from "@/hooks";
 
@@ -34,7 +34,7 @@ export default function Home() {
   const { correct, incorrect, notSubmitted } = state;
 
   useEffect(() => {
-    setCssProperty(getRandomKey(propertyDictionary));
+    setCssProperty(getRandomKey(dict));
   }, []);
 
   const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
@@ -44,7 +44,7 @@ export default function Home() {
 
   const resetInput = (afterMilisseconds = 800) => {
     setTimeout(() => {
-      setCssProperty(getRandomKey(propertyDictionary));
+      setCssProperty(getRandomKey(dict));
       setAttempt("");
       mutateTranslationStatus({ type: "not_submitted" });
     }, afterMilisseconds);

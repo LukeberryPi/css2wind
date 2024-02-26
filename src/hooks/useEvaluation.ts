@@ -1,4 +1,4 @@
-import { propertyDictionary } from "../../v1";
+import { dict } from "../../v1";
 import { useReducer } from "react";
 
 type State = {
@@ -10,7 +10,7 @@ type Action = {
   type: "correct" | "incorrect" | "not_submitted";
 };
 
-function reducer(state: State, action: Action){
+function reducer(state: State, action: Action) {
   switch (action.type) {
     case "correct": {
       return {
@@ -50,12 +50,12 @@ export default function useEvaluation(initialState: State) {
       return;
     }
 
-    if (propertyDictionary[cssProperty].includes(attempt)) {
+    if (dict[cssProperty].includes(attempt)) {
       dispatch({ type: "correct" });
       return "correct";
     }
 
-    if (!propertyDictionary[cssProperty].includes(attempt)) {
+    if (!dict[cssProperty].includes(attempt)) {
       dispatch({ type: "incorrect" });
       return "incorrect";
     }
