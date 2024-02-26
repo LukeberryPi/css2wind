@@ -73,26 +73,26 @@ export default function Home() {
     <main className="flex flex-col justify-center text-center">
       <section
         id="play"
-        className="mx-auto flex h-screen flex-col items-center justify-center"
+        className="mx-auto flex h-screen flex-col items-center justify-center gap-16"
       >
+        <h3 className="text-2xl text-zinc-100">
+          Translate the <span className="text-berryBlue">CSS property</span> to
+          the TailwindCSS equivalent
+        </h3>
         <div className="flex items-center justify-center gap-6">
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
             .class &#123;
             <span
-              className={`
-                ${notSubmitted && "border border-berryBlue text-berryBlue"} 
-                ${correct && "border border-greenGo text-greenGo"}
-                ${
-                  incorrect &&
-                  "animate-shake border border-alertRed text-alertRed"
-                }
-                w-96 origin-center select-all bg-transparent p-5 text-xl `}
+              data-not-submitted={notSubmitted}
+              data-correct={correct}
+              data-incorrect={incorrect}
+              className="w-96 origin-center select-all border bg-transparent p-5 text-xl data-[incorrect=true]:animate-shake data-[correct=true]:border-greenGo data-[incorrect=true]:border-alertRed data-[not-submitted=true]:border-berryBlue data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-berryBlue"
             >
               {currentProperty ? currentProperty : "..."}
             </span>
             &#125;
           </div>
-          {notSubmitted && <Arrow size={32} className="fill-zinc-50" />}
+          {notSubmitted && <Arrow size={32} className="fill-zinc-100" />}
           {correct && <Check size={32} className="fill-greenGo" />}
           {incorrect && (
             <Close size={32} className="animate-shake fill-alertRed " />
@@ -106,13 +106,10 @@ export default function Home() {
               onKeyDown={(event) => handleKeyDown(event, attempt)}
               autoFocus
               autoComplete="off"
-              className={`w-96 origin-center bg-transparent p-5 text-xl  focus:outline-none
-              ${notSubmitted && "border border-zinc-50 text-zinc-50"}
-              ${correct && "border border-greenGo text-greenGo"}
-              ${
-                incorrect &&
-                "animate-shake border border-alertRed text-alertRed"
-              }`}
+              data-not-submitted={notSubmitted}
+              data-correct={correct}
+              data-incorrect={incorrect}
+              className="w-96 origin-center border bg-transparent p-5 text-xl  text-alertRed focus:outline-none data-[incorrect=true]:animate-shake data-[correct=true]:border-greenGo data-[incorrect=true]:border-alertRed data-[not-submitted=true]:border-zinc-100 data-[correct=true]:text-greenGo data-[not-submitted=true]:text-zinc-100"
             />
             &#34;
           </div>
@@ -144,7 +141,7 @@ export default function Home() {
             </span>
             &#125;
           </div>
-          {notSubmitted && <Arrow size={32} className="fill-zinc-50" />}
+          {notSubmitted && <Arrow size={32} className="fill-zinc-100" />}
           {correct && <Check size={32} className="fill-greenGo" />}
           {incorrect && (
             <Close size={32} className="animate-shake fill-alertRed " />
@@ -157,7 +154,7 @@ export default function Home() {
               onChange={(event) => handleChange(event)}
               onKeyDown={(event) => handleKeyDown(event, attempt)}
               className={`w-96 origin-center bg-transparent p-5 text-xl  focus:outline-none
-              ${notSubmitted && "border border-zinc-50 text-zinc-50"}
+              ${notSubmitted && "border border-zinc-100 text-zinc-100"}
               ${correct && "border border-greenGo text-greenGo"}
               ${
                 incorrect &&
