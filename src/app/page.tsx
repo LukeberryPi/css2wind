@@ -103,6 +103,10 @@ export default function Home() {
         id="how-to-play"
         className="mx-auto flex h-screen flex-col items-center justify-center"
       >
+        <h3 className="text-4xl text-zinc-950">How to Play</h3>
+        <p>
+          Type the correct tailwind equivalent to the css property on the left!
+        </p>
         <div className="flex items-center justify-center gap-6">
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
             .class &#123;
@@ -116,7 +120,7 @@ export default function Home() {
                 }
                 w-96 origin-center select-all bg-transparent p-5 text-xl `}
             >
-              {cssProperty}
+              margin-right: 12px
             </span>
             &#125;
           </div>
