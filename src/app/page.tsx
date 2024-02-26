@@ -118,7 +118,7 @@ export default function Home() {
         id="how-to-play"
         className="mx-auto flex h-screen flex-col items-center justify-center"
       >
-        <h3 className="text-4xl text-zinc-100">How to Play</h3>
+        <h3 className="text-6xl text-zinc-100">How to Play</h3>
         <p>
           Type the correct tailwind equivalent to the css property on the left!
         </p>

@@ -5,7 +5,7 @@ export default function Faq() {
       className="mx-auto flex w-full max-w-full flex-col gap-20 px-2 py-20 sm:max-w-7xl md:py-32"
     >
       <div className="flex flex-col items-center gap-6">
-        <h2 className="break-words text-5xl text-zinc-100 md:text-6xl">
+        <h2 className="break-words text-6xl text-zinc-100 md:text-6xl">
           Frequently Asked Questions
         </h2>
       </div>
@@ -24,6 +24,7 @@ export default function Faq() {
             <span>Read More: </span>
             <a
               className="text-berryBlue underline underline-offset-2"
+              target="_blank"
               href="https://frontstuff.io/no-utility-classes-arent-the-same-as-inline-styles"
             >
               Utility-first Fundamentals
@@ -47,6 +48,7 @@ export default function Faq() {
             <span>Read More: </span>
             <a
               className="text-berryBlue underline underline-offset-2"
+              target="_blank"
               href="https://frontstuff.io/no-utility-classes-arent-the-same-as-inline-styles"
             >
               No, Utility Classes Aren&apos;t the Same As Inline Styles
@@ -69,6 +71,7 @@ export default function Faq() {
             <span>Watch this: </span>
             <a
               className="text-berryBlue underline underline-offset-2"
+              target="_blank"
               href="https://youtu.be/CQuTF-bkOgc?si=ENc7vupHcaGrXddW"
             >
               Comparing Modern CSS Solutions
@@ -91,6 +94,7 @@ export default function Faq() {
             <span>Read More: </span>
             <a
               className="text-berryBlue underline underline-offset-2"
+              target="_blank"
               href="https://adamwathan.me/css-utility-classes-and-separation-of-concerns/"
             >
               CSS Utility Classes and &quot;Separation of Concerns&quot;
