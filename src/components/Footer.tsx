@@ -40,7 +40,9 @@ export default function Footer() {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="flex cursor-pointer items-center gap-4"
         >
-          <span className="text-berryBlue">Play</span>
+          <span className="underline-berryBlue text-berryBlue underline underline-offset-4">
+            Play
+          </span>
           <Arrow className="-rotate-90 fill-berryBlue" />
         </button>
       ) : (
@@ -48,7 +50,7 @@ export default function Footer() {
           href="#tutorial-input"
           className="flex cursor-pointer items-center gap-4"
         >
-          <span>How to Play</span>
+          <span className="underline underline-offset-4">How to Play</span>
           <Arrow className="rotate-90 fill-white" />
         </a>
       )}
