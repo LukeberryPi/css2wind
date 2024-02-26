@@ -32,41 +32,36 @@ export default async function RootLayout({
             <span className="text-2xl font-medium">css2wind</span>
           </Link>
           <ul className="hidden items-center justify-center gap-10 underline-offset-4 group-hover:underline md:flex">
-            <li className="border border-zinc-700 transition-all hover:border-zinc-50 ">
-              <Link
-                className="flex items-center gap-4 px-4 py-2 underline-offset-4 transition-all group-hover:underline"
-                href="/"
-              >
-                <House className="fill-zinc-50" />
-                how to play
-              </Link>
-            </li>
-            <li className="border border-zinc-700 transition-all hover:border-zinc-50 ">
-              <Link
-                className="flex items-center gap-4 px-4 py-2 underline-offset-4 transition-all group-hover:underline"
-                href="/help"
+            <li className="border border-zinc-700  hover:border-zinc-50 ">
+              <a
+                className="flex items-center gap-4 px-4 py-2 underline-offset-4  group-hover:underline"
+                href="#how-to-play"
               >
                 <Info className="fill-zinc-50" />
-                learn about tailwind
+                <span>how to play</span>
+              </a>
+            </li>
+            <li className="border border-zinc-700  hover:border-zinc-50 ">
+              <Link
+                className="flex items-center gap-4 px-4 py-2 underline-offset-4  group-hover:underline"
+                href="/help"
+              >
+                <span>learn about tailwind</span>
               </Link>
             </li>
           </ul>
         </nav>
         {children}
         <footer className="fixed bottom-0 flex w-full items-center justify-between px-8 py-6 text-lg">
-          <ul className="hidden items-center gap-10 underline-offset-4 group-hover:underline md:flex">
-            <li>
-              <a
-                className="border border-zinc-700 px-4 py-2 text-zinc-50 transition-all hover:border-zinc-50 "
-                target="_blank"
-                href="ttps://github.com/LukeberryPi/css2wind"
-              >
-                contribute on github!
-              </a>
-            </li>
-          </ul>
           <a
-            className="border border-zinc-700 px-4 py-2 text-zinc-50 transition-all hover:border-zinc-50 "
+            className="border border-zinc-700 px-4 py-2 text-zinc-50  hover:border-zinc-50 "
+            target="_blank"
+            href="ttps://github.com/LukeberryPi/css2wind"
+          >
+            contribute on github!
+          </a>
+          <a
+            className="border border-zinc-700 px-4 py-2 text-zinc-50  hover:border-zinc-50 "
             target="_blank"
             href="https://twitter.com/LukeberryPi"
           >

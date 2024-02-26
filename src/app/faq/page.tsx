@@ -14,7 +14,7 @@ export default function Faq() {
         <div className="flex items-center">
           <div className="flex cursor-default flex-col items-start gap-2 text-white">
             .class &#123;
-            <div className="border-2 border-greenGo bg-inherit p-5 text-xl text-greenGo">
+            <div className="border-2 border-greenGo p-5 text-xl text-greenGo">
               flex-direction: column;
             </div>
             &#125;
@@ -38,7 +38,7 @@ export default function Faq() {
         <div className="flex items-center">
           <div className="flex cursor-default flex-col items-start gap-2 text-white">
             .class &#123;
-            <div className="border-2 border-alertRed bg-inherit p-5 text-xl text-alertRed">
+            <div className="border-2 border-alertRed p-5 text-xl text-alertRed">
               flex-direction: column;
             </div>
             &#125;

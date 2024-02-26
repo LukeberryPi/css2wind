@@ -54,8 +54,11 @@ export default function Home() {
   };
 
   return (
-    <main className="flex flex-col justify-center divide-y-2 divide-zinc-700 text-center">
-      <section className="mx-auto flex h-full flex-col items-center ">
+    <main className="flex flex-col justify-center text-center">
+      <section
+        id="play"
+        className="mx-auto flex h-screen flex-col items-center justify-center"
+      >
         <div className="flex items-center justify-center gap-6">
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
             .class &#123;
@@ -74,7 +77,7 @@ export default function Home() {
                   incorrect &&
                   "animate-shake border border-alertRed font-medium text-alertRed"
                 }
-                w-96 origin-center select-all bg-transparent p-5 text-xl transition-all`}
+                w-96 origin-center select-all bg-transparent p-5 text-xl `}
             >
               {cssProperty}
             </span>
@@ -84,10 +87,7 @@ export default function Home() {
           {correct && <Check size={32} className="fill-greenGo" />}
           {partial && <Alert size={32} className="fill-yellowYes" />}
           {incorrect && (
-            <Close
-              size={32}
-              className="animate-shake fill-alertRed transition-all"
-            />
+            <Close size={32} className="animate-shake fill-alertRed " />
           )}
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
             className=&#34;
@@ -96,7 +96,61 @@ export default function Home() {
               onChange={(event) => handleChange(event)}
               onKeyDown={(event) => handleKeyDown(event, attempt)}
               autoFocus
-              className={`transition-al w-96 origin-center bg-transparent p-5 text-xl focus:outline-none
+              className={`w-96 origin-center bg-transparent p-5 text-xl  focus:outline-none
+              ${notSubmitted && "border border-white font-medium text-white"}
+              ${correct && "border border-greenGo font-medium text-greenGo"}
+              ${partial && "border border-yellowYes font-medium text-yellowYes"}
+              ${
+                incorrect &&
+                "animate-shake border border-alertRed font-medium text-alertRed"
+              }`}
+            />
+            &#34;
+          </div>
+        </div>
+      </section>
+      <section
+        id="how-to-play"
+        className="mx-auto flex h-screen flex-col items-center justify-center"
+      >
+        <div className="flex items-center justify-center gap-6">
+          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
+            .class &#123;
+            <span
+              className={`
+                ${
+                  notSubmitted &&
+                  "border border-berryBlue font-medium text-berryBlue"
+                } 
+                ${correct && "border border-greenGo font-medium text-greenGo"}
+                ${
+                  partial &&
+                  "border border-yellowYes font-medium text-yellowYes"
+                }
+                ${
+                  incorrect &&
+                  "animate-shake border border-alertRed font-medium text-alertRed"
+                }
+                w-96 origin-center select-all bg-transparent p-5 text-xl `}
+            >
+              {cssProperty}
+            </span>
+            &#125;
+          </div>
+          {notSubmitted && <Arrow size={32} className="fill-white" />}
+          {correct && <Check size={32} className="fill-greenGo" />}
+          {partial && <Alert size={32} className="fill-yellowYes" />}
+          {incorrect && (
+            <Close size={32} className="animate-shake fill-alertRed " />
+          )}
+          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
+            className=&#34;
+            <input
+              value={attempt}
+              onChange={(event) => handleChange(event)}
+              onKeyDown={(event) => handleKeyDown(event, attempt)}
+              autoFocus
+              className={`w-96 origin-center bg-transparent p-5 text-xl  focus:outline-none
               ${notSubmitted && "border border-white font-medium text-white"}
               ${correct && "border border-greenGo font-medium text-greenGo"}
               ${partial && "border border-yellowYes font-medium text-yellowYes"}
