@@ -8,11 +8,11 @@ export default function Footer() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const element = document.getElementById("tutorial-input");
+      const tutorial = document.getElementById("tutorial-input");
 
-      if (!element) return;
+      if (!tutorial) return;
 
-      const boundingClientRect = element.getBoundingClientRect();
+      const boundingClientRect = tutorial.getBoundingClientRect();
       const isVisible =
         boundingClientRect.top >= 0 &&
         boundingClientRect.bottom <= window.innerHeight;
@@ -36,13 +36,13 @@ export default function Footer() {
         Contribute on Github!
       </a>
       {tutorialIsVisible ? (
-        <a
-          href="#play-input"
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="flex cursor-pointer items-center gap-4"
         >
           <span className="text-berryBlue">Play</span>
           <Arrow className="-rotate-90 fill-berryBlue" />
-        </a>
+        </button>
       ) : (
         <a
           href="#tutorial-input"
