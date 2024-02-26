@@ -10,7 +10,7 @@ type Action = {
   type: "correct" | "incorrect" | "not_submitted";
 };
 
-const reducer = (state: State, action: Action) => {
+function reducer(state: State, action: Action){
   switch (action.type) {
     case "correct": {
       return {
@@ -37,9 +37,9 @@ const reducer = (state: State, action: Action) => {
       };
     }
   }
-};
+}
 
-export const useEvaluation = (initialState: State) => {
+export default function useEvaluation(initialState: State) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const evaluateTranslation = (
@@ -66,4 +66,4 @@ export const useEvaluation = (initialState: State) => {
     evaluateTranslation,
     mutate: dispatch,
   };
-};
+}
