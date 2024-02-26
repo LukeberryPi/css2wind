@@ -19,9 +19,9 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className="scroll-smooth pt-20 subpixel-antialiased" lang="en">
+    <html className="min-h-screen scroll-smooth subpixel-antialiased" lang="en">
       <body
-        className={`${firaCode.className} min-h-screen bg-black text-white`}
+        className={`${firaCode.className} flex min-h-screen items-center justify-center bg-black text-white`}
       >
         <nav className="fixed top-0 flex w-full items-center justify-between px-8 py-6 text-lg text-zinc-50">
           <Link
@@ -55,11 +55,11 @@ export default async function RootLayout({
         {children}
         <footer className="fixed bottom-0 flex w-full items-center justify-between px-8 py-6 text-lg">
           <ul className="hidden items-center gap-10 underline-offset-4 group-hover:underline md:flex">
-            <li className="group border border-zinc-50 transition-all ">
+            <li>
               <a
-                href="https://github.com/LukeberryPi/css2wind"
-                className="flex items-center px-4 py-2 decoration-zinc-50 underline-offset-4 transition-all group-hover:underline"
+                className="border border-zinc-700 px-4 py-2 text-zinc-50 transition-all hover:border-zinc-50 "
                 target="_blank"
+                href="ttps://github.com/LukeberryPi/css2wind"
               >
                 contribute on github!
               </a>

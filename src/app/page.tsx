@@ -55,7 +55,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col justify-center divide-y-2 divide-zinc-700 text-center">
-      <section className="mx-auto flex max-w-7xl flex-col items-center gap-10 py-[268px]">
+      <section className="mx-auto flex h-full flex-col items-center ">
         <div className="flex items-center justify-center gap-6">
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
             .class &#123;
