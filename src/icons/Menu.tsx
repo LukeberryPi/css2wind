@@ -1,6 +1,6 @@
 import { IconProps } from "./IconProps.types";
 
-export function Menu({ className, size = 24 }: IconProps) {
+export default function Menu({ className, size = 24 }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

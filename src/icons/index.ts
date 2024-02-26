@@ -1,9 +1,9 @@
-export { Zap } from "./Zap";
-export { Check } from "./Check";
-export { Close } from "./Close";
-export { Arrow } from "./Arrow";
-export { House } from "./House";
-export { Info } from "./Info";
-export { Alert } from "./Alert";
-export { Menu } from "./Menu";
-export { Minus } from "./Minus";
+export { default as Zap } from "./Zap";
+export { default as Check } from "./Check";
+export { default as Close } from "./Close";
+export { default as Arrow } from "./Arrow";
+export { default as House } from "./House";
+export { default as Info } from "./Info";
+export { default as Alert } from "./Alert";
+export { default as Menu } from "./Menu";
+export { default as Minus } from "./Minus";

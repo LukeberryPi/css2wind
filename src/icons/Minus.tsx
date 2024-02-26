@@ -1,6 +1,6 @@
 import { IconProps } from "./IconProps.types";
 
-export function Minus({ size = 24, className }: IconProps) {
+export default function Minus({ size = 24, className }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
