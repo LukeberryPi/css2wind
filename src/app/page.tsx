@@ -27,7 +27,7 @@ export default function Home() {
   const [properties, setProperties] = useState([]);
   const [currentProperty, setCurrentProperty] = useState("");
   const [attempt, setAttempt] = useState("");
-  
+
   const {
     state,
     evaluateTranslation,
@@ -58,7 +58,10 @@ export default function Home() {
   ) => {
     if (event.code == "Enter") {
       event.preventDefault();
-      const evaluation = evaluateTranslation(translation.trim(), currentProperty);
+      const evaluation = evaluateTranslation(
+        translation.trim(),
+        currentProperty
+      );
 
       if (!evaluation) return;
 
@@ -85,7 +88,7 @@ export default function Home() {
                 }
                 w-96 origin-center select-all bg-transparent p-5 text-xl `}
             >
-              {currentProperty}
+              {currentProperty ? currentProperty : "..."}
             </span>
             &#125;
           </div>
