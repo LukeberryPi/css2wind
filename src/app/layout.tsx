@@ -23,7 +23,7 @@ export default async function RootLayout({
       <body
         className={`${firaCode.className} min-h-screen bg-black text-white`}
       >
-        <nav className="fixed top-0 flex w-full items-center justify-between border-b border-zinc-700 bg-inherit px-8 py-4 text-lg text-zinc-50">
+        <nav className="fixed top-0 flex w-full items-center justify-between px-8 py-6 text-lg text-zinc-50">
           <Link
             href="/"
             className="flex items-center gap-4 underline-offset-4 transition-transform group-hover:underline"
@@ -53,7 +53,7 @@ export default async function RootLayout({
           </ul>
         </nav>
         {children}
-        <footer className="bottom-0 flex w-full items-center justify-between border-t border-zinc-700 bg-inherit px-8 py-5 text-lg">
+        <footer className="fixed bottom-0 flex w-full items-center justify-between px-8 py-6 text-lg">
           <ul className="hidden items-center gap-10 underline-offset-4 group-hover:underline md:flex">
             <li className="group border border-zinc-50 transition-all ">
               <a

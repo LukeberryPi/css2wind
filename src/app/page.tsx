@@ -1,5 +1,5 @@
 "use client";
-import { Alert, Arrow, Check, Close, Zap } from "@/icons";
+import { Alert, Arrow, Check, Close } from "@/icons";
 import { useEffect, useState } from "react";
 import { propertyDictionary } from "@/v1";
 import { getRandomKey } from "@/utils";
