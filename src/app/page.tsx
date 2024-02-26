@@ -1,7 +1,7 @@
 "use client";
 import { Alert, Arrow, Check, Close } from "@/icons";
 import { useEffect, useState } from "react";
-import { propertyDictionary } from "@/v1";
+import { propertyDictionary } from "../../v1";
 import { getRandomKey } from "@/utils";
 import { useEvaluation } from "@/hooks";
 
@@ -59,18 +59,15 @@ export default function Home() {
         className="mx-auto flex h-screen flex-col items-center justify-center"
       >
         <div className="flex items-center justify-center gap-6">
-          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
+          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
             .class &#123;
             <span
               className={`
-                ${
-                  notSubmitted &&
-                  "border border-berryBlue font-medium text-berryBlue"
-                } 
-                ${correct && "border border-greenGo font-medium text-greenGo"}
+                ${notSubmitted && "border border-berryBlue text-berryBlue"} 
+                ${correct && "border border-greenGo text-greenGo"}
                 ${
                   incorrect &&
-                  "animate-shake border border-alertRed font-medium text-alertRed"
+                  "animate-shake border border-alertRed text-alertRed"
                 }
                 w-96 origin-center select-all bg-transparent p-5 text-xl `}
             >
@@ -78,12 +75,12 @@ export default function Home() {
             </span>
             &#125;
           </div>
-          {notSubmitted && <Arrow size={32} className="fill-white" />}
+          {notSubmitted && <Arrow size={32} className="fill-zinc-50" />}
           {correct && <Check size={32} className="fill-greenGo" />}
           {incorrect && (
             <Close size={32} className="animate-shake fill-alertRed " />
           )}
-          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
+          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
             className=&#34;
             <input
               value={attempt}
@@ -91,11 +88,11 @@ export default function Home() {
               onKeyDown={(event) => handleKeyDown(event, attempt)}
               autoFocus
               className={`w-96 origin-center bg-transparent p-5 text-xl  focus:outline-none
-              ${notSubmitted && "border border-white font-medium text-white"}
-              ${correct && "border border-greenGo font-medium text-greenGo"}
+              ${notSubmitted && "border border-zinc-50 text-zinc-50"}
+              ${correct && "border border-greenGo text-greenGo"}
               ${
                 incorrect &&
-                "animate-shake border border-alertRed font-medium text-alertRed"
+                "animate-shake border border-alertRed text-alertRed"
               }`}
             />
             &#34;
@@ -107,18 +104,15 @@ export default function Home() {
         className="mx-auto flex h-screen flex-col items-center justify-center"
       >
         <div className="flex items-center justify-center gap-6">
-          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
+          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
             .class &#123;
             <span
               className={`
-                ${
-                  notSubmitted &&
-                  "border border-berryBlue font-medium text-berryBlue"
-                } 
-                ${correct && "border border-greenGo font-medium text-greenGo"}
+                ${notSubmitted && "border border-berryBlue text-berryBlue"} 
+                ${correct && "border border-greenGo text-greenGo"}
                 ${
                   incorrect &&
-                  "animate-shake border border-alertRed font-medium text-alertRed"
+                  "animate-shake border border-alertRed text-alertRed"
                 }
                 w-96 origin-center select-all bg-transparent p-5 text-xl `}
             >
@@ -126,24 +120,23 @@ export default function Home() {
             </span>
             &#125;
           </div>
-          {notSubmitted && <Arrow size={32} className="fill-white" />}
+          {notSubmitted && <Arrow size={32} className="fill-zinc-50" />}
           {correct && <Check size={32} className="fill-greenGo" />}
           {incorrect && (
             <Close size={32} className="animate-shake fill-alertRed " />
           )}
-          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
+          <div className="flex cursor-default flex-col items-start gap-2 text-zinc-500">
             className=&#34;
             <input
               value={attempt}
               onChange={(event) => handleChange(event)}
               onKeyDown={(event) => handleKeyDown(event, attempt)}
-              autoFocus
               className={`w-96 origin-center bg-transparent p-5 text-xl  focus:outline-none
-              ${notSubmitted && "border border-white font-medium text-white"}
-              ${correct && "border border-greenGo font-medium text-greenGo"}
+              ${notSubmitted && "border border-zinc-50 text-zinc-50"}
+              ${correct && "border border-greenGo text-greenGo"}
               ${
                 incorrect &&
-                "animate-shake border border-alertRed font-medium text-alertRed"
+                "animate-shake border border-alertRed text-alertRed"
               }`}
             />
             &#34;
