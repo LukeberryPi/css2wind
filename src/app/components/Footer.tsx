@@ -31,7 +31,7 @@ export default function Footer() {
       <a
         className="px-4 py-2 text-zinc-100 hover:outline  hover:outline-zinc-100 "
         target="_blank"
-        href="ttps://github.com/LukeberryPi/css2wind"
+        href="https://github.com/LukeberryPi/css2wind"
       >
         Contribute on Github!
       </a>
