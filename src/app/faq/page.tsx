@@ -65,6 +65,15 @@ export default function Faq() {
             Bootstrap&apos;s pre-defined components, embracing a utility-first
             approach for efficient styling.
           </p>
+          <div className="text-sm md:text-lg">
+            <span>Watch this: </span>
+            <a
+              className="text-berryBlue underline underline-offset-2"
+              href="https://youtu.be/CQuTF-bkOgc?si=ENc7vupHcaGrXddW"
+            >
+              Comparing Modern CSS Solutions
+            </a>
+          </div>
         </li>
         <li className="flex flex-col gap-3 px-2 text-center md:px-0 md:text-left">
           <p className="text-lg md:text-2xl">

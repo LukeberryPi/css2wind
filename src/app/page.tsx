@@ -1,9 +1,21 @@
 "use client";
-import { Arrow, Check, Close } from "@/icons";
+import { Arrow, Check, Close, Minus } from "@/icons";
 import { useEffect, useState } from "react";
 import { propertyDictionary } from "../../v1";
 import { getRandomKey } from "@/utils";
 import { useEvaluation } from "@/hooks";
+
+function Scoreboard() {
+  const arr = Array(8).fill("ok");
+
+  return (
+    <div className="flex items-center gap-4">
+      {arr.map((item, i) => (
+        <Minus key={i} className="text-zinc-100" />
+      ))}
+    </div>
+  );
+}
 
 const initialState = {
   correct: false,
@@ -64,7 +76,7 @@ export default function Home() {
             <span
               className={`
                 ${notSubmitted && "border border-berryBlue text-berryBlue"} 
-                ${correct && "animate-lift border border-greenGo text-greenGo"}
+                ${correct && "border border-greenGo text-greenGo"}
                 ${
                   incorrect &&
                   "animate-shake border border-alertRed text-alertRed"
@@ -83,6 +95,7 @@ export default function Home() {
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
             className=&#34;
             <input
+              id="play-input"
               value={attempt}
               onChange={(event) => handleChange(event)}
               onKeyDown={(event) => handleKeyDown(event, attempt)}
@@ -98,6 +111,7 @@ export default function Home() {
             &#34;
           </div>
         </div>
+        <Scoreboard />
       </section>
       <section
         id="how-to-play"
@@ -132,6 +146,7 @@ export default function Home() {
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
             className=&#34;
             <input
+              id="tutorial-input"
               value={attempt}
               onChange={(event) => handleChange(event)}
               onKeyDown={(event) => handleKeyDown(event, attempt)}
