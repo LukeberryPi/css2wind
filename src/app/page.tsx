@@ -5,26 +5,14 @@ import { dict } from "../../v1";
 import { getRandomKey } from "@/utils";
 import { useEvaluation } from "@/hooks";
 
-function Scoreboard() {
-  const arr = Array(8).fill("ok");
-
-  return (
-    <div className="flex items-center gap-4">
-      {arr.map((item, i) => (
-        <Minus key={i} className="text-zinc-100" />
-      ))}
-    </div>
-  );
-}
-
 const initialState = {
   correct: false,
   incorrect: false,
   notSubmitted: true,
+  score: Array(8),
 };
 
 export default function Home() {
-  const [properties, setProperties] = useState([]);
   const [currentProperty, setCurrentProperty] = useState("");
   const [attempt, setAttempt] = useState("");
 
@@ -33,7 +21,7 @@ export default function Home() {
     evaluateTranslation,
     mutate: mutateTranslationStatus,
   } = useEvaluation(initialState);
-  const { correct, incorrect, notSubmitted } = state;
+  const { correct, incorrect, notSubmitted, score } = state;
 
   useEffect(() => {
     setCurrentProperty(getRandomKey(dict));
@@ -114,7 +102,6 @@ export default function Home() {
             &#34;
           </div>
         </div>
-        <Scoreboard />
       </section>
       <section
         id="how-to-play"

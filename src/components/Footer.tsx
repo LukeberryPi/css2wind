@@ -38,7 +38,7 @@ export default function Footer() {
       {tutorialIsVisible ? (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="flex cursor-pointer items-center gap-4"
+          className="flex items-center gap-4"
         >
           <span className="underline-berryBlue text-berryBlue underline underline-offset-4">
             Play
@@ -46,13 +46,18 @@ export default function Footer() {
           <Arrow className="-rotate-90 fill-berryBlue" />
         </button>
       ) : (
-        <a
-          href="#tutorial-input"
-          className="flex cursor-pointer items-center gap-4"
+        <button
+          onClick={() =>
+            window.scrollTo({
+              top: document.body.scrollHeight,
+              behavior: "smooth",
+            })
+          }
+          className="flex items-center gap-4"
         >
           <span className="underline underline-offset-4">How to Play</span>
           <Arrow className="rotate-90 fill-white" />
-        </a>
+        </button>
       )}
       <a
         className="px-4 py-2 text-zinc-100 hover:outline  hover:outline-zinc-100 "

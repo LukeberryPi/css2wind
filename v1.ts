@@ -306,6 +306,7 @@ export const dict: Record<string, string[]> = {
   "opacity: 0.7": ["opacity-70"],
   "opacity: 0.75": ["opacity-75"],
   "opacity: 0.8": ["opacity-80"],
+  "opacity: 0.85": ["opacity-85"],
   "opacity: 0.9": ["opacity-90"],
   "opacity: 0.95": ["opacity-95"],
   "opacity: 0": ["opacity-0"],
