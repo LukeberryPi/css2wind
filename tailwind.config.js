@@ -13,21 +13,27 @@ module.exports = {
         greenGo: "#4FBF85",
       },
       animation: {
-        shake: "shake 0.82s cubic-bezier(.36,.07,.19,.97) both",
+        shake: "shake 0.8s cubic-bezier(.36,.07,.19,.97) both",
+        lift: "lift 0.8s cubic-bezier(.36,.07,.19,.97) both",
       },
       keyframes: {
+        lift: {
+          "50%": {
+            transform: "translateY(-6px)",
+          },
+        },
         shake: {
           "10%, 90%": {
-            transform: "translate3d(-1px, 0, 0)",
+            transform: "translateX(-1px)",
           },
           "20%, 80%": {
-            transform: "translate3d(2px, 0, 0)",
+            transform: "translateX(2px)",
           },
           "30%, 50%, 70%": {
-            transform: "translate3d(-4px, 0, 0)",
+            transform: "translateX(-4px)",
           },
           "40%, 60%": {
-            transform: "translate3d(4px, 0, 0)",
+            transform: "translateX(4px)",
           },
         },
       },

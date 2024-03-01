@@ -74,16 +74,16 @@ export default function Home() {
               data-not-submitted={notSubmitted}
               data-correct={correct}
               data-incorrect={incorrect}
-              className="w-96 origin-center select-all border bg-transparent p-5 text-xl data-[incorrect=true]:animate-shake data-[correct=true]:border-greenGo data-[incorrect=true]:border-alertRed data-[not-submitted=true]:border-berryBlue data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-berryBlue"
+              className="w-96 origin-center select-all border bg-transparent p-5 text-xl data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:border-greenGo data-[incorrect=true]:border-alertRed data-[not-submitted=true]:border-berryBlue data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-berryBlue"
             >
               {currentProperty ? currentProperty : "..."}
             </span>
             &#125;
           </div>
           {notSubmitted && <Arrow size={32} className="fill-zinc-100" />}
-          {correct && <Check size={32} className="fill-greenGo" />}
+          {correct && <Check size={32} className="animate-lift fill-greenGo" />}
           {incorrect && (
-            <Close size={32} className="animate-shake fill-alertRed " />
+            <Close size={32} className="animate-shake fill-alertRed" />
           )}
           <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
             className=&#34;
@@ -97,7 +97,7 @@ export default function Home() {
               data-not-submitted={notSubmitted}
               data-correct={correct}
               data-incorrect={incorrect}
-              className="w-96 origin-center border bg-transparent p-5 text-xl  text-alertRed focus:outline-none data-[incorrect=true]:animate-shake data-[correct=true]:border-greenGo data-[incorrect=true]:border-alertRed data-[not-submitted=true]:border-zinc-100 data-[correct=true]:text-greenGo data-[not-submitted=true]:text-zinc-100"
+              className="w-96 origin-center border bg-transparent p-5 text-xl  text-alertRed focus:outline-none data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:border-greenGo data-[incorrect=true]:border-alertRed data-[not-submitted=true]:border-zinc-100 data-[correct=true]:text-greenGo data-[not-submitted=true]:text-zinc-100"
             />
             &#34;
           </div>
@@ -142,7 +142,7 @@ export default function Home() {
               onKeyDown={(event) => handleKeyDown(event, attempt)}
               className={`w-96 origin-center bg-transparent p-5 text-xl  focus:outline-none
               ${notSubmitted && "border border-zinc-100 text-zinc-100"}
-              ${correct && "border border-greenGo text-greenGo"}
+              ${correct && "animate-lift border border-greenGo text-greenGo"}
               ${
                 incorrect &&
                 "animate-shake border border-alertRed text-alertRed"
