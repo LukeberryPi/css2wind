@@ -5,13 +5,13 @@ export default function Faq() {
       className="mx-auto flex w-full max-w-full flex-col gap-20 px-2 py-20 sm:max-w-7xl md:py-32"
     >
       <div className="flex flex-col items-center gap-6">
-        <h2 className="break-words text-6xl text-zinc-100 md:text-6xl">
+        <h2 className="break-words text-6xl text-zinc-200 md:text-6xl">
           Frequently Asked Questions
         </h2>
       </div>
       <ul className="flex max-w-3xl flex-col gap-16 self-center">
         <li className="flex flex-col gap-3 px-2 text-center md:px-0 md:text-left">
-          <p className="text-lg text-zinc-100 md:text-2xl">
+          <p className="text-lg text-zinc-200 md:text-2xl">
             What is <span className="text-berryBlue">TailwindCSS?</span>
           </p>
           <p className="text-sm text-zinc-400 md:text-lg">
@@ -20,7 +20,7 @@ export default function Faq() {
             approach, offering flexibility through direct class manipulation for
             efficient design control.
           </p>
-          <div className="text-sm text-zinc-100 md:text-lg">
+          <div className="text-sm text-zinc-200 md:text-lg">
             <span>Read More: </span>
             <a
               className="text-berryBlue underline underline-offset-2"
@@ -32,7 +32,7 @@ export default function Faq() {
           </div>
         </li>
         <li className="flex flex-col gap-3 px-2 text-center md:px-0 md:text-left">
-          <p className="text-lg text-zinc-100 md:text-2xl">
+          <p className="text-lg text-zinc-200 md:text-2xl">
             Isn&apos;t that just
             <span className="text-berryBlue"> inline styles?</span>
           </p>
@@ -44,7 +44,7 @@ export default function Faq() {
             enable styling hover, focus, and other states not possible with
             inline styles.
           </p>
-          <div className="text-sm text-zinc-100 md:text-lg">
+          <div className="text-sm text-zinc-200 md:text-lg">
             <span>Read More: </span>
             <a
               className="text-berryBlue underline underline-offset-2"
@@ -56,7 +56,7 @@ export default function Faq() {
           </div>
         </li>
         <li className="flex flex-col gap-3 px-2 text-center md:px-0 md:text-left">
-          <p className="text-lg text-zinc-100 md:text-2xl">
+          <p className="text-lg text-zinc-200 md:text-2xl">
             Why not use <span className="text-berryBlue">Bootstrap </span>
             then?
           </p>
@@ -67,7 +67,7 @@ export default function Faq() {
             Bootstrap&apos;s pre-defined components, embracing a utility-first
             approach for efficient styling.
           </p>
-          <div className="text-sm text-zinc-100 md:text-lg">
+          <div className="text-sm text-zinc-200 md:text-lg">
             <span>Watch this: </span>
             <a
               className="text-berryBlue underline underline-offset-2"
@@ -79,7 +79,7 @@ export default function Faq() {
           </div>
         </li>
         <li className="flex flex-col gap-3 px-2 text-center md:px-0 md:text-left">
-          <p className="text-lg text-zinc-100 md:text-2xl">
+          <p className="text-lg text-zinc-200 md:text-2xl">
             Doesn&apos;t the
             <span className="text-berryBlue"> HTML get ugly?</span>
           </p>
@@ -90,7 +90,7 @@ export default function Faq() {
             a functional approach to styling and reduces the need for custom
             CSS.
           </p>
-          <div className="text-sm text-zinc-100 md:text-lg">
+          <div className="text-sm text-zinc-200 md:text-lg">
             <span>Read More: </span>
             <a
               className="text-berryBlue underline underline-offset-2"

@@ -57,7 +57,7 @@ export default function useEvaluation(initialState: State) {
 
   const evaluateTranslation = (
     attempt: string,
-    cssProperty: string
+    cssProperty: string,
   ): Action["type"] | undefined => {
     if (!attempt) {
       return;

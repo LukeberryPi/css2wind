@@ -29,7 +29,7 @@ export default function Footer() {
   return (
     <footer className="fixed bottom-0 flex w-full items-center justify-between bg-inherit px-8 py-6 text-lg">
       <a
-        className="px-4 py-2 text-zinc-100 hover:outline  hover:outline-zinc-100 "
+        className="px-4 py-2 text-zinc-200 hover:outline  hover:outline-zinc-100 "
         target="_blank"
         href="https://github.com/LukeberryPi/css2wind"
       >
@@ -43,7 +43,7 @@ export default function Footer() {
           <span className="underline-berryBlue text-berryBlue underline underline-offset-4">
             Play
           </span>
-          <Arrow className="-rotate-90 fill-berryBlue" />
+          <Arrow className="fill-berryBlue -rotate-90" />
         </button>
       ) : (
         <button
@@ -56,11 +56,11 @@ export default function Footer() {
           className="flex items-center gap-4"
         >
           <span className="underline underline-offset-4">How to Play</span>
-          <Arrow className="rotate-90 fill-white" />
+          <Arrow className="rotate-90 fill-zinc-100" />
         </button>
       )}
       <a
-        className="px-4 py-2 text-zinc-100 hover:outline  hover:outline-zinc-100 "
+        className="px-4 py-2 text-zinc-200 hover:outline  hover:outline-zinc-100 "
         target="_blank"
         href="https://twitter.com/LukeberryPi"
       >
