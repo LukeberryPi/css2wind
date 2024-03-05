@@ -33,8 +33,8 @@ export default function Play() {
 
   const resetInput = (afterMilisseconds = 800) => {
     setTimeout(() => {
-      setCurrentProperty(getRandomKey(dict8));
       setAttempt("");
+      setCurrentProperty(getRandomKey(dict8));
       mutateTranslationStatus({ type: "not_submitted" });
     }, afterMilisseconds);
   };

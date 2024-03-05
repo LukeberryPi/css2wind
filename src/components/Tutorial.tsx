@@ -15,7 +15,7 @@ export default function Tutorial() {
   };
 
   const evaluateTutorial = (attempt: string) => {
-    if (attempt.trim() === "pr-3") {
+    if (attempt.trim() === "p-3") {
       setTutorialCorrect(true);
       setTutorialIncorrect(false);
       setTutorialNotSubmitted(false);
@@ -30,17 +30,22 @@ export default function Tutorial() {
 
   const handleKeyDown = (
     event: React.KeyboardEvent<HTMLInputElement>,
-    translation: string,
+    attempt: string,
   ) => {
+    if (!attempt.trim()) return;
+
     if (event.code == "Enter") {
       event.preventDefault();
-      evaluateTutorial(tutorialAttempt);
+
+      evaluateTutorial(attempt);
       resetInput();
     }
   };
 
-  const handleReturnClick = (translation: string) => {
-    evaluateTutorial(tutorialAttempt);
+  const handleReturnClick = (attempt: string) => {
+    if (!attempt.trim()) return;
+
+    evaluateTutorial(attempt);
 
     document.activeElement instanceof HTMLElement
       ? document.getElementById("tutorial-input")?.focus()
