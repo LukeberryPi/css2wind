@@ -8,7 +8,6 @@ const initialState = {
   correct: false,
   incorrect: false,
   notSubmitted: true,
-  score: Array(8),
 };
 
 export default function Play() {
@@ -20,7 +19,7 @@ export default function Play() {
     evaluateTranslation,
     mutate: mutateTranslationStatus,
   } = useEvaluation(initialState);
-  const { correct, incorrect, notSubmitted, score } = state;
+  const { correct, incorrect, notSubmitted } = state;
 
   useEffect(() => {
     setCurrentProperty(getRandomKey(dict8));
@@ -50,7 +49,10 @@ export default function Play() {
         currentProperty,
       );
 
-      if (!evaluation) return;
+      if (!evaluation) {
+        setAttempt("");
+        return;
+      }
 
       resetInput();
     }
@@ -59,7 +61,13 @@ export default function Play() {
   const handleReturnClick = (translation: string) => {
     const evaluation = evaluateTranslation(translation.trim(), currentProperty);
 
-    if (!evaluation) return;
+    if (!evaluation) {
+      setAttempt("");
+      document.activeElement instanceof HTMLElement
+        ? document.getElementById("play-input")?.focus()
+        : null;
+      return;
+    }
 
     document.activeElement instanceof HTMLElement
       ? document.getElementById("play-input")?.focus()

@@ -32,10 +32,13 @@ export default function Tutorial() {
     event: React.KeyboardEvent<HTMLInputElement>,
     attempt: string,
   ) => {
-    if (!attempt.trim()) return;
-
     if (event.code == "Enter") {
       event.preventDefault();
+
+      if (!attempt.trim()) {
+        setTutorialAttempt("");
+        return;
+      }
 
       evaluateTutorial(attempt);
       resetInput();
@@ -43,10 +46,16 @@ export default function Tutorial() {
   };
 
   const handleReturnClick = (attempt: string) => {
-    if (!attempt.trim()) return;
+    if (!attempt.trim()) {
+      setTutorialAttempt("");
+      document.activeElement instanceof HTMLElement
+        ? document.getElementById("tutorial-input")?.focus()
+        : null;
+      resetInput();
+      return;
+    }
 
     evaluateTutorial(attempt);
-
     document.activeElement instanceof HTMLElement
       ? document.getElementById("tutorial-input")?.focus()
       : null;
