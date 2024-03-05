@@ -56,7 +56,7 @@ export default function Play() {
     }
   };
 
-  const handleEnterClick = (translation: string) => {
+  const handleReturnClick = (translation: string) => {
     const evaluation = evaluateTranslation(translation.trim(), currentProperty);
 
     if (!evaluation) return;
@@ -66,6 +66,7 @@ export default function Play() {
       : null;
     resetInput();
   };
+
   return (
     <section
       id="play"
@@ -115,7 +116,7 @@ export default function Play() {
               data-not-submitted={notSubmitted}
               data-correct={correct}
               data-incorrect={incorrect}
-              onClick={() => handleEnterClick(attempt)}
+              onClick={() => handleReturnClick(attempt)}
               className="data-[correct=true]:ring-greenGo data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[incorrect=true]:ring-alertRed hover:zinc-900 absolute right-0 h-full w-28 text-lg text-zinc-200 ring-1 ring-zinc-300 transition-all focus:outline-none active:ring data-[not-submitted=true]:hover:bg-zinc-800"
             >
               return

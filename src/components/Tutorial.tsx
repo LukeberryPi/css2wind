@@ -1,9 +1,61 @@
+"use client";
+
+import { useState } from "react";
 import { Arrow, Check, Close } from "@/icons";
 
 export default function Tutorial() {
-  const tutorialCorrect = false;
-  const tutorialIncorrect = false;
-  const tutorialNotSubmitted = true;
+  const [tutorialAttempt, setTutorialAttempt] = useState("");
+  const [tutorialCorrect, setTutorialCorrect] = useState(false);
+  const [tutorialIncorrect, setTutorialIncorrect] = useState(false);
+  const [tutorialNotSubmitted, setTutorialNotSubmitted] = useState(true);
+
+  const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
+    const attempt = event.currentTarget.value;
+    setTutorialAttempt(attempt);
+  };
+
+  const evaluateTutorial = (attempt: string) => {
+    if (attempt.trim() === "pr-3") {
+      setTutorialCorrect(true);
+      setTutorialIncorrect(false);
+      setTutorialNotSubmitted(false);
+      return;
+    }
+
+    setTutorialCorrect(false);
+    setTutorialIncorrect(true);
+    setTutorialNotSubmitted(false);
+    return;
+  };
+
+  const handleKeyDown = (
+    event: React.KeyboardEvent<HTMLInputElement>,
+    translation: string,
+  ) => {
+    if (event.code == "Enter") {
+      event.preventDefault();
+      evaluateTutorial(tutorialAttempt);
+      resetInput();
+    }
+  };
+
+  const handleReturnClick = (translation: string) => {
+    evaluateTutorial(tutorialAttempt);
+
+    document.activeElement instanceof HTMLElement
+      ? document.getElementById("tutorial-input")?.focus()
+      : null;
+    resetInput();
+  };
+
+  const resetInput = (afterMilisseconds = 800) => {
+    setTimeout(() => {
+      setTutorialAttempt("");
+      setTutorialNotSubmitted(true);
+      setTutorialCorrect(false);
+      setTutorialIncorrect(false);
+    }, afterMilisseconds);
+  };
 
   return (
     <section className="mx-auto flex h-screen flex-col items-center justify-center gap-16">
@@ -18,7 +70,7 @@ export default function Tutorial() {
             data-tutorial-not-submitted={tutorialNotSubmitted}
             data-tutorial-correct={tutorialCorrect}
             data-tutorial-incorrect={tutorialIncorrect}
-            className="data-tutorial-[correct=true]:animate-lift data-tutorial-[incorrect=true]:animate-shake data-tutorial-[correct=true]:border-greenGo data-tutorial-[incorrect=true]:border-alertRed data-tutorial-[not-submitted=true]:border-berryBlue data-tutorial-[correct=true]:text-greenGo data-tutorial-[incorrect=true]:text-alertRed data-tutorial-[not-submitted=true]:text-berryBlue w-[420px] origin-center border p-5 text-xl"
+            className="data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:border-greenGo data-[tutorial-incorrect=true]:border-alertRed data-[tutorial-not-submitted=true]:border-berryBlue data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-not-submitted=true]:text-berryBlue w-[420px] origin-center border p-5 text-xl"
           >
             padding: 12px
           </span>
@@ -37,23 +89,23 @@ export default function Tutorial() {
             data-tutorial-not-submitted={tutorialNotSubmitted}
             data-tutorial-correct={tutorialCorrect}
             data-tutorial-incorrect={tutorialIncorrect}
-            className="data-tutorial-[correct=true]:animate-lift data-tutorial-[incorrect=true]:animate-shake data-tutorial-[correct=true]:border-greenGo data-tutorial-[incorrect=true]:border-alertRed data-tutorial-[incorrect=true]:text-alertRed data-tutorial-[correct=true]:text-greenGo relative w-[420px] origin-center border"
+            className="data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:border-greenGo data-[tutorial-incorrect=true]:border-alertRed data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-correct=true]:text-greenGo relative w-[420px] origin-center border"
           >
             <input
               id="tutorial-input"
-              // value={attempt}
-              // onChange={(event) => handleChange(event)}
-              // onKeyDown={(event) => handleKeyDown(event, attempt)}
+              value={tutorialAttempt}
+              onChange={(event) => handleChange(event)}
+              onKeyDown={(event) => handleKeyDown(event, tutorialAttempt)}
               autoComplete="off"
               data-tutorial-not-submitted={tutorialNotSubmitted}
-              className="data-tutorial-[not-submitted=true]:border-zinc-100 data-tutorial-[not-submitted=true]:text-zinc-200 w-full bg-inherit p-5 text-xl focus:outline-none"
+              className="w-full bg-inherit p-5 text-xl focus:outline-none data-[tutorial-not-submitted=true]:border-zinc-100 data-[tutorial-not-submitted=true]:text-zinc-200"
             />
             <button
               data-tutorial-not-submitted={tutorialNotSubmitted}
               data-tutorial-correct={tutorialCorrect}
               data-tutorial-incorrect={tutorialIncorrect}
-              // onClick={() => handleEnterClick(attempt)}
-              className="data-tutorial-[correct=true]:ring-greenGo data-tutorial-[correct=true]:text-greenGo data-tutorial-[incorrect=true]:text-alertRed data-tutorial-[incorrect=true]:ring-alertRed hover:zinc-900 data-tutorial-[not-submitted=true]:hover:bg-zinc-800 absolute right-0 h-full w-28 text-lg text-zinc-200 ring-1 ring-zinc-300 transition-all focus:outline-none active:ring"
+              onClick={() => handleReturnClick(tutorialAttempt)}
+              className="data-[tutorial-correct=true]:ring-greenGo data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-incorrect=true]:ring-alertRed hover:zinc-900 absolute right-0 h-full w-28 text-lg text-zinc-200 ring-1 ring-zinc-300 transition-all focus:outline-none active:ring data-[tutorial-not-submitted=true]:hover:bg-zinc-800"
             >
               return
             </button>
