@@ -578,3 +578,14 @@ export const dict: Record<string, string[]> = {
   "z-index: 50": ["z-50"],
   "z-index: auto": ["z-auto"],
 };
+
+export const dict8: Record<string, string[]> = {
+  "align-items: baseline": ["items-baseline"],
+  "display: none": ["hidden"],
+  "flex-direction: column": ["flex-col"],
+  "height: 40px": ["h-10", "h-[40px]"],
+  "justify-content: space-between": ["justify-between"],
+  "margin-left: 1px": ["ml-px", "ml-[1px]"],
+  "max-height: 4px": ["max-h-1"],
+  "z-index: 50": ["z-50"],
+};

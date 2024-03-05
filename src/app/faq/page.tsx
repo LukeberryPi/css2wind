@@ -23,7 +23,7 @@ export default function Faq() {
           <div className="text-sm text-zinc-200 md:text-lg">
             <span>Read More: </span>
             <a
-              className="text-berryBlue underline underline-offset-2"
+              className="text-berryBlue"
               target="_blank"
               href="https://frontstuff.io/no-utility-classes-arent-the-same-as-inline-styles"
             >
@@ -47,7 +47,7 @@ export default function Faq() {
           <div className="text-sm text-zinc-200 md:text-lg">
             <span>Read More: </span>
             <a
-              className="text-berryBlue underline underline-offset-2"
+              className="text-berryBlue"
               target="_blank"
               href="https://frontstuff.io/no-utility-classes-arent-the-same-as-inline-styles"
             >
@@ -70,7 +70,7 @@ export default function Faq() {
           <div className="text-sm text-zinc-200 md:text-lg">
             <span>Watch this: </span>
             <a
-              className="text-berryBlue underline underline-offset-2"
+              className="text-berryBlue"
               target="_blank"
               href="https://youtu.be/CQuTF-bkOgc?si=ENc7vupHcaGrXddW"
             >
@@ -93,7 +93,7 @@ export default function Faq() {
           <div className="text-sm text-zinc-200 md:text-lg">
             <span>Read More: </span>
             <a
-              className="text-berryBlue underline underline-offset-2"
+              className="text-berryBlue"
               target="_blank"
               href="https://adamwathan.me/css-utility-classes-and-separation-of-concerns/"
             >

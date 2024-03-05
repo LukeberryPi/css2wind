@@ -2,9 +2,11 @@
 
 import { Arrow } from "@/icons";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const [tutorialIsVisible, setTutorialIsVisible] = useState<boolean>();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,17 +37,16 @@ export default function Footer() {
       >
         Contribute on Github!
       </a>
-      {tutorialIsVisible ? (
+      {tutorialIsVisible && pathname === "/" && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="flex items-center gap-4"
         >
-          <span className="underline-berryBlue text-berryBlue underline underline-offset-4">
-            Play
-          </span>
+          <span className="text-berryBlue">Play</span>
           <Arrow className="fill-berryBlue -rotate-90" />
         </button>
-      ) : (
+      )}
+      {!tutorialIsVisible && pathname === "/" && (
         <button
           onClick={() =>
             window.scrollTo({
@@ -55,7 +56,7 @@ export default function Footer() {
           }
           className="flex items-center gap-4"
         >
-          <span className="underline underline-offset-4">How to Play</span>
+          <span>How to Play</span>
           <Arrow className="rotate-90 fill-zinc-100" />
         </button>
       )}
