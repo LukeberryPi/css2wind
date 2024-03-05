@@ -14,15 +14,15 @@ export default function Header() {
       <div className="hidden items-center justify-center gap-10 md:flex">
         {pathname === "/faq" && (
           <Link
-            className="hover:outline-berryBlue text-berryBlue flex items-center gap-4 px-4 py-2 hover:outline"
+            className="text-berryBlue ring-berryBlue px-4 py-2 ring-1 active:ring"
             href="/"
           >
-            Play!
+            Play Now!
           </Link>
         )}
         {pathname === "/" && (
           <Link
-            className="flex items-center gap-4 px-4 py-2 hover:outline hover:outline-zinc-100"
+            className="flex items-center gap-4 px-4 py-2 hover:bg-zinc-800"
             href="/faq"
           >
             Learn more about TailwindCSS

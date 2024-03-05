@@ -61,20 +61,22 @@ export default function Tutorial() {
           <span>&#34;</span>
         </div>
       </div>
-      <div className="text-lg text-zinc-400">
-        <p>
-          Try typing <span className="text-zinc-100">p-3</span> in the white box
-          to the right and pressing enter.
-        </p>
-        <p>
-          That's how you write{" "}
-          <span className="text-berryBlue">padding: 12px</span> using
-          TailwindCSS!
-        </p>
-      </div>
-      <div className="text-lg text-zinc-400">
-        <p>Every day there are eight CSS properties to be translated.</p>
-        <p>Can you get them all right?</p>
+      <div className="space-y-8 text-lg text-zinc-400">
+        <div>
+          <p>
+            Try typing <span className="text-zinc-100">p-3</span> in the white
+            box to the right and pressing enter.
+          </p>
+          <p>
+            That's how you write{" "}
+            <span className="text-berryBlue">padding: 12px</span> using
+            TailwindCSS!
+          </p>
+        </div>
+        <div>
+          <p>Every day there are eight CSS properties to be translated.</p>
+          <p>Can you get them all right?</p>
+        </div>
       </div>
     </section>
   );
