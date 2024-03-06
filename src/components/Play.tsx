@@ -91,7 +91,7 @@ export default function Play() {
             data-not-submitted={notSubmitted}
             data-correct={correct}
             data-incorrect={incorrect}
-            className="data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:border-greenGo data-[incorrect=true]:border-alertRed data-[not-submitted=true]:border-berryBlue data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-berryBlue w-[420px] origin-center border p-5 text-xl"
+            className="data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:border-greenGo data-[incorrect=true]:border-alertRed data-[not-submitted=true]:border-berryBlue data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-berryBlue w-[420px] origin-center border p-5 text-xl transition-colors"
           >
             {currentProperty ? currentProperty : "..."}
           </span>
@@ -108,7 +108,7 @@ export default function Play() {
             data-not-submitted={notSubmitted}
             data-correct={correct}
             data-incorrect={incorrect}
-            className="data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:border-greenGo data-[incorrect=true]:border-alertRed data-[incorrect=true]:text-alertRed data-[correct=true]:text-greenGo relative w-[420px] origin-center border"
+            className="data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:border-greenGo data-[incorrect=true]:border-alertRed data-[incorrect=true]:text-alertRed data-[correct=true]:text-greenGo relative w-[420px] origin-center border transition-colors"
           >
             <input
               id="play-input"

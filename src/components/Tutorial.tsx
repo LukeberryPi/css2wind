@@ -84,7 +84,7 @@ export default function Tutorial() {
             data-tutorial-not-submitted={tutorialNotSubmitted}
             data-tutorial-correct={tutorialCorrect}
             data-tutorial-incorrect={tutorialIncorrect}
-            className="data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:border-greenGo data-[tutorial-incorrect=true]:border-alertRed data-[tutorial-not-submitted=true]:border-berryBlue data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-not-submitted=true]:text-berryBlue w-[420px] origin-center border p-5 text-xl"
+            className="data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:border-greenGo data-[tutorial-incorrect=true]:border-alertRed data-[tutorial-not-submitted=true]:border-berryBlue data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-not-submitted=true]:text-berryBlue w-[420px] origin-center border p-5 text-xl transition-colors"
           >
             padding: 12px
           </span>
@@ -103,7 +103,7 @@ export default function Tutorial() {
             data-tutorial-not-submitted={tutorialNotSubmitted}
             data-tutorial-correct={tutorialCorrect}
             data-tutorial-incorrect={tutorialIncorrect}
-            className="data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:border-greenGo data-[tutorial-incorrect=true]:border-alertRed data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-correct=true]:text-greenGo relative w-[420px] origin-center border"
+            className="data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:border-greenGo data-[tutorial-incorrect=true]:border-alertRed data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-correct=true]:text-greenGo relative w-[420px] origin-center border transition-colors"
           >
             <input
               id="tutorial-input"
