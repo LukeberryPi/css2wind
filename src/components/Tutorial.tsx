@@ -111,6 +111,7 @@ export default function Tutorial() {
               onChange={(event) => handleChange(event)}
               onKeyDown={(event) => handleKeyDown(event, tutorialAttempt)}
               autoComplete="off"
+              placeholder="click here!"
               data-tutorial-not-submitted={tutorialNotSubmitted}
               className="w-full bg-inherit p-5 text-xl focus:outline-none data-[tutorial-not-submitted=true]:border-zinc-100 data-[tutorial-not-submitted=true]:text-zinc-200"
             />
