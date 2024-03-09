@@ -1,3 +1,5 @@
+"use client";
+
 import { useEvaluation } from "@/hooks";
 import { Arrow, Check, Close } from "@/icons";
 import { getRandomKey } from "@/utils";
@@ -63,15 +65,19 @@ export default function Play() {
 
     if (!evaluation) {
       setAttempt("");
-      document.activeElement instanceof HTMLElement
-        ? document.getElementById("play-input")?.focus()
-        : null;
       return;
     }
 
-    document.activeElement instanceof HTMLElement
-      ? document.getElementById("play-input")?.focus()
-      : null;
+    if (!document) {
+      return;
+    }
+
+    const someElementHasFocus = document.activeElement instanceof HTMLElement;
+
+    if (someElementHasFocus) {
+      document.getElementById("play-input")?.focus();
+    }
+
     resetInput();
   };
 

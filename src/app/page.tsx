@@ -1,6 +1,6 @@
 "use client";
-import { Tutorial } from "@/components";
-import Play from "@/components/Play";
+
+import { Tutorial, Play } from "@/components";
 
 export default function Home() {
   return (
