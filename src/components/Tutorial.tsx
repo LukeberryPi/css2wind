@@ -135,7 +135,7 @@ export default function Tutorial() {
             box to the right and pressing enter.
           </p>
           <p>
-            That's how you write{" "}
+            That&apos;s how you write{" "}
             <span className="text-berryBlue">padding: 12px</span> using
             TailwindCSS!
           </p>
