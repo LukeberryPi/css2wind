@@ -48,17 +48,23 @@ export default function Tutorial() {
   const handleReturnClick = (attempt: string) => {
     if (!attempt.trim()) {
       setTutorialAttempt("");
-      document.activeElement instanceof HTMLElement
-        ? document.getElementById("tutorial-input")?.focus()
-        : null;
+      if (typeof document !== undefined) {
+        document.activeElement instanceof HTMLElement
+          ? document.getElementById("tutorial-input")?.focus()
+          : null;
+      }
       resetInput();
       return;
     }
 
     evaluateTutorial(attempt);
-    document.activeElement instanceof HTMLElement
-      ? document.getElementById("tutorial-input")?.focus()
-      : null;
+
+    if (typeof document !== undefined) {
+      document.activeElement instanceof HTMLElement
+        ? document.getElementById("tutorial-input")?.focus()
+        : null;
+    }
+
     resetInput();
   };
 
