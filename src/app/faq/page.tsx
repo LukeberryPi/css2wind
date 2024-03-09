@@ -1,11 +1,10 @@
+"use client";
+
 import { Open } from "@/icons";
 
 export default function Faq() {
   return (
-    <section
-      id="faq"
-      className="mx-auto flex w-full max-w-full flex-col gap-20 px-2 py-20 sm:max-w-7xl md:py-32"
-    >
+    <section className="mx-auto flex w-full max-w-full flex-col gap-20 px-2 py-20 sm:max-w-7xl md:py-32">
       <div className="flex flex-col items-center gap-6">
         <h2 className="break-words text-6xl text-zinc-200 md:text-6xl">
           Frequently Asked Questions
