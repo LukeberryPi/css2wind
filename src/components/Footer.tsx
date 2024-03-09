@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 function isTutorialVisible() {
+  if (!document) return false;
+
   const tutorial = document.getElementById("tutorial-input");
 
   if (!tutorial) return false;
