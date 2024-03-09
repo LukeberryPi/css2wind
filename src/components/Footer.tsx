@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 function isTutorialVisible() {
-  if (!document) return false;
+  if (typeof document === undefined) return false;
 
-  const tutorial = document.getElementById("tutorial-input");
+  const tutorial = document?.getElementById("tutorial-input");
 
   if (!tutorial) return false;
 
@@ -17,6 +17,17 @@ function isTutorialVisible() {
     boundingClientRect.bottom <= window.innerHeight;
 
   return isVisible;
+}
+
+function scroll(to: "top" | "bottom") {
+  if (typeof document === undefined) {
+    return;
+  }
+
+  window.scrollTo({
+    top: to === "top" ? 0 : document.body.scrollHeight,
+    behavior: "smooth",
+  });
 }
 
 export default function Footer() {
@@ -48,7 +59,7 @@ export default function Footer() {
       </a>
       {tutorialIsVisible && pathname === "/" && (
         <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          onClick={() => scroll("top")}
           className="ring-berryBlue active:ring-3 flex items-center gap-4 px-4 py-2 ring-1 active:ring"
         >
           <span className="text-berryBlue">Play Now!</span>
@@ -57,12 +68,7 @@ export default function Footer() {
       )}
       {!tutorialIsVisible && pathname === "/" && (
         <button
-          onClick={() =>
-            window.scrollTo({
-              top: document.body.scrollHeight,
-              behavior: "smooth",
-            })
-          }
+          onClick={() => scroll("bottom")}
           className="flex items-center gap-4 px-4 py-2 ring-1 ring-zinc-100 hover:bg-zinc-800 active:ring"
         >
           <span className="text-zinc-100">How to Play?</span>

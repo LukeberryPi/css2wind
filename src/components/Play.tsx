@@ -68,7 +68,7 @@ export default function Play() {
       return;
     }
 
-    if (!document) {
+    if (typeof document === undefined) {
       return;
     }
 
