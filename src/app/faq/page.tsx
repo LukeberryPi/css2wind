@@ -1,5 +1,3 @@
-"use client";
-
 import { Open } from "@/icons";
 
 export default function Faq() {
