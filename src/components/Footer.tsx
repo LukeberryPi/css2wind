@@ -4,32 +4,6 @@ import { Arrow } from "@/icons";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
-function isTutorialVisible() {
-  if (typeof document === undefined) return false;
-
-  const tutorial = document?.getElementById("tutorial-input");
-
-  if (!tutorial) return false;
-
-  const boundingClientRect = tutorial.getBoundingClientRect();
-  const isVisible =
-    boundingClientRect.top >= 0 &&
-    boundingClientRect.bottom <= window.innerHeight;
-
-  return isVisible;
-}
-
-function scroll(to: "top" | "bottom") {
-  if (typeof document === undefined) {
-    return;
-  }
-
-  window.scrollTo({
-    top: to === "top" ? 0 : document.body.scrollHeight,
-    behavior: "smooth",
-  });
-}
-
 export default function Footer() {
   const [tutorialIsVisible, setTutorialIsVisible] = useState<boolean>(
     isTutorialVisible(),
@@ -47,6 +21,38 @@ export default function Footer() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  function isTutorialVisible() {
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+      setIsClient(true);
+    }, []);
+
+    if (typeof document === undefined || !isClient) return false;
+
+    const tutorial = document?.getElementById("tutorial-input");
+
+    if (!tutorial) return false;
+
+    const boundingClientRect = tutorial.getBoundingClientRect();
+    const isVisible =
+      boundingClientRect.top >= 0 &&
+      boundingClientRect.bottom <= window.innerHeight;
+
+    return isVisible;
+  }
+
+  function scroll(to: "top" | "bottom") {
+    if (typeof document === undefined) {
+      return;
+    }
+
+    window.scrollTo({
+      top: to === "top" ? 0 : document.body.scrollHeight,
+      behavior: "smooth",
+    });
+  }
 
   return (
     <footer className="fixed bottom-0 flex w-full items-center justify-between bg-inherit px-8 py-6 text-lg">
