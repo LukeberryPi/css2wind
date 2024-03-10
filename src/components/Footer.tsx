@@ -45,10 +45,12 @@ export default function Footer() {
   }
 
   function scroll(to: "top" | "bottom") {
-    window.scrollTo({
-      top: to === "top" ? 0 : document.body.scrollHeight,
-      behavior: "smooth",
-    });
+    if (typeof document === undefined || !isClient) {
+      window.scrollTo({
+        top: to === "top" ? 0 : document.body.scrollHeight,
+        behavior: "smooth",
+      });
+    }
   }
 
   return (

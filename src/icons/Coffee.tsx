@@ -1,6 +1,6 @@
 import { IconProps } from "./IconProps.types";
 
-export default function House({ className, size = 24 }: IconProps) {
+export default function Coffee({ className, size = 24 }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +9,10 @@ export default function House({ className, size = 24 }: IconProps) {
       viewBox="0 0 24 24"
       className={className}
     >
-      <path d="M14 2h-4v2H8v2H6v2H4v2H2v2h2v10h7v-6h2v6h7V12h2v-2h-2V8h-2V6h-2V4h-2V2zm0 2v2h2v2h2v2h2v2h-2v8h-3v-6H9v6H6v-8H4v-2h2V8h2V6h2V4h4z" />
+      <path
+        fill="currentColor"
+        d="M7 3H5v4h2zm4 0H9v4h2zm2 0h2v4h-2zm8 6H3v12h14v-5h4zm-2 5h-2v-3h2zM5 11h10v8H5z"
+      ></path>
     </svg>
   );
 }
