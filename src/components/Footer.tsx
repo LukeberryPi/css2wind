@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const [isClient, setIsClient] = useState(false);
   const [tutorialIsVisible, setTutorialIsVisible] = useState<boolean>(
     isTutorialVisible(),
   );
@@ -22,13 +23,11 @@ export default function Footer() {
     };
   }, []);
 
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   function isTutorialVisible() {
-    const [isClient, setIsClient] = useState(false);
-
-    useEffect(() => {
-      setIsClient(true);
-    }, []);
-
     if (typeof document === undefined || !isClient) return false;
 
     const tutorial = document?.getElementById("tutorial-input");
@@ -44,7 +43,7 @@ export default function Footer() {
   }
 
   function scroll(to: "top" | "bottom") {
-    if (typeof document === undefined) {
+    if (typeof document === undefined || !isClient) {
       return;
     }
 
