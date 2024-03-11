@@ -10,12 +10,12 @@ export default function Footer() {
   const pathname = usePathname();
 
   useEffect(() => {
-    setTutorialIsVisible(isTutorialVisible());
+    setTutorialIsVisible(tutorialCurrentlyOnScreen());
   }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      setTutorialIsVisible(isTutorialVisible);
+      setTutorialIsVisible(tutorialCurrentlyOnScreen);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -23,13 +23,13 @@ export default function Footer() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [tutorialCurrentlyOnScreen, setTutorialIsVisible]);
 
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-  function isTutorialVisible() {
+  function tutorialCurrentlyOnScreen() {
     let tutorial;
 
     console.log(
@@ -41,6 +41,7 @@ export default function Footer() {
       "document: ",
       typeof document,
     );
+
     if (document && isClient) {
       tutorial = document.getElementById("tutorial-input");
     }
@@ -63,7 +64,8 @@ export default function Footer() {
       "document",
       typeof document,
     );
-    if (typeof document === undefined || !isClient) {
+
+    if (typeof document !== undefined || isClient) {
       window.scrollTo({
         top: to === "top" ? 0 : document.body.scrollHeight,
         behavior: "smooth",
