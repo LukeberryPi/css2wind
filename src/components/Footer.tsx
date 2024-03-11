@@ -30,6 +30,15 @@ export default function Footer() {
   function isTutorialVisible() {
     let tutorial;
 
+    console.log(
+      "isTutorialVisible called",
+      "tutorial state: ",
+      tutorialIsVisible,
+      "isclient: ",
+      isClient,
+      "document: ",
+      typeof document,
+    );
     if (document && isClient) {
       tutorial = document.getElementById("tutorial-input");
     }
@@ -45,6 +54,13 @@ export default function Footer() {
   }
 
   function scroll(to: "top" | "bottom") {
+    console.log(
+      "scroll called",
+      "isclient: ",
+      isClient,
+      "document",
+      typeof document,
+    );
     if (typeof document === undefined || !isClient) {
       window.scrollTo({
         top: to === "top" ? 0 : document.body.scrollHeight,

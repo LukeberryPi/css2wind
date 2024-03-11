@@ -11,6 +11,7 @@ module.exports = {
         alertRed: "#E35454",
         berryBlue: "#79CBE3",
         greenGo: "#4FBF85",
+        cutePink: "#B084C6",
       },
       animation: {
         shake: "shake 0.8s cubic-bezier(.36,.07,.19,.97) both",
