@@ -19,7 +19,7 @@ export default function Header() {
           className="text-cutePink ring-cutePink flex items-center gap-4 px-4 py-2 ring-1 active:ring"
         >
           <Coffee />
-          <span>Pay me a Coffee!</span>
+          <span>Buy me a Coffee!</span>
         </a>
         {pathname === "/faq" && (
           <Link
