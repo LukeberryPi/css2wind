@@ -58,7 +58,9 @@ export default function Faq() {
               target="_blank"
               href="https://frontstuff.io/no-utility-classes-arent-the-same-as-inline-styles"
             >
-              <span>No, utility classes aren't the same as inline styles</span>
+              <span>
+                No, utility classes aren&apos;t the same as inline styles
+              </span>
               <Open size={20} />
             </a>
           </div>
@@ -75,7 +77,7 @@ export default function Faq() {
             Bootstrap is a{" "}
             <span className="text-zinc-200">component library:</span> it decides
             how a button looks and customization is secondary. Tailwind CSS
-            isn't, since it provides small pieces of CSS, called{" "}
+            isn&apos;t, since it provides small pieces of CSS, called{" "}
             <span className="text-zinc-200">utilities</span>, so you can style a
             button from scratch — and make it look however you please.
           </p>
