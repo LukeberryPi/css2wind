@@ -76,7 +76,7 @@ export default function Footer() {
           onClick={() => scroll("bottom")}
           className="flex items-center gap-4 px-4 py-2 ring-1 ring-zinc-100 hover:bg-zinc-800 active:ring"
         >
-          <span className="text-zinc-100">How to Play?</span>
+          <span className="text-zinc-200">How to Play?</span>
           <Arrow className="rotate-90 fill-zinc-100" />
         </button>
       )}

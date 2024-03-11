@@ -81,7 +81,7 @@ export default function Tutorial() {
     <section className="mx-auto flex h-screen flex-col items-center justify-center gap-16">
       <p className="text-2xl text-zinc-200">
         Your goal is to guess how to write the{" "}
-        <span className="text-berryBlue">CSS property</span> using TailwindCSS
+        <span className="text-berryBlue">CSS property</span> using Tailwind CSS
       </p>
       <div className="flex items-center justify-center gap-6">
         <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
@@ -137,13 +137,13 @@ export default function Tutorial() {
       <div className="space-y-8 text-lg text-zinc-400">
         <div>
           <p>
-            Try typing <span className="text-zinc-100">p-3</span> in the white
+            Try typing <span className="text-zinc-200">p-3</span> in the white
             box to the right and pressing enter.
           </p>
           <p>
             That&apos;s how you write{" "}
-            <span className="text-berryBlue">padding: 12px</span> using
-            TailwindCSS!
+            <span className="text-berryBlue">padding: 12px</span> using Tailwind
+            CSS!
           </p>
         </div>
         <div>

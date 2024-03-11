@@ -88,7 +88,7 @@ export default function Play() {
     >
       <h3 className="text-2xl text-zinc-200">
         Translate the <span className="text-berryBlue">CSS property</span> to
-        its TailwindCSS equivalent
+        its Tailwind CSS equivalent
       </h3>
       <div className="flex items-center justify-center gap-6">
         <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">

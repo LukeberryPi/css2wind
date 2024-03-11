@@ -25,7 +25,7 @@ export default function Header() {
             className="flex items-center gap-4 px-4 py-2 hover:bg-zinc-800"
             href="/faq"
           >
-            Learn more about TailwindCSS
+            Learn more about Tailwind CSS
           </Link>
         )}
       </div>
