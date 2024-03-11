@@ -6,10 +6,12 @@ import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const [isClient, setIsClient] = useState(false);
-  const [tutorialIsVisible, setTutorialIsVisible] = useState<boolean>(
-    isTutorialVisible(),
-  );
+  const [tutorialIsVisible, setTutorialIsVisible] = useState<boolean>(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    setTutorialIsVisible(isTutorialVisible());
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
