@@ -90,7 +90,7 @@ export default function Tutorial() {
             data-tutorial-not-submitted={tutorialNotSubmitted}
             data-tutorial-correct={tutorialCorrect}
             data-tutorial-incorrect={tutorialIncorrect}
-            className="data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:ring-greenGo data-[tutorial-incorrect=true]:ring-alertRed data-[tutorial-not-submitted=true]:ring-berryBlue data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-not-submitted=true]:text-berryBlue w-[420px] origin-center p-5 text-xl ring-1 transition-colors"
+            className="data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:ring-greenGo data-[tutorial-incorrect=true]:ring-alertRed data-[tutorial-not-submitted=true]:ring-berryBlue data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-not-submitted=true]:text-berryBlue w-[420px] origin-center p-5 text-xl ring-1 transition-all"
           >
             padding: 12px
           </span>
