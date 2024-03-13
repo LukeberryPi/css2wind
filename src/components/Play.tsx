@@ -164,7 +164,7 @@ ${emojis}`;
             data-not-submitted={notSubmitted}
             data-correct={correct}
             data-incorrect={incorrect}
-            className="data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:border-greenGo data-[incorrect=true]:border-alertRed data-[not-submitted=true]:border-berryBlue data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-berryBlue w-[420px] origin-center border p-5 text-xl transition-colors"
+            className="data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:ring-berryBlue data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-berryBlue w-[420px] origin-center p-5 text-xl ring-1 transition-colors"
           >
             {gameOver ? (
               <span className="">game: over</span>
@@ -176,7 +176,7 @@ ${emojis}`;
           </span>
           &#125;
         </div>
-        {notSubmitted && <Arrow size={32} className="fill-zinc-100" />}
+        {notSubmitted && <Arrow size={32} className="fill-zinc-200" />}
         {correct && <Check size={32} className="animate-lift fill-greenGo" />}
         {incorrect && (
           <Close size={32} className="animate-shake fill-alertRed" />
@@ -187,7 +187,7 @@ ${emojis}`;
             data-not-submitted={notSubmitted}
             data-correct={correct}
             data-incorrect={incorrect}
-            className="data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:border-greenGo data-[incorrect=true]:border-alertRed data-[incorrect=true]:text-alertRed data-[correct=true]:text-greenGo relative w-[420px] origin-center border transition-colors"
+            className="data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:ring-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:text-greenGo relative w-[420px] origin-center ring-1 transition-colors data-[incorrect=true]:ring-red-500"
           >
             <input
               id="play-input"
@@ -198,7 +198,7 @@ ${emojis}`;
               autoFocus
               autoComplete="off"
               data-not-submitted={notSubmitted}
-              className="w-full bg-inherit p-5 text-xl focus:outline-none data-[not-submitted=true]:border-zinc-100 data-[not-submitted=true]:text-zinc-200"
+              className="w-full bg-inherit p-5 text-xl ring-1 focus:outline-none data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200"
             />
             <button
               data-not-submitted={notSubmitted}

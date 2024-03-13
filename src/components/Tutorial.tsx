@@ -90,13 +90,13 @@ export default function Tutorial() {
             data-tutorial-not-submitted={tutorialNotSubmitted}
             data-tutorial-correct={tutorialCorrect}
             data-tutorial-incorrect={tutorialIncorrect}
-            className="data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:border-greenGo data-[tutorial-incorrect=true]:border-alertRed data-[tutorial-not-submitted=true]:border-berryBlue data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-not-submitted=true]:text-berryBlue w-[420px] origin-center border p-5 text-xl transition-colors"
+            className="data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:ring-greenGo data-[tutorial-incorrect=true]:ring-alertRed data-[tutorial-not-submitted=true]:ring-berryBlue data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-not-submitted=true]:text-berryBlue w-[420px] origin-center p-5 text-xl ring-1 transition-colors"
           >
             padding: 12px
           </span>
           &#125;
         </div>
-        {tutorialNotSubmitted && <Arrow size={32} className="fill-zinc-100" />}
+        {tutorialNotSubmitted && <Arrow size={32} className="fill-zinc-200" />}
         {tutorialCorrect && (
           <Check size={32} className="animate-lift fill-greenGo" />
         )}
@@ -109,7 +109,7 @@ export default function Tutorial() {
             data-tutorial-not-submitted={tutorialNotSubmitted}
             data-tutorial-correct={tutorialCorrect}
             data-tutorial-incorrect={tutorialIncorrect}
-            className="data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:border-greenGo data-[tutorial-incorrect=true]:border-alertRed data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-correct=true]:text-greenGo relative w-[420px] origin-center border transition-colors"
+            className="data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:ring-greenGo data-[tutorial-incorrect=true]:ring-alertRed data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-correct=true]:text-greenGo relative w-[420px] origin-center ring-1 ring-zinc-200 transition-all"
           >
             <input
               id="tutorial-input"
@@ -119,14 +119,14 @@ export default function Tutorial() {
               autoComplete="off"
               placeholder="click here!"
               data-tutorial-not-submitted={tutorialNotSubmitted}
-              className="w-full bg-inherit p-5 text-xl focus:outline-none data-[tutorial-not-submitted=true]:border-zinc-100 data-[tutorial-not-submitted=true]:text-zinc-200"
+              className="w-full bg-inherit p-5 text-xl focus:outline-none data-[tutorial-not-submitted=true]:text-zinc-200 data-[tutorial-not-submitted=true]:ring-zinc-200"
             />
             <button
               data-tutorial-not-submitted={tutorialNotSubmitted}
               data-tutorial-correct={tutorialCorrect}
               data-tutorial-incorrect={tutorialIncorrect}
               onClick={() => handleReturnClick(tutorialAttempt)}
-              className="data-[tutorial-correct=true]:ring-greenGo data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-incorrect=true]:ring-alertRed hover:zinc-900 absolute right-0 h-full w-28 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all focus:outline-none active:ring data-[tutorial-not-submitted=true]:hover:bg-zinc-800"
+              className="data-[tutorial-correct=true]:ring-greenGo data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-incorrect=true]:ring-alertRed absolute right-0 h-full w-28 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all focus:outline-none active:ring data-[tutorial-not-submitted=true]:hover:bg-zinc-800"
             >
               return
             </button>

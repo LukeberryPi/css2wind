@@ -67,7 +67,7 @@ export default function Footer() {
       {tutorialIsVisible && pathname === "/" && (
         <button
           onClick={() => scroll("top")}
-          className="ring-berryBlue active:ring-3 flex items-center gap-4 px-4 py-2 ring-1 active:ring"
+          className="ring-berryBlue flex items-center gap-4 px-4 py-2 ring-1 active:ring"
         >
           <span className="text-berryBlue">Play Now!</span>
           <Arrow className="fill-berryBlue -rotate-90" />
@@ -76,10 +76,10 @@ export default function Footer() {
       {!tutorialIsVisible && pathname === "/" && (
         <button
           onClick={() => scroll("bottom")}
-          className="flex items-center gap-4 px-4 py-2 ring-1 ring-zinc-100 hover:bg-zinc-800 active:ring"
+          className="flex items-center gap-4 px-4 py-2 ring-1 ring-zinc-200 hover:bg-zinc-800 active:ring"
         >
           <span className="text-zinc-200">How to Play?</span>
-          <Arrow className="rotate-90 fill-zinc-100" />
+          <Arrow className="rotate-90 fill-zinc-200" />
         </button>
       )}
       <a
