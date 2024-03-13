@@ -164,10 +164,10 @@ ${emojis}`;
             data-not-submitted={notSubmitted}
             data-correct={correct}
             data-incorrect={incorrect}
-            className="data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed w-[420px] origin-center p-5 text-xl ring-1 transition-all data-[not-submitted=true]:text-sky-300 data-[not-submitted=true]:ring-sky-300"
+            className="w-[420px] origin-center p-5 text-xl ring-1 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-sky-300 data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:ring-sky-300"
           >
             {gameOver ? (
-              <span className="">game: over</span>
+              <span>GAME OVER!</span>
             ) : currentProperty ? (
               currentProperty
             ) : (
@@ -187,7 +187,7 @@ ${emojis}`;
             data-not-submitted={notSubmitted}
             data-correct={correct}
             data-incorrect={incorrect}
-            className="data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[incorrect=true]:text-alertRed data-[correct=true]:text-greenGo relative w-[420px] origin-center ring-1 ring-zinc-200 transition-all"
+            className="relative w-[420px] origin-center ring-1 ring-zinc-200 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed"
           >
             <input
               id="play-input"
@@ -206,7 +206,7 @@ ${emojis}`;
               data-incorrect={incorrect}
               disabled={gameOver}
               onClick={() => handleReturnClick(attempt)}
-              className="data-[correct=true]:ring-greenGo data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[incorrect=true]:ring-alertRed absolute right-0 h-full w-28 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all focus:outline-none active:ring disabled:hidden data-[not-submitted=true]:hover:bg-zinc-800"
+              className="absolute right-0 h-full w-28 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all focus:outline-none active:ring disabled:hidden data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:hover:bg-zinc-800"
             >
               return
             </button>

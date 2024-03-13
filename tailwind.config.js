@@ -10,7 +10,6 @@ module.exports = {
       colors: {
         alertRed: "#E35454",
         greenGo: "#4FBF85",
-        cutePink: "#c084fc",
       },
       animation: {
         shake: "shake 0.8s cubic-bezier(.36,.07,.19,.97) both",

@@ -16,7 +16,7 @@ export default function Header() {
         <a
           href="https://www.buymeacoffee.com/lukeberrypi"
           target="_blank"
-          className="text-cutePink ring-cutePink flex items-center gap-4 px-4 py-2 ring-1 active:ring"
+          className="flex items-center gap-4 px-4 py-2 text-purple-400 ring-1 ring-purple-400 active:ring"
         >
           <Coffee />
           <span>Buy me a Coffee!</span>
