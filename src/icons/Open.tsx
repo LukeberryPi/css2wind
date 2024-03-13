@@ -1,6 +1,6 @@
 import type { IconProps } from "./IconProps.types";
 
-export default function PixelarticonsOpen({ className, size = 24 }: IconProps) {
+export default function Open({ className, size = 24 }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -11,8 +11,8 @@ export default function PixelarticonsOpen({ className, size = 24 }: IconProps) {
     >
       <path
         fill="currentColor"
-        d="M5 3h6v2H5v14h14v-6h2v8H3V3zm8 0h8v8h-2V7h-2V5h-4zm0 8h-2v2H9v2h2v-2h2zm4-4h-2v2h-2v2h2V9h2z"
-      ></path>
+        d="M21 11V3h-8v2h4v2h-2v2h-2v2h-2v2H9v2h2v-2h2v-2h2V9h2V7h2v4zM11 5H3v16h16v-8h-2v6H5V7h6z"
+      />
     </svg>
   );
 }

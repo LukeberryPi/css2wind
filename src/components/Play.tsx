@@ -1,16 +1,10 @@
 "use client";
 
-import { VT323 } from "next/font/google";
 import { useEvaluation } from "@/hooks";
 import { Arrow, Check, Close, Copy } from "@/icons";
 import { getRandomKey } from "@/utils";
 import { useState, useEffect } from "react";
 import Scoreboard from "./Scoreboard";
-
-const pixel_font = VT323({
-  subsets: ["latin"],
-  weight: ["400"],
-});
 
 const initialScore = Array(8).fill("not_submitted");
 
@@ -167,7 +161,7 @@ ${emojis}`;
             className="w-[420px] origin-center p-5 text-xl ring-1 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-sky-300 data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:ring-sky-300"
           >
             {gameOver ? (
-              <span>GAME OVER!</span>
+              <span>Game over!</span>
             ) : currentProperty ? (
               currentProperty
             ) : (

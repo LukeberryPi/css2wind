@@ -1,5 +1,23 @@
 import { Open } from "@/icons";
 
+export const metadata = {
+  title: "css2wind | Frequently Asked Questions",
+  description: "Learn more about Tailwind CSS",
+  applicationName: "css2wind",
+  referrer: "origin-when-cross-origin",
+  keywords: ["Tailwind", "CSS", "Bootstrap", "Style", "HTML"],
+  authors: { name: "Luke Berry" },
+  creator: "Luke Berry",
+  publisher: "Luke Berry",
+  openGraph: {
+    type: "website",
+    images: "https://www.css2wind.com/og-faq.png",
+    siteName: "css2wind",
+    title: "css2wind | Frequently Asked Questions",
+    description: "Learn more about Tailwind CSS",
+  },
+};
+
 export default function Faq() {
   return (
     <section className="container mx-auto flex w-full max-w-full flex-col gap-20 px-6 py-20 md:py-32">
@@ -30,7 +48,7 @@ export default function Faq() {
               href="https://frontstuff.io/no-utility-classes-arent-the-same-as-inline-styles"
             >
               <span>Utility-first Fundamentals</span>
-              <Open size={20} className="shrink-0 self-center" />
+              <Open className="shrink-0 self-center" />
             </a>
           </div>
         </li>
@@ -62,7 +80,7 @@ export default function Faq() {
               <span>
                 No, utility classes aren&apos;t the same as inline styles
               </span>
-              <Open size={20} className="shrink-0 self-center" />
+              <Open className="shrink-0 self-center" />
             </a>
           </div>
         </li>
@@ -82,7 +100,7 @@ export default function Faq() {
             <span className="text-zinc-200">utilities</span>, so you can style a
             button from scratch — and make it look however you please.
           </p>
-          <div className="flex items-center gap-2 text-zinc-200 md:text-lg">
+          <div className="flex flex-col gap-2 text-zinc-200 sm:flex-row md:text-lg">
             <span>Watch this: </span>
             <a
               className="flex items-center gap-2 text-sky-300 hover:underline hover:underline-offset-2"
@@ -90,7 +108,7 @@ export default function Faq() {
               href="https://youtu.be/CQuTF-bkOgc?si=ENc7vupHcaGrXddW"
             >
               <span>Comparing Modern CSS Solutions</span>
-              <Open size={20} className="shrink-0 self-center" />
+              <Open className="shrink-0 self-center" />
             </a>
           </div>
         </li>
@@ -120,7 +138,7 @@ export default function Faq() {
               <span>
                 CSS Utility Classes and &quot;Separation of Concerns&quot;
               </span>
-              <Open size={20} className="shrink-0 self-center" />
+              <Open className="shrink-0 self-center" />
             </a>
           </div>
         </li>
