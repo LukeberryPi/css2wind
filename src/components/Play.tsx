@@ -154,8 +154,8 @@ ${emojis}`;
       className="mx-auto flex h-screen flex-col items-center justify-center gap-16"
     >
       <h3 className="text-2xl text-zinc-200">
-        Translate the <span className="text-berryBlue">CSS property</span> to
-        its Tailwind CSS equivalent
+        Translate the <span className="text-sky-300">CSS property</span> to its
+        Tailwind CSS equivalent
       </h3>
       <div className="flex items-center justify-center gap-6">
         <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
@@ -164,7 +164,7 @@ ${emojis}`;
             data-not-submitted={notSubmitted}
             data-correct={correct}
             data-incorrect={incorrect}
-            className="data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:ring-berryBlue data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-berryBlue w-[420px] origin-center p-5 text-xl ring-1 transition-all"
+            className="data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed w-[420px] origin-center p-5 text-xl ring-1 transition-all data-[not-submitted=true]:text-sky-300 data-[not-submitted=true]:ring-sky-300"
           >
             {gameOver ? (
               <span className="">game: over</span>
@@ -198,7 +198,7 @@ ${emojis}`;
               autoFocus
               autoComplete="off"
               data-not-submitted={notSubmitted}
-              className="w-full bg-inherit p-5 text-xl focus:outline-none data-[not-submitted=true]:border-zinc-100 data-[not-submitted=true]:text-zinc-200"
+              className="w-full bg-inherit p-5 text-xl focus:outline-none data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200"
             />
             <button
               data-not-submitted={notSubmitted}

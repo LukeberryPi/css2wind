@@ -12,7 +12,7 @@ export default function Faq() {
         <li className="flex flex-col gap-5 px-2 md:px-0 md:text-left">
           <h3 className="text-lg text-zinc-200 md:text-3xl">
             What is{" "}
-            <span className="bg-berryBlue px-2 py-px font-black text-zinc-900">
+            <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
               Tailwind CSS?
             </span>
           </h3>
@@ -25,7 +25,7 @@ export default function Faq() {
           <div className="flex flex-col gap-2 text-left text-zinc-200 sm:flex-row md:text-lg">
             <span>Read More: </span>
             <a
-              className="text-berryBlue flex items-start gap-2 hover:underline hover:underline-offset-2 sm:gap-2"
+              className="flex items-start gap-2 text-sky-300 hover:underline hover:underline-offset-2 sm:gap-2"
               target="_blank"
               href="https://frontstuff.io/no-utility-classes-arent-the-same-as-inline-styles"
             >
@@ -37,7 +37,7 @@ export default function Faq() {
         <li className="flex flex-col gap-5 px-2 md:px-0 md:text-left">
           <h3 className="text-lg text-zinc-200 md:text-3xl">
             Isn&apos;t that just{" "}
-            <span className="bg-berryBlue px-2 py-px font-black text-zinc-900">
+            <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
               inline styles?
             </span>
           </h3>
@@ -55,7 +55,7 @@ export default function Faq() {
           <div className="flex flex-col gap-2 text-zinc-200 sm:flex-row md:text-lg">
             <span>Read More: </span>
             <a
-              className="text-berryBlue flex items-center gap-2 hover:underline hover:underline-offset-2"
+              className="flex items-center gap-2 text-sky-300 hover:underline hover:underline-offset-2"
               target="_blank"
               href="https://frontstuff.io/no-utility-classes-arent-the-same-as-inline-styles"
             >
@@ -69,7 +69,7 @@ export default function Faq() {
         <li className="flex flex-col gap-5 px-2 md:px-0 md:text-left">
           <h3 className="text-lg text-zinc-200 md:text-3xl">
             Why not use{" "}
-            <span className="bg-berryBlue px-2 py-px font-black text-zinc-900">
+            <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
               Bootstrap
             </span>{" "}
             then?
@@ -85,7 +85,7 @@ export default function Faq() {
           <div className="flex items-center gap-2 text-zinc-200 md:text-lg">
             <span>Watch this: </span>
             <a
-              className="text-berryBlue flex items-center gap-2 hover:underline hover:underline-offset-2"
+              className="flex items-center gap-2 text-sky-300 hover:underline hover:underline-offset-2"
               target="_blank"
               href="https://youtu.be/CQuTF-bkOgc?si=ENc7vupHcaGrXddW"
             >
@@ -97,7 +97,7 @@ export default function Faq() {
         <li className="flex flex-col gap-3 px-2 md:px-0 md:text-left">
           <h3 className="text-lg text-zinc-200 md:text-3xl">
             Doesn&apos;t the{" "}
-            <span className="bg-berryBlue px-2 py-px font-black text-zinc-900">
+            <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
               {" "}
               HTML get ugly?
             </span>
@@ -113,7 +113,7 @@ export default function Faq() {
           <div className="flex items-center gap-2 text-zinc-200 md:text-lg">
             <span>Read More: </span>
             <a
-              className="text-berryBlue flex items-center gap-2 hover:underline hover:underline-offset-2"
+              className="flex items-center gap-2 text-sky-300 hover:underline hover:underline-offset-2"
               target="_blank"
               href="https://adamwathan.me/css-utility-classes-and-separation-of-concerns/"
             >

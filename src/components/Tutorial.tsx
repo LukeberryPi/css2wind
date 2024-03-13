@@ -81,7 +81,7 @@ export default function Tutorial() {
     <section className="mx-auto flex h-screen flex-col items-center justify-center gap-16">
       <p className="text-2xl text-zinc-200">
         Your goal is to guess how to write the{" "}
-        <span className="text-berryBlue">CSS property</span> using Tailwind CSS
+        <span className="text-sky-300">CSS property</span> using Tailwind CSS
       </p>
       <div className="flex items-center justify-center gap-6">
         <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
@@ -90,7 +90,7 @@ export default function Tutorial() {
             data-tutorial-not-submitted={tutorialNotSubmitted}
             data-tutorial-correct={tutorialCorrect}
             data-tutorial-incorrect={tutorialIncorrect}
-            className="data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:ring-greenGo data-[tutorial-incorrect=true]:ring-alertRed data-[tutorial-not-submitted=true]:ring-berryBlue data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-not-submitted=true]:text-berryBlue w-[420px] origin-center p-5 text-xl ring-1 transition-all"
+            className="data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:ring-greenGo data-[tutorial-incorrect=true]:ring-alertRed data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed w-[420px] origin-center p-5 text-xl ring-1 transition-all data-[tutorial-not-submitted=true]:text-sky-300 data-[tutorial-not-submitted=true]:ring-sky-300"
           >
             padding: 12px
           </span>
@@ -142,7 +142,7 @@ export default function Tutorial() {
           </p>
           <p>
             That&apos;s how you write{" "}
-            <span className="text-berryBlue">padding: 12px</span> using Tailwind
+            <span className="text-sky-300">padding: 12px</span> using Tailwind
             CSS!
           </p>
         </div>

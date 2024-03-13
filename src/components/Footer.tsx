@@ -67,10 +67,10 @@ export default function Footer() {
       {tutorialIsVisible && pathname === "/" && (
         <button
           onClick={() => scroll("top")}
-          className="ring-berryBlue flex items-center gap-4 px-4 py-2 ring-1 active:ring"
+          className="flex items-center gap-4 px-4 py-2 ring-1 ring-sky-300 active:ring"
         >
-          <span className="text-berryBlue">Play Now!</span>
-          <Arrow className="fill-berryBlue -rotate-90" />
+          <span className="text-sky-300">Play Now!</span>
+          <Arrow className="-rotate-90 fill-sky-300" />
         </button>
       )}
       {!tutorialIsVisible && pathname === "/" && (
