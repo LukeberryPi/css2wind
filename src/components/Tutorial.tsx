@@ -126,7 +126,7 @@ export default function Tutorial() {
               data-tutorial-correct={tutorialCorrect}
               data-tutorial-incorrect={tutorialIncorrect}
               onClick={() => handleReturnClick(tutorialAttempt)}
-              className="data-[tutorial-correct=true]:ring-greenGo data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-incorrect=true]:ring-alertRed hover:zinc-900 absolute right-0 h-full w-28 text-lg text-zinc-200 ring-1 ring-zinc-300 transition-all focus:outline-none active:ring data-[tutorial-not-submitted=true]:hover:bg-zinc-800"
+              className="data-[tutorial-correct=true]:ring-greenGo data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-incorrect=true]:ring-alertRed hover:zinc-900 absolute right-0 h-full w-28 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all focus:outline-none active:ring data-[tutorial-not-submitted=true]:hover:bg-zinc-800"
             >
               return
             </button>

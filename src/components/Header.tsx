@@ -31,7 +31,7 @@ export default function Header() {
         )}
         {pathname === "/" && (
           <Link
-            className="flex items-center gap-4 px-4 py-2 text-zinc-200 ring-1 ring-zinc-200 active:ring"
+            className="flex items-center gap-4 px-4 py-2 text-zinc-200 ring-1 ring-zinc-200 hover:bg-zinc-800 active:ring"
             href="/faq"
           >
             Learn more about Tailwind CSS

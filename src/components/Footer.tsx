@@ -1,13 +1,30 @@
 "use client";
 
 import { Arrow } from "@/icons";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const [isClient, setIsClient] = useState(false);
   const [tutorialIsVisible, setTutorialIsVisible] = useState<boolean>(false);
   const pathname = usePathname();
+
+  const tutorialCurrentlyOnScreen = useCallback(() => {
+    let tutorial;
+
+    if (document && isClient) {
+      tutorial = document.getElementById("tutorial-input");
+    }
+
+    if (!tutorial) return false;
+
+    const boundingClientRect = tutorial.getBoundingClientRect();
+    const isVisible =
+      boundingClientRect.top >= 0 &&
+      boundingClientRect.bottom <= window.innerHeight;
+
+    return isVisible;
+  }, [isClient]);
 
   useEffect(() => {
     setTutorialIsVisible(tutorialCurrentlyOnScreen());
@@ -29,49 +46,14 @@ export default function Footer() {
     setIsClient(true);
   }, []);
 
-  function tutorialCurrentlyOnScreen() {
-    let tutorial;
-
-    console.log(
-      "isTutorialVisible called",
-      "tutorial state: ",
-      tutorialIsVisible,
-      "isclient: ",
-      isClient,
-      "document: ",
-      typeof document,
-    );
-
-    if (document && isClient) {
-      tutorial = document.getElementById("tutorial-input");
-    }
-
-    if (!tutorial) return false;
-
-    const boundingClientRect = tutorial.getBoundingClientRect();
-    const isVisible =
-      boundingClientRect.top >= 0 &&
-      boundingClientRect.bottom <= window.innerHeight;
-
-    return isVisible;
-  }
-
-  function scroll(to: "top" | "bottom") {
-    console.log(
-      "scroll called",
-      "isclient: ",
-      isClient,
-      "document",
-      typeof document,
-    );
-
+  const scroll = (to: "top" | "bottom") => {
     if (typeof document !== undefined || isClient) {
       window.scrollTo({
         top: to === "top" ? 0 : document.body.scrollHeight,
         behavior: "smooth",
       });
     }
-  }
+  };
 
   return (
     <footer className="fixed bottom-0 flex w-full items-center justify-between bg-inherit px-8 py-6 text-lg">
