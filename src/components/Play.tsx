@@ -147,7 +147,7 @@ ${emojis}`;
       id="play"
       className="mx-auto flex h-screen flex-col items-center justify-center gap-12 md:gap-16"
     >
-      <h3 className="text-lg text-zinc-200 md:text-2xl">
+      <h3 className="text-lg text-zinc-200 sm:text-2xl">
         Translate the <span className="text-sky-300">CSS property</span> to its
         Tailwind CSS equivalent
       </h3>
@@ -158,7 +158,7 @@ ${emojis}`;
             data-not-submitted={notSubmitted}
             data-correct={correct}
             data-incorrect={incorrect}
-            className="w-[420px] origin-center p-5 text-xl ring-1 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-sky-300 data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:ring-sky-300"
+            className="min-w-52 grow origin-center p-5 text-lg ring-1 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-sky-300 data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:ring-sky-300 md:text-xl"
           >
             {gameOver ? (
               <span>Game over!</span>
@@ -185,7 +185,7 @@ ${emojis}`;
             data-not-submitted={notSubmitted}
             data-correct={correct}
             data-incorrect={incorrect}
-            className="relative w-[420px] origin-center ring-1 ring-zinc-200 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed"
+            className="min-w-52 relative grow origin-center ring-1 ring-zinc-200 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed"
           >
             <input
               id="play-input"
@@ -196,7 +196,7 @@ ${emojis}`;
               autoFocus
               autoComplete="off"
               data-not-submitted={notSubmitted}
-              className="w-full bg-inherit p-5 text-xl focus:outline-none data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200"
+              className="w-full bg-inherit p-5 text-lg focus:outline-none data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200 md:text-xl"
             />
             <button
               data-not-submitted={notSubmitted}
@@ -204,7 +204,7 @@ ${emojis}`;
               data-incorrect={incorrect}
               disabled={gameOver}
               onClick={() => handleReturnClick(attempt)}
-              className="absolute right-0 h-full w-28 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all focus:outline-none active:ring disabled:hidden data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:hover:bg-zinc-800"
+              className="absolute right-0 h-full w-28 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all focus:outline-none active:ring disabled:hidden data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:hover:bg-zinc-800 md:text-xl"
             >
               return
             </button>
@@ -213,7 +213,7 @@ ${emojis}`;
               onClick={handleCopyClick}
               className={`absolute right-0 top-0 flex h-full ${
                 resultCopied ? "w-40" : "w-32"
-              } items-center justify-center gap-4 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all hover:bg-zinc-800 active:ring disabled:hidden`}
+              } items-center justify-center gap-4 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all hover:bg-zinc-800 active:ring disabled:hidden md:text-xl`}
             >
               <Copy />
               {resultCopied ? "Copied!" : "Copy"}
