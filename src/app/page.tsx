@@ -20,7 +20,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="container flex flex-col justify-center px-6 text-center">
+    <main className="container mx-auto flex flex-col justify-center px-6 text-center">
       <Play />
       <Tutorial />
     </main>

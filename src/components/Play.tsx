@@ -147,7 +147,7 @@ ${emojis}`;
       id="play"
       className="mx-auto flex h-screen flex-col items-center justify-center gap-12 md:gap-16"
     >
-      <h3 className="text-2xl text-zinc-200">
+      <h3 className="text-lg text-zinc-200 md:text-2xl">
         Translate the <span className="text-sky-300">CSS property</span> to its
         Tailwind CSS equivalent
       </h3>

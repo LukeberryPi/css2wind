@@ -19,7 +19,7 @@ export default async function RootLayout({
   return (
     <html className="min-h-screen scroll-smooth subpixel-antialiased" lang="en">
       <body
-        className={`${firaCode.className} flex min-h-screen items-center justify-center bg-zinc-950 text-zinc-200`}
+        className={`${firaCode.className} flex min-h-screen bg-zinc-950 text-zinc-200`}
       >
         <Header />
         {children}
