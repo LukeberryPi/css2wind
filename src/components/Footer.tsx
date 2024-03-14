@@ -63,14 +63,16 @@ export default function Footer() {
         href="https://github.com/LukeberryPi/css2wind"
       >
         <Branch className="text-zinc-200" />
-        <span className="hidden sm:inline">Github</span>
+        <span className="hidden text-sm sm:inline md:text-lg">Github</span>
       </a>
       {tutorialIsVisible && pathname === "/" && (
         <button
           onClick={() => scroll("top")}
           className="flex items-center gap-4 px-4 py-2 ring-1 ring-sky-300 active:ring"
         >
-          <span className="hidden text-sky-300 xs:inline">Play Now!</span>
+          <span className="hidden text-sm text-sky-300 tiny:inline md:text-lg">
+            Play Now!
+          </span>
           <Arrow className="-rotate-90 fill-sky-300" />
         </button>
       )}
@@ -79,7 +81,9 @@ export default function Footer() {
           onClick={() => scroll("bottom")}
           className="flex items-center gap-4 px-4 py-2 ring-1 ring-zinc-200 hover:bg-zinc-800 active:ring"
         >
-          <span className="hidden text-zinc-200 tiny:inline">How to Play?</span>
+          <span className="hidden text-sm text-zinc-200 tiny:inline md:text-lg">
+            How to Play?
+          </span>
           <Arrow className="rotate-90 fill-zinc-200" />
         </button>
       )}
@@ -89,7 +93,7 @@ export default function Footer() {
         href="https://twitter.com/LukeberryPi"
       >
         <At className="text-zinc-200" />
-        <span className="hidden sm:inline">LukeberryPi</span>
+        <span className="hidden text-sm sm:inline md:text-lg">LukeberryPi</span>
       </a>
     </footer>
   );

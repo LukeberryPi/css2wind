@@ -78,30 +78,32 @@ export default function Tutorial() {
   };
 
   return (
-    <section className="mx-auto flex h-screen flex-col items-center justify-center gap-16">
-      <p className="text-2xl text-zinc-200">
+    <section className="mx-auto flex h-screen flex-col items-center justify-center gap-12 md:gap-16">
+      <p className="text-lg text-zinc-200 md:text-2xl">
         Your goal is to guess how to write the{" "}
         <span className="text-sky-300">CSS property</span> using Tailwind CSS
       </p>
-      <div className="flex items-center justify-center gap-6">
+      <div className="flex flex-col items-center justify-center md:flex-row md:gap-6">
         <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
           .class &#123;
           <span
             data-tutorial-not-submitted={tutorialNotSubmitted}
             data-tutorial-correct={tutorialCorrect}
             data-tutorial-incorrect={tutorialIncorrect}
-            className="max-w-[420px] origin-center p-5 text-xl ring-1 transition-all data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-not-submitted=true]:text-sky-300 data-[tutorial-correct=true]:ring-greenGo data-[tutorial-incorrect=true]:ring-alertRed data-[tutorial-not-submitted=true]:ring-sky-300"
+            className="w-[420px] origin-center p-5 text-xl ring-1 transition-all data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-not-submitted=true]:text-sky-300 data-[tutorial-correct=true]:ring-greenGo data-[tutorial-incorrect=true]:ring-alertRed data-[tutorial-not-submitted=true]:ring-sky-300"
           >
             padding: 12px
           </span>
           &#125;
         </div>
-        {tutorialNotSubmitted && <Arrow size={32} className="fill-zinc-200" />}
+        {tutorialNotSubmitted && (
+          <Arrow className="h-6 w-6 rotate-90 fill-zinc-200 md:h-8 md:w-8 md:rotate-0" />
+        )}
         {tutorialCorrect && (
-          <Check size={32} className="animate-lift fill-greenGo" />
+          <Check className="h-6 w-6 animate-lift fill-greenGo md:h-8 md:w-8" />
         )}
         {tutorialIncorrect && (
-          <Close size={32} className="animate-shake fill-alertRed" />
+          <Close className="h-6 w-6 animate-shake fill-alertRed md:h-8 md:w-8" />
         )}
         <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
           <span>className=&#34;</span>
@@ -109,7 +111,7 @@ export default function Tutorial() {
             data-tutorial-not-submitted={tutorialNotSubmitted}
             data-tutorial-correct={tutorialCorrect}
             data-tutorial-incorrect={tutorialIncorrect}
-            className="relative max-w-[420px] origin-center ring-1 ring-zinc-200 transition-all data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-correct=true]:ring-greenGo data-[tutorial-incorrect=true]:ring-alertRed"
+            className="relative w-[420px] origin-center ring-1 ring-zinc-200 transition-all data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-correct=true]:ring-greenGo data-[tutorial-incorrect=true]:ring-alertRed"
           >
             <input
               id="tutorial-input"
@@ -134,11 +136,11 @@ export default function Tutorial() {
           <span>&#34;</span>
         </div>
       </div>
-      <div className="space-y-8 text-lg text-zinc-400">
+      <div className="space-y-4 text-sm text-zinc-400 md:space-y-8 md:text-lg">
         <div>
           <p>
             Try typing <span className="text-zinc-200">p-3</span> in the white
-            box to the right and pressing enter.
+            box and pressing enter.
           </p>
           <p>
             That&apos;s how you write{" "}
@@ -147,7 +149,7 @@ export default function Tutorial() {
           </p>
         </div>
         <div>
-          <p>Every day there are eight CSS properties to be translated.</p>
+          <p>There are eight CSS properties to be translated.</p>
           <p>Can you get them all right?</p>
         </div>
       </div>

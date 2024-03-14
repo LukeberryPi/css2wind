@@ -47,7 +47,7 @@ export default function Play() {
     ).length;
     setTimeout(() => {
       setIsGameOver(notSubmittedCount === 0);
-    }, 840);
+    }, 800);
   }, [score]);
 
   useEffect(() => {
@@ -145,20 +145,20 @@ ${emojis}`;
   return (
     <section
       id="play"
-      className="mx-auto flex h-screen flex-col items-center justify-center gap-16"
+      className="mx-auto flex h-screen flex-col items-center justify-center gap-12 md:gap-16"
     >
       <h3 className="text-2xl text-zinc-200">
         Translate the <span className="text-sky-300">CSS property</span> to its
         Tailwind CSS equivalent
       </h3>
-      <div className="flex items-center justify-center gap-6">
+      <div className="flex flex-col items-center justify-center md:flex-row md:gap-6">
         <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
           .class &#123;
           <span
             data-not-submitted={notSubmitted}
             data-correct={correct}
             data-incorrect={incorrect}
-            className="max-w-[420px] origin-center p-5 text-xl ring-1 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-sky-300 data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:ring-sky-300"
+            className="w-[420px] origin-center p-5 text-xl ring-1 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-sky-300 data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:ring-sky-300"
           >
             {gameOver ? (
               <span>Game over!</span>
@@ -170,10 +170,14 @@ ${emojis}`;
           </span>
           &#125;
         </div>
-        {notSubmitted && <Arrow size={32} className="fill-zinc-100" />}
-        {correct && <Check size={32} className="animate-lift fill-greenGo" />}
+        {notSubmitted && (
+          <Arrow className="h-6 w-6 rotate-90 fill-zinc-100 md:h-8 md:w-8 md:rotate-0" />
+        )}
+        {correct && (
+          <Check className="h-6 w-6 animate-lift fill-greenGo md:h-8 md:w-8" />
+        )}
         {incorrect && (
-          <Close size={32} className="animate-shake fill-alertRed" />
+          <Close className="h-6 w-6 animate-shake fill-alertRed md:h-8 md:w-8" />
         )}
         <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
           <span>className=&#34;</span>
@@ -181,7 +185,7 @@ ${emojis}`;
             data-not-submitted={notSubmitted}
             data-correct={correct}
             data-incorrect={incorrect}
-            className="relative max-w-[420px] origin-center ring-1 ring-zinc-200 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed"
+            className="relative w-[420px] origin-center ring-1 ring-zinc-200 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed"
           >
             <input
               id="play-input"

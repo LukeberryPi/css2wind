@@ -5210,122 +5210,122 @@ export const api = {
         {
           css: "0px",
           tailwind: {
-            correct: ["max-w-0"],
-            partial: ["max-w-[0px]"],
+            correct: ["w-0"],
+            partial: ["w-[0px]"],
           },
         },
         {
           css: "100%",
           tailwind: {
-            correct: ["max-w-full"],
+            correct: ["w-full"],
           },
         },
         {
           css: "1024px",
           tailwind: {
-            correct: ["max-w-5xl", "max-w-screen-lg"],
-            partial: ["max-w-[1024px]"],
+            correct: ["w-5xl", "w-screen-lg"],
+            partial: ["w-[1024px]"],
           },
         },
         {
           css: "1152px",
           tailwind: {
-            correct: ["max-w-6xl"],
-            partial: ["max-w-[1152px]"],
+            correct: ["w-6xl"],
+            partial: ["w-[1152px]"],
           },
         },
         {
           css: "1280px",
           tailwind: {
-            correct: ["max-w-7xl", "max-w-screen-xl"],
-            partial: ["max-w-[1280px]"],
+            correct: ["w-7xl", "w-screen-xl"],
+            partial: ["w-[1280px]"],
           },
         },
         {
           css: "1536px",
           tailwind: {
-            correct: ["max-w-screen-2xl"],
-            partial: ["max-w-[1536px]"],
+            correct: ["w-screen-2xl"],
+            partial: ["w-[1536px]"],
           },
         },
         {
           css: "320px",
           tailwind: {
-            correct: ["max-w-xs"],
-            partial: ["max-w-[320px]"],
+            correct: ["w-xs"],
+            partial: ["w-[320px]"],
           },
         },
         {
           css: "448px",
           tailwind: {
-            correct: ["max-w-md"],
-            partial: ["max-w-[448px]"],
+            correct: ["w-md"],
+            partial: ["w-[448px]"],
           },
         },
         {
           css: "512px",
           tailwind: {
-            correct: ["max-w-lg"],
-            partial: ["max-w-[512px]"],
+            correct: ["w-lg"],
+            partial: ["w-[512px]"],
           },
         },
         {
           css: "576px",
           tailwind: {
-            correct: ["max-w-xl"],
-            partial: ["max-w-[576px]"],
+            correct: ["w-xl"],
+            partial: ["w-[576px]"],
           },
         },
         {
           css: "640px",
           tailwind: {
-            correct: ["max-w-screen-sm"],
-            partial: ["max-w-[640px]"],
+            correct: ["w-screen-sm"],
+            partial: ["w-[640px]"],
           },
         },
         {
           css: "65ch",
           tailwind: {
-            correct: ["max-w-prose"],
-            partial: ["max-w-[65ch]"],
+            correct: ["w-prose"],
+            partial: ["w-[65ch]"],
           },
         },
         {
           css: "672px",
           tailwind: {
-            correct: ["max-w-2xl"],
-            partial: ["max-w-[672px]"],
+            correct: ["w-2xl"],
+            partial: ["w-[672px]"],
           },
         },
         {
           css: "768px",
           tailwind: {
-            correct: ["max-w-3xl", "max-w-screen-md"],
-            partial: ["max-w-[768px]"],
+            correct: ["w-3xl", "w-screen-md"],
+            partial: ["w-[768px]"],
           },
         },
         {
           css: "fit-content",
           tailwind: {
-            correct: ["max-w-fit"],
+            correct: ["w-fit"],
           },
         },
         {
           css: "max-content",
           tailwind: {
-            correct: ["max-w-max"],
+            correct: ["w-max"],
           },
         },
         {
           css: "min-content",
           tailwind: {
-            correct: ["max-w-min"],
+            correct: ["w-min"],
           },
         },
         {
           css: "none",
           tailwind: {
-            correct: ["max-w-none"],
+            correct: ["w-none"],
           },
         },
       ],
