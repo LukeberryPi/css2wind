@@ -34,11 +34,14 @@ export default function Header() {
         )}
         {pathname === "/" && (
           <Link
-            className="flex items-center gap-4 px-4 py-2 text-zinc-200 ring-1 ring-zinc-200 hover:bg-zinc-800 active:ring"
+            className="flex items-center gap-4 px-3 py-2 text-zinc-200 ring-1 ring-zinc-200 hover:bg-zinc-800 active:ring md:px-4"
             href="/faq"
           >
             <Script className="text-zinc-200" />
-            <span>Learn more about Tailwind CSS</span>
+            <span className="hidden md:inline">
+              Learn more{" "}
+              <span className="hidden lg:inline">about Tailwind CSS</span>
+            </span>
           </Link>
         )}
       </div>

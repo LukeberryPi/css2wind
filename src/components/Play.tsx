@@ -158,7 +158,7 @@ ${emojis}`;
             data-not-submitted={notSubmitted}
             data-correct={correct}
             data-incorrect={incorrect}
-            className="w-[420px] origin-center p-5 text-xl ring-1 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-sky-300 data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:ring-sky-300"
+            className="max-w-[420px] origin-center p-5 text-xl ring-1 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-sky-300 data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:ring-sky-300"
           >
             {gameOver ? (
               <span>Game over!</span>
@@ -181,7 +181,7 @@ ${emojis}`;
             data-not-submitted={notSubmitted}
             data-correct={correct}
             data-incorrect={incorrect}
-            className="relative w-[420px] origin-center ring-1 ring-zinc-200 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed"
+            className="relative max-w-[420px] origin-center ring-1 ring-zinc-200 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed"
           >
             <input
               id="play-input"

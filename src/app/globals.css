@@ -8,3 +8,7 @@
     @apply transition-all active:scale-95;
   }
 }
+
+* {
+  min-width: 0;
+}

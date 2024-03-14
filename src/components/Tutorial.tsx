@@ -90,7 +90,7 @@ export default function Tutorial() {
             data-tutorial-not-submitted={tutorialNotSubmitted}
             data-tutorial-correct={tutorialCorrect}
             data-tutorial-incorrect={tutorialIncorrect}
-            className="data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:ring-greenGo data-[tutorial-incorrect=true]:ring-alertRed data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed w-[420px] origin-center p-5 text-xl ring-1 transition-all data-[tutorial-not-submitted=true]:text-sky-300 data-[tutorial-not-submitted=true]:ring-sky-300"
+            className="max-w-[420px] origin-center p-5 text-xl ring-1 transition-all data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-not-submitted=true]:text-sky-300 data-[tutorial-correct=true]:ring-greenGo data-[tutorial-incorrect=true]:ring-alertRed data-[tutorial-not-submitted=true]:ring-sky-300"
           >
             padding: 12px
           </span>
@@ -109,7 +109,7 @@ export default function Tutorial() {
             data-tutorial-not-submitted={tutorialNotSubmitted}
             data-tutorial-correct={tutorialCorrect}
             data-tutorial-incorrect={tutorialIncorrect}
-            className="data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:ring-greenGo data-[tutorial-incorrect=true]:ring-alertRed data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-correct=true]:text-greenGo relative w-[420px] origin-center ring-1 ring-zinc-200 transition-all"
+            className="relative max-w-[420px] origin-center ring-1 ring-zinc-200 transition-all data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-correct=true]:ring-greenGo data-[tutorial-incorrect=true]:ring-alertRed"
           >
             <input
               id="tutorial-input"
@@ -126,7 +126,7 @@ export default function Tutorial() {
               data-tutorial-correct={tutorialCorrect}
               data-tutorial-incorrect={tutorialIncorrect}
               onClick={() => handleReturnClick(tutorialAttempt)}
-              className="data-[tutorial-correct=true]:ring-greenGo data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-incorrect=true]:ring-alertRed absolute right-0 h-full w-28 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all focus:outline-none active:ring data-[tutorial-not-submitted=true]:hover:bg-zinc-800"
+              className="absolute right-0 h-full w-28 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all focus:outline-none active:ring data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-correct=true]:ring-greenGo data-[tutorial-incorrect=true]:ring-alertRed data-[tutorial-not-submitted=true]:hover:bg-zinc-800"
             >
               return
             </button>
