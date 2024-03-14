@@ -56,14 +56,14 @@ export default function Footer() {
   };
 
   return (
-    <footer className="fixed bottom-0 flex w-full items-center justify-between bg-inherit px-8 py-6 text-lg">
+    <footer className="fixed bottom-0 flex w-full items-center justify-between bg-inherit px-6 py-6 text-lg md:px-8">
       <a
         className="flex items-center gap-4 px-4 py-2 text-zinc-200 hover:bg-zinc-800"
         target="_blank"
         href="https://github.com/LukeberryPi/css2wind"
       >
         <Branch className="text-zinc-200" />
-        <span>Github</span>
+        <span className="hidden tiny:inline">Github</span>
       </a>
       {tutorialIsVisible && pathname === "/" && (
         <button
@@ -89,7 +89,7 @@ export default function Footer() {
         href="https://twitter.com/LukeberryPi"
       >
         <At className="text-zinc-200" />
-        <span>LukeberryPi</span>
+        <span className="hidden tiny:inline">LukeberryPi</span>
       </a>
     </footer>
   );

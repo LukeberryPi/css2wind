@@ -1,7 +1,7 @@
 import { Tutorial, Play } from "@/components";
 
 export const metadata = {
-  title: "css2wind | A minigame for learning Tailwind CSS",
+  title: "css2wind | Home",
   description: "A minigame for learning Tailwind CSS",
   applicationName: "css2wind",
   referrer: "origin-when-cross-origin",
@@ -20,7 +20,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-center text-center">
+    <main className="container flex flex-col justify-center text-center">
       <Play />
       <Tutorial />
     </main>

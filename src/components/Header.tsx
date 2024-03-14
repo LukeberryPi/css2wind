@@ -9,27 +9,27 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed top-0 flex w-full items-center justify-between bg-inherit px-8 py-6 text-lg text-zinc-200">
+    <nav className="fixed top-0 flex w-full items-center justify-between bg-inherit px-6 py-6 text-lg text-zinc-200 md:px-8">
       <Link href="/" className="flex items-center gap-5">
         <Image src="/logo.svg" alt="logo" width={32} height={32} />
-        <span className="hidden text-2xl sm:block">css2wind</span>
+        <span className="hidden text-2xl tiny:block">css2wind</span>
       </Link>
-      <div className="hidden items-center justify-center gap-10 md:flex">
+      <div className="flex items-center justify-center gap-6 md:gap-10">
         <a
           href="https://www.buymeacoffee.com/lukeberrypi"
           target="_blank"
-          className="flex items-center gap-4 px-4 py-2 text-purple-400 ring-1 ring-purple-400 active:ring"
+          className="flex items-center gap-4 px-3 py-2 text-purple-400 ring-1 ring-purple-400 active:ring md:px-4"
         >
           <Coffee />
-          <span>Buy me a Coffee!</span>
+          <span className="hidden md:inline">Buy me a Coffee!</span>
         </a>
         {pathname === "/faq" && (
           <Link
-            className="flex items-center gap-4 px-4 py-2 text-sky-300 ring-1 ring-sky-300 active:ring"
+            className="flex items-center gap-4 px-3 py-2 text-sky-300 ring-1 ring-sky-300 active:ring md:px-4"
             href="/"
           >
             <House />
-            <span>Play Now!</span>
+            <span className="hidden md:inline">Play Now!</span>
           </Link>
         )}
         {pathname === "/" && (

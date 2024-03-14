@@ -20,27 +20,30 @@ export const metadata = {
 
 export default function Faq() {
   return (
-    <section className="container mx-auto flex w-full max-w-full flex-col gap-20 px-6 py-20 md:py-32">
+    <section className="container mx-auto flex w-full flex-col gap-20 px-6 py-32">
       <div className="flex flex-col items-center gap-6">
         <h2 className="text-center text-5xl text-zinc-200 md:text-6xl">
           Frequently Asked Questions
         </h2>
       </div>
-      <ul className="flex max-w-3xl shrink-0 flex-col gap-20 self-center">
+      <ul className="mx-auto flex max-w-[800px] flex-col gap-20">
         <li className="flex flex-col gap-5 px-2 md:px-0 md:text-left">
-          <h3 className="text-lg text-zinc-200 md:text-3xl">
+          <h3 className="text-2xl text-zinc-200 md:text-4xl">
             What is{" "}
             <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
-              Tailwind CSS?
+              Tailwind
+            </span>
+            <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
+              CSS?
             </span>
           </h3>
-          <p className="text-zinc-400 md:text-lg">
+          <p className="text-lg text-zinc-400 sm:text-xl">
             Tailwind CSS is a utility-first framework with pre-built CSS classes
             for responsive, customizable UIs. It promotes a functional styling
             approach, offering flexibility through direct class manipulation for
             efficient design control.
           </p>
-          <div className="flex flex-col gap-2 text-left text-zinc-200 sm:flex-row md:text-lg">
+          <div className="flex flex-col gap-2 text-left text-zinc-200 sm:flex-row sm:text-lg md:text-xl">
             <span>Read More: </span>
             <a
               className="flex items-start gap-2 text-sky-300 hover:underline hover:underline-offset-2 sm:gap-2"
@@ -53,13 +56,16 @@ export default function Faq() {
           </div>
         </li>
         <li className="flex flex-col gap-5 px-2 md:px-0 md:text-left">
-          <h3 className="text-lg text-zinc-200 md:text-3xl">
+          <h3 className="text-2xl text-zinc-200 md:text-4xl">
             Isn&apos;t that just{" "}
             <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
-              inline styles?
+              inline
+            </span>
+            <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
+              styles?
             </span>
           </h3>
-          <p className="text-zinc-400 md:text-lg">
+          <p className="text-lg text-zinc-400 sm:text-xl">
             Although similar, Tailwind CSS and inline styling have key
             differences. For example, it is impossible to use{" "}
             <span className="text-zinc-200">media queries</span> and{" "}
@@ -70,29 +76,27 @@ export default function Faq() {
             <span className="text-zinc-200">hover:</span> (to change styles when
             the user hovers their mouse over something).
           </p>
-          <div className="flex flex-col gap-2 text-zinc-200 sm:flex-row md:text-lg">
-            <span>Read More: </span>
+          <div className="flex flex-col gap-2 text-zinc-200 sm:flex-row sm:text-lg md:text-xl">
+            <span className="shrink-0">Read More: </span>
             <a
               className="flex items-center gap-2 text-sky-300 hover:underline hover:underline-offset-2"
               target="_blank"
               href="https://frontstuff.io/no-utility-classes-arent-the-same-as-inline-styles"
             >
-              <span>
-                No, utility classes aren&apos;t the same as inline styles
-              </span>
+              <span>Utility classes vs inline styles</span>
               <Open className="shrink-0 self-center" />
             </a>
           </div>
         </li>
         <li className="flex flex-col gap-5 px-2 md:px-0 md:text-left">
-          <h3 className="text-lg text-zinc-200 md:text-3xl">
+          <h3 className="text-2xl text-zinc-200 md:text-4xl">
             Why not use{" "}
             <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
               Bootstrap
             </span>{" "}
             then?
           </h3>
-          <p className="text-zinc-400 md:text-lg">
+          <p className="text-lg text-zinc-400 sm:text-xl">
             Bootstrap is a{" "}
             <span className="text-zinc-200">component library:</span> it decides
             how a button looks and customization is secondary. Tailwind CSS
@@ -100,7 +104,7 @@ export default function Faq() {
             <span className="text-zinc-200">utilities</span>, so you can style a
             button from scratch — and make it look however you please.
           </p>
-          <div className="flex flex-col gap-2 text-zinc-200 sm:flex-row md:text-lg">
+          <div className="flex flex-col gap-2 text-zinc-200 sm:flex-row sm:text-lg md:text-xl">
             <span>Watch this: </span>
             <a
               className="flex items-center gap-2 text-sky-300 hover:underline hover:underline-offset-2"
@@ -113,31 +117,34 @@ export default function Faq() {
           </div>
         </li>
         <li className="flex flex-col gap-3 px-2 md:px-0 md:text-left">
-          <h3 className="text-lg text-zinc-200 md:text-3xl">
+          <h3 className="text-2xl text-zinc-200 md:text-4xl">
             Doesn&apos;t the{" "}
             <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
-              {" "}
-              HTML get ugly?
+              HTML
+            </span>
+            <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
+              get
+            </span>
+            <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
+              ugly?
             </span>
           </h3>
-          <p className="text-zinc-400 md:text-lg">
-            Yes it does! This is a trade-off that Tailwind CSS embraces: it
+          <p className="text-lg text-zinc-400 sm:text-xl">
+            Yes, it does! This is a trade-off that Tailwind CSS embraces: it
             sacrifices pretty HTML for{" "}
             <span className="text-zinc-200">styling consistency</span> and{" "}
             <span className="text-zinc-200"> ease of maintenance </span>that
             comes with colocation — having markdown and styles at the same
             place.
           </p>
-          <div className="flex items-center gap-2 text-zinc-200 md:text-lg">
+          <div className="flex flex-col items-start gap-2 text-zinc-200 sm:flex-row sm:text-lg md:text-xl">
             <span>Read More: </span>
             <a
               className="flex items-center gap-2 text-sky-300 hover:underline hover:underline-offset-2"
               target="_blank"
               href="https://adamwathan.me/css-utility-classes-and-separation-of-concerns/"
             >
-              <span>
-                CSS Utility Classes and &quot;Separation of Concerns&quot;
-              </span>
+              <span>CSS and &quot;Separation of Concerns&quot;</span>
               <Open className="shrink-0 self-center" />
             </a>
           </div>

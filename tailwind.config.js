@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        tiny: "400px",
+        xs: "500px",
+      },
       colors: {
         alertRed: "#E35454",
         greenGo: "#4FBF85",
