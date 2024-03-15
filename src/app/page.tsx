@@ -2,7 +2,7 @@ import { Tutorial, Play } from "@/components";
 
 export const metadata = {
   title: "css2wind | Home",
-  description: "A minigame for learning Tailwind CSS",
+  description: "A minigame for learning Tailwind CSS.",
   applicationName: "css2wind",
   referrer: "origin-when-cross-origin",
   keywords: ["Tailwind", "CSS", "Bootstrap", "Style", "HTML"],
@@ -19,7 +19,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "css2wind, a minigame for learning Tailwind CSS",
-    description: "A minigame for learning Tailwind CSS",
+    description: "A minigame for learning Tailwind CSS.",
     images: { url: "https://www.css2wind.com/og-home.png" },
   },
 };

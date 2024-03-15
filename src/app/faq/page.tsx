@@ -2,7 +2,7 @@ import { Open } from "@/icons";
 
 export const metadata = {
   title: "css2wind | Frequently Asked Questions",
-  description: "Learn more about Tailwind CSS",
+  description: "Learn more about Tailwind CSS.",
   applicationName: "css2wind",
   referrer: "origin-when-cross-origin",
   keywords: ["Tailwind", "CSS", "Bootstrap", "Style", "HTML"],
@@ -14,7 +14,7 @@ export const metadata = {
     images: "https://www.css2wind.com/og-faq.png",
     siteName: "css2wind",
     title: "css2wind | Frequently Asked Questions",
-    description: "Learn more about Tailwind CSS",
+    description: "Learn more about Tailwind CSS.",
   },
   twitter: {
     card: "summary_large_image",
@@ -35,20 +35,22 @@ export default function Faq() {
       </div>
       <ul className="mx-auto flex max-w-[800px] flex-col gap-20">
         <li id="what" className="flex flex-col gap-5 px-2 md:px-0 md:text-left">
-          <h3 className="text-2xl text-zinc-200 md:text-4xl">
+          <h3 className="text-2xl text-zinc-200 sm:text-4xl">
             What is{" "}
-            <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
+            <span className="bg-sky-300 px-2 font-black text-zinc-900">
               Tailwind
             </span>
-            <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
+            <span className="bg-sky-300 px-2 font-black text-zinc-900">
               CSS?
             </span>
           </h3>
           <p className="text-lg text-zinc-400 sm:text-xl">
-            Tailwind CSS is a utility-first framework with pre-built CSS classes
-            for responsive, customizable UIs. It promotes a functional styling
-            approach, offering flexibility through direct class manipulation for
-            efficient design control.
+            Tailwind CSS is a different way of writing CSS. It provides small
+            pieces of CSS, called utilities, which represent a single line of
+            CSS. It encourages colocation (keeping markdown and styles in the
+            same place) for easier maintenance. This means you don't need to
+            worry about naming your classes or styles affecting unwanted
+            elements.
           </p>
           <div className="flex flex-col gap-2 text-left text-zinc-200 sm:flex-row sm:text-lg md:text-xl">
             <span>Read More: </span>
@@ -66,12 +68,12 @@ export default function Faq() {
           id="inline"
           className="flex flex-col gap-5 px-2 md:px-0 md:text-left"
         >
-          <h3 className="text-2xl text-zinc-200 md:text-4xl">
+          <h3 className="text-2xl text-zinc-200 sm:text-4xl">
             Isn&apos;t that just{" "}
-            <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
+            <span className="bg-sky-300 px-2 font-black text-zinc-900">
               inline
             </span>
-            <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
+            <span className="bg-sky-300 px-2 font-black text-zinc-900">
               styles?
             </span>
           </h3>
@@ -102,9 +104,9 @@ export default function Faq() {
           id="bootstrap"
           className="flex flex-col gap-5 px-2 md:px-0 md:text-left"
         >
-          <h3 className="text-2xl text-zinc-200 md:text-4xl">
+          <h3 className="text-2xl text-zinc-200 sm:text-4xl">
             Why not use{" "}
-            <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
+            <span className="bg-sky-300 px-2 font-black text-zinc-900">
               Bootstrap
             </span>{" "}
             then?
@@ -130,15 +132,15 @@ export default function Faq() {
           </div>
         </li>
         <li id="html" className="flex flex-col gap-3 px-2 md:px-0 md:text-left">
-          <h3 className="text-2xl text-zinc-200 md:text-4xl">
+          <h3 className="text-2xl text-zinc-200 sm:text-4xl">
             Doesn&apos;t the{" "}
-            <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
+            <span className="bg-sky-300 px-2 font-black text-zinc-900">
               HTML
             </span>
-            <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
+            <span className="bg-sky-300 px-2 font-black text-zinc-900">
               get
             </span>
-            <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
+            <span className="bg-sky-300 px-2 font-black text-zinc-900">
               ugly?
             </span>
           </h3>
