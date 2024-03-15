@@ -48,8 +48,8 @@ export default function Faq() {
             Tailwind CSS is a different way of writing CSS. It provides small
             pieces of CSS, called utilities, which represent a single line of
             CSS. It encourages colocation (keeping markdown and styles in the
-            same place) for easier maintenance. This means you don't need to
-            worry about naming your classes or styles affecting unwanted
+            same place) for easier maintenance. This means you don&apos;t need
+            to worry about naming your classes or styles affecting unwanted
             elements.
           </p>
           <div className="flex flex-col gap-2 text-left text-zinc-200 sm:flex-row sm:text-lg md:text-xl">
