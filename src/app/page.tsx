@@ -16,11 +16,17 @@ export const metadata = {
     title: "css2wind | A minigame for learning Tailwind CSS",
     description: "A minigame for learning Tailwind CSS",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "css2wind, a minigame for learning Tailwind CSS",
+    description: "A minigame for learning Tailwind CSS",
+    images: { url: "https://www.css2wind.com/og-home.png" },
+  },
 };
 
 export default function Home() {
   return (
-    <main className="container mx-auto flex flex-col justify-center px-6 text-center">
+    <main className="container mx-auto flex flex-col justify-center px-6 pb-8 text-center md:pb-0">
       <Play />
       <Tutorial />
     </main>

@@ -16,6 +16,13 @@ export const metadata = {
     title: "css2wind | Frequently Asked Questions",
     description: "Learn more about Tailwind CSS",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "css2wind, a minigame for learning Tailwind CSS",
+    description:
+      "What is Tailwind? Isn't that just inline styles? Isn't that just Bootstrap? Doesn't the HTMl get ugly?",
+    images: { url: "https://www.css2wind.com/og-faq.png" },
+  },
 };
 
 export default function Faq() {
@@ -27,7 +34,7 @@ export default function Faq() {
         </h2>
       </div>
       <ul className="mx-auto flex max-w-[800px] flex-col gap-20">
-        <li className="flex flex-col gap-5 px-2 md:px-0 md:text-left">
+        <li id="what" className="flex flex-col gap-5 px-2 md:px-0 md:text-left">
           <h3 className="text-2xl text-zinc-200 md:text-4xl">
             What is{" "}
             <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
@@ -55,7 +62,10 @@ export default function Faq() {
             </a>
           </div>
         </li>
-        <li className="flex flex-col gap-5 px-2 md:px-0 md:text-left">
+        <li
+          id="inline"
+          className="flex flex-col gap-5 px-2 md:px-0 md:text-left"
+        >
           <h3 className="text-2xl text-zinc-200 md:text-4xl">
             Isn&apos;t that just{" "}
             <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
@@ -88,7 +98,10 @@ export default function Faq() {
             </a>
           </div>
         </li>
-        <li className="flex flex-col gap-5 px-2 md:px-0 md:text-left">
+        <li
+          id="bootstrap"
+          className="flex flex-col gap-5 px-2 md:px-0 md:text-left"
+        >
           <h3 className="text-2xl text-zinc-200 md:text-4xl">
             Why not use{" "}
             <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
@@ -116,7 +129,7 @@ export default function Faq() {
             </a>
           </div>
         </li>
-        <li className="flex flex-col gap-3 px-2 md:px-0 md:text-left">
+        <li id="html" className="flex flex-col gap-3 px-2 md:px-0 md:text-left">
           <h3 className="text-2xl text-zinc-200 md:text-4xl">
             Doesn&apos;t the{" "}
             <span className="bg-sky-300 px-2 py-px font-black text-zinc-900">
