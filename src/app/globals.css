@@ -9,6 +9,8 @@
   }
 }
 
-* {
-  min-width: 0;
+@layer utilities {
+  .debug {
+    @apply border border-red-500;
+  }
 }

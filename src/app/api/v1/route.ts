@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { dict } from "./v1";
 import { getRandomKey } from "@/utils";
+import { dict } from "./v1";
 
 export async function GET() {
   const data: Record<string, string[]> = {};

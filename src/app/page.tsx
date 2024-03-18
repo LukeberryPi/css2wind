@@ -1,6 +1,5 @@
 import { Tutorial, Play } from "@/components";
 import { headers } from "next/headers";
-import { parseJsonConfigFileContent } from "typescript";
 
 export const metadata = {
   title: "css2wind | Home",
