@@ -25,7 +25,7 @@ export default function Play({
   const [inputDisabled, setInputDisabled] = useState(false);
   const [resultCopied, setResultCopied] = useState(false);
   const [gameOver, setIsGameOver] = useState(false);
-  const [dict, setDict] = useState(propertyDictionary);
+  // const [dict, setDict] = useState(propertyDictionary);
 
   const {
     state,
@@ -41,11 +41,12 @@ export default function Play({
     ).length;
     setTimeout(() => {
       setIsGameOver(notSubmittedCount === 0);
-    }, 800);
+    }, 750);
   }, [score]);
 
   useEffect(() => {
-    setCurrentProperty(getRandomKey(dict));
+    console.log("setting current property to random key");
+    setCurrentProperty(getRandomKey(propertyDictionary));
   }, []);
 
   const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
@@ -62,7 +63,16 @@ export default function Play({
 
     setTimeout(() => {
       setAttempt("");
-      setCurrentProperty(getRandomKey(dict));
+      console.log("setting property on reset input");
+      setCurrentProperty(
+        getRandomKey(
+          Object.fromEntries(
+            Object.entries(propertyDictionary).filter(
+              ([key, _]) => key !== currentProperty,
+            ),
+          ),
+        ),
+      );
       mutateTranslationStatus({ type: "not_submitted" });
       setInputDisabled(false);
     }, afterMilisseconds);
