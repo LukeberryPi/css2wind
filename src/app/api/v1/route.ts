@@ -1,15 +1,8 @@
 import { NextResponse } from "next/server";
-import { getRandomKey } from "@/utils";
 import { dict } from "./v1";
 
+// i would love to fetch only 8 properties but i'm lazy
+// this is a gross workaround to (mostly) avoid repeating properties
 export async function GET() {
-  const data: Record<string, string[]> = {};
-  const numberOfProperties = 8;
-
-  for (let i = 0; i < numberOfProperties; i++) {
-    const randomProperty = getRandomKey(dict);
-    data[randomProperty] = dict[randomProperty];
-  }
-
-  return NextResponse.json(data);
+  return NextResponse.json(dict);
 }
