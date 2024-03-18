@@ -206,7 +206,7 @@ ${emojis}`;
               data-incorrect={incorrect}
               disabled={gameOver}
               onClick={() => handleReturnClick(attempt)}
-              className="absolute -bottom-[29px] right-0 w-20 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all focus:outline-none active:ring disabled:hidden data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed md:bottom-auto md:h-full md:w-28 md:text-xl data-[not-submitted=true]:md:hover:bg-zinc-800"
+              className="absolute -bottom-[29px] right-0 w-24 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all focus:outline-none active:ring disabled:hidden data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed md:bottom-auto md:h-full md:w-28 md:text-xl data-[not-submitted=true]:md:hover:bg-zinc-800"
             >
               return
             </button>
