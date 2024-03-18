@@ -23,6 +23,9 @@ export const metadata = {
       "What is Tailwind? Isn't that just inline styles? Isn't that just Bootstrap? Doesn't the HTMl get ugly?",
     images: { url: "https://www.css2wind.com/og-faq.png" },
   },
+  verification: {
+    google: "pWGXfs8mFFqr-ZqzvuVT82rztzmghIcc6gwy_qklleo",
+  },
 };
 
 export default function Faq() {
