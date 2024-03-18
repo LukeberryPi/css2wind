@@ -23,6 +23,9 @@ export const metadata = {
     description: "A minigame for learning Tailwind CSS.",
     images: { url: "https://www.css2wind.com/og-home.png" },
   },
+  // verification: {
+  //   google: "pWGXfs8mFFqr-ZqzvuVT82rztzmghIcc6gwy_qklleo",
+  // },
 };
 
 export default async function Home() {
