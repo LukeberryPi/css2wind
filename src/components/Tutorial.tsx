@@ -15,7 +15,7 @@ export default function Tutorial() {
   };
 
   const evaluateTutorial = (attempt: string) => {
-    if (attempt.trim() === "p-3") {
+    if (attempt.trim() === "p-3" || attempt.trim() === "p-[12px]") {
       setTutorialCorrect(true);
       setTutorialIncorrect(false);
       setTutorialNotSubmitted(false);

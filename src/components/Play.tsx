@@ -5,6 +5,7 @@ import { Arrow, Check, Close, Copy } from "@/icons";
 import { getRandomKey } from "@/utils";
 import { useState, useEffect } from "react";
 import Scoreboard from "./Scoreboard";
+import autoprefixer from "autoprefixer";
 
 const initialScore = Array(8).fill("not_submitted");
 
@@ -197,6 +198,9 @@ ${emojis}`;
               onKeyDown={(event) => handleKeyDown(event, attempt)}
               autoFocus
               autoComplete="off"
+              autoCorrect="off"
+              autoCapitalize="off"
+              spellCheck="true"
               data-not-submitted={notSubmitted}
               className="w-full bg-inherit p-5 text-lg focus:outline-none data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200 md:text-xl"
             />
