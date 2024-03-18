@@ -32,7 +32,7 @@ export default function Tutorial() {
     event: React.KeyboardEvent<HTMLInputElement>,
     attempt: string,
   ) => {
-    if (event.code == "Enter") {
+    if (event.key == "Enter") {
       event.preventDefault();
 
       if (!attempt.trim()) {

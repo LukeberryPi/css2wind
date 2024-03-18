@@ -84,7 +84,7 @@ export default function Play({
       return;
     }
 
-    if (event.code == "Enter") {
+    if (event.key == "Enter") {
       event.preventDefault();
       const evaluation = evaluateTranslation(
         translation.trim(),
