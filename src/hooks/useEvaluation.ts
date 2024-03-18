@@ -1,4 +1,4 @@
-import { dict } from "../../v1";
+import { dict } from "../app/api/v1/v1";
 import { useReducer } from "react";
 
 type State = {

@@ -1,4 +1,6 @@
 import { Tutorial, Play } from "@/components";
+import { headers } from "next/headers";
+import { parseJsonConfigFileContent } from "typescript";
 
 export const metadata = {
   title: "css2wind | Home",
@@ -24,10 +26,17 @@ export const metadata = {
   },
 };
 
-export default function Home() {
+export default async function Home() {
+  const host = headers().get("host");
+  const protocol = process?.env.NODE_ENV === "development" ? "http" : "https";
+  const response = await fetch(`${protocol}://${host}/api/v1`, {
+    cache: "no-store",
+  });
+  const json = await response.json();
+
   return (
     <main className="container mx-auto flex flex-col justify-center px-6 pb-8 text-center md:pb-0">
-      <Play />
+      <Play propertyDictionary={json} />
       <Tutorial />
     </main>
   );

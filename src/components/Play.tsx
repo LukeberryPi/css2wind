@@ -15,23 +15,17 @@ const initialState = {
   score: initialScore,
 };
 
-export const dict8: Record<string, string[]> = {
-  "align-items: baseline": ["items-baseline"],
-  "display: none": ["hidden"],
-  "flex-direction: column": ["flex-col"],
-  "height: 40px": ["h-10", "h-[40px]"],
-  "justify-content: space-between": ["justify-between"],
-  "margin-left: 1px": ["ml-px", "ml-[1px]"],
-  "max-height: 4px": ["max-h-1"],
-  "z-index: 50": ["z-50"],
-};
-
-export default function Play() {
+export default function Play({
+  propertyDictionary,
+}: {
+  propertyDictionary: Record<string, string[]>;
+}) {
   const [currentProperty, setCurrentProperty] = useState("");
   const [attempt, setAttempt] = useState("");
   const [inputDisabled, setInputDisabled] = useState(false);
   const [resultCopied, setResultCopied] = useState(false);
   const [gameOver, setIsGameOver] = useState(false);
+  const [currentDict, setCurrentDict] = useState(propertyDictionary);
 
   const {
     state,
@@ -51,7 +45,7 @@ export default function Play() {
   }, [score]);
 
   useEffect(() => {
-    setCurrentProperty(getRandomKey(dict8));
+    setCurrentProperty(getRandomKey(currentDict));
   }, []);
 
   const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
@@ -63,11 +57,19 @@ export default function Play() {
     setAttempt(attempt);
   };
 
+  const removeAttemptedProperty = (dict: Record<string, string[]>) => {
+    const updatedDict = Object.fromEntries(
+      Object.entries(dict).filter(([key, _]) => key !== currentProperty),
+    );
+    setCurrentDict(updatedDict);
+  };
+
   const resetInput = (afterMilisseconds = 800) => {
     setInputDisabled(true);
     setTimeout(() => {
       setAttempt("");
-      setCurrentProperty(getRandomKey(dict8));
+      removeAttemptedProperty(currentDict);
+      setCurrentProperty(getRandomKey(currentDict));
       mutateTranslationStatus({ type: "not_submitted" });
       setInputDisabled(false);
     }, afterMilisseconds);
