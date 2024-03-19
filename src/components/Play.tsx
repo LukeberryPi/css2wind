@@ -5,7 +5,6 @@ import { Arrow, Check, Close, Copy } from "@/icons";
 import { getRandomKey } from "@/utils";
 import { useState, useEffect } from "react";
 import Scoreboard from "./Scoreboard";
-import autoprefixer from "autoprefixer";
 
 const initialScore = Array(8).fill("not_submitted");
 
