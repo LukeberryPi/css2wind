@@ -8,6 +8,18 @@ import { usePathname } from "next/navigation";
 export default function Header() {
   const pathname = usePathname();
 
+  const navigateToFaq = () => {
+    const sure = confirm(
+      "You will lose your current game if you go to FAQ. Are you sure?",
+    );
+
+    if (!sure) {
+      return;
+    }
+
+    window.location.href = "/faq";
+  };
+
   return (
     <header className="fixed top-0 z-50 flex w-full items-center justify-between bg-inherit px-6 py-6 text-lg text-zinc-200 md:px-8">
       <nav className="flex w-full items-center justify-between">
@@ -34,16 +46,19 @@ export default function Header() {
             </Link>
           )}
           {pathname === "/" && (
-            <Link
+            <a
+              onClick={() => navigateToFaq()}
               className="flex items-center gap-4 px-3 py-2 text-zinc-200 ring-1 ring-zinc-200 hover:bg-zinc-800 active:ring md:px-4"
               href="/faq"
             >
               <Script className="text-zinc-200" />
-              <span className="hidden sm:inline">
-                Learn more{" "}
-                <span className="hidden lg:inline">about Tailwind CSS</span>
+              <span className="hidden md:inline">
+                <span className="inline lg:hidden">FAQ</span>
+                <span className="hidden lg:inline">
+                  Frequently Asked Questions
+                </span>
               </span>
-            </Link>
+            </a>
           )}
         </div>
       </nav>
