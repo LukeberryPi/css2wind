@@ -3,10 +3,11 @@
 import { Coffee, House, Script } from "@/icons";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Header() {
   const pathname = usePathname();
+  const router = useRouter();
 
   const navigateToFaq = () => {
     const sure = confirm(
@@ -17,7 +18,7 @@ export default function Header() {
       return;
     }
 
-    window.location.href = "/faq";
+    router.push("/faq");
   };
 
   return (
