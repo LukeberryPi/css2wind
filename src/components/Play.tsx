@@ -160,7 +160,8 @@ ${emojis}`;
             data-not-submitted={notSubmitted}
             data-correct={correct}
             data-incorrect={incorrect}
-            className="w-64 origin-center p-5 text-lg ring-1 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-sky-300 data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:ring-sky-300 tiny:w-80 sm:w-96 md:w-[420px] md:text-xl"
+            data-game-over={gameOver}
+            className="relative data-[game-over=true]:justify-between data-[game-over=true]:flex w-64 origin-center p-5 text-lg ring-1 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-sky-300 data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:ring-sky-300 tiny:w-80 sm:w-96 md:w-[420px] md:text-xl"
           >
             {gameOver ? (
               <span>Game over!</span>
@@ -169,6 +170,10 @@ ${emojis}`;
             ) : (
               "..."
             )}
+            <button data-game-over={gameOver} className="hidden absolute right-0 top-0 data-[game-over=true]:flex h-full w-fit items-center justify-center gap-3 pr-5 pl-4 ring-1 ring-sky-300 bg-inherit hover:bg-zinc-800">
+              <Restart />
+              <span>Play Again</span>
+            </button>
           </span>
           <span className="hidden tiny:inline">&#125;</span>
         </div>
@@ -217,7 +222,7 @@ ${emojis}`;
               disabled={!gameOver}
               onClick={handleCopyClick}
               className={`absolute -bottom-[33px] right-0 flex h-8 md:top-0 md:h-full ${
-                resultCopied ? "w-40" : "w-32"
+                resultCopied ? "px-6" : "px-5"
               } items-center justify-center gap-2 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all active:ring disabled:hidden md:gap-4 md:text-xl md:hover:bg-zinc-800`}
             >
               <Copy className="h-6 w-6" />
@@ -234,7 +239,7 @@ ${emojis}`;
           e.preventDefault();
           window.location.href = "/";
         }}
-        className="hidden w-fit items-center justify-between gap-4 self-center px-4 py-2 text-sky-300 ring-1 ring-sky-300 active:ring data-[game-over=true]:flex"
+        className="hidden w-fit items-center justify-between gap-4 self-center px-4 py-2 text-sky-300 ring-1 ring-sky-300 active:ring data-[game-over=true]:hidden"
       >
         <Restart />
         Play Again
