@@ -68,7 +68,7 @@ export default function Footer() {
       {tutorialIsVisible && pathname === "/" && (
         <button
           onClick={() => scroll("top")}
-          className="flex items-center gap-4 px-4 py-2 ring-1 ring-sky-300 active:ring"
+          className="flex items-center gap-4 px-4 py-2 ring-1 ring-sky-300 hover:bg-zinc-800 active:ring"
         >
           <span className="hidden text-sky-300 tiny:inline md:text-lg">
             Play Now!
