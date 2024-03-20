@@ -1,7 +1,7 @@
 "use client";
 
 import { useEvaluation } from "@/hooks";
-import { Arrow, Check, Close, Copy } from "@/icons";
+import { Arrow, Check, Close, Copy, Restart } from "@/icons";
 import { getRandomKey } from "@/utils";
 import { useState, useEffect } from "react";
 import Scoreboard from "./Scoreboard";
@@ -147,7 +147,7 @@ ${emojis}`;
   return (
     <section
       id="play"
-      className="mx-auto flex h-screen flex-col justify-center gap-8 md:gap-16"
+      className="relative mx-auto flex h-screen flex-col justify-center gap-8 md:gap-16"
     >
       <h3 className="text-lg text-zinc-200 sm:text-2xl">
         Translate the <span className="text-sky-300">CSS property</span> to its
@@ -228,6 +228,17 @@ ${emojis}`;
         </div>
       </div>
       <Scoreboard score={score} />
+      <button
+        data-game-over={gameOver}
+        onClick={(e: any) => {
+          e.preventDefault();
+          window.location.href = "/";
+        }}
+        className="hidden w-fit items-center justify-between gap-4 self-center px-4 py-2 text-sky-300 ring-1 ring-sky-300 active:ring data-[game-over=true]:flex"
+      >
+        <Restart />
+        Play Again
+      </button>
       {/* debug */}
       {/* <button onClick={handleCopyClick}>copy</button>
       <button onClick={() => setIsGameOver(true)}> end game</button> */}

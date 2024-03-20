@@ -13,7 +13,7 @@ export default function Scoreboard({ score }: ScoreboardProps) {
   const notSubmittedCount = score.filter((el) => el === "not_submitted").length;
 
   return (
-    <div className="relative flex flex-col items-center justify-center gap-8">
+    <div className="flex flex-col items-center justify-center gap-8 lg:flex-row-reverse">
       <div className="flex max-w-[180px] flex-wrap items-center justify-center gap-4 md:max-w-none">
         {score.map((item, i) => (
           <span key={i}>{iconMap[item]}</span>

@@ -24,13 +24,13 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 z-50 flex w-full items-center justify-between bg-inherit px-6 py-6 text-lg text-zinc-200 md:px-8">
+    <header className="fixed top-0 z-50 flex w-full items-center justify-between bg-inherit p-6 text-zinc-200">
       <nav className="flex w-full items-center justify-between">
         <Link href="/" className="flex items-center gap-5">
           <Image src="/logo.svg" alt="logo" width={32} height={32} />
           <span className="hidden text-2xl tiny:block">css2wind</span>
         </Link>
-        <div className="flex items-center justify-center gap-6 md:gap-10">
+        <div className="flex items-center justify-center gap-8">
           <a
             href="https://tailwind.com/docs/padding"
             target="_blank"
