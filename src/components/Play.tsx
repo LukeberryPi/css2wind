@@ -14,6 +14,8 @@ const initialState = {
   incorrect: false,
   notSubmitted: true,
   score: initialScore,
+  showCorrectAnswer: false,
+  correctAnswersList: [],
 };
 
 export default function Play({
@@ -32,16 +34,38 @@ export default function Play({
     evaluateTranslation,
     mutate: mutateTranslationStatus,
   } = useEvaluation(initialState);
-  const { correct, incorrect, notSubmitted, score } = state;
+  const {
+    correct,
+    incorrect,
+    notSubmitted,
+    score,
+    showCorrectAnswer: isShowingCorrectAnswer,
+    correctAnswersList,
+  } = state;
+
+  const lastCorrectAnswers = correctAnswersList.at(-1);
+  const areAnswersLongerThanInput = lastCorrectAnswers
+    ? lastCorrectAnswers?.join(", ").length >= 23
+    : false;
+
+  const correctAnswerToDisplay = areAnswersLongerThanInput
+    ? lastCorrectAnswers?.at(0)
+    : lastCorrectAnswers?.join(", ");
 
   // work around animation transitions for smooth rendering of copy button
   useEffect(() => {
+    const hasNotSubmittedScore = score.some((el) => el === "not_submitted");
     const notSubmittedCount = score.filter(
       (el) => el === "not_submitted",
     ).length;
+    if (hasNotSubmittedScore) return;
+
+    const isLastAnswerCorrect = score.at(-1) === "correct";
+    const timeout = isLastAnswerCorrect ? 800 : 2400;
+
     setTimeout(() => {
-      setIsGameOver(notSubmittedCount === 0);
-    }, 750);
+      setIsGameOver(true);
+    }, timeout);
   }, [score]);
 
   useEffect(() => {
@@ -55,6 +79,12 @@ export default function Play({
 
     const attempt = event.currentTarget.value;
     setAttempt(attempt);
+  };
+
+  const showCorrectAnswer = (afterMilisseconds = 800) => {
+    setTimeout(() => {
+      mutateTranslationStatus({ type: "show_correct_answer" });
+    }, afterMilisseconds);
   };
 
   const resetInput = (afterMilisseconds = 800) => {
@@ -96,6 +126,13 @@ export default function Play({
         return;
       }
 
+      if (evaluation === "incorrect") {
+        showCorrectAnswer();
+        resetInput(2400);
+
+        return;
+      }
+
       resetInput();
     }
   };
@@ -116,6 +153,13 @@ export default function Play({
 
     if (someElementHasFocus) {
       document.getElementById("play-input")?.focus();
+    }
+
+    if (evaluation === "incorrect") {
+      showCorrectAnswer(800);
+      resetInput(2400);
+
+      return;
     }
 
     resetInput();
@@ -187,30 +231,53 @@ ${emojis}`;
           <div
             data-not-submitted={notSubmitted}
             data-correct={correct}
+            data-show-correct-answer={isShowingCorrectAnswer}
             data-incorrect={incorrect}
-            className="relative w-64 origin-center ring-1 ring-zinc-200 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed tiny:w-80 sm:w-96 md:w-[420px]"
+            className="relative w-64 origin-center ring-1 ring-zinc-200 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[show-correct-answer=true]:text-greenGo data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed tiny:w-80 sm:w-96 md:w-[420px]"
           >
-            <input
-              id="play-input"
-              disabled={gameOver}
-              value={gameOver ? "Share your result!" : attempt}
-              onChange={(event) => handleChange(event)}
-              onKeyDown={(event) => handleKeyDown(event, attempt)}
-              autoFocus
-              autoComplete="off"
-              autoCorrect="off"
-              autoCapitalize="off"
-              spellCheck="true"
-              data-not-submitted={notSubmitted}
-              className="w-full bg-inherit p-5 text-lg focus:outline-none data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200 md:text-xl"
-            />
+            <div
+              style={{
+                transformStyle: "preserve-3d",
+                transform: isShowingCorrectAnswer
+                  ? "rotateX(180deg)"
+                  : "rotateX(0deg)",
+              }}
+              className={`relative bg-zinc-950 duration-500`}
+            >
+              <input
+                id="play-input"
+                disabled={gameOver}
+                value={gameOver ? "Share your result!" : attempt}
+                onChange={(event) => handleChange(event)}
+                onKeyDown={(event) => handleKeyDown(event, attempt)}
+                autoFocus
+                autoComplete="off"
+                autoCorrect="off"
+                autoCapitalize="off"
+                spellCheck="true"
+                data-not-submitted={notSubmitted}
+                style={{
+                  backfaceVisibility: "hidden",
+                }}
+                className="w-full bg-inherit bg-zinc-950 p-5 text-lg focus:outline-none data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200 md:text-xl"
+              />
+              <input
+                disabled
+                style={{
+                  backfaceVisibility: "hidden",
+                  transform: "rotateX(180deg)",
+                }}
+                className="absolute inset-0  w-full  bg-inherit bg-zinc-950 p-5 text-lg focus:outline-none  data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200 md:text-xl"
+                value={correctAnswerToDisplay}
+              />
+            </div>
             <button
               data-not-submitted={notSubmitted}
               data-correct={correct}
               data-incorrect={incorrect}
               disabled={gameOver}
               onClick={() => handleReturnClick(attempt)}
-              className="absolute -bottom-[29px] right-0 w-24 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all focus:outline-none active:ring disabled:hidden data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed md:bottom-auto md:h-full md:w-28 md:text-xl data-[not-submitted=true]:md:hover:bg-zinc-800"
+              className="absolute -bottom-[29px] right-0 w-24 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all focus:outline-none active:ring disabled:hidden data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed md:bottom-auto md:top-0 md:h-full md:w-28 md:text-xl data-[not-submitted=true]:md:hover:bg-zinc-800"
             >
               return
             </button>
