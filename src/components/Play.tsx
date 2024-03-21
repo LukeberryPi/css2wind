@@ -3,9 +3,8 @@
 import { useEvaluation } from "@/hooks";
 import { Arrow, Check, Close, Copy } from "@/icons";
 import { getRandomKey } from "@/utils";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Scoreboard from "./Scoreboard";
-import autoprefixer from "autoprefixer";
 
 const initialScore = Array(8).fill("not_submitted");
 
@@ -215,7 +214,7 @@ ${emojis}`;
           <span className="hidden tiny:inline">&#125;</span>
         </div>
         {notSubmitted && (
-          <Arrow className="h-6 w-6 rotate-90 fill-zinc-100 md:h-8 md:w-8 lg:rotate-0" />
+          <Arrow className="h-6 w-6 fill-zinc-100 rotate-90 md:h-8 md:w-8 lg:rotate-0" />
         )}
         {correct && (
           <Check className="h-6 w-6 animate-lift fill-greenGo md:h-8 md:w-8" />
@@ -233,13 +232,8 @@ ${emojis}`;
             className="relative w-64 origin-center ring-1 ring-zinc-200 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[show-correct-answer=true]:text-greenGo data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed tiny:w-80 sm:w-96 md:w-[420px]"
           >
             <div
-              style={{
-                transformStyle: "preserve-3d",
-                transform: isShowingCorrectAnswer
-                  ? "rotateX(180deg)"
-                  : "rotateX(0deg)",
-              }}
-              className={`relative bg-zinc-950 duration-500`}
+              data-show-correct-answer={isShowingCorrectAnswer}
+              className={`relative bg-zinc-950 duration-500 transform-style-3d data-[show-correct-answer=true]:rotate-x-180`}
             >
               <input
                 id="play-input"
@@ -253,18 +247,11 @@ ${emojis}`;
                 autoCapitalize="off"
                 spellCheck="true"
                 data-not-submitted={notSubmitted}
-                style={{
-                  backfaceVisibility: "hidden",
-                }}
-                className="w-full bg-inherit bg-zinc-950 p-5 text-lg focus:outline-none data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200 md:text-xl"
+                className="w-full bg-inherit bg-zinc-950 p-5 text-lg backface-hidden focus:outline-none data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200 md:text-xl"
               />
               <input
                 disabled
-                style={{
-                  backfaceVisibility: "hidden",
-                  transform: "rotateX(180deg)",
-                }}
-                className="absolute inset-0  w-full  bg-inherit bg-zinc-950 p-5 text-lg focus:outline-none  data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200 md:text-xl"
+                className="absolute inset-0 w-full  bg-inherit  bg-zinc-950 p-5 text-lg rotate-x-180 backface-hidden focus:outline-none  data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200 md:text-xl"
                 value={correctAnswerToDisplay}
               />
             </div>
