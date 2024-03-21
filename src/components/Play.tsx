@@ -55,9 +55,6 @@ export default function Play({
   // work around animation transitions for smooth rendering of copy button
   useEffect(() => {
     const hasNotSubmittedScore = score.some((el) => el === "not_submitted");
-    const notSubmittedCount = score.filter(
-      (el) => el === "not_submitted",
-    ).length;
     if (hasNotSubmittedScore) return;
 
     const isLastAnswerCorrect = score.at(-1) === "correct";
@@ -127,7 +124,7 @@ export default function Play({
       }
 
       if (evaluation === "incorrect") {
-        showCorrectAnswer();
+        showCorrectAnswer(800);
         resetInput(2400);
 
         return;
