@@ -58,7 +58,7 @@ export default function Footer() {
   return (
     <footer className="fixed bottom-0 flex w-full items-center justify-between bg-inherit p-6">
       <a
-        className="flex items-center gap-3 p-3 text-zinc-200 hover:bg-zinc-800"
+        className="flex items-center gap-3 p-3 text-zinc-200 hover:opacity-80"
         target="_blank"
         href="https://github.com/LukeberryPi/css2wind"
       >
@@ -68,23 +68,23 @@ export default function Footer() {
       {tutorialIsVisible && pathname === "/" && (
         <button
           onClick={() => scroll("top")}
-          className="flex items-center gap-3 p-3 ring-1 ring-sky-300 hover:bg-zinc-800 active:ring"
+          className="flex items-center gap-3 p-3 ring-1 ring-sky-300 hover:opacity-80 active:ring"
         >
           <span className="hidden text-sky-300 tiny:inline">Play Now!</span>
-          <Arrow className="-rotate-90 fill-sky-300" />
+          <Arrow className="fill-sky-300 -rotate-90" />
         </button>
       )}
       {!tutorialIsVisible && pathname === "/" && (
         <button
           onClick={() => scroll("bottom")}
-          className="flex items-center gap-4 self-center px-4 py-2 ring-1 ring-zinc-200 hover:bg-zinc-800 active:ring"
+          className="flex items-center gap-3 self-center p-3 ring-1 ring-zinc-200 hover:opacity-80 active:ring"
         >
           <span className="hidden text-zinc-200 tiny:inline">How to Play?</span>
-          <Arrow className="rotate-90 fill-zinc-200" />
+          <Arrow className="fill-zinc-200 rotate-90" />
         </button>
       )}
       <a
-        className="flex items-center gap-3 p-3 text-zinc-200 hover:bg-zinc-800"
+        className="flex items-center gap-3 p-3 text-zinc-200 hover:opacity-80"
         target="_blank"
         href="https://twitter.com/LukeberryPi"
       >

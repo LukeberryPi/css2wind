@@ -57,7 +57,7 @@ export default function Play({
     if (hasNotSubmittedScore) return;
 
     const isLastAnswerCorrect = score.at(-1) === "correct";
-    const timeout = isLastAnswerCorrect ? 850 : 2950;
+    const timeout = isLastAnswerCorrect ? 900 : 3000;
 
     setTimeout(() => {
       setIsGameOver(true);
@@ -202,7 +202,7 @@ ${emojis}`;
             data-correct={correct}
             data-incorrect={incorrect}
             data-game-over={gameOver}
-            className="relative data-[game-over=true]:justify-between data-[game-over=true]:flex w-64 origin-center p-5 text-lg ring-1 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-sky-300 data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:ring-sky-300 tiny:w-80 sm:w-96 md:w-[420px] md:text-xl"
+            className="relative w-64 origin-center p-5 text-center text-lg ring-1 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-sky-300 data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:ring-sky-300 tiny:w-80 sm:w-96 md:w-[420px] md:text-xl"
           >
             {gameOver ? (
               <span>Game over!</span>
@@ -211,10 +211,6 @@ ${emojis}`;
             ) : (
               "..."
             )}
-            <button data-game-over={gameOver} className="hidden absolute right-0 top-0 data-[game-over=true]:flex h-full w-fit items-center justify-center gap-3 pr-5 pl-4 ring-1 ring-sky-300 bg-inherit hover:bg-zinc-800">
-              <Restart />
-              <span>Play Again</span>
-            </button>
           </span>
           <span className="hidden tiny:inline">&#125;</span>
         </div>
@@ -238,7 +234,7 @@ ${emojis}`;
           >
             <div
               data-show-correct-answer={isShowingCorrectAnswer}
-              className="relative duration-400 transition-transform transform-style-3d data-[show-correct-answer=true]:rotate-x-180"
+              className="duration-400 relative transition-transform transform-style-3d data-[show-correct-answer=true]:rotate-x-180"
             >
               <input
                 id="play-input"
@@ -266,7 +262,7 @@ ${emojis}`;
               data-incorrect={incorrect}
               disabled={gameOver}
               onClick={() => handleReturnClick(attempt)}
-              className="absolute -bottom-[29px] right-0 w-24 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all focus:outline-none active:ring disabled:hidden data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed md:bottom-auto md:top-0 md:h-full md:w-28 md:text-xl data-[not-submitted=true]:md:hover:bg-zinc-800"
+              className="absolute -bottom-[29px] right-0 w-24 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all focus:outline-none active:ring disabled:hidden data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed md:bottom-auto md:top-0 md:h-full md:w-28 md:text-xl data-[not-submitted=true]:md:hover:opacity-80"
             >
               return
             </button>
@@ -274,8 +270,8 @@ ${emojis}`;
               disabled={!gameOver}
               onClick={handleCopyClick}
               className={`absolute -bottom-[33px] right-0 flex h-8 md:top-0 md:h-full ${
-                resultCopied ? "px-6" : "px-5"
-              } items-center justify-center gap-2 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all active:ring disabled:hidden md:gap-4 md:text-xl md:hover:bg-zinc-800`}
+                resultCopied ? "w-40" : "w-32"
+              } items-center justify-center gap-2 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all active:ring disabled:hidden md:gap-4 md:text-xl md:hover:opacity-80`}
             >
               <Copy className="h-6 w-6" />
               {resultCopied ? "Copied!" : "Copy"}
@@ -291,10 +287,10 @@ ${emojis}`;
           e.preventDefault();
           window.location.href = "/";
         }}
-        className="hidden w-fit items-center justify-between gap-4 self-center px-4 py-2 text-sky-300 ring-1 ring-sky-300 active:ring data-[game-over=true]:hidden"
+        className="hidden items-center justify-between gap-3 self-center p-3 text-sky-300 ring-1 ring-sky-300 active:ring data-[game-over=true]:flex"
       >
         <Restart />
-        Play Again
+        <span>Play Again</span>
       </button>
       {/* debug */}
       {/* <button onClick={handleCopyClick}>copy</button>

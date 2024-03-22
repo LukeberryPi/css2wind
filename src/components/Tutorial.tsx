@@ -97,7 +97,7 @@ export default function Tutorial() {
           &#125;
         </div>
         {tutorialNotSubmitted && (
-          <Arrow className="h-6 w-6 rotate-90 fill-zinc-200 md:h-8 md:w-8 lg:rotate-0" />
+          <Arrow className="h-6 w-6 fill-zinc-200 rotate-90 md:h-8 md:w-8 lg:rotate-0" />
         )}
         {tutorialCorrect && (
           <Check className="h-6 w-6 animate-lift fill-greenGo md:h-8 md:w-8" />
@@ -129,7 +129,7 @@ export default function Tutorial() {
               data-tutorial-incorrect={tutorialIncorrect}
               onClick={() => handleReturnClick(tutorialAttempt)}
               className="absolute -bottom-[29px] right-0 w-24 text-lg text-zinc-200
-              ring-1 ring-zinc-200 transition-all focus:outline-none active:ring data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-correct=true]:ring-greenGo data-[tutorial-incorrect=true]:ring-alertRed md:bottom-auto md:h-full md:w-28 md:text-xl data-[tutorial-not-submitted=true]:md:hover:bg-zinc-800"
+              ring-1 ring-zinc-200 transition-all focus:outline-none active:ring data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-correct=true]:ring-greenGo data-[tutorial-incorrect=true]:ring-alertRed md:bottom-auto md:h-full md:w-28 md:text-xl data-[tutorial-not-submitted=true]:md:hover:opacity-80"
             >
               return
             </button>

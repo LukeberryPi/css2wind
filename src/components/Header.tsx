@@ -28,13 +28,13 @@ export default function Header() {
       <nav className="flex w-full items-center justify-between">
         <Link href="/" className="flex items-center gap-5">
           <Image src="/logo.svg" alt="logo" width={32} height={32} />
-          <span className="hidden text-2xl tiny:block">css2wind</span>
+          <span className="hidden text-2xl xs:block">css2wind</span>
         </Link>
         <div className="flex items-center justify-center gap-8">
           <a
             href="https://tailwindcss.com/docs/padding"
             target="_blank"
-            className="flex items-center gap-3 p-3 text-sky-300 ring-1 ring-sky-300 hover:bg-zinc-800 active:ring"
+            className="flex items-center gap-3 p-3 text-sky-300 ring-1 ring-sky-300 hover:opacity-80 active:ring"
           >
             <Tailwind />
             <span className="hidden lg:inline">Tailwind Docs</span>
@@ -43,7 +43,7 @@ export default function Header() {
           <a
             href="https://www.buymeacoffee.com/lukeberrypi"
             target="_blank"
-            className="flex items-center gap-3 p-3 text-purple-400 ring-1 ring-purple-400 hover:bg-zinc-800 active:ring"
+            className="flex items-center gap-3 p-3 text-purple-400 ring-1 ring-purple-400 hover:opacity-80 active:ring"
           >
             <Coffee />
             <span className="hidden lg:inline">Buy me a Coffee!</span>
@@ -61,7 +61,7 @@ export default function Header() {
           {pathname === "/" && (
             <a
               onClick={(e) => navigateToFaq(e)}
-              className="flex items-center gap-3 p-3 text-zinc-200 ring-1 ring-zinc-200 hover:bg-zinc-800 active:ring"
+              className="flex items-center gap-3 p-3 text-zinc-200 ring-1 ring-zinc-200 hover:opacity-80 active:ring"
               href="/faq"
             >
               <Script className="text-zinc-200" />
