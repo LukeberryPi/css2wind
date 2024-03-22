@@ -57,7 +57,7 @@ export default function Play({
     if (hasNotSubmittedScore) return;
 
     const isLastAnswerCorrect = score.at(-1) === "correct";
-    const timeout = isLastAnswerCorrect ? 800 : 2400;
+    const timeout = isLastAnswerCorrect ? 850 : 2950;
 
     setTimeout(() => {
       setIsGameOver(true);
@@ -77,13 +77,13 @@ export default function Play({
     setAttempt(attempt);
   };
 
-  const showCorrectAnswer = (afterMilisseconds = 800) => {
+  const showCorrectAnswer = (afterMilisseconds = 900) => {
     setTimeout(() => {
       mutateTranslationStatus({ type: "show_correct_answer" });
     }, afterMilisseconds);
   };
 
-  const resetInput = (afterMilisseconds = 800) => {
+  const resetInput = (afterMilisseconds = 900) => {
     setInputDisabled(true);
 
     setTimeout(() => {
@@ -123,8 +123,8 @@ export default function Play({
       }
 
       if (evaluation === "incorrect") {
-        showCorrectAnswer(800);
-        resetInput(2400);
+        showCorrectAnswer(900);
+        resetInput(3000);
 
         return;
       }
@@ -152,8 +152,8 @@ export default function Play({
     }
 
     if (evaluation === "incorrect") {
-      showCorrectAnswer(800);
-      resetInput(2400);
+      showCorrectAnswer(900);
+      resetInput(3000);
 
       return;
     }
@@ -234,11 +234,11 @@ ${emojis}`;
             data-correct={correct}
             data-show-correct-answer={isShowingCorrectAnswer}
             data-incorrect={incorrect}
-            className="relative w-64 origin-center ring-1 ring-zinc-200 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[show-correct-answer=true]:text-greenGo data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed tiny:w-80 sm:w-96 md:w-[420px]"
+            className="relative w-64 origin-center ring-1 ring-zinc-200 transition-colors data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[show-correct-answer=true]:text-greenGo data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed tiny:w-80 sm:w-96 md:w-[420px]"
           >
             <div
               data-show-correct-answer={isShowingCorrectAnswer}
-              className={`relative bg-zinc-950 duration-500 transform-style-3d data-[show-correct-answer=true]:rotate-x-180`}
+              className="relative duration-400 transition-transform transform-style-3d data-[show-correct-answer=true]:rotate-x-180"
             >
               <input
                 id="play-input"
