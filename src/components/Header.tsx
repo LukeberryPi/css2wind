@@ -34,7 +34,7 @@ export default function Header() {
           <a
             href="https://tailwind.com/docs/padding"
             target="_blank"
-            className="flex items-center gap-4 px-3 py-2 text-sky-300 ring-1 ring-sky-300 hover:bg-zinc-800 active:ring md:px-4"
+            className="flex items-center gap-3 p-3 text-sky-300 ring-1 ring-sky-300 hover:bg-zinc-800 active:ring"
           >
             <Tailwind />
             <span className="hidden lg:inline">Tailwind Docs</span>
@@ -43,7 +43,7 @@ export default function Header() {
           <a
             href="https://www.buymeacoffee.com/lukeberrypi"
             target="_blank"
-            className="flex items-center gap-4 px-3 py-2 text-purple-400 ring-1 ring-purple-400 hover:bg-zinc-800 active:ring md:px-4"
+            className="flex items-center gap-3 p-3 text-purple-400 ring-1 ring-purple-400 hover:bg-zinc-800 active:ring"
           >
             <Coffee />
             <span className="hidden lg:inline">Buy me a Coffee!</span>
@@ -51,7 +51,7 @@ export default function Header() {
           </a>
           {pathname === "/faq" && (
             <Link
-              className="flex items-center gap-4 px-3 py-2 text-sky-300 ring-1 ring-sky-300 active:ring md:px-4"
+              className="flex items-center gap-3 p-3 text-sky-300 ring-1 ring-sky-300 active:ring"
               href="/"
             >
               <House />
@@ -61,7 +61,7 @@ export default function Header() {
           {pathname === "/" && (
             <a
               onClick={(e) => navigateToFaq(e)}
-              className="flex items-center gap-4 px-3 py-2 text-zinc-200 ring-1 ring-zinc-200 hover:bg-zinc-800 active:ring md:px-4"
+              className="flex items-center gap-3 p-3 text-zinc-200 ring-1 ring-zinc-200 hover:bg-zinc-800 active:ring"
               href="/faq"
             >
               <Script className="text-zinc-200" />
