@@ -36,7 +36,7 @@ And build the website:
 
 Now, this url should be running css2wind locally!
 
-[http://localhost:5173/](http://localhost:3000/)
+[http://localhost:3000/](http://localhost:3000/)
 
 ---
 
