@@ -1,7 +1,7 @@
 "use client";
 
 import { useEvaluation } from "@/hooks";
-import { Arrow, Check, Close, Copy } from "@/icons";
+import { Arrow, Check, Close, Copy, Restart } from "@/icons";
 import { getRandomKey } from "@/utils";
 import { useEffect, useState } from "react";
 import Scoreboard from "./Scoreboard";
@@ -57,7 +57,7 @@ export default function Play({
     if (hasNotSubmittedScore) return;
 
     const isLastAnswerCorrect = score.at(-1) === "correct";
-    const timeout = isLastAnswerCorrect ? 800 : 2400;
+    const timeout = isLastAnswerCorrect ? 900 : 3000;
 
     setTimeout(() => {
       setIsGameOver(true);
@@ -77,13 +77,13 @@ export default function Play({
     setAttempt(attempt);
   };
 
-  const showCorrectAnswer = (afterMilisseconds = 800) => {
+  const showCorrectAnswer = (afterMilisseconds = 900) => {
     setTimeout(() => {
       mutateTranslationStatus({ type: "show_correct_answer" });
     }, afterMilisseconds);
   };
 
-  const resetInput = (afterMilisseconds = 800) => {
+  const resetInput = (afterMilisseconds = 900) => {
     setInputDisabled(true);
 
     setTimeout(() => {
@@ -123,8 +123,8 @@ export default function Play({
       }
 
       if (evaluation === "incorrect") {
-        showCorrectAnswer(800);
-        resetInput(2400);
+        showCorrectAnswer(900);
+        resetInput(3000);
 
         return;
       }
@@ -152,8 +152,8 @@ export default function Play({
     }
 
     if (evaluation === "incorrect") {
-      showCorrectAnswer(800);
-      resetInput(2400);
+      showCorrectAnswer(900);
+      resetInput(3000);
 
       return;
     }
@@ -188,7 +188,7 @@ ${emojis}`;
   return (
     <section
       id="play"
-      className="mx-auto flex h-screen flex-col justify-center gap-8 md:gap-16"
+      className="relative mx-auto flex h-screen flex-col justify-center gap-8 md:gap-16"
     >
       <h3 className="text-lg text-zinc-200 sm:text-2xl">
         Translate the <span className="text-sky-300">CSS property</span> to its
@@ -201,7 +201,8 @@ ${emojis}`;
             data-not-submitted={notSubmitted}
             data-correct={correct}
             data-incorrect={incorrect}
-            className="w-64 origin-center p-5 text-lg ring-1 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-sky-300 data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:ring-sky-300 tiny:w-80 sm:w-96 md:w-[420px] md:text-xl"
+            data-game-over={gameOver}
+            className="relative w-64 origin-center p-5 text-center text-lg ring-1 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-sky-300 data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:ring-sky-300 tiny:w-80 sm:w-96 md:w-[420px] md:text-xl"
           >
             {gameOver ? (
               <span>Game over!</span>
@@ -229,11 +230,11 @@ ${emojis}`;
             data-correct={correct}
             data-show-correct-answer={isShowingCorrectAnswer}
             data-incorrect={incorrect}
-            className="relative w-64 origin-center ring-1 ring-zinc-200 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[show-correct-answer=true]:text-greenGo data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed tiny:w-80 sm:w-96 md:w-[420px]"
+            className="relative w-64 origin-center ring-1 ring-zinc-200 transition-colors data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[show-correct-answer=true]:text-greenGo data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed tiny:w-80 sm:w-96 md:w-[420px]"
           >
             <div
               data-show-correct-answer={isShowingCorrectAnswer}
-              className={`relative bg-zinc-950 duration-500 transform-style-3d data-[show-correct-answer=true]:rotate-x-180`}
+              className="duration-400 relative transition-transform transform-style-3d data-[show-correct-answer=true]:rotate-x-180"
             >
               <input
                 id="play-input"
@@ -261,7 +262,7 @@ ${emojis}`;
               data-incorrect={incorrect}
               disabled={gameOver}
               onClick={() => handleReturnClick(attempt)}
-              className="absolute -bottom-[29px] right-0 w-24 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all focus:outline-none active:ring disabled:hidden data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed md:bottom-auto md:top-0 md:h-full md:w-28 md:text-xl data-[not-submitted=true]:md:hover:bg-zinc-800"
+              className="absolute -bottom-[29px] right-0 w-24 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all focus:outline-none active:ring disabled:hidden data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed md:bottom-auto md:top-0 md:h-full md:w-28 md:text-xl data-[not-submitted=true]:md:hover:opacity-80"
             >
               return
             </button>
@@ -270,7 +271,7 @@ ${emojis}`;
               onClick={handleCopyClick}
               className={`absolute -bottom-[33px] right-0 flex h-8 md:top-0 md:h-full ${
                 resultCopied ? "w-40" : "w-32"
-              } items-center justify-center gap-2 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all active:ring disabled:hidden md:gap-4 md:text-xl md:hover:bg-zinc-800`}
+              } items-center justify-center gap-2 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all active:ring disabled:hidden md:gap-4 md:text-xl md:hover:opacity-80`}
             >
               <Copy className="h-6 w-6" />
               {resultCopied ? "Copied!" : "Copy"}
@@ -280,6 +281,17 @@ ${emojis}`;
         </div>
       </div>
       <Scoreboard score={score} />
+      <button
+        data-game-over={gameOver}
+        onClick={(e: any) => {
+          e.preventDefault();
+          window.location.href = "/";
+        }}
+        className="hidden items-center justify-between gap-3 self-center p-3 text-sky-300 ring-1 ring-sky-300 active:ring data-[game-over=true]:flex"
+      >
+        <Restart />
+        <span>Play Again</span>
+      </button>
       {/* debug */}
       {/* <button onClick={handleCopyClick}>copy</button>
       <button onClick={() => setIsGameOver(true)}> end game</button> */}

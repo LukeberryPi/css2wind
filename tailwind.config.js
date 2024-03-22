@@ -16,8 +16,8 @@ module.exports = {
         greenGo: "#4FBF85",
       },
       animation: {
-        shake: "shake 0.8s cubic-bezier(.36,.07,.19,.97) both",
-        lift: "lift 0.8s cubic-bezier(.36,.07,.19,.97) both",
+        shake: "shake 0.9s cubic-bezier(.36,.07,.19,.97) both",
+        lift: "lift 0.9s cubic-bezier(.36,.07,.19,.97) both",
       },
       keyframes: {
         lift: {
