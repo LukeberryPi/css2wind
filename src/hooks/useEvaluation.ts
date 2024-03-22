@@ -5,11 +5,25 @@ type State = {
   correct: boolean;
   incorrect: boolean;
   notSubmitted: boolean;
+  showCorrectAnswer: boolean;
+  correctAnswersList: string[][];
   score: Array<Action["type"]>;
 };
 
-type Action = {
-  type: "correct" | "incorrect" | "not_submitted";
+type Action = BaseAction | CorrectAction | IncorrectAction;
+
+type BaseAction = {
+  type: "not_submitted" | "show_correct_answer";
+};
+
+type CorrectAction = {
+  type: "correct";
+  correctAnswers: string[];
+};
+
+type IncorrectAction = {
+  type: "incorrect";
+  correctAnswers: string[];
 };
 
 function reducer(state: State, action: Action) {
@@ -30,7 +44,12 @@ function reducer(state: State, action: Action) {
         correct: true,
         incorrect: false,
         notSubmitted: false,
+        showCorrectAnswer: false,
         score: updatedScore,
+        correctAnswersList: [
+          ...state.correctAnswersList,
+          action.correctAnswers,
+        ],
       };
     }
     case "incorrect": {
@@ -50,6 +69,11 @@ function reducer(state: State, action: Action) {
         incorrect: true,
         notSubmitted: false,
         score: updatedScore,
+        showCorrectAnswer: false,
+        correctAnswersList: [
+          ...state.correctAnswersList,
+          action.correctAnswers,
+        ],
       };
     }
     case "not_submitted": {
@@ -58,6 +82,15 @@ function reducer(state: State, action: Action) {
         correct: false,
         incorrect: false,
         notSubmitted: true,
+        showCorrectAnswer: false,
+        correctAnswer: "",
+      };
+    }
+
+    case "show_correct_answer": {
+      return {
+        ...state,
+        showCorrectAnswer: true,
       };
     }
   }
@@ -75,12 +108,19 @@ export default function useEvaluation(initialState: State) {
     }
 
     if (dict[cssProperty].includes(attempt)) {
-      dispatch({ type: "correct" });
+      dispatch({
+        type: "correct",
+        correctAnswers: dict[cssProperty],
+      });
+
       return "correct";
     }
 
     if (!dict[cssProperty].includes(attempt)) {
-      dispatch({ type: "incorrect" });
+      dispatch({
+        type: "incorrect",
+        correctAnswers: dict[cssProperty],
+      });
       return "incorrect";
     }
   };

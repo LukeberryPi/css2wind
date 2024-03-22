@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "prettier": "^2.8.8",
-    "prettier-plugin-tailwindcss": "^0.3.0"
+    "prettier-plugin-tailwindcss": "^0.3.0",
+    "tailwindcss-3d": "^1.0.5"
   }
 }
