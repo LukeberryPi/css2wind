@@ -32,7 +32,7 @@ export default function Header() {
         </Link>
         <div className="flex items-center justify-center gap-8">
           <a
-            href="https://tailwind.com/docs/padding"
+            href="https://tailwindcss.com/docs/padding"
             target="_blank"
             className="flex items-center gap-3 p-3 text-sky-300 ring-1 ring-sky-300 hover:bg-zinc-800 active:ring"
           >
