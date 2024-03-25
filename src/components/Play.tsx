@@ -228,13 +228,7 @@ export default function Play({
             data-game-over={gameOver}
             className="relative w-64 origin-center p-5 text-center text-lg ring-1 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-sky-300 data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:ring-sky-300 tiny:w-80 sm:w-96 md:w-[420px] md:text-xl"
           >
-            {gameOver ? (
-              <span>GAME OVER!</span>
-            ) : currentProperty ? (
-              currentProperty
-            ) : (
-              "..."
-            )}
+            {currentProperty ? currentProperty : "..."}
           </span>
           <span className="hidden tiny:inline">&#125;</span>
         </div>
@@ -262,18 +256,16 @@ export default function Play({
             >
               <input
                 id="play-input"
-                disabled={gameOver}
-                value={gameOver ? "GAME OVER!" : attempt}
+                value={attempt}
                 onChange={(event) => handleChange(event)}
                 onKeyDown={(event) => handleKeyDown(event, attempt)}
                 autoFocus
                 autoComplete="off"
                 autoCorrect="off"
                 autoCapitalize="off"
-                spellCheck="true"
+                spellCheck="false"
                 data-not-submitted={notSubmitted}
-                data-game-over={gameOver}
-                className="w-full bg-inherit bg-zinc-950 p-5 text-lg backface-hidden focus:outline-none data-[game-over=true]:text-center data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200 md:text-xl"
+                className="w-full bg-inherit bg-zinc-950 p-5 text-lg backface-hidden focus:outline-none data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200 md:text-xl"
               />
               <input
                 disabled
@@ -285,7 +277,6 @@ export default function Play({
               data-not-submitted={notSubmitted}
               data-correct={correct}
               data-incorrect={incorrect}
-              disabled={gameOver}
               onClick={() => handleReturnClick(attempt)}
               className="absolute -bottom-[29px] right-0 w-24 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all focus:outline-none active:ring disabled:hidden data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:hover:opacity-80 md:bottom-auto md:top-0 md:h-full md:w-28 md:text-xl"
             >
