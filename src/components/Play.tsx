@@ -1,7 +1,7 @@
 "use client";
 
 import { useEvaluation } from "@/hooks";
-import { Arrow, Check, Close, Copy, Restart } from "@/icons";
+import { Arrow, Check, Close, Copy, Restart, Share } from "@/icons";
 import { getRandomKey } from "@/utils";
 import { useEffect, useState } from "react";
 import Scoreboard from "./Scoreboard";
@@ -125,7 +125,6 @@ export default function Play({
       if (evaluation === "incorrect") {
         showCorrectAnswer(900);
         resetInput(3000);
-
         return;
       }
 
@@ -161,8 +160,7 @@ export default function Play({
     resetInput();
   };
 
-  const handleCopyClick = () => {
-    setResultCopied(true);
+  const generateResultText = () => {
     const correctCount = score.filter((el) => el === "correct").length;
     let emojis = "";
 
@@ -174,16 +172,41 @@ export default function Play({
       }
     }
 
-    const text = `I just got ${correctCount}/8 on css2wind.com!
+    const text = `I just got ${correctCount}/8 on css2wind.com!\n\n${emojis}`;
 
-${emojis}`;
+    return text;
+  };
 
-    navigator.clipboard.writeText(text);
+  const handleCopyClick = () => {
+    setResultCopied(true);
+
+    navigator.clipboard.writeText(generateResultText());
 
     setTimeout(() => {
       setResultCopied(false);
     }, 2500);
   };
+
+  const generateTweetIntent = () => {
+    const originalText = generateResultText();
+
+    const CHAR_MAP: Record<string, string> = {
+      " ": "%20",
+      "\n": "%0A",
+    };
+
+    const split = originalText.split("").map((item) => {
+      if (item in CHAR_MAP) {
+        return CHAR_MAP[item];
+      }
+
+      return item;
+    });
+
+    return `https://twitter.com/intent/post?text=${split.join("")}`;
+  };
+
+  console.log(generateTweetIntent());
 
   return (
     <section
@@ -205,7 +228,7 @@ ${emojis}`;
             className="relative w-64 origin-center p-5 text-center text-lg ring-1 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-sky-300 data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:ring-sky-300 tiny:w-80 sm:w-96 md:w-[420px] md:text-xl"
           >
             {gameOver ? (
-              <span>Game over!</span>
+              <span>GAME OVER!</span>
             ) : currentProperty ? (
               currentProperty
             ) : (
@@ -239,7 +262,7 @@ ${emojis}`;
               <input
                 id="play-input"
                 disabled={gameOver}
-                value={gameOver ? "Share your result!" : attempt}
+                value={gameOver ? "GAME OVER!" : attempt}
                 onChange={(event) => handleChange(event)}
                 onKeyDown={(event) => handleKeyDown(event, attempt)}
                 autoFocus
@@ -248,11 +271,12 @@ ${emojis}`;
                 autoCapitalize="off"
                 spellCheck="true"
                 data-not-submitted={notSubmitted}
-                className="w-full bg-inherit bg-zinc-950 p-5 text-lg backface-hidden focus:outline-none data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200 md:text-xl"
+                data-game-over={gameOver}
+                className="w-full bg-inherit bg-zinc-950 p-5 text-lg backface-hidden focus:outline-none data-[game-over=true]:text-center data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200 md:text-xl"
               />
               <input
                 disabled
-                className="absolute inset-0 w-full  bg-inherit  bg-zinc-950 p-5 text-lg rotate-x-180 backface-hidden focus:outline-none  data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200 md:text-xl"
+                className="absolute inset-0 w-full bg-inherit bg-zinc-950 p-5 text-lg rotate-x-180 backface-hidden focus:outline-none data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200 md:text-xl"
                 value={correctAnswerToDisplay}
               />
             </div>
@@ -266,32 +290,41 @@ ${emojis}`;
             >
               return
             </button>
-            <button
-              disabled={!gameOver}
-              onClick={handleCopyClick}
-              className={`absolute -bottom-[33px] right-0 flex h-8 md:top-0 md:h-full ${
-                resultCopied ? "w-40" : "w-32"
-              } items-center justify-center gap-2 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all active:ring disabled:hidden md:gap-4 md:text-xl md:hover:opacity-80`}
-            >
-              <Copy className="h-6 w-6" />
-              {resultCopied ? "Copied!" : "Copy"}
-            </button>
           </div>
           <span className="hidden tiny:inline">&#34;</span>
         </div>
       </div>
       <Scoreboard score={score} />
-      <button
+      <div
         data-game-over={gameOver}
-        onClick={(e: any) => {
-          e.preventDefault();
-          window.location.href = "/";
-        }}
-        className="hidden items-center justify-between gap-3 self-center p-3 text-sky-300 ring-1 ring-sky-300 active:ring data-[game-over=true]:flex"
+        className="hidden flex-col items-center justify-center gap-8 transition-all data-[game-over=true]:flex lg:flex-row"
       >
-        <Restart />
-        <span>Play Again</span>
-      </button>
+        <a
+          href={generateTweetIntent()}
+          target="_blank"
+          className="flex w-64 items-center justify-center gap-3 self-center p-3 text-[#1D9BF0] ring-1 ring-[#1D9BF0] hover:opacity-80 active:ring lg:w-fit"
+        >
+          <Share />
+          <span>Share to Twitter</span>
+        </a>
+        <button
+          onClick={handleCopyClick}
+          className="flex w-64 items-center justify-center gap-3 self-center p-3 text-zinc-200 ring-1 ring-zinc-200 hover:opacity-80 active:ring lg:w-fit"
+        >
+          <Copy />
+          <span>{resultCopied ? "Copied!" : "Copy Result"}</span>
+        </button>
+        <button
+          onClick={(e: any) => {
+            e.preventDefault();
+            window.location.href = "/";
+          }}
+          className="flex w-64 items-center justify-center gap-3 self-center p-3 text-sky-300 ring-1 ring-sky-300 hover:opacity-80 active:ring lg:w-fit"
+        >
+          <Restart />
+          <span>Play Again</span>
+        </button>
+      </div>
       {/* debug */}
       {/* <button onClick={handleCopyClick}>copy</button>
       <button onClick={() => setIsGameOver(true)}> end game</button> */}

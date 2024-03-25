@@ -30,7 +30,7 @@ export const metadata = {
 
 export default function Faq() {
   return (
-    <section className="container mx-auto flex w-full flex-col gap-20 px-6 py-32">
+    <main className="container mx-auto flex w-full flex-col gap-20 px-6">
       <div className="flex flex-col items-center gap-6">
         <h2 className="text-center text-5xl text-zinc-200 md:text-6xl">
           Frequently Asked Questions
@@ -168,6 +168,6 @@ export default function Faq() {
           </div>
         </li>
       </ul>
-    </section>
+    </main>
   );
 }
