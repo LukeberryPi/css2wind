@@ -219,14 +219,14 @@ export default function Play({
         data-game-over={gameOver}
         className="flex-col items-center justify-center gap-4 pb-6 data-[game-over=false]:flex data-[game-over=true]:hidden tiny:pb-0 md:gap-6 lg:flex-row"
       >
-        <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
+        <div className="flex flex-col items-start gap-2 text-zinc-400">
           <span className="hidden tiny:inline">.class &#123;</span>
           <span
             data-not-submitted={notSubmitted}
             data-correct={correct}
             data-incorrect={incorrect}
             data-game-over={gameOver}
-            className="relative w-64 origin-center p-5 text-center text-lg ring-1 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-sky-300 data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:ring-sky-300 tiny:w-80 sm:w-96 md:w-[420px] md:text-xl"
+            className="w-64 origin-center p-5 text-center text-lg ring-1 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-sky-300 data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:ring-sky-300 tiny:w-80 sm:w-96 md:w-104 md:text-xl"
           >
             {currentProperty ? currentProperty : "..."}
           </span>
@@ -241,14 +241,14 @@ export default function Play({
         {incorrect && (
           <Close className="h-6 w-6 animate-shake fill-alertRed md:h-8 md:w-8" />
         )}
-        <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
+        <div className="flex flex-col items-start gap-2 text-zinc-400">
           <span className="hidden tiny:inline">className=&#34;</span>
           <div
             data-not-submitted={notSubmitted}
             data-correct={correct}
             data-show-correct-answer={isShowingCorrectAnswer}
             data-incorrect={incorrect}
-            className="relative w-64 origin-center ring-1 ring-zinc-200 transition-colors data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[show-correct-answer=true]:text-greenGo data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed tiny:w-80 sm:w-96 md:w-[420px]"
+            className="relative w-64 origin-center ring-1 ring-zinc-200 transition-colors data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[show-correct-answer=true]:text-greenGo data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed tiny:w-80 sm:w-96 md:w-104"
           >
             <div
               data-show-correct-answer={isShowingCorrectAnswer}
