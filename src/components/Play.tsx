@@ -206,8 +206,6 @@ export default function Play({
     return `https://twitter.com/intent/post?text=${split.join("")}`;
   };
 
-  console.log(generateTweetIntent());
-
   return (
     <section
       id="play"
@@ -217,7 +215,10 @@ export default function Play({
         Translate the <span className="text-sky-300">CSS property</span> to its
         Tailwind CSS equivalent
       </h3>
-      <div className="flex flex-col items-center justify-center gap-4 pb-6 tiny:pb-0 md:gap-6 lg:flex-row">
+      <div
+        data-game-over={gameOver}
+        className="flex-col items-center justify-center gap-4 pb-6 data-[game-over=false]:flex data-[game-over=true]:hidden tiny:pb-0 md:gap-6 lg:flex-row"
+      >
         <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
           <span className="hidden tiny:inline">.class &#123;</span>
           <span
