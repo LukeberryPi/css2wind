@@ -85,7 +85,7 @@ export default function Tutorial() {
       </h3>
       <div className="flex flex-col items-center justify-center gap-6 lg:flex-row">
         <div className="flex flex-col items-start gap-2 text-zinc-400">
-          <span className="hidden tiny:inline">.class &#123;</span>
+          <span className="hidden xs:inline">.class &#123;</span>
           <span
             data-tutorial-not-submitted={tutorialNotSubmitted}
             data-tutorial-correct={tutorialCorrect}
@@ -94,7 +94,7 @@ export default function Tutorial() {
           >
             padding: 12px
           </span>
-          <span className="hidden tiny:inline">&#125;</span>
+          <span className="hidden xs:inline">&#125;</span>
         </div>
         {tutorialNotSubmitted && (
           <Arrow className="h-6 w-6 fill-zinc-200 rotate-90 md:h-8 md:w-8 lg:rotate-0" />
@@ -106,7 +106,7 @@ export default function Tutorial() {
           <Close className="h-6 w-6 animate-shake fill-alertRed md:h-8 md:w-8" />
         )}
         <div className="flex flex-col items-start gap-2 text-zinc-400">
-          <span className="hidden tiny:inline">className=&#34;</span>
+          <span className="hidden xs:inline">className=&#34;</span>
           <div
             data-tutorial-not-submitted={tutorialNotSubmitted}
             data-tutorial-correct={tutorialCorrect}
@@ -137,7 +137,7 @@ export default function Tutorial() {
               </span>
             </button>
           </div>
-          <span className="hidden tiny:inline">&#34;</span>
+          <span className="hidden xs:inline">&#34;</span>
         </div>
       </div>
       <div className="max-w-prose space-y-4 text-sm text-zinc-400 md:space-y-8 md:text-lg">

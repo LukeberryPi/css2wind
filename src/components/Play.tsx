@@ -220,7 +220,7 @@ export default function Play({
         className="flex-col items-center justify-center gap-4 pb-6 data-[game-over=false]:flex data-[game-over=true]:hidden tiny:pb-0 md:gap-6 lg:flex-row"
       >
         <div className="flex flex-col items-start gap-2 text-zinc-400">
-          <span className="hidden tiny:inline">.class &#123;</span>
+          <span className="hidden xs:inline">.class &#123;</span>
           <span
             data-not-submitted={notSubmitted}
             data-correct={correct}
@@ -230,7 +230,7 @@ export default function Play({
           >
             {currentProperty ? currentProperty : "..."}
           </span>
-          <span className="hidden tiny:inline">&#125;</span>
+          <span className="hidden xs:inline">&#125;</span>
         </div>
         {notSubmitted && (
           <Arrow className="h-6 w-6 fill-zinc-100 rotate-90 md:h-8 md:w-8 lg:rotate-0" />
@@ -242,7 +242,7 @@ export default function Play({
           <Close className="h-6 w-6 animate-shake fill-alertRed md:h-8 md:w-8" />
         )}
         <div className="flex flex-col items-start gap-2 text-zinc-400">
-          <span className="hidden tiny:inline">className=&#34;</span>
+          <span className="hidden xs:inline">className=&#34;</span>
           <div
             data-not-submitted={notSubmitted}
             data-correct={correct}
@@ -283,7 +283,7 @@ export default function Play({
               return
             </button>
           </div>
-          <span className="hidden tiny:inline">&#34;</span>
+          <span className="hidden xs:inline">&#34;</span>
         </div>
       </div>
       <Scoreboard score={score} />
