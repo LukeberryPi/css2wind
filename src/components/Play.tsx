@@ -277,7 +277,7 @@ export default function Play({
               />
               <input
                 disabled
-                className="debug absolute h-18 max-w-full bg-inherit bg-zinc-950 px-5 text-lg rotate-x-180 backface-hidden focus:outline-none md:text-xl"
+                className="absolute h-18 max-w-full bg-inherit bg-zinc-950 px-5 text-lg rotate-x-180 backface-hidden focus:outline-none md:text-xl"
                 value={correctAnswerToDisplay}
               />
             </div>
