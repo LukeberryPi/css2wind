@@ -260,7 +260,7 @@ export default function Play({
           >
             <div
               data-show-correct-answer={isShowingCorrectAnswer}
-              className="relative flex items-center transition-transform duration-200 transform-style-3d data-[show-correct-answer=true]:rotate-x-180"
+              className="relative flex w-full items-center transition-transform duration-200 transform-style-3d data-[show-correct-answer=true]:rotate-x-180"
             >
               <input
                 id="play-input"
