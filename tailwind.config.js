@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        18: "4.5rem",
+        104: "26rem",
+      },
       screens: {
         tiny: "400px",
         xs: "500px",

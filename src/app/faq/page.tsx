@@ -30,7 +30,7 @@ export const metadata = {
 
 export default function Faq() {
   return (
-    <main className="container mx-auto flex w-full flex-col gap-20 px-6">
+    <main className="container mx-auto my-36 flex w-full flex-col gap-20 px-6">
       <div className="flex flex-col items-center gap-6">
         <h2 className="text-center text-5xl text-zinc-200 md:text-6xl">
           Frequently Asked Questions
@@ -58,7 +58,7 @@ export default function Faq() {
           <div className="flex flex-col gap-2 text-left text-zinc-200 sm:flex-row sm:text-lg md:text-xl">
             <span>Read More: </span>
             <a
-              className="flex items-start gap-2 text-sky-300 hover:underline hover:underline-offset-2 sm:gap-2"
+              className="flex items-start gap-2 text-sky-300 underline hover:opacity-80 sm:gap-2"
               target="_blank"
               href="https://frontstuff.io/no-utility-classes-arent-the-same-as-inline-styles"
             >
@@ -94,7 +94,7 @@ export default function Faq() {
           <div className="flex flex-col gap-2 text-zinc-200 sm:flex-row sm:text-lg md:text-xl">
             <span className="shrink-0">Read More: </span>
             <a
-              className="flex items-center gap-2 text-sky-300 hover:underline hover:underline-offset-2"
+              className="flex items-center gap-2 text-sky-300 underline hover:opacity-80"
               target="_blank"
               href="https://frontstuff.io/no-utility-classes-arent-the-same-as-inline-styles"
             >
@@ -125,7 +125,7 @@ export default function Faq() {
           <div className="flex flex-col gap-2 text-zinc-200 sm:flex-row sm:text-lg md:text-xl">
             <span>Watch this: </span>
             <a
-              className="flex items-center gap-2 text-sky-300 hover:underline hover:underline-offset-2"
+              className="flex items-center gap-2 text-sky-300 underline hover:opacity-80"
               target="_blank"
               href="https://youtu.be/CQuTF-bkOgc?si=ENc7vupHcaGrXddW"
             >
@@ -158,7 +158,7 @@ export default function Faq() {
           <div className="flex flex-col items-start gap-2 text-zinc-200 sm:flex-row sm:text-lg md:text-xl">
             <span>Read More: </span>
             <a
-              className="flex items-center gap-2 text-sky-300 hover:underline hover:underline-offset-2"
+              className="flex items-center gap-2 text-sky-300 underline hover:opacity-80"
               target="_blank"
               href="https://adamwathan.me/css-utility-classes-and-separation-of-concerns/"
             >

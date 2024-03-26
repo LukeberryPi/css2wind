@@ -10,7 +10,6 @@ export default function Scoreboard({ score }: ScoreboardProps) {
   };
 
   const correctCount = score.filter((el) => el === "correct").length;
-  const notSubmittedCount = score.filter((el) => el === "not_submitted").length;
 
   return (
     <div className="flex flex-col items-center justify-center gap-8 lg:flex-row-reverse">
@@ -19,9 +18,7 @@ export default function Scoreboard({ score }: ScoreboardProps) {
           <span key={i}>{iconMap[item]}</span>
         ))}
       </div>
-      <span>
-        Your score: {correctCount}/{8 - notSubmittedCount}
-      </span>
+      <span>Your score: {correctCount}/8</span>
     </div>
   );
 }
