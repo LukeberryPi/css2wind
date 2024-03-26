@@ -131,8 +131,8 @@ export default function Tutorial() {
               className="h-full px-5
               text-xl text-zinc-200 ring-1 ring-zinc-200 transition-all focus:outline-none active:ring data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-correct=true]:ring-greenGo data-[tutorial-incorrect=true]:ring-alertRed data-[tutorial-not-submitted=true]:hover:opacity-80"
             >
-              <span className="hidden sm:inline">return</span>
-              <span className="inline sm:hidden">
+              <span className="hidden md:inline">return</span>
+              <span className="inline md:hidden">
                 <ChevronRight />
               </span>
             </button>
