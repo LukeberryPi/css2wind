@@ -90,7 +90,7 @@ export default function Tutorial() {
             data-tutorial-not-submitted={tutorialNotSubmitted}
             data-tutorial-correct={tutorialCorrect}
             data-tutorial-incorrect={tutorialIncorrect}
-            className="h-18 w-64 origin-center p-5 text-lg ring-1 transition-all data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-not-submitted=true]:text-sky-300 data-[tutorial-correct=true]:ring-greenGo data-[tutorial-incorrect=true]:ring-alertRed data-[tutorial-not-submitted=true]:ring-sky-300 tiny:w-80 xs:w-96 md:w-104 md:text-xl"
+            className="flex h-18 w-64 items-center justify-center text-lg ring-1 transition-all data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-not-submitted=true]:text-sky-300 data-[tutorial-correct=true]:ring-greenGo data-[tutorial-incorrect=true]:ring-alertRed data-[tutorial-not-submitted=true]:ring-sky-300 tiny:w-80 xs:w-96 md:w-104 md:text-xl"
           >
             padding: 12px
           </span>
@@ -111,7 +111,7 @@ export default function Tutorial() {
             data-tutorial-not-submitted={tutorialNotSubmitted}
             data-tutorial-correct={tutorialCorrect}
             data-tutorial-incorrect={tutorialIncorrect}
-            className="flex h-18 w-64 origin-center items-center ring-1 ring-zinc-200 transition-all data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-correct=true]:ring-greenGo data-[tutorial-incorrect=true]:ring-alertRed tiny:w-80 xs:w-96 md:w-104"
+            className="flex h-18 w-64 items-center ring-1 ring-zinc-200 transition-all data-[tutorial-correct=true]:animate-lift data-[tutorial-incorrect=true]:animate-shake data-[tutorial-correct=true]:text-greenGo data-[tutorial-incorrect=true]:text-alertRed data-[tutorial-correct=true]:ring-greenGo data-[tutorial-incorrect=true]:ring-alertRed tiny:w-80 xs:w-96 md:w-104"
           >
             <input
               id="tutorial-input"
