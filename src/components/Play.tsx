@@ -1,7 +1,15 @@
 "use client";
 
 import { useEvaluation } from "@/hooks";
-import { Arrow, Check, Close, Copy, Restart, Share } from "@/icons";
+import {
+  Arrow,
+  Check,
+  ChevronRight,
+  Close,
+  Copy,
+  Restart,
+  Share,
+} from "@/icons";
 import { getRandomKey } from "@/utils";
 import { useEffect, useState } from "react";
 import Scoreboard from "./Scoreboard";
@@ -219,24 +227,18 @@ export default function Play({
         data-game-over={gameOver}
         className="flex-col items-center justify-center gap-4 pb-6 data-[game-over=false]:flex data-[game-over=true]:hidden tiny:pb-0 md:gap-6 lg:flex-row"
       >
-        <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
-          <span className="hidden tiny:inline">.class &#123;</span>
+        <div className="flex flex-col items-start gap-2 text-zinc-400">
+          <span className="hidden xs:inline">.class &#123;</span>
           <span
             data-not-submitted={notSubmitted}
             data-correct={correct}
             data-incorrect={incorrect}
             data-game-over={gameOver}
-            className="relative w-64 origin-center p-5 text-center text-lg ring-1 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-sky-300 data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:ring-sky-300 tiny:w-80 sm:w-96 md:w-[420px] md:text-xl"
+            className="flex h-18 w-64 items-center justify-center text-center text-lg ring-1 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[not-submitted=true]:text-sky-300 data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:ring-sky-300 tiny:w-80 sm:w-96 md:w-104 md:text-xl"
           >
-            {gameOver ? (
-              <span>GAME OVER!</span>
-            ) : currentProperty ? (
-              currentProperty
-            ) : (
-              "..."
-            )}
+            {currentProperty ? currentProperty : "..."}
           </span>
-          <span className="hidden tiny:inline">&#125;</span>
+          <span className="hidden xs:inline">&#125;</span>
         </div>
         {notSubmitted && (
           <Arrow className="h-6 w-6 fill-zinc-100 rotate-90 md:h-8 md:w-8 lg:rotate-0" />
@@ -247,37 +249,35 @@ export default function Play({
         {incorrect && (
           <Close className="h-6 w-6 animate-shake fill-alertRed md:h-8 md:w-8" />
         )}
-        <div className="flex cursor-default flex-col items-start gap-2 text-zinc-400">
-          <span className="hidden tiny:inline">className=&#34;</span>
+        <div className="flex flex-col items-start gap-2 text-zinc-400">
+          <span className="hidden xs:inline">className=&#34;</span>
           <div
             data-not-submitted={notSubmitted}
             data-correct={correct}
             data-show-correct-answer={isShowingCorrectAnswer}
             data-incorrect={incorrect}
-            className="relative w-64 origin-center ring-1 ring-zinc-200 transition-colors data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[show-correct-answer=true]:text-greenGo data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed tiny:w-80 sm:w-96 md:w-[420px]"
+            className="flex h-18 w-64 items-center justify-between ring-1 ring-zinc-200 transition-all data-[correct=true]:animate-lift data-[incorrect=true]:animate-shake data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[show-correct-answer=true]:text-greenGo data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed tiny:w-80 sm:w-96 md:w-104"
           >
             <div
               data-show-correct-answer={isShowingCorrectAnswer}
-              className="duration-400 relative transition-transform transform-style-3d data-[show-correct-answer=true]:rotate-x-180"
+              className="relative flex w-full items-center transition-transform duration-200 transform-style-3d data-[show-correct-answer=true]:rotate-x-180"
             >
               <input
                 id="play-input"
-                disabled={gameOver}
-                value={gameOver ? "GAME OVER!" : attempt}
+                value={attempt}
                 onChange={(event) => handleChange(event)}
                 onKeyDown={(event) => handleKeyDown(event, attempt)}
                 autoFocus
                 autoComplete="off"
                 autoCorrect="off"
                 autoCapitalize="off"
-                spellCheck="true"
+                spellCheck="false"
                 data-not-submitted={notSubmitted}
-                data-game-over={gameOver}
-                className="w-full bg-inherit bg-zinc-950 p-5 text-lg backface-hidden focus:outline-none data-[game-over=true]:text-center data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200 md:text-xl"
+                className="w-full bg-inherit px-5 text-lg backface-hidden focus:outline-none data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200 md:text-xl"
               />
               <input
                 disabled
-                className="absolute inset-0 w-full bg-inherit bg-zinc-950 p-5 text-lg rotate-x-180 backface-hidden focus:outline-none data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200 md:text-xl"
+                className="absolute h-18 max-w-full bg-inherit bg-zinc-950 px-5 text-lg rotate-x-180 backface-hidden focus:outline-none md:text-xl"
                 value={correctAnswerToDisplay}
               />
             </div>
@@ -285,14 +285,16 @@ export default function Play({
               data-not-submitted={notSubmitted}
               data-correct={correct}
               data-incorrect={incorrect}
-              disabled={gameOver}
               onClick={() => handleReturnClick(attempt)}
-              className="absolute -bottom-[29px] right-0 w-24 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all focus:outline-none active:ring disabled:hidden data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed md:bottom-auto md:top-0 md:h-full md:w-28 md:text-xl data-[not-submitted=true]:md:hover:opacity-80"
+              className="h-full px-5 text-lg text-zinc-200 ring-1 ring-zinc-200 transition-all focus:outline-none active:ring data-[correct=true]:text-greenGo data-[incorrect=true]:text-alertRed data-[correct=true]:ring-greenGo data-[incorrect=true]:ring-alertRed data-[not-submitted=true]:hover:opacity-80 md:bottom-auto md:top-0 md:h-full md:w-28 md:text-xl"
             >
-              return
+              <span className="hidden md:inline">return</span>
+              <span className="inline md:hidden">
+                <ChevronRight />
+              </span>
             </button>
           </div>
-          <span className="hidden tiny:inline">&#34;</span>
+          <span className="hidden xs:inline">&#34;</span>
         </div>
       </div>
       <Scoreboard score={score} />
