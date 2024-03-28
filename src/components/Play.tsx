@@ -260,7 +260,7 @@ export default function Play({
           >
             <div
               data-show-correct-answer={isShowingCorrectAnswer}
-              className="relative flex w-full items-center transition-transform duration-200 transform-style-3d data-[show-correct-answer=true]:rotate-x-180"
+              className="relative flex h-full w-full items-center transition-transform duration-200 transform-style-3d data-[show-correct-answer=true]:rotate-x-180"
             >
               <input
                 id="play-input"
@@ -273,7 +273,7 @@ export default function Play({
                 autoCapitalize="off"
                 spellCheck="false"
                 data-not-submitted={notSubmitted}
-                className="w-full bg-inherit px-5 text-lg backface-hidden focus:outline-none data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200 md:text-xl"
+                className="h-full w-full bg-inherit px-5 text-lg backface-hidden focus:outline-none data-[not-submitted=true]:text-zinc-200 data-[not-submitted=true]:ring-zinc-200 md:text-xl"
               />
               <input
                 disabled
