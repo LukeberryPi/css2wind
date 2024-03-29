@@ -5287,7 +5287,8 @@ export const api = {
         {
           css: "65ch",
           tailwind: {
-            correct: ["w-prose"],
+            correct: ["w-
+            prose"],
             partial: ["w-[65ch]"],
           },
         },
