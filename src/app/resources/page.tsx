@@ -1,30 +1,40 @@
 import { Open } from "@/icons";
 
 export const metadata = {
-  title: "css2wind | Frequently Asked Questions",
-  description: "Learn more about Tailwind CSS.",
+  title: "css2wind | Resources",
+  description: "Understand the tools that make Tailwind CSS amazing.",
   applicationName: "css2wind",
   referrer: "origin-when-cross-origin",
-  keywords: ["Tailwind", "CSS", "Bootstrap", "Style", "HTML"],
+  keywords: [
+    "Tailwind",
+    "CSS",
+    "shadcn",
+    "cva",
+    "prettier",
+    "plugin",
+    "extension",
+  ],
   authors: { name: "Luke Berry" },
   creator: "Luke Berry",
   publisher: "Luke Berry",
   openGraph: {
     type: "website",
-    images: "https://www.css2wind.com/og-faq.png",
+    // TODO: create new og image for resources
+    images: "https://www.css2wind.com/og-resources.png",
     siteName: "css2wind",
-    title: "css2wind | Frequently Asked Questions",
-    description: "Learn more about Tailwind CSS.",
+    title: "css2wind | Resources",
+    description: "Understand the tools that make Tailwind CSS amazing.",
   },
   twitter: {
     card: "summary_large_image",
     title: "css2wind, a minigame for learning Tailwind CSS",
     description:
-      "What is Tailwind? Isn't that just inline styles? Isn't that just Bootstrap? Doesn't the HTMl get ugly?",
-    images: { url: "https://www.css2wind.com/og-faq.png" },
+      "What is Tailwind Intellisense? prettier-plugin-tailwindcss? Tailwind Merge? shadcn/ui?",
+    images: { url: "https://www.css2wind.com/og-resources.png" },
   },
   verification: {
-    google: "pWGXfs8mFFqr-ZqzvuVT82rztzmghIcc6gwy_qklleo",
+    // TODO: new verif id for route
+    google: "lalalala",
   },
 };
 
