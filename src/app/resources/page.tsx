@@ -44,17 +44,17 @@ export default function Resources() {
         <li className="flex flex-col gap-5 text-lg sm:text-xl md:px-0 md:text-left">
           <h3 className="text-zinc-200">Tailwind CSS Intellisense</h3>
           <p className="text-zinc-400">
-            This VS Code extension enables auto-completion while you write
-            Tailwind CSS classes! This boosts productivity and can even teach
-            you new utilities! It is also useful for finding out what CSS a
-            utility represents by simply hovering it.
+            This VS Code extension enables{" "}
+            <span className="text-zinc-200">auto-completion</span> while you
+            write Tailwind CSS classes! It is also useful for finding out what
+            CSS a utility is equivalent to by simply hovering it.
           </p>
           <span>
             Read More:{" "}
             <a
               className="text-sky-300 underline hover:opacity-80 sm:gap-2"
               target="_blank"
-              href="https://frontstuff.io/no-utility-classes-arent-the-same-as-inline-styles"
+              href="https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss"
             >
               Tailwind Intellisense Extension
             </a>
@@ -63,18 +63,19 @@ export default function Resources() {
         <li className="flex flex-col gap-5 text-lg sm:text-xl md:px-0 md:text-left">
           <h3 className="text-zinc-200">prettier-plugin-tailwindcss</h3>
           <p className="text-zinc-400">
-            This is an npm package with one goal: automatically sorting your
+            This is an npm package with one goal:{" "}
+            <span className="text-zinc-200">automatically sorting</span> your
             Tailwind CSS utilities. Why does this matter? It assures that there
             is no unpredictable behavior with utilities applying the same
-            styles. Keeping the order consistent also improves refactoring and
-            readability.
+            styles. Keeping the order consistent also improves{" "}
+            <span className="text-zinc-200"> refactoring and readability</span>.
           </p>
           <span>
             Read More:{" "}
             <a
               className="text-sky-300 underline hover:opacity-80 sm:gap-2"
               target="_blank"
-              href="https://frontstuff.io/no-utility-classes-arent-the-same-as-inline-styles"
+              href="https://tailwindcss.com/blog/automatic-class-sorting-with-prettier"
             >
               prettier-plugin-tailwindcss
             </a>
@@ -83,17 +84,20 @@ export default function Resources() {
         <li className="flex flex-col gap-5 text-lg sm:text-xl md:px-0 md:text-left">
           <h3 className="text-zinc-200">Tailwind Typography</h3>
           <p className="text-zinc-400">
-            This depednency is pure magic. It turns unstyled markdown into
-            well-structured, consistently styled text. Forget setting
-            font-weights for your titles and paddings for your paragraphs:
-            Tailwind Typography has got you covered.
+            This dependency is pure magic. It turns unstyled markdown into
+            <span className="text-zinc-400">
+              {" "}
+              well-structured, consistently styled text
+            </span>
+            . Forget setting font-weights for your titles and paddings for your
+            paragraphs: Tailwind Typography has got you covered.
           </p>
           <span>
             Read More:{" "}
             <a
               className="text-sky-300 underline hover:opacity-80 sm:gap-2"
               target="_blank"
-              href="https://frontstuff.io/no-utility-classes-arent-the-same-as-inline-styles"
+              href="https://tailwindcss.com/blog/tailwindcss-typography"
             >
               Tailwind Typography
             </a>
@@ -104,16 +108,34 @@ export default function Resources() {
         <h4 className="text-zinc-200">More resources:</h4>
         <ul className="space-y-4">
           <li className="text-zinc-400">
-            <span className="text-zinc-200">shadcn/ui:</span> copy and paste
-            handcrafted UI components that are 100% customizable with Tailwind
-            CSS.
+            <a
+              target="_blank"
+              href="https://ui.shadcn.com/"
+              className="text-zinc-200 underline"
+            >
+              shadcn/ui
+            </a>
+            , copy and paste handcrafted UI components that are 100%
+            customizable with Tailwind CSS.
           </li>
           <li className="text-zinc-400">
-            <span className="text-zinc-200">Tailwind Merge:</span> overwrite
-            Tailwind CSS utilities consistently and predictably.
+            <a
+              target="_blank"
+              href="https://github.com/dcastil/tailwind-merge"
+              className="text-zinc-200 underline"
+            >
+              Tailwind Merge
+            </a>
+            , overwrite Tailwind CSS utilities consistently and predictably.
           </li>
           <li className="text-zinc-400">
-            <span className="text-zinc-200">Class Variance Authority:</span>{" "}
+            <a
+              target="_blank"
+              href="https://www.tailwind-variants.org/"
+              className="text-zinc-200 underline"
+            >
+              Tailwind Variants:
+            </a>{" "}
             achieve variants such as default, warning, and danger buttons with
             Tailwind CSS.
           </li>
