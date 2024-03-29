@@ -1,5 +1,3 @@
-import { Open } from "@/icons";
-
 export const metadata = {
   title: "css2wind | Resources",
   description: "Understand the tools that make Tailwind CSS amazing.",
@@ -41,80 +39,69 @@ export const metadata = {
 export default function Resources() {
   return (
     <main className="container mx-auto my-36 flex w-full flex-col gap-20 px-6">
-      <h2 className="text-center text-5xl text-zinc-200 md:text-6xl">
-        Resources
-      </h2>
-      <ul className="mx-auto flex max-w-[800px] flex-col gap-20">
-        <li className="flex flex-col gap-5 md:px-0 md:text-left">
-          <h3 className="text-2xl text-zinc-200 sm:text-4xl">
-            Tailwind CSS Intellisense
-          </h3>
-          <p className="text-lg text-zinc-400 sm:text-xl">
+      <h2 className="text-center text-4xl text-zinc-200">Resources</h2>
+      <ul className="mx-auto max-w-[800px] space-y-20">
+        <li className="flex flex-col gap-5 text-lg sm:text-xl md:px-0 md:text-left">
+          <h3 className="text-zinc-200">Tailwind CSS Intellisense</h3>
+          <p className="text-zinc-400">
             This VS Code extension enables auto-completion while you write
             Tailwind CSS classes! This boosts productivity and can even teach
             you new utilities! It is also useful for finding out what CSS a
             utility represents by simply hovering it.
           </p>
-          <div className="flex flex-col gap-2 text-left text-zinc-200 sm:flex-row sm:text-lg md:text-xl">
-            <span>Read More: </span>
+          <span>
+            Read More:{" "}
             <a
-              className="flex items-start gap-2 text-sky-300 underline hover:opacity-80 sm:gap-2"
+              className="text-sky-300 underline hover:opacity-80 sm:gap-2"
               target="_blank"
               href="https://frontstuff.io/no-utility-classes-arent-the-same-as-inline-styles"
             >
-              <span>Tailwind Intellisense Extension</span>
-              <Open className="shrink-0 self-center" />
+              Tailwind Intellisense Extension
             </a>
-          </div>
+          </span>
         </li>
-        <li className="flex flex-col gap-5 md:px-0 md:text-left">
-          <h3 className="text-2xl text-zinc-200 sm:text-4xl">
-            prettier-plugin-tailwindcss
-          </h3>
-          <p className="text-lg text-zinc-400 sm:text-xl">
+        <li className="flex flex-col gap-5 text-lg sm:text-xl md:px-0 md:text-left">
+          <h3 className="text-zinc-200">prettier-plugin-tailwindcss</h3>
+          <p className="text-zinc-400">
             This is an npm package with one goal: automatically sorting your
             Tailwind CSS utilities. Why does this matter? It assures that there
             is no unpredictable behavior with utilities applying the same
             styles. Keeping the order consistent also improves refactoring and
             readability.
           </p>
-          <div className="flex flex-col gap-2 text-zinc-200 sm:flex-row sm:text-lg md:text-xl">
-            <span className="shrink-0">Read More: </span>
+          <span>
+            Read More:{" "}
             <a
-              className="flex items-center gap-2 text-sky-300 underline hover:opacity-80"
+              className="text-sky-300 underline hover:opacity-80 sm:gap-2"
               target="_blank"
               href="https://frontstuff.io/no-utility-classes-arent-the-same-as-inline-styles"
             >
               prettier-plugin-tailwindcss
-              <Open className="shrink-0 self-center" />
             </a>
-          </div>
+          </span>
         </li>
-        <li className="flex flex-col gap-5 md:px-0 md:text-left">
-          <h3 className="text-2xl text-zinc-200 sm:text-4xl">
-            Tailwind Typography
-          </h3>
-          <p className="text-lg text-zinc-400 sm:text-xl">
+        <li className="flex flex-col gap-5 text-lg sm:text-xl md:px-0 md:text-left">
+          <h3 className="text-zinc-200">Tailwind Typography</h3>
+          <p className="text-zinc-400">
             This depednency is pure magic. It turns unstyled markdown into
             well-structured, consistently styled text. Forget setting
             font-weights for your titles and paddings for your paragraphs:
             Tailwind Typography has got you covered.
           </p>
-          <div className="flex flex-col gap-2 text-zinc-200 sm:flex-row sm:text-lg md:text-xl">
-            <span>Read more: </span>
+          <span>
+            Read More:{" "}
             <a
-              className="flex items-center gap-2 text-sky-300 underline hover:opacity-80"
+              className="text-sky-300 underline hover:opacity-80 sm:gap-2"
               target="_blank"
-              href="https://youtu.be/CQuTF-bkOgc?si=ENc7vupHcaGrXddW"
+              href="https://frontstuff.io/no-utility-classes-arent-the-same-as-inline-styles"
             >
-              <span>Tailwind Typography</span>
-              <Open className="shrink-0 self-center" />
+              Tailwind Typography
             </a>
-          </div>
+          </span>
         </li>
       </ul>
-      <div className="flex flex-col gap-4">
-        <h4 className="text-lg md:text-2xl">Take it to the next level:</h4>
+      <div className="mx-auto flex max-w-[800px] flex-col gap-4 text-lg sm:text-xl">
+        <h4 className="text-zinc-200">More resources:</h4>
         <ul className="space-y-4">
           <li className="text-zinc-400">
             <span className="text-zinc-200">shadcn/ui:</span> copy and paste
