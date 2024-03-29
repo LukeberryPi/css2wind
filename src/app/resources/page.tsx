@@ -17,7 +17,6 @@ export const metadata = {
   publisher: "Luke Berry",
   openGraph: {
     type: "website",
-    // TODO: create new og image for resources
     images: "https://www.css2wind.com/og-resources.png",
     siteName: "css2wind",
     title: "css2wind | Resources",
