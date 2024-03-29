@@ -133,9 +133,9 @@ export default function Resources() {
               href="https://www.tailwind-variants.org/"
               className="text-zinc-200 underline"
             >
-              Tailwind Variants:
-            </a>{" "}
-            achieve variants such as default, warning, and danger buttons with
+              Tailwind Variants
+            </a>
+            , achieve variants such as default, warning, and danger buttons with
             Tailwind CSS.
           </li>
         </ul>
