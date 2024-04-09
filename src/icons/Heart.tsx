@@ -1,6 +1,6 @@
 import { IconProps } from "./IconProps.types";
 
-export default function Coffee({ className, size = 24 }: IconProps) {
+export default function Heart({ className, size = 24 }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -11,8 +11,8 @@ export default function Coffee({ className, size = 24 }: IconProps) {
     >
       <path
         fill="currentColor"
-        d="M7 3H5v4h2zm4 0H9v4h2zm2 0h2v4h-2zm8 6H3v12h14v-5h4zm-2 5h-2v-3h2zM5 11h10v8H5z"
-      ></path>
+        d="M9 2H5v2H3v2H1v6h2v2h2v2h2v2h2v2h2v2h2v-2h2v-2h2v-2h2v-2h2v-2h2V6h-2V4h-2V2h-4v2h-2v2h-2V4H9zm0 2v2h2v2h2V6h2V4h4v2h2v6h-2v2h-2v2h-2v2h-2v2h-2v-2H9v-2H7v-2H5v-2H3V6h2V4z"
+      />
     </svg>
   );
 }

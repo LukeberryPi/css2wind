@@ -1,6 +1,6 @@
 "use client";
 
-import { Coffee, House, Open, Script } from "@/icons";
+import { Heart, House, Open, Script } from "@/icons";
 import Tailwind from "@/icons/Tailwind";
 import Image from "next/image";
 import Link from "next/link";
@@ -45,7 +45,7 @@ export default function Header() {
             target="_blank"
             className="flex items-center gap-3 p-3 text-purple-400 ring-1 ring-purple-400 hover:opacity-80 active:ring"
           >
-            <Coffee />
+            <Heart />
             <span className="hidden lg:inline">Buy me a Coffee!</span>
             <Open className="hidden lg:block" />
           </a>
