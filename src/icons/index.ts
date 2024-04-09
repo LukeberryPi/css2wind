@@ -1,4 +1,5 @@
 export { default as Check } from "./Check";
+export { default as More } from "./More";
 export { default as ChevronRight } from "./ChevronRight";
 export { default as Share } from "./Share";
 export { default as Branch } from "./Branch";
