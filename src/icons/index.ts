@@ -12,4 +12,5 @@ export { default as Heart } from "./Heart";
 export { default as Close } from "./Close";
 export { default as Arrow } from "./Arrow";
 export { default as Minus } from "./Minus";
+export { default as Tailwind } from "./Tailwind";
 export { default as Open } from "./Open";

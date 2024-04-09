@@ -1,26 +1,32 @@
 "use client";
 
-import { Heart, House, Open, Script } from "@/icons";
-import Tailwind from "@/icons/Tailwind";
+import { Heart, More, Open, Tailwind } from "@/icons";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
 export default function Header() {
-  const pathname = usePathname();
   const router = useRouter();
+  const pathname = usePathname();
 
-  const navigateToFaq = (e: any) => {
+  const safeNavigate = (e: any, href: string) => {
     e.preventDefault();
-    const sure = confirm(
-      "You will lose your current game if you go to FAQ. Are you sure?",
-    );
+    const isHome = pathname === "/";
+    let sure = false;
 
-    if (!sure) {
-      return;
+    if (isHome) {
+      sure = confirm(
+        `You will lose your current game if you go to ${href}. Are you sure?`,
+      );
+
+      if (!sure) {
+        return;
+      }
+
+      router.push(href);
+    } else {
+      router.push(href);
     }
-
-    router.push("/faq");
   };
 
   return (
@@ -30,8 +36,35 @@ export default function Header() {
           <Image src="/logo.svg" alt="logo" width={32} height={32} />
           <span className="hidden text-2xl xs:block">css2wind</span>
         </Link>
-        <div className="flex items-center justify-center gap-8">
+        <div className="flex items-center justify-center gap-10">
           <a
+            className="cursor-pointer hover:opacity-80"
+            onClick={(e) => safeNavigate(e, "/")}
+          >
+            Home
+          </a>
+          <a
+            className="cursor-pointer hover:opacity-80"
+            onClick={(e) => safeNavigate(e, "/tutorial")}
+          >
+            Tutorial
+          </a>
+          <a
+            className="cursor-pointer hover:opacity-80"
+            onClick={(e) => safeNavigate(e, "/resources")}
+          >
+            Resources
+          </a>
+          <a
+            className="cursor-pointer hover:opacity-80"
+            onClick={(e) => safeNavigate(e, "/faq")}
+          >
+            FAQ
+          </a>
+          <button>
+            <More className="hover:opacity-80" />
+          </button>
+          {/* <a
             href="https://tailwindcss.com/docs/padding"
             target="_blank"
             className="flex items-center gap-3 p-3 text-sky-300 ring-1 ring-sky-300 hover:opacity-80 active:ring"
@@ -48,26 +81,7 @@ export default function Header() {
             <Heart />
             <span className="hidden lg:inline">Buy me a Coffee!</span>
             <Open className="hidden lg:block" />
-          </a>
-          {pathname === "/faq" && (
-            <Link
-              className="flex items-center gap-3 p-3 text-sky-300 ring-1 ring-sky-300 active:ring"
-              href="/"
-            >
-              <House />
-              <span className="hidden lg:inline">Play Now!</span>
-            </Link>
-          )}
-          {pathname === "/" && (
-            <a
-              onClick={(e) => navigateToFaq(e)}
-              className="flex items-center gap-3 p-3 text-zinc-200 ring-1 ring-zinc-200 hover:opacity-80 active:ring"
-              href="/faq"
-            >
-              <Script className="text-zinc-200" />
-              <span className="hidden lg:inline">FAQ</span>
-            </a>
-          )}
+          </a> */}
         </div>
       </nav>
     </header>
