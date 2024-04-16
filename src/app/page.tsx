@@ -1,4 +1,4 @@
-import { Tutorial, Play } from "@/components";
+import { Play } from "@/components";
 import { headers } from "next/headers";
 
 export const metadata = {
@@ -39,7 +39,6 @@ export default async function Home() {
   return (
     <main className="container mx-auto flex flex-col justify-center px-6 text-center">
       <Play propertyDictionary={json} />
-      <Tutorial />
     </main>
   );
 }

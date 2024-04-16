@@ -84,11 +84,12 @@ export default function Resources() {
           <h3 className="text-zinc-200">Tailwind Typography</h3>
           <p className="text-zinc-400">
             This dependency is pure magic. It turns unstyled markdown into
-            <span className="text-zinc-400">
+            well-structured,
+            <span className="text-zinc-200">
               {" "}
-              well-structured, consistently styled text
-            </span>
-            . Forget setting font-weights for your titles and paddings for your
+              consistently styled text.
+            </span>{" "}
+            Forget setting font-weights for your titles and paddings for your
             paragraphs: Tailwind Typography has got you covered.
           </p>
           <span>

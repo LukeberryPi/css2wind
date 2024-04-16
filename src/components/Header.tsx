@@ -36,27 +36,27 @@ export default function Header() {
           <Image src="/logo.svg" alt="logo" width={32} height={32} />
           <span className="hidden text-2xl xs:block">css2wind</span>
         </Link>
-        <div className="flex items-center justify-center gap-10">
+        <div className="flex items-center justify-center gap-8">
           <a
-            className="cursor-pointer hover:opacity-80"
+            className="cursor-pointer p-2 hover:opacity-80"
             onClick={(e) => safeNavigate(e, "/")}
           >
             Home
           </a>
           <a
-            className="cursor-pointer hover:opacity-80"
+            className="cursor-pointer p-2 hover:opacity-80"
             onClick={(e) => safeNavigate(e, "/tutorial")}
           >
             Tutorial
           </a>
           <a
-            className="cursor-pointer hover:opacity-80"
+            className="cursor-pointer p-2 hover:opacity-80"
             onClick={(e) => safeNavigate(e, "/resources")}
           >
             Resources
           </a>
           <a
-            className="cursor-pointer hover:opacity-80"
+            className="cursor-pointer p-2 hover:opacity-80"
             onClick={(e) => safeNavigate(e, "/faq")}
           >
             FAQ
