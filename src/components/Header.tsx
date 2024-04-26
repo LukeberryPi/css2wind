@@ -1,6 +1,6 @@
 "use client";
 
-import { Close, Heart, More, Open, Tailwind } from "@/icons";
+import { Close, More, Open } from "@/icons";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
