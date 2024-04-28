@@ -35,6 +35,7 @@ export default function Play({
   const [inputDisabled, setInputDisabled] = useState(false);
   const [resultCopied, setResultCopied] = useState(false);
   const [gameOver, setIsGameOver] = useState(false);
+  const [showAnswerList, setShowAnswerList] = useState(false);
 
   const {
     state,
@@ -327,10 +328,22 @@ export default function Play({
           <Restart />
           <span>Play Again</span>
         </button>
+        <button
+          onClick={() => setShowAnswerList((prev) => !prev)}
+          className="flex items-center gap-4 hover:opacity-80"
+        >
+          Show answers
+          <span
+            data-show-answer-list={showAnswerList}
+            className="-rotate-90 data-[show-answer-list=true]:rotate-90"
+          >
+            <ChevronRight />
+          </span>
+          {JSON.stringify(correctAnswersList)}
+        </button>
       </div>
       {/* debug */}
-      {/* <button onClick={handleCopyClick}>copy</button>
-      <button onClick={() => setIsGameOver(true)}> end game</button> */}
+      <button onClick={() => setIsGameOver(true)}> end game</button>
     </section>
   );
 }
