@@ -37,7 +37,7 @@ export default async function Home() {
   const json = await response.json();
 
   return (
-    <main className="container mx-auto flex flex-col justify-center px-6 text-center">
+    <main className="container mx-auto flex flex-col justify-center text-center">
       <Play propertyDictionary={json} />
     </main>
   );
