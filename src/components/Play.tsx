@@ -234,13 +234,15 @@ export default function Play({
           showAnswerModal &&
           correctAnswersList.map((item, i) => (
             <div key={i} className="flex w-full justify-between">
-              <span className="flex flex-1 items-center justify-start">
+              <span className="flex flex-1 items-center justify-start text-sky-300">
                 {Object.entries(dict)
                   .filter(([_, v]) => v[0] === item[0])
                   .map((el) => el[0].split(item[0]))}
               </span>
-              <span className="flex flex-1 items-center justify-center">→</span>
-              <span className="flex flex-1 items-center justify-end">
+              <span className="flex flex-1 items-center justify-center">
+                <Arrow className="fill-zinc-200" />
+              </span>
+              <span className="flex flex-1 items-center justify-end text-greenGo">
                 {item[0]}
               </span>
             </div>
