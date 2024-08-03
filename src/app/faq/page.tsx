@@ -92,10 +92,9 @@ export default function Faq() {
             how a button looks and customization is secondary.{" "}
           </p>
           <p className="text-zinc-400">
-            {" "}
-            CSS isn&apos;t, since it provides small pieces of CSS, called{" "}
-            <span className="text-zinc-200">utilities</span>, so you can style a
-            button from scratch — and make it look however you please.
+            TailwindCSS isn&apos;t, since it provides small pieces of CSS,
+            called <span className="text-zinc-200">utilities</span>, so you can
+            style a button from scratch — and make it look however you please.
           </p>
           <span>
             Watch this:{" "}
