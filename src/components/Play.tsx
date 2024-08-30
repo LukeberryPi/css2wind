@@ -76,7 +76,20 @@ export default function Play({
   }, [score]);
 
   useEffect(() => {
-    setCurrentProperty(getRandomKey(propertyDictionary));
+    const isSessionInProgress = localStorage.getItem('sessionProgress')
+
+    if (!isSessionInProgress) {
+      setCurrentProperty(getRandomKey(propertyDictionary));
+      return
+    }
+
+    const { score, currentProperty } = JSON.parse(localStorage.getItem('sessionProgress') || '')
+    
+    setCurrentProperty(currentProperty);
+    mutateTranslationStatus({
+      type: "set_current_progress",
+      score
+    })
   }, []);
 
   const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
@@ -99,16 +112,17 @@ export default function Play({
 
     setTimeout(() => {
       setAttempt("");
-      setCurrentProperty(
-        getRandomKey(
-          Object.fromEntries(
-            Object.entries(propertyDictionary).filter(
-              ([key, _]) => key !== currentProperty,
-            ),
+
+      const randomProperty = getRandomKey(
+        Object.fromEntries(
+          Object.entries(propertyDictionary).filter(
+            ([key, _]) => key !== currentProperty,
           ),
         ),
-      );
-      mutateTranslationStatus({ type: "not_submitted" });
+      )
+
+      setCurrentProperty(randomProperty);
+      mutateTranslationStatus({ type: "not_submitted", currentProperty: randomProperty });
       setInputDisabled(false);
     }, afterMilisseconds);
   };
@@ -217,6 +231,13 @@ export default function Play({
     return `https://twitter.com/intent/post?text=${split.join("")}`;
   };
 
+  const playAgain = (event: React.FormEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+
+    localStorage.removeItem('sessionProgress')
+    window.location.href = "/";
+  }
+  
   return (
     <div className="mx-auto flex w-fit items-center justify-center">
       <div
@@ -351,10 +372,7 @@ export default function Play({
             <span>{resultCopied ? "Copied!" : "Copy Result"}</span>
           </button>
           <button
-            onClick={(e: any) => {
-              e.preventDefault();
-              window.location.href = "/";
-            }}
+            onClick={playAgain}
             className="flex w-64 items-center justify-center gap-3 self-center p-3 text-sky-300 ring-1 ring-sky-300 hover:opacity-80 active:ring lg:w-fit"
           >
             <Restart />

@@ -14,27 +14,13 @@ export default function Header() {
   const safeNavigate = (e: any, href: string) => {
     e.preventDefault();
     const isHome = pathname === "/";
-    let sure = false;
 
     if (isHome && href === "/") {
       setMobileNavOpen(false);
       return;
     }
 
-    if (isHome) {
-      sure = confirm(
-        `You will lose your current game if you go to ${href}. Are you sure?`,
-      );
-
-      if (!sure) {
-        return;
-      }
-
-      router.push(href);
-    } else {
-      router.push(href);
-    }
-
+    router.push(href);
     setMobileNavOpen(false);
   };
 
