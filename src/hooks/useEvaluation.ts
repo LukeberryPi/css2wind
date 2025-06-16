@@ -49,10 +49,12 @@ function handleNewScore({ state, action, currentProperty }: NewScore) {
     return item;
   });
 
+  const isGameOver = !state.score.includes('not_submitted')
 
   localStorage.setItem('sessionProgress', JSON.stringify({
     score,
-    currentProperty 
+    currentProperty,
+    isGameOver
   }))
 
   return score

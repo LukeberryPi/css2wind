@@ -36,8 +36,15 @@ export default function Play({
   const [attempt, setAttempt] = useState("");
   const [inputDisabled, setInputDisabled] = useState(false);
   const [resultCopied, setResultCopied] = useState(false);
-  const [gameOver, setIsGameOver] = useState(false);
   const [showAnswerModal, setShowAnswerModal] = useState(false);
+  const [gameOver, setIsGameOver] = useState(() => {
+    const sessionProgress = localStorage.getItem("sessionProgress")
+    if (!sessionProgress) return false
+
+    const { isGameOver } = JSON.parse(sessionProgress)
+
+    return isGameOver || false
+  });
 
   const {
     state,
@@ -76,15 +83,15 @@ export default function Play({
   }, [score]);
 
   useEffect(() => {
-    const isSessionInProgress = localStorage.getItem('sessionProgress')
+    const sessionProgress = localStorage.getItem("sessionProgress")
 
-    if (!isSessionInProgress) {
+    if (!sessionProgress) {
       setCurrentProperty(getRandomKey(propertyDictionary));
       return
     }
 
     const { score, currentProperty } = JSON.parse(localStorage.getItem('sessionProgress') || '')
-    
+
     setCurrentProperty(currentProperty);
     mutateTranslationStatus({
       type: "set_current_progress",
@@ -237,7 +244,7 @@ export default function Play({
     localStorage.removeItem('sessionProgress')
     window.location.href = "/";
   }
-  
+
   return (
     <div className="mx-auto flex w-fit items-center justify-center">
       <div
