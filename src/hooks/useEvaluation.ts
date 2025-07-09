@@ -10,10 +10,11 @@ type State = {
   score: Array<Action["type"]>;
 };
 
-type Action = BaseAction | CorrectAction | IncorrectAction;
+type Action = BaseAction | CorrectAction | IncorrectAction | CurrentProgressAction
 
 type BaseAction = {
   type: "not_submitted" | "show_correct_answer";
+  currentProperty?: string
 };
 
 type CorrectAction = {
@@ -26,18 +27,43 @@ type IncorrectAction = {
   correctAnswers: string[];
 };
 
+type CurrentProgressAction = {
+  type: "set_current_progress";
+  score: Array<Action["type"]>;
+}
+
+type NewScore = {
+  state: State,
+  action: Pick<Action , 'type'>
+  currentProperty?: string
+}
+
+function handleNewScore({ state, action, currentProperty }: NewScore) {
+  const score = state.score.map((item, i, arr) => {
+    const firstNotSubmitted = arr.indexOf("not_submitted");
+
+    if (i === firstNotSubmitted) {
+      return action.type;
+    }
+
+    return item;
+  });
+
+  const isGameOver = !state.score.includes('not_submitted')
+
+  localStorage.setItem('sessionProgress', JSON.stringify({
+    score,
+    currentProperty,
+    isGameOver
+  }))
+
+  return score
+}
+
 function reducer(state: State, action: Action) {
   switch (action.type) {
     case "correct": {
-      const updatedScore = state.score.map((item, i, arr) => {
-        const firstNotSubmitted = arr.indexOf("not_submitted");
-
-        if (i === firstNotSubmitted) {
-          return "correct";
-        }
-
-        return item;
-      });
+      const updatedScore = handleNewScore({ state, action })
 
       return {
         ...state,
@@ -53,15 +79,7 @@ function reducer(state: State, action: Action) {
       };
     }
     case "incorrect": {
-      const updatedScore = state.score.map((item, i, arr) => {
-        const firstNotSubmitted = arr.indexOf("not_submitted");
-
-        if (i === firstNotSubmitted) {
-          return "incorrect";
-        }
-
-        return item;
-      });
+      const updatedScore = handleNewScore({ state, action })
 
       return {
         ...state,
@@ -77,6 +95,12 @@ function reducer(state: State, action: Action) {
       };
     }
     case "not_submitted": {
+      handleNewScore({
+        state,
+        action,
+        currentProperty: action.currentProperty 
+      })
+
       return {
         ...state,
         correct: false,
@@ -92,6 +116,13 @@ function reducer(state: State, action: Action) {
         ...state,
         showCorrectAnswer: true,
       };
+    }
+
+    case "set_current_progress": {
+      return {
+        ...state,
+        score: action.score,
+      }
     }
   }
 }
