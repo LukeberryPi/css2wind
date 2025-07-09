@@ -79,14 +79,6 @@ export default function Header() {
               Docs
               <Open className="size-5" />
             </a>
-            <a
-              className="flex cursor-pointer items-center gap-2 p-2 hover:opacity-80"
-              href="https://buymeacoffee.com/lukeberrypi"
-              target="_blank"
-            >
-              Donate
-              <Open className="size-5" />
-            </a>
           </div>
           <button
             onClick={() => setMobileNavOpen((prev) => !prev)}

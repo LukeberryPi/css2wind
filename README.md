@@ -1,11 +1,5 @@
 # [https://www.css2wind.com/](https://www.css2wind.com/)
 
-## This project is free
-
-That's why i rely on donations to keep it going. If css2wind has helped you in any way, support me and [buy me a coffee](https://www.buymeacoffee.com/lukeberrypi)!
-
----
-
 ## Accessing locally
 
 You need to have these installed:
