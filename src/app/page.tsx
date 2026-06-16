@@ -1,5 +1,5 @@
 import { Play } from "@/components";
-import { headers } from "next/headers";
+import { DEFAULT_GAME_MODE, gameRegistry } from "@/game";
 
 export const metadata = {
   title: "css2wind | Home",
@@ -29,16 +29,15 @@ export const metadata = {
 };
 
 export default async function Home() {
-  const host = headers().get("host");
-  const protocol = process?.env.NODE_ENV === "development" ? "http" : "https";
-  const response = await fetch(`${protocol}://${host}/api/v1`, {
-    cache: "no-store",
-  });
-  const json = await response.json();
-
   return (
     <main className="container mx-auto flex flex-col justify-center text-center">
-      <Play propertyDictionary={json} />
+      <Play
+        defaultMode={DEFAULT_GAME_MODE}
+        dictionaries={{
+          "tailwind-v3": gameRegistry["tailwind-v3"].dictionary,
+          "tailwind-v4": gameRegistry["tailwind-v4"].dictionary,
+        }}
+      />
     </main>
   );
 }

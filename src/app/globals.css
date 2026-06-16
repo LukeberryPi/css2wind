@@ -1,6 +1,41 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --spacing-18: 4.5rem;
+  --spacing-104: 26rem;
+  --breakpoint-tiny: 400px;
+  --breakpoint-xs: 500px;
+  --color-alertRed: #e35454;
+  --color-greenGo: #4fbf85;
+  --animate-shake: shake 0.9s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  --animate-lift: lift 0.9s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+
+  @keyframes lift {
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+
+  @keyframes shake {
+    10%,
+    90% {
+      transform: translateX(-1px);
+    }
+    20%,
+    80% {
+      transform: translateX(2px);
+    }
+    30%,
+    50%,
+    70% {
+      transform: translateX(-4px);
+    }
+    40%,
+    60% {
+      transform: translateX(4px);
+    }
+  }
+}
 
 @layer base {
   a,
@@ -9,8 +44,18 @@
   }
 }
 
-@layer utilities {
-  .debug {
-    @apply border border-red-500;
-  }
+@utility debug {
+  @apply border border-red-500;
+}
+
+@utility transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+@utility backface-hidden {
+  backface-visibility: hidden;
+}
+
+@utility rotate-x-180 {
+  transform: rotateX(180deg);
 }

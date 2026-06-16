@@ -1,39 +1,54 @@
-# [https://www.css2wind.com/](https://www.css2wind.com/)
+# css2wind
 
-## Accessing locally
+[css2wind.com](https://www.css2wind.com/) is a small Next.js minigame for practicing CSS-to-Tailwind translations.
 
-You need to have these installed:
+## Setup
 
-- [git](https://git-scm.com/downloads)
-- [node.js](https://nodejs.org/en/download/)
+Requirements:
 
-If you don't have one, it is recommended that you also download an IDE:
+- Node.js 24 or newer
+- npm
 
-- [vs code](https://code.visualstudio.com/download)
+Install dependencies and start the local app:
 
-Then, you can:
+```bash
+npm install
+npm run dev
+```
 
-- [clone this repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) if you just want to look around
-- [fork this repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo) if you want to contribue code and open pull requests
+Open [http://localhost:3000](http://localhost:3000).
 
-Now, access the directory to which you just cloned the repository:
+## Scripts
 
-`cd css2wind`
+- `npm run dev`: start the Next.js development server.
+- `npm run typecheck`: run TypeScript without emitting files.
+- `npm run lint`: run ESLint.
+- `npm run test`: run Vitest unit tests.
+- `npm run test:e2e`: run the Playwright homepage smoke test.
+- `npm run build`: create a production build.
 
-Finally, you should install dependencies:
+## Game Modes
 
-`npm install`
+The homepage defaults to the original Tailwind v3 game. Tailwind v4 is available through the compact `v3` / `v4` selector in the game UI.
 
-And build the website:
+Progress is stored per mode in localStorage:
 
-`npm run dev`
+- `css2wind:game:tailwind-v3`
+- `css2wind:game:tailwind-v4`
 
-Now, this url should be running css2wind locally!
+The `/api/v1` endpoint remains compatible with the previous shape and returns the v3 dictionary.
 
-[http://localhost:3000/](http://localhost:3000/)
+## Verification
 
----
+Before merging, run:
 
-## Contributions
+```bash
+npm install
+npm run typecheck
+npm run lint
+npm run test
+npm run test:e2e
+npm run build
+```
 
-Issues and pull requests are appreciated!
+CI runs the same verification sequence with `npm ci`.
