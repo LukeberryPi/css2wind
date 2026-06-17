@@ -11,7 +11,7 @@ export default function Header() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const safeNavigate = (e: any, href: string) => {
+  const safeNavigate = (e: React.MouseEvent<HTMLElement>, href: string) => {
     e.preventDefault();
     const isHome = pathname === "/";
 
