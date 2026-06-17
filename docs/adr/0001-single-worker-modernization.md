@@ -16,4 +16,4 @@ The app was on older Next, React, and Tailwind dependencies, and the game state 
 
 ## Consequences
 
-The migration can update dependencies, tests, CI, and internal game structure together. Behavior changes must remain explicit, with Tailwind v4 exposed only through an opt-in selector.
+The migration can update dependencies, tests, and internal game structure together. Behavior changes must remain explicit, with Tailwind v4 exposed only through an opt-in selector.

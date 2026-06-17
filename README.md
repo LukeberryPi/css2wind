@@ -6,26 +6,24 @@
 
 Requirements:
 
-- Node.js 24 or newer
-- npm
+- Bun 1.3 or newer
 
 Install dependencies and start the local app:
 
 ```bash
-npm install
-npm run dev
+bun install
+bun run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
 
 ## Scripts
 
-- `npm run dev`: start the Next.js development server.
-- `npm run typecheck`: run TypeScript without emitting files.
-- `npm run lint`: run ESLint.
-- `npm run test`: run Vitest unit tests.
-- `npm run test:e2e`: run the Playwright homepage smoke test.
-- `npm run build`: create a production build.
+- `bun run dev`: start the Next.js development server.
+- `bun run typecheck`: run TypeScript without emitting files.
+- `bun run lint`: run ESLint.
+- `bun run test`: run Vitest unit tests.
+- `bun run build`: create a production build.
 
 ## Game Modes
 
@@ -43,12 +41,9 @@ The `/api/v1` endpoint remains compatible with the previous shape and returns th
 Before merging, run:
 
 ```bash
-npm install
-npm run typecheck
-npm run lint
-npm run test
-npm run test:e2e
-npm run build
+bun install
+bun run typecheck
+bun run lint
+bun run test
+bun run build
 ```
-
-CI runs the same verification sequence with `npm ci`.
